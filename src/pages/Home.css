@@ -2343,6 +2343,7 @@
     width: 100% !important;
     height: 280px !important;
     overflow: hidden !important;
+    border-radius: 16px !important;
   }
 
   .hidden-slide {
@@ -2398,37 +2399,56 @@
   .frame-401 {
     position: relative !important;
     width: 100% !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
+    display: block !important;
   }
 
   .carousel-arrow {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    position: absolute !important;
+    top: 140px !important;
+    transform: translateY(-50%) !important;
     width: 40px !important;
     height: 40px !important;
     border-radius: 50% !important;
-    background: rgba(14, 16, 255, 0.8) !important;
+    background: rgba(14, 16, 255, 0.75) !important;
     color: #ffffff !important;
     border: none !important;
     font-size: 20px !important;
     font-weight: bold !important;
     cursor: pointer !important;
-    z-index: 10 !important;
-    transition: background 0.3s ease !important;
+    z-index: 100 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    transition: background 0.3s, transform 0.2s !important;
   }
 
-  .carousel-arrow:hover {
-    background: rgba(14, 16, 255, 1) !important;
+  .carousel-arrow:active {
+    transform: translateY(-50%) scale(0.9) !important;
+  }
+
+  .carousel-arrow.left-arrow {
+    left: 10px !important;
+  }
+
+  .carousel-arrow.right-arrow {
+    right: 10px !important;
   }
 
   .frame-399 {
-    width: calc(100% - 100px) !important;
-    flex-grow: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .frame-400 {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 16px !important;
   }
 
   .rectangle-287 {
