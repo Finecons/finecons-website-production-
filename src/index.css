@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Merriweather+Sans:wght@400;700&family=Wix+Madefor+Text:wght@400;700&display=swap');
+
+:root {
+  /* Colors */
+  /* Fonts */
+  --display-mobile-font-family: 'Merriweather', sans-serif;
+  --display-mobile-font-size: 32px;
+  --display-mobile-line-height: 46px;
+  --display-mobile-font-weight: 600;
+  --display-mobile-font-style: normal;
+  --display-desktop-font-family: 'Merriweather', sans-serif;
+  --display-desktop-font-size: 64px;
+  --display-desktop-line-height: 96px;
+  --display-desktop-font-weight: 600;
+  --display-desktop-font-style: normal;
+  --display-tab-font-family: 'Merriweather', sans-serif;
+  --display-tab-font-size: 48px;
+  --display-tab-line-height: 64px;
+  --display-tab-font-weight: 600;
+  --display-tab-font-style: normal;
+  --heading-serif-1-desktop-font-family: 'Merriweather', sans-serif;
+  --heading-serif-1-desktop-font-size: 48px;
+  --heading-serif-1-desktop-line-height: 60px;
+  --heading-serif-1-desktop-font-weight: 600;
+  --heading-serif-1-desktop-font-style: normal;
+  --heading-serif-1-mobile-font-family: 'Merriweather', sans-serif;
+  --heading-serif-1-mobile-font-size: 32px;
+  --heading-serif-1-mobile-line-height: 40px;
+  --heading-serif-1-mobile-font-weight: 600;
+  --heading-serif-1-mobile-font-style: normal;
+  --heading-sans-2-desktop-font-family: 'Merriweather Sans', sans-serif;
+  --heading-sans-2-desktop-font-size: 28px;
+  --heading-sans-2-desktop-line-height: 36px;
+  --heading-sans-2-desktop-font-weight: 700;
+  --heading-sans-2-desktop-font-style: normal;
+  --heading-sans-2-mobile-font-family: 'Merriweather Sans', sans-serif;
+  --heading-sans-2-mobile-font-size: 18px;
+  --heading-sans-2-mobile-line-height: 28px;
+  --heading-sans-2-mobile-font-weight: 700;
+  --heading-sans-2-mobile-font-style: normal;
+  --sub-heading-sans-1-desktop-font-family: 'Merriweather Sans', sans-serif;
+  --sub-heading-sans-1-desktop-font-size: 40px;
+  --sub-heading-sans-1-desktop-line-height: 48px;
+  --sub-heading-sans-1-desktop-font-weight: 700;
+  --sub-heading-sans-1-desktop-font-style: normal;
+  --sub-heading-sans-1-mobile-font-family: 'Merriweather Sans', sans-serif;
+  --sub-heading-sans-1-mobile-font-size: 28px;
+  --sub-heading-sans-1-mobile-line-height: 36px;
+  --sub-heading-sans-1-mobile-font-weight: 700;
+  --sub-heading-sans-1-mobile-font-style: normal;
+  --body-regular-desktop-font-family: 'Merriweather Sans', sans-serif;
+  --body-regular-desktop-font-size: 18px;
+  --body-regular-desktop-line-height: 26px;
+  --body-regular-desktop-font-weight: 400;
+  --body-regular-desktop-font-style: normal;
+  --body-regular-mobile-font-family: 'Merriweather Sans', sans-serif;
+  --body-regular-mobile-font-size: 14px;
+  --body-regular-mobile-line-height: 26px;
+  --body-regular-mobile-font-weight: 400;
+  --body-regular-mobile-font-style: normal;
+  --body-regular-2-desktop-font-family: 'Merriweather Sans', sans-serif;
+  --body-regular-2-desktop-font-size: 24px;
+  --body-regular-2-desktop-line-height: 32px;
+  --body-regular-2-desktop-font-weight: 400;
+  --body-regular-2-desktop-font-style: normal;
+  --body-regular-2-mobile-font-family: 'Merriweather Sans', sans-serif;
+  --body-regular-2-mobile-font-size: 18px;
+  --body-regular-2-mobile-line-height: 28px;
+  --body-regular-2-mobile-font-weight: 400;
+  --body-regular-2-mobile-font-style: normal;
+  --heading-sans-3-desktop-font-family: 'Merriweather Sans', sans-serif;
+  --heading-sans-3-desktop-font-size: 48px;
+  --heading-sans-3-desktop-line-height: 56px;
+  --heading-sans-3-desktop-font-weight: 700;
+  --heading-sans-3-desktop-font-style: normal;
+  --sub-heading-sans-2-desktop-font-family: 'Merriweather Sans', sans-serif;
+  --sub-heading-sans-2-desktop-font-size: 18px;
+  --sub-heading-sans-2-desktop-line-height: 26px;
+  --sub-heading-sans-2-desktop-font-weight: 700;
+  --sub-heading-sans-2-desktop-font-style: normal;
+}
+
+/* Fix global positioning for Figma exports without overriding specific class rules */
+:where(div[class^="frame-"], div[class^="group-"], div[class^="rectangle-"], div[class^="ellipse-"]) {
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+/* Global Navbar Active Link Styling */
+.group-274 .active-link {
+  color: #0e10ff !important;
+  font-weight: 600 !important;
+}
+
+/* Global Footer Wrapper to isolate absolute elements in document flow */
+.footer-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-color: #534eeb;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.footer-wrapper .rectangle-266 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+.footer-wrapper .mask-group {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.footer-wrapper .image-3 {
+  position: absolute !important;
+  top: 50px !important;
+  left: 127px !important;
+}
+
+.footer-wrapper .frame-424 {
+  position: absolute !important;
+  top: 220px !important;
+  left: auto !important;
+  right: 127px !important;
+}
+
+.footer-wrapper .frame-423 {
+  position: absolute !important;
+  top: 220px !important;
+  left: 145px !important;
+}
+
+.footer-wrapper .copyright-finecons-2026 {
+  position: absolute !important;
+  top: 460px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Reusable Page Hero Progress Indicator (frame-2) */
+.frame-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.frame-2 div {
+  border-radius: 30px;
+  width: 6px;
+  height: 37px;
+}
+
+.frame-2 .active-rect {
+  background: #0e10ff !important;
+}
+
+.frame-2 .inactive-rect {
+  background: #9d9dff !important;
+}
+
+/* Use Case Modal Styles */
+.use-case-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.use-case-modal-card {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 48px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 16, 255, 0.2) transparent;
+}
+
+.use-case-modal-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.use-case-modal-card::-webkit-scrollbar-thumb {
+  background-color: rgba(14, 16, 255, 0.2);
+  border-radius: 10px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #777777;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  color: #0e10ff;
+}
+
+/* Background concentric circles matching natural styling */
+.modal-decorative-circles {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.modal-circle-1,
+.modal-circle-2,
+.modal-circle-3 {
+  border: 4px solid #0e10ff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.modal-circle-1 {
+  width: 250px;
+  height: 250px;
+  top: 0;
+  left: 0;
+}
+
+.modal-circle-2 {
+  width: 190px;
+  height: 190px;
+  top: 30px;
+  left: 30px;
+}
+
+.modal-circle-3 {
+  width: 130px;
+  height: 130px;
+  top: 60px;
+  left: 60px;
+}
+
+/* Naturals Logo Styling */
+.naturals-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 24px;
+}
+
+/* Sections Styling */
+.modal-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.modal-section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-section-header .section-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  stroke: #0e10ff;
+}
+
+.modal-section-header h3 {
+  color: #0e10ff;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-section-content .headline {
+  color: #191c1e;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.modal-section-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-section-content ul li {
+  color: #444444;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+.modal-section-content ul li::before {
+  content: "•";
+  color: #0e10ff;
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  left: 4px;
+  top: -2px;
+}
+
+.modal-section-content .footer-text {
+  color: #555555;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .use-case-modal-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+  .close-modal-btn {
+    top: 16px;
+    right: 16px;
+  }
+  .naturals-logo {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+  .modal-sections {
+    gap: 28px;
+  }
+  .modal-section-header h3 {
+    font-size: 18px;
+  }
+}
+
+/* Global Footer Overrides to enforce a compact 300px height on all pages */
+:root [class*="footer-wrapper"] {
+  height: 300px !important;
+  min-height: 300px !important;
+}
+
+:root [class*="footer-wrapper"] .rectangle-266,
+:root [class*="footer-wrapper"] .mask-group {
+  height: 300px !important;
+}
+
+/* Logo scaling & positioning */
+:root [class*="footer-wrapper"] .image-3 {
+  width: 250px !important;
+  height: 65px !important;
+  max-width: 250px !important;
+  max-height: 65px !important;
+  top: 30px !important;
+  left: 80px !important;
+  position: absolute !important;
+  object-fit: contain !important;
+}
+
+/* Contact Details Wrapper positioning */
+:root [class*="footer-wrapper"] .frame-423 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  top: 115px !important;
+  left: 80px !important;
+  width: auto !important;
+  height: auto !important;
+  position: absolute !important;
+}
+
+/* Contact rows: Address, Phone, Email alignment */
+:root [class*="footer-wrapper"] .group-246,
+:root [class*="footer-wrapper"] .group-245,
+:root [class*="footer-wrapper"] .frame-244 {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: auto !important;
+  height: auto !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+/* Scale down icon circles */
+:root [class*="footer-wrapper"] .group-363,
+:root [class*="footer-wrapper"] .group-364,
+:root [class*="footer-wrapper"] .group-365 {
+  width: 36px !important;
+  height: 36px !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+}
+
+:root [class*="footer-wrapper"] .ellipse-6,
+:root [class*="footer-wrapper"] .ellipse-7,
+:root [class*="footer-wrapper"] .ellipse-8 {
+  width: 36px !important;
+  height: 36px !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* Scale down SVGs inside icon circles */
+:root [class*="footer-wrapper"] .lucide-map-pin,
+:root [class*="footer-wrapper"] .lucide-phone,
+:root [class*="footer-wrapper"] .lucide-mail {
+  width: 18px !important;
+  height: 18px !important;
+  top: 9px !important;
+  left: 9px !important;
+  position: absolute !important;
+}
+
+/* Scale down contact text font sizes & remove offsets */
+:root [class*="footer-wrapper"] .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018,
+:root [class*="footer-wrapper"] ._91-44-43927600,
+:root [class*="footer-wrapper"] .info-finecons-com {
+  font-size: 16px !important;
+  line-height: 20px !important;
+  color: #ffffff !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Grid of page links positioning & text styling */
+:root [class*="footer-wrapper"] .frame-424 {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px 28px !important;
+  top: 115px !important;
+  right: 80px !important;
+  left: auto !important;
+  position: absolute !important;
+  width: auto !important;
+}
+
+:root [class*="footer-wrapper"] .privacy-policy,
+:root [class*="footer-wrapper"] .terms-conditions,
+:root [class*="footer-wrapper"] .compliance-disclosure,
+:root [class*="footer-wrapper"] .case-studies {
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease !important;
+  font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+:root [class*="footer-wrapper"] .privacy-policy:hover,
+:root [class*="footer-wrapper"] .terms-conditions:hover,
+:root [class*="footer-wrapper"] .compliance-disclosure:hover,
+:root [class*="footer-wrapper"] .case-studies:hover {
+  opacity: 0.8 !important;
+}
+
+/* Copyright centering */
+:root [class*="footer-wrapper"] .copyright-finecons-2026 {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  bottom: 15px !important;
+  top: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  width: fit-content !important;
+  text-align: center !important;
+  position: absolute !important;
+  font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+  font-weight: 400 !important;
+  transform: none !important;
+  translate: none !important;
+}
+
+/* Footer Responsive Media Queries */
+@media (max-width: 768px) {
+  :root [class*="footer-wrapper"] {
+    height: auto !important;
+    padding: 40px 24px 60px 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 30px !important;
+  }
+  
+  :root [class*="footer-wrapper"] .rectangle-266,
+  :root [class*="footer-wrapper"] .mask-group {
+    height: 100% !important;
+  }
+  
+  :root [class*="footer-wrapper"] .image-3 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 auto !important;
+  }
+  
+  :root [class*="footer-wrapper"] .frame-423 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    align-items: center !important;
+  }
+  
+  :root [class*="footer-wrapper"] .group-246,
+  :root [class*="footer-wrapper"] .group-245,
+  :root [class*="footer-wrapper"] .frame-244 {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  :root [class*="footer-wrapper"] .frame-424 {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+  
+  :root [class*="footer-wrapper"] .copyright-finecons-2026 {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: 10px !important;
+  }
+}
+
+/* Global Mobile Navbar responsive overrides and Hamburger Menu */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  padding: 0;
+  z-index: 1002;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #0e10ff;
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #0e10ff;
+}
+
+.mobile-only-nav-btn {
+  display: none !important;
+}
+
+.desktop-only-nav-btn {
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: flex !important;
+  }
+  
+  .desktop-only-nav-btn {
+    display: none !important;
+  }
+  
+  .mobile-only-nav-btn {
+    display: flex !important;
+  }
+
+  /* Force responsive width/padding on Navbar container */
+  .frame-376 {
+    width: 90% !important;
+    max-width: 440px !important;
+    height: 70px !important;
+    border-radius: 24px !important;
+    padding: 10px 20px !important;
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: absolute !important;
+  }
+
+  .finecons-logo-3 {
+    height: 36px !important;
+    width: auto !important;
+  }
+
+  /* Hamburger Dropdown Navigation */
+  .group-274 {
+    display: none !important;
+  }
+
+  .group-274.mobile-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 80px !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 35px rgba(14, 16, 255, 0.12) !important;
+    padding: 24px !important;
+    gap: 20px !important;
+    z-index: 1001 !important;
+    align-items: center !important;
+  }
+
+  .group-274.mobile-open .about,
+  .group-274.mobile-open .partners,
+  .group-274.mobile-open .solutions {
+    font-size: 18px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .group-274.mobile-open .group-353 {
+    margin-top: 10px !important;
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+
+  /* Proportional scaling for vector graphic headers on mobile */
+  .about-hero-visual {
+    width: 420px !important;
+    height: 380px !important;
+    transform: scale(0.8) !important;
+    transform-origin: center center !important;
+    margin: -30px auto !important;
+    position: relative !important;
+  }
+  
+  .about-hero-visual .ellipse-4, 
+  .about-hero-visual .ellipse-2, 
+  .about-hero-visual .ellipse-3 {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-visual {
+    transform: scale(0.65) !important;
+    margin: -50px auto !important;
+  }
+}
+
+

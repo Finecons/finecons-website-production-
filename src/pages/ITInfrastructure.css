@@ -1,0 +1,1167 @@
+/* IT Infrastructure Page Stylesheet */
+
+.solutions-it-infrastructure {
+  background: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background Gradients & Circles */
+.solutions-it-infrastructure .rectangle-217 {
+  background: linear-gradient(
+      123.26deg,
+      rgba(228, 234, 255, 0) 45.126545429229736%,
+      rgba(38, 210, 222, 0.3) 90.87963700294495%
+    ),
+    linear-gradient(
+      223.8deg,
+      rgba(228, 234, 255, 1) 38.33858370780945%,
+      rgba(175, 175, 255, 1) 79.08464074134827%
+    );
+  opacity: 0.85;
+  width: 100%;
+  height: 820px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.solutions-it-infrastructure .ellipse-17 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.09);
+  border-width: 52px;
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: -80px;
+  top: -124px;
+  z-index: 1;
+}
+
+.solutions-it-infrastructure .ellipse-18 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.09);
+  border-width: 52px;
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: -10px;
+  top: -54px;
+  z-index: 1;
+}
+
+.solutions-it-infrastructure .ellipse-19 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.05);
+  border-width: 52px;
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: 244px;
+  top: 376px;
+  z-index: 1;
+}
+
+.solutions-it-infrastructure .ellipse-20 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.05);
+  border-width: 52px;
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: 314px;
+  top: 446px;
+  z-index: 1;
+}
+
+/* Hero Section */
+.solutions-it-infrastructure .frame-462 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  margin: 180px auto 60px auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-it-infrastructure .frame-461 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .frame-460 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.solutions-it-infrastructure .i-t-i-n-f-r-a {
+  color: #0e10ff;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: var(--heading-sans-2-desktop-font-size, 20px);
+  line-height: var(--heading-sans-2-desktop-line-height, 28px);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
+  text-align: left;
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: var(--display-desktop-font-size, 54px);
+  line-height: var(--display-desktop-line-height, 76px);
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise-span {
+  color: #191c1e;
+}
+
+.solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise-span2 {
+  color: #0e10ff;
+  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solutions-it-infrastructure .hero-image-wrapper {
+  width: 50%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(14, 16, 255, 0.12);
+}
+
+.solutions-it-infrastructure .rectangle-323 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.solutions-it-infrastructure .hero-image-wrapper:hover .rectangle-323 {
+  transform: scale(1.05);
+}
+
+.solutions-it-infrastructure .frame-2-bars {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.solutions-it-infrastructure .bar {
+  background: rgba(14, 16, 255, 0.15);
+  border-radius: 3px;
+  width: 8px;
+  height: 36px;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+.solutions-it-infrastructure .bar.active {
+  background: #0e10ff;
+  height: 48px;
+}
+
+/* Main Content Section styling (Sidebar & Content side-by-side) */
+.solutions-it-infrastructure .frame-465 {
+  width: 100%;
+  max-width: 1440px;
+  margin: 180px auto 100px auto;
+  padding: 0 48px 0 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-it-infrastructure .frame-322 {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Sidebar Solutions Navigation Panel */
+.solutions-it-infrastructure .frame-289 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(14, 16, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px 24px;
+  position: sticky;
+  top: 120px;
+}
+
+.solutions-it-infrastructure .s-o-l-u-t-i-o-n-s {
+  color: #191c1e;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.solutions-it-infrastructure .s-o-l-u-t-i-o-n-s:hover {
+  color: #0e10ff;
+}
+
+.solutions-it-infrastructure .frame-288 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .sidebar-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  color: #555555;
+  position: relative;
+}
+
+.solutions-it-infrastructure .sidebar-item:hover {
+  background: rgba(14, 16, 255, 0.04);
+  color: #000000;
+}
+
+.solutions-it-infrastructure .sidebar-item.active {
+  background: rgba(14, 16, 255, 0.08);
+  color: #0e10ff;
+}
+
+.solutions-it-infrastructure .vector-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.solutions-it-infrastructure .sidebar-text {
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.solutions-it-infrastructure .sidebar-item.active .sidebar-text {
+  font-weight: 700;
+}
+
+.solutions-it-infrastructure .active-dot {
+  position: absolute;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0e10ff;
+  box-shadow: 0 0 8px rgba(14, 16, 255, 0.8);
+}
+
+/* Content Details Column */
+.solutions-it-infrastructure .frame-561 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  flex: 1;
+}
+
+/* Page Sub-Heading & Intro */
+.solutions-it-infrastructure .frame-325 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .it-infrastructure-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .it-infrastructure-2-span {
+  color: #0e10ff;
+}
+
+.solutions-it-infrastructure .it-infrastructure-2-span2 {
+  color: #191c1e;
+}
+
+.solutions-it-infrastructure .intro-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .intro-text {
+  color: #333333;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  flex: 1;
+}
+
+/* Interactive SVG Topology Map styling */
+.solutions-it-infrastructure .group-319-svg {
+  width: 45%;
+  max-width: 420px;
+  flex-shrink: 0;
+  background: radial-gradient(circle, rgba(14, 16, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.solutions-it-infrastructure .server-slot {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.solutions-it-infrastructure .server-slot:hover {
+  transform: scale(1.03) translateX(4px);
+}
+
+@keyframes pingPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.solutions-it-infrastructure .radar-ping {
+  transform-origin: center;
+  animation: pingPulse 2s infinite ease-out;
+}
+
+/* Accordions Section */
+.solutions-it-infrastructure .frame-329 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .accordion-wrapper {
+  border: 1px solid rgba(14, 16, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(14, 16, 255, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solutions-it-infrastructure .accordion-wrapper:hover {
+  border-color: rgba(14, 16, 255, 0.16);
+  box-shadow: 0px 8px 30px rgba(14, 16, 255, 0.04);
+}
+
+.solutions-it-infrastructure .group-284,
+.solutions-it-infrastructure .group-285 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(180deg, #f8faff 0%, #edf4ff 100%);
+}
+
+.solutions-it-infrastructure .our-approach-title,
+.solutions-it-infrastructure .key-advantages-title {
+  color: #191c1e;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  z-index: 2;
+}
+
+.solutions-it-infrastructure .chevron-icon {
+  width: 28px;
+  height: 28px;
+  color: #0e10ff;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.solutions-it-infrastructure .chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.solutions-it-infrastructure .accordion-body-text {
+  padding: 32px;
+  color: #333333;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 18px;
+  line-height: 28px;
+  border-top: 1px solid rgba(14, 16, 255, 0.05);
+}
+
+.solutions-it-infrastructure .accordion-body-content {
+  padding: 32px;
+  border-top: 1px solid rgba(14, 16, 255, 0.05);
+}
+
+.solutions-it-infrastructure .frame-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .advantages-visual-wrapper {
+  width: 40%;
+  max-width: 336px;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.solutions-it-infrastructure .rectangle-333 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.solutions-it-infrastructure .advantages-list-wrapper {
+  flex: 1;
+}
+
+.solutions-it-infrastructure .advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.solutions-it-infrastructure .advantages-list li {
+  color: #333333;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.solutions-it-infrastructure .advantages-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: #0e10ff;
+  box-shadow: 0 0 6px rgba(14, 16, 255, 0.4);
+}
+
+/* Strategic Pillars Section */
+.solutions-it-infrastructure .section-strategic-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.solutions-it-infrastructure .core-infrastructure-pillars-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .core-infrastructure-pillars-span {
+  color: #191c1e;
+}
+
+.solutions-it-infrastructure .core-infrastructure-pillars-span2 {
+  color: #0e10ff;
+}
+
+.solutions-it-infrastructure .pillars-subtitle {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .pillar-column {
+  background: rgba(14, 16, 255, 0.02);
+  border: 1px solid rgba(14, 16, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.4s ease;
+}
+
+.solutions-it-infrastructure .pillar-column:hover {
+  transform: translateY(-8px);
+  border-color: rgba(14, 16, 255, 0.2);
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(14, 16, 255, 0.08);
+}
+
+.solutions-it-infrastructure .pillar-image-card {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.solutions-it-infrastructure .pillar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.solutions-it-infrastructure .pillar-column:hover .pillar-image {
+  transform: scale(1.05);
+}
+
+.solutions-it-infrastructure .pillar-title {
+  color: #191c1e;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .pillar-desc {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.solutions-it-infrastructure .pillar-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(14, 16, 255, 0.06);
+  padding-top: 20px;
+}
+
+.solutions-it-infrastructure .pillar-bullets li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  color: #333333;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.solutions-it-infrastructure .bullet-svg {
+  width: 16px;
+  height: 16px;
+  color: #cb096d;
+  flex-shrink: 0;
+}
+
+/* Featured Enterprise Hardware Section */
+.solutions-it-infrastructure .section-enterprise-hardware {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.solutions-it-infrastructure .featured-hardware-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .featured-hardware-span {
+  color: #191c1e;
+}
+
+.solutions-it-infrastructure .featured-hardware-span2 {
+  color: #0e10ff;
+}
+
+.solutions-it-infrastructure .hardware-subtitle {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .hardware-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .hardware-card {
+  background: rgba(14, 16, 255, 0.01);
+  border: 1px solid rgba(14, 16, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.solutions-it-infrastructure .hardware-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(14, 16, 255, 0.2);
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(14, 16, 255, 0.06);
+}
+
+.solutions-it-infrastructure .hardware-image-box {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.solutions-it-infrastructure .product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.solutions-it-infrastructure .hardware-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.solutions-it-infrastructure .hardware-title {
+  color: #191c1e;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .hardware-desc {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Technical Expertise Panel */
+.solutions-it-infrastructure .section-technical-capabilities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.solutions-it-infrastructure .container15 {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .container16 {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 120px;
+  height: max-content;
+}
+
+.solutions-it-infrastructure .technical-expertise-title {
+  color: #191c1e;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .expertise-subtitle {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .container17 {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.solutions-it-infrastructure .background-border {
+  background: rgba(14, 16, 255, 0.02);
+  border: 1px solid rgba(14, 16, 255, 0.06);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.solutions-it-infrastructure .background-border:hover {
+  background: #ffffff;
+  border-color: rgba(14, 16, 255, 0.16);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(14, 16, 255, 0.04);
+}
+
+.solutions-it-infrastructure .expertise-icon-box {
+  background: rgba(14, 16, 255, 0.05);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e10ff;
+  transition: all 0.3s ease;
+}
+
+.solutions-it-infrastructure .background-border:hover .expertise-icon-box {
+  background: #0e10ff;
+  color: #ffffff;
+}
+
+.solutions-it-infrastructure .heading-4 {
+  color: #191c1e;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .expertise-desc {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+  margin-top: 8px;
+}
+
+/* Global Logistics Split Section */
+.solutions-it-infrastructure .section-global-logistics {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.solutions-it-infrastructure .container21 {
+  flex: 0.8;
+  max-width: 420px;
+}
+
+.solutions-it-infrastructure .logistics-image-card {
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+}
+
+.solutions-it-infrastructure .global-infrastructure-logistics {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.solutions-it-infrastructure .container22 {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.solutions-it-infrastructure .logistics-tag {
+  color: #cb096d;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.solutions-it-infrastructure .secure-global-deployment-title {
+  color: #191c1e;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .logistics-subtitle-desc {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .container23 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.solutions-it-infrastructure .container24 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.solutions-it-infrastructure .bullet-icon {
+  background: rgba(14, 16, 255, 0.05);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e10ff;
+  flex-shrink: 0;
+}
+
+.solutions-it-infrastructure .logistics-point-desc {
+  color: #555555;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+  margin-top: 4px;
+}
+
+/* Partners Block Styling */
+.solutions-it-infrastructure .group-348 {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.solutions-it-infrastructure .frame-464 {
+  background: rgba(14, 16, 255, 0.02);
+  border: 1px solid rgba(14, 16, 255, 0.06);
+  border-radius: 28px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .cyber-security-partners {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.solutions-it-infrastructure .cyber-security-partners-span {
+  color: #191c1e;
+}
+
+.solutions-it-infrastructure .cyber-security-partners-span2 {
+  color: #0e10ff;
+}
+
+.solutions-it-infrastructure .partners-grid-cyber {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .partner-logo-box {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  width: 180px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.solutions-it-infrastructure .partner-logo-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(14, 16, 255, 0.06);
+  border-color: rgba(14, 16, 255, 0.1);
+}
+
+.solutions-it-infrastructure .p-logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.solutions-it-infrastructure .partner-logo-box:hover .p-logo {
+  opacity: 1;
+}
+
+.solutions-it-infrastructure .font-cisco {
+  font-family: "Arial Black", sans-serif;
+  color: #00b4e5;
+}
+
+.solutions-it-infrastructure .font-autodesk {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #0696d7;
+}
+
+.solutions-it-infrastructure .font-vmware {
+  font-family: "Georgia", serif;
+  font-weight: 900;
+  color: #5b2d82;
+  text-transform: lowercase;
+}
+
+.solutions-it-infrastructure .font-lenovo {
+  font-family: "Arial Black", sans-serif;
+  color: #e2231a;
+  text-transform: uppercase;
+}
+
+.solutions-it-infrastructure .font-sophos {
+  font-family: "Georgia", serif;
+  font-weight: 900;
+  color: #00508f;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+/* Footer Wrapper */
+.solutions-it-infrastructure .footer-wrapper {
+  margin-top: 80px;
+  width: 100%;
+}
+
+/* Fade-in transitions */
+.solutions-it-infrastructure .fade-in {
+  animation: fadeInEffect 0.5s ease forwards;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .solutions-it-infrastructure .frame-322 {
+    gap: 40px;
+  }
+  .solutions-it-infrastructure .frame-289 {
+    width: 260px;
+    padding: 32px 16px;
+  }
+  .solutions-it-infrastructure .container15 {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .solutions-it-infrastructure .container16 {
+    position: static;
+  }
+  .solutions-it-infrastructure .container17 {
+    width: 100%;
+  }
+  .solutions-it-infrastructure .section-global-logistics {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .solutions-it-infrastructure .container21 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .solutions-it-infrastructure .frame-322 {
+    flex-direction: column;
+  }
+  .solutions-it-infrastructure .frame-289 {
+    width: 100%;
+    position: static;
+    padding: 24px;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+  }
+  .solutions-it-infrastructure .s-o-l-u-t-i-o-n-s {
+    display: none;
+  }
+  .solutions-it-infrastructure .frame-288 {
+    flex-direction: row;
+    gap: 12px;
+    width: auto;
+  }
+  .solutions-it-infrastructure .sidebar-item {
+    padding: 12px 16px;
+    width: max-content;
+  }
+  .solutions-it-infrastructure .active-dot {
+    bottom: 4px;
+    right: 50%;
+    transform: translateX(50%);
+    top: auto;
+    width: 4px;
+    height: 4px;
+  }
+  .solutions-it-infrastructure .frame-461 {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .solutions-it-infrastructure .hero-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 360px;
+  }
+  .solutions-it-infrastructure .intro-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .solutions-it-infrastructure .group-319-svg {
+    width: 100%;
+    max-width: 320px;
+  }
+  .solutions-it-infrastructure .pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .solutions-it-infrastructure .hardware-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .solutions-it-infrastructure .frame-462 {
+    margin-top: 140px;
+    padding: 0 24px;
+  }
+  .solutions-it-infrastructure .frame-465 {
+    margin-top: 120px;
+    padding: 0 24px;
+  }
+  .solutions-it-infrastructure .pillars-grid,
+  .solutions-it-infrastructure .hardware-products-grid,
+  .solutions-it-infrastructure .container17 {
+    grid-template-columns: 1fr;
+  }
+  .solutions-it-infrastructure .frame-3 {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .solutions-it-infrastructure .advantages-visual-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}

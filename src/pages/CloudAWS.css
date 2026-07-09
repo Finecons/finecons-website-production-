@@ -1,0 +1,745 @@
+/* Cloud AWS Details Page Stylesheet */
+
+.cloud-aws,
+.cloud-aws * {
+  box-sizing: border-box;
+}
+
+.cloud-aws {
+  background: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background Gradients & Circles */
+.cloud-aws .rectangle-217 {
+  background: linear-gradient(
+      123.26deg,
+      rgba(228, 234, 255, 0) 45.126545429229736%,
+      rgba(38, 210, 222, 0.3) 90.87963700294495%
+    ),
+    linear-gradient(
+      223.8deg,
+      rgba(228, 234, 255, 1) 38.33858370780945%,
+      rgba(175, 175, 255, 1) 79.08464074134827%
+    );
+  width: 100%;
+  height: 820px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.cloud-aws .ellipse-17 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.09);
+  border-width: 52px;
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: -80px;
+  top: -124px;
+  z-index: 1;
+}
+
+.cloud-aws .ellipse-18 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.09);
+  border-width: 52px;
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: -10px;
+  top: -54px;
+  z-index: 1;
+}
+
+.cloud-aws .ellipse-19 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.05);
+  border-width: 52px;
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: 244px;
+  top: 306px;
+  z-index: 1;
+}
+
+.cloud-aws .ellipse-20 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.05);
+  border-width: 52px;
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: 314px;
+  top: 376px;
+  z-index: 1;
+}
+
+.cloud-aws .ellipse-192 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.05);
+  border-width: 52px;
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: 384px;
+  top: 434px;
+  z-index: 1;
+}
+
+.cloud-aws .ellipse-202 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgba(34, 35, 147, 0.05);
+  border-width: 52px;
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: 454px;
+  top: 504px;
+  z-index: 1;
+}
+
+/* Hero Section */
+.cloud-aws .frame-496 {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 180px auto 60px auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.cloud-aws .powered-by-aws-built-for-scale {
+  text-align: left;
+  font-family: var(
+    --display-desktop-font-family,
+    "Merriweather-SemiBold",
+    sans-serif
+  );
+  font-size: 44px;
+  line-height: 58px;
+  font-weight: 600;
+  position: relative;
+  width: 666px;
+}
+
+.cloud-aws .powered-by-aws-built-for-scale-span {
+  color: #000000;
+}
+
+.cloud-aws .powered-by-aws-built-for-scale-span2 {
+  color: #0e10ff;
+}
+
+.cloud-aws .group-294 {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Content Container */
+.cloud-aws .frame-508 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  z-index: 2;
+}
+
+/* About AWS Section */
+.cloud-aws .frame-498 {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 60px auto 80px auto;
+  padding: 0 48px;
+}
+
+.cloud-aws .frame-497 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.cloud-aws .f-i-n-e-c-o-n-s-aws {
+  color: #0e10ff;
+  text-align: left;
+  font-family: var(
+    --heading-sans-2-desktop-font-family,
+    "MerriweatherSans-Bold",
+    sans-serif
+  );
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  position: relative;
+  align-self: stretch;
+}
+
+.cloud-aws .our-aws-solutions {
+  text-align: left;
+  font-family: var(
+    --heading-serif-1-desktop-font-family,
+    "Merriweather-SemiBold",
+    sans-serif
+  );
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 600;
+  position: relative;
+  align-self: stretch;
+}
+
+.cloud-aws .our-aws-solutions-span {
+  color: #000000;
+}
+
+.cloud-aws .our-aws-solutions-span2 {
+  color: #0e10ff;
+}
+
+.cloud-aws .as-an-aws-advanced-partner-fine-cons-works-in-close-alignment-with-aws-best-practices-and-proven-frameworks-we-enable-organisations-to-confidently-adopt-cloud-technologies-with-structured-and-reliable-approaches-our-solutions-are-designed-to-optimize-performance-scalability-and-cost-efficiency-across-cloud-environments-security-and-compliance-are-embedded-at-every-stage-of-the-cloud-lifecycle-this-ensures-resilient-well-governed-and-future-ready-aws-workloads-for-our-customers {
+  color: #555555;
+  text-align: left;
+  font-family: var(
+    --body-regular-desktop-font-family,
+    "MerriweatherSans-Regular",
+    sans-serif
+  );
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  position: relative;
+  width: 622px;
+}
+
+.cloud-aws .group-380 {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Certifications Panel */
+.cloud-aws .group-381 {
+  width: 100%;
+  background: radial-gradient(
+      closest-side,
+      rgba(255, 255, 255, 0) 42.307692766189575%,
+      rgba(207, 245, 255, 0.15) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(228, 234, 255, 0.4) 60%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  backdrop-filter: blur(15.6px);
+  padding: 80px 0;
+  margin-bottom: 80px;
+  border-top: 1px solid rgba(14, 16, 255, 0.05);
+  border-bottom: 1px solid rgba(14, 16, 255, 0.05);
+}
+
+.cloud-aws .frame-503 {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.cloud-aws .frame-499 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.cloud-aws .a-w-s-c-e-r-t-i-f-i-c-a-t-e {
+  color: #0e10ff;
+  text-align: left;
+  font-family: var(
+    --heading-sans-2-desktop-font-family,
+    "MerriweatherSans-Bold",
+    sans-serif
+  );
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  position: relative;
+  align-self: stretch;
+}
+
+.cloud-aws .cloud-certifications-expertise {
+  text-align: left;
+  font-family: var(
+    --heading-serif-1-desktop-font-family,
+    "Merriweather-SemiBold",
+    sans-serif
+  );
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 600;
+  position: relative;
+  align-self: stretch;
+}
+
+.cloud-aws .cloud-certifications-expertise-span {
+  color: #0e10ff;
+}
+
+.cloud-aws .cloud-certifications-expertise-span2 {
+  color: #000000;
+}
+
+.cloud-aws .frame-502 {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  flex-shrink: 0;
+}
+
+.cloud-aws .frame-500,
+.cloud-aws .frame-501 {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(14, 16, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(14, 16, 255, 0.04);
+  width: 250px;
+  height: 250px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.cloud-aws .frame-500:hover,
+.cloud-aws .frame-501:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(14, 16, 255, 0.08);
+  border-color: #0e10ff;
+}
+
+.cloud-aws .aws-partner-advanced-1200-x-900-logo-65-f-93763-f-637-c-09-cd-04-a-0274-db-3-ebb-34-fb-2-b-349-d-1 {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Solutions & Services Grid */
+.cloud-aws .frame-506 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 80px auto;
+  padding: 0 48px;
+}
+
+.cloud-aws .frame-504 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.cloud-aws .w-h-a-t-w-e-d-o {
+  color: #0e10ff;
+  font-family: var(
+    --heading-sans-2-desktop-font-family,
+    "MerriweatherSans-Bold",
+    sans-serif
+  );
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.cloud-aws .aws-solutions-services {
+  font-family: var(
+    --heading-serif-1-desktop-font-family,
+    "Merriweather-SemiBold",
+    sans-serif
+  );
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.cloud-aws .aws-solutions-services-span {
+  color: #0e10ff;
+}
+
+.cloud-aws .aws-solutions-services-span2 {
+  color: #000000;
+}
+
+.cloud-aws .group-325 {
+  width: 100%;
+}
+
+.cloud-aws .frame-505 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  row-gap: 60px;
+  width: 100%;
+}
+
+.cloud-aws .group-298,
+.cloud-aws .group-299,
+.cloud-aws .group-300,
+.cloud-aws .group-301,
+.cloud-aws .group-302,
+.cloud-aws .group-303 {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(14, 16, 255, 0.05);
+  transition: all 0.3s ease;
+  padding: 24px;
+}
+
+.cloud-aws .group-298:hover,
+.cloud-aws .group-299:hover,
+.cloud-aws .group-300:hover,
+.cloud-aws .group-301:hover,
+.cloud-aws .group-302:hover,
+.cloud-aws .group-303:hover {
+  transform: translateY(-5px);
+  border-color: #0e10ff;
+  box-shadow: 0 15px 40px rgba(14, 16, 255, 0.06);
+}
+
+.cloud-aws .rectangle-314,
+.cloud-aws .rectangle-315,
+.cloud-aws .rectangle-316,
+.cloud-aws .rectangle-3142,
+.cloud-aws .rectangle-3152,
+.cloud-aws .rectangle-3162 {
+  border-radius: 8px;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.cloud-aws .cloud-migration-foundations,
+.cloud-aws .cloud-operations-governance,
+.cloud-aws .recovery-continuity,
+.cloud-aws .cloud-performance-optimisation,
+.cloud-aws .cloud-security-governance,
+.cloud-aws .cloud-cost-optimisation-fin-ops {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(
+    --sub-heading-sans-1-desktop-font-family,
+    "MerriweatherSans-Bold",
+    sans-serif
+  );
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks,
+.cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks2,
+.cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks3,
+.cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks4,
+.cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks5,
+.cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks6 {
+  color: #555555;
+  text-align: left;
+  font-family: var(
+    --body-regular-desktop-font-family,
+    "MerriweatherSans-Regular",
+    sans-serif
+  );
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* Success Stories Section */
+.cloud-aws .frame-507 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 100px auto;
+  padding: 0 48px;
+}
+
+.cloud-aws .frame-304 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.cloud-aws .a-w-s-u-s-e-c-a-s-e-s {
+  color: #0e10ff;
+  font-family: var(
+    --heading-sans-2-desktop-font-family,
+    "MerriweatherSans-Bold",
+    sans-serif
+  );
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.cloud-aws .cloud-success-stories {
+  font-family: var(
+    --heading-serif-1-desktop-font-family,
+    "Merriweather-SemiBold",
+    sans-serif
+  );
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.cloud-aws .cloud-success-stories-span {
+  color: #0e10ff;
+}
+
+.cloud-aws .cloud-success-stories-span2 {
+  color: #000000;
+}
+
+.cloud-aws .use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.cloud-aws .use-case-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(14, 16, 255, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+  transition: all 0.3s ease;
+}
+
+.cloud-aws .use-case-card:hover {
+  transform: translateY(-5px);
+  border-color: #0e10ff;
+  box-shadow: 0 15px 40px rgba(14, 16, 255, 0.06);
+}
+
+.cloud-aws .use-case-logo-container {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px dashed rgba(14, 16, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.cloud-aws .use-case-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cloud-aws .use-case-title {
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: #191c1e;
+  text-align: center;
+  margin: 12px 0 6px 0;
+}
+
+.cloud-aws .view-use-case-btn {
+  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  border-radius: 130px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(14, 16, 255, 0.15);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.cloud-aws .use-case-card:hover .view-use-case-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cloud-aws .use-case-card:hover .view-use-case-btn:hover {
+  box-shadow: 0px 6px 20px rgba(14, 16, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.cloud-aws .view-use-case-btn .btn-text {
+  color: #ffffff;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Footer Wrapper */
+.cloud-aws .footer-wrapper {
+  background: #534eeb;
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .cloud-aws .frame-505 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .cloud-aws .use-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .cloud-aws .frame-496 {
+    flex-direction: column;
+    margin-top: 140px;
+    gap: 40px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .cloud-aws .powered-by-aws-built-for-scale {
+    font-size: 38px;
+    line-height: 52px;
+    text-align: center;
+  }
+  .cloud-aws .group-294 {
+    max-width: 100%;
+  }
+  .cloud-aws .frame-498 {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .cloud-aws .frame-497 {
+    align-items: center;
+  }
+  .cloud-aws .as-an-aws-advanced-partner-fine-cons-works-in-close-alignment-with-aws-best-practices-and-proven-frameworks-we-enable-organisations-to-confidently-adopt-cloud-technologies-with-structured-and-reliable-approaches-our-solutions-are-designed-to-optimize-performance-scalability-and-cost-efficiency-across-cloud-environments-security-and-compliance-are-embedded-at-every-stage-of-the-cloud-lifecycle-this-ensures-resilient-well-governed-and-future-ready-aws-workloads-for-our-customers {
+    text-align: center;
+  }
+  .cloud-aws .group-380 {
+    max-width: 100%;
+  }
+  .cloud-aws .frame-503 {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .cloud-aws .frame-499 {
+    align-items: center;
+    text-align: center;
+  }
+  .cloud-aws .frame-502 {
+    justify-content: center;
+    width: 100%;
+  }
+  .cloud-aws .frame-506 {
+    padding: 0 24px;
+  }
+  .cloud-aws .frame-507 {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-aws .frame-505 {
+    grid-template-columns: 1fr;
+  }
+  .cloud-aws .use-cases-grid {
+    grid-template-columns: 1fr;
+  }
+  .cloud-aws .frame-502 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cloud-aws .our-aws-solutions,
+  .cloud-aws .cloud-certifications-expertise,
+  .cloud-aws .aws-solutions-services,
+  .cloud-aws .cloud-success-stories {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}

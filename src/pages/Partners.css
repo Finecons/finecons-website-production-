@@ -1,0 +1,817 @@
+/* Partners.css */
+.partnerships,
+.partnerships * {
+    box-sizing: border-box;
+}
+
+.partnerships {
+    background: #ffffff;
+    color: #000000;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: "MerriweatherSans-Regular", sans-serif;
+}
+
+/* Background Ellipses styling */
+.partnerships .ellipse-17 {
+    border-radius: 50%;
+    border: 52px solid rgba(34, 35, 147, 0.09);
+    width: 324px;
+    height: 324px;
+    position: absolute;
+    left: -80px;
+    top: -124px;
+    pointer-events: none;
+}
+
+.partnerships .ellipse-18 {
+    border-radius: 50%;
+    border: 52px solid rgba(34, 35, 147, 0.09);
+    width: 184px;
+    height: 184px;
+    position: absolute;
+    left: -10px;
+    top: -54px;
+    pointer-events: none;
+}
+
+.partnerships .ellipse-19 {
+    border-radius: 50%;
+    border: 52px solid rgba(34, 35, 147, 0.05);
+    width: 324px;
+    height: 324px;
+    position: absolute;
+    left: 244px;
+    top: 306px;
+    pointer-events: none;
+}
+
+.partnerships .ellipse-20 {
+    border-radius: 50%;
+    border: 52px solid rgba(34, 35, 147, 0.05);
+    width: 184px;
+    height: 184px;
+    position: absolute;
+    left: 314px;
+    top: 376px;
+    pointer-events: none;
+}
+
+.partnerships .ellipse-192 {
+    border-radius: 50%;
+    border: 52px solid rgba(34, 35, 147, 0.05);
+    width: 324px;
+    height: 324px;
+    position: absolute;
+    left: 384px;
+    top: 434px;
+    pointer-events: none;
+}
+
+.partnerships .ellipse-202 {
+    border-radius: 50%;
+    border: 52px solid rgba(34, 35, 147, 0.05);
+    width: 184px;
+    height: 184px;
+    position: absolute;
+    left: 454px;
+    top: 504px;
+    pointer-events: none;
+}
+
+/* Hero Section */
+.partners-hero {
+    background: linear-gradient(123.26deg,
+            rgba(228, 234, 255, 0) 45%,
+            rgba(38, 210, 222, 0.3) 90%),
+        linear-gradient(223.8deg,
+            rgba(228, 234, 255, 1) 38%,
+            rgba(175, 175, 255, 1) 79%);
+    width: 100%;
+    height: 820px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.partners-hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.partners-hero-content {
+    flex: 1.2;
+    max-width: 700px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.partners-hero-content .frame-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+.building-success-through-partnerships {
+    font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 56px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0;
+}
+
+.building-success-through-partnerships-span2 {
+    color: #0e10ff;
+}
+
+.about-hero-visual {
+    flex-shrink: 0;
+    width: 420px;
+    height: 380px;
+    position: relative;
+    transition: transform 0.5s ease;
+    overflow: visible;
+}
+
+.about-hero-visual:hover {
+    transform: scale(1.03);
+}
+
+.ellipse-4,
+.ellipse-4 * {
+    box-sizing: border-box;
+}
+
+.ellipse-4 {
+    position: absolute;
+    width: 269px;
+    height: 250px;
+    left: 10px;
+    top: 75px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.ellipse-2,
+.ellipse-2 * {
+    box-sizing: border-box;
+}
+
+.ellipse-2 {
+    position: absolute;
+    width: 234px;
+    height: 323px;
+    left: 45px;
+    top: 25px;
+    z-index: 2;
+    overflow: visible;
+}
+
+.ellipse-3,
+.ellipse-3 * {
+    box-sizing: border-box;
+}
+
+.ellipse-3 {
+    position: absolute;
+    width: 316px;
+    height: 350px;
+    left: 100px;
+    top: 15px;
+    z-index: 3;
+    overflow: visible;
+    object-fit: cover;
+}
+
+.group-387 {
+    flex: 0.8;
+    max-width: 480px;
+    transition: transform 0.5s ease;
+}
+
+/* Blob visual hover effect for partners hero */
+.partnerships .about-hero-visual:hover {
+    transform: scale(1.03);
+}
+
+/* Page Content Container */
+.partners-content-container {
+    max-width: 1280px;
+    margin: 120px auto;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+}
+
+/* Powering Section */
+.powering-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.powering-content {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.powering-title {
+    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 48px;
+    line-height: 1.25;
+    font-weight: 600;
+    margin: 0;
+}
+
+.powering-title-span {
+    color: #000000;
+}
+
+.powering-title-span2 {
+    color: #0e10ff;
+}
+
+.powering-desc {
+    color: #444444;
+    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.powering-image-wrapper {
+    flex: 0.9;
+    height: 480px;
+    position: relative;
+}
+
+.powering-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Overview Section */
+.overview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    text-align: center;
+}
+
+.overview-header {
+    max-width: 1014px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.o-v-e-r-v-i-e-w {
+    color: #000000;
+    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.partner-ecosystem {
+    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.partner-ecosystem-span {
+    color: #0e10ff;
+}
+
+.partner-ecosystem-span2 {
+    color: #000000;
+}
+
+.overview-desc {
+    color: #444444;
+    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    width: 100%;
+}
+
+.ecosystem-card {
+    background: #ffffff;
+    border: 1.5px solid #adaefa;
+    border-radius: 16px;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    min-height: 240px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(14, 16, 255, 0.08);
+    border-color: #0e10ff;
+}
+
+.ecosystem-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ecf5fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0e10ff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ecosystem-card:hover .ecosystem-icon-wrapper {
+    background: #0e10ff;
+    color: #ffffff;
+}
+
+.ecosystem-card-title {
+    color: #000000;
+    font-family: var(--body-regular-2-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* How We Work Section */
+.how-we-work-section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+}
+
+.how-we-work-header {
+    max-width: 1139px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.h-o-w-w-e-w-o-r-k {
+    color: #000000;
+    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.work-process-title {
+    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.work-process-title-span {
+    color: #000000;
+}
+
+.work-process-title-span2 {
+    color: #0e10ff;
+}
+
+.process-timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 40px 0;
+}
+
+/* Connecting Line */
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 142px;
+    /* Center of the 204px circle */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+    z-index: 1;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    gap: 28px;
+}
+
+.step-icon-wrapper {
+    width: 204px;
+    height: 204px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid rgba(32, 183, 230, 0.44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    position: relative;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    color: #0e10ff;
+}
+
+.process-step:hover .step-icon-wrapper {
+    transform: translateY(-6px);
+    border-color: #0e10ff;
+    box-shadow: 0 15px 35px rgba(14, 16, 255, 0.08);
+}
+
+.step-number {
+    position: absolute;
+    top: -12px;
+    background: #0e10ff;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(14, 16, 255, 0.3);
+}
+
+.step-title {
+    font-family: var(--body-regular-2-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #000000;
+    max-width: 220px;
+}
+
+.ellipse-30,
+.ellipse-31,
+.ellipse-32,
+.ellipse-33 {
+    background: #0e10ff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 134px;
+    /* Center aligned vertically with circles */
+    position: relative;
+    z-index: 2;
+}
+
+/* Our Partners Logos Grid Section */
+.partners-logos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.partner-logo-card {
+    background: #ffffff;
+    border: 1.5px solid #adaefa;
+    border-radius: 16px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+}
+
+.partner-logo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(14, 16, 255, 0.08);
+    border-color: #0e10ff;
+}
+
+/* Premium Typographic brand logo designs */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+    font-weight: 700;
+}
+
+.brand-logo .logo-icon {
+    font-size: 24px;
+}
+
+.brand-logo .logo-text {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.font-azure {
+    color: #0089d6;
+}
+
+.font-dell {
+    color: #0076c0;
+    font-family: "Merriweather-SemiBold", serif;
+    font-style: italic;
+}
+
+.font-cisco {
+    color: #03b6e8;
+    letter-spacing: -2px;
+}
+
+.font-aws {
+    color: #ff9900;
+    font-family: "Merriweather-SemiBold", serif;
+}
+
+.font-hp {
+    color: #0096d6;
+    font-weight: 800;
+}
+
+.font-vmware {
+    color: #f58025;
+    font-style: italic;
+}
+
+.font-lenovo {
+    color: #e1251b;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+}
+
+.font-sophos {
+    color: #00508f;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+}
+
+.font-autodesk {
+    color: #0696d7;
+}
+
+.font-adobe {
+    color: #ff0000;
+}
+
+.font-acer {
+    color: #83b81a;
+    text-transform: lowercase !important;
+}
+
+.font-cpplus {
+    color: #da251c;
+    font-weight: 800;
+}
+
+.microsoft-azure {
+    color: #003050;
+}
+
+.dell {
+    color: #003050;
+}
+
+.cisco {
+    color: #002244;
+}
+
+.aws {
+    color: #232f3e;
+}
+
+.hp {
+    color: #002244;
+}
+
+.vmware {
+    color: #333333;
+}
+
+.lenovo {
+    color: #000000;
+}
+
+.sophos {
+    color: #00508f;
+}
+
+.autodesk {
+    color: #222222;
+}
+
+.adobe {
+    color: #222222;
+}
+
+.acer {
+    color: #333333;
+}
+
+.cp-plus {
+    color: #111111;
+}
+
+/* Partners Footer Wrap */
+.partners-footer-wrapper {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    background-color: #534eeb;
+}
+
+.partners-footer-wrapper .rectangle-266 {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    translate: none !important;
+}
+
+.partners-footer-wrapper .mask-group {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    translate: -50% 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.partners-footer-wrapper .image-3 {
+    position: absolute !important;
+    top: 50px !important;
+    left: 127px !important;
+}
+
+.partners-footer-wrapper .frame-424 {
+    position: absolute !important;
+    top: 220px !important;
+    left: auto !important;
+    right: 127px !important;
+}
+
+.partners-footer-wrapper .frame-423 {
+    position: absolute !important;
+    top: 220px !important;
+    left: 145px !important;
+}
+
+.partners-footer-wrapper .copyright-finecons-2026 {
+    position: absolute !important;
+    top: 460px !important;
+    left: 50% !important;
+    translate: -50% 0 !important;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .partners-hero {
+        height: auto;
+        min-height: auto;
+        margin-top: 120px !important;
+        padding: 0 !important;
+    }
+
+    .partners-hero-inner {
+        flex-direction: column;
+        padding-top: 0 !important;
+        gap: 48px;
+        text-align: center;
+    }
+
+    .partners-hero-content {
+        height: auto;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .partners-hero-content .frame-2 {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .building-success-through-partnerships {
+        font-size: 48px;
+    }
+
+    .partnerships .ellipse-4 {
+        position: relative !important;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+        transform: rotate(-47.484deg) !important;
+        margin: 40px auto 0 auto;
+    }
+
+    .powering-section {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .powering-image-wrapper {
+        width: 100%;
+        height: 380px;
+    }
+
+    .ecosystem-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-timeline {
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .process-timeline::before {
+        display: none;
+        /* Hide line when stacked */
+    }
+
+    .ellipse-30,
+    .ellipse-31,
+    .ellipse-32,
+    .ellipse-33 {
+        display: none;
+        /* Hide timeline step dots when stacked vertically */
+    }
+
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logos-grid {
+        grid-template-columns: 1fr;
+    }
+}
