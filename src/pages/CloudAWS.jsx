@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import './CloudAWS.css';
 
 // SVG Chevron icon
@@ -253,9 +253,11 @@ const CloudAWS = ({ navigateTo }) => {
       </div>
 
       {/* Footer Wrapper */}
-      <div className="footer-wrapper">
+      <div className="footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
 
       {/* Use Case Modal */}
       {modalOpen && (

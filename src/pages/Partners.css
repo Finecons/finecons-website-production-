@@ -725,6 +725,102 @@
     translate: -50% 0 !important;
 }
 
+/* Licensing Section */
+.partners-licensing-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.partners-licensing-image-wrapper {
+    flex: 1;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s ease;
+}
+
+.partners-licensing-image-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.partners-licensing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.partners-licensing-content {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.l-i-c-e-n-s-i-n-g {
+    color: #000000;
+    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.partners-licensing-title {
+    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 44px;
+    line-height: 1.25;
+    font-weight: 600;
+    margin: 0;
+    color: #000000;
+}
+
+.partners-licensing-title-blue {
+    color: #0e10ff;
+}
+
+.partners-licensing-desc {
+    color: #444444;
+    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.partners-licensing-button {
+    background: linear-gradient(90deg, #0e10ff 0%, #b90f7d 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px 48px;
+    font-family: var(--body-regular-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(14, 16, 255, 0.2);
+}
+
+.partners-licensing-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(14, 16, 255, 0.35);
+}
+
+.partners-licensing-button:active {
+    transform: translateY(1px);
+}
+
+/* Hide mobile pagination dots by default on desktop */
+.mobile-only-rects {
+    display: none !important;
+}
+
 /* Responsiveness */
 @media (max-width: 1024px) {
     .partners-hero {
@@ -778,6 +874,16 @@
         height: 380px;
     }
 
+    .partners-licensing-section {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .partners-licensing-image-wrapper {
+        width: 100%;
+        height: 380px;
+    }
+
     .ecosystem-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -807,11 +913,133 @@
 }
 
 @media (max-width: 768px) {
+    .partners-hero {
+        margin-top: 0px !important;
+        padding-top: 120px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .partners-hero-inner {
+        flex-direction: column !important;
+        padding: 0 28px 48px 28px !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 36px !important;
+    }
+
+    .partners-hero-content {
+        align-items: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
+        padding: 0 !important;
+        height: auto !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+    }
+
+    .desktop-only-rects {
+        display: none !important;
+    }
+
+    .mobile-only-rects {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 32px auto 0 auto !important;
+        position: static !important;
+        gap: 6px !important;
+    }
+
+    .building-success-through-partnerships {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
+        text-align: left !important;
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .building-success-through-partnerships span {
+        display: inline !important;
+    }
+
+    /* Center and scale the image and SVG blobs */
+    .about-hero-visual {
+        width: 420px !important;
+        height: 380px !important;
+        transform: scale(0.8) !important;
+        transform-origin: center center !important;
+        margin: 0 auto -20px auto !important;
+        align-self: center !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+    }
+
+    .partnerships .ellipse-4 {
+        position: absolute !important;
+        left: 10px !important;
+        top: 75px !important;
+        transform: rotate(-47.484deg) !important;
+        margin: 0 !important;
+    }
+
+    /* Hide top-left ellipses on mobile as requested */
+    .partnerships .ellipse-17,
+    .partnerships .ellipse-18 {
+        display: none !important;
+    }
+
+    /* Reposition text-background ellipses on mobile */
+    .partnerships .ellipse-19 {
+        left: 80px !important;
+        top: 160px !important;
+    }
+
+    .partnerships .ellipse-20 {
+        left: 150px !important;
+        top: 230px !important;
+    }
+
+    .partnerships .ellipse-192 {
+        left: 160px !important;
+        top: 240px !important;
+    }
+
+    .partnerships .ellipse-202 {
+        left: 230px !important;
+        top: 310px !important;
+    }
+
     .ecosystem-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .logos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+
+    .partners-licensing-title {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
+    }
+
+    .l-i-c-e-n-s-i-n-g {
+        font-size: 20px !important;
+    }
+
+    .partners-licensing-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .building-success-through-partnerships {
+        font-size: 28px !important;
+    }
+
+    .about-hero-visual {
+        transform: scale(0.68) !important;
+        margin: -40px auto -60px auto !important;
     }
 }

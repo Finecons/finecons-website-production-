@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import './Partners.css';
 
 const Partners = ({ navigateTo }) => {
@@ -29,7 +29,7 @@ const Partners = ({ navigateTo }) => {
               <span>Building Success Through </span>
               <span className="building-success-through-partnerships-span2">Partnerships</span>
             </h1>
-            <div className="frame-2">
+            <div className="frame-2 desktop-only-rects">
               <div className="inactive-rect"></div>
               <div className="inactive-rect"></div>
               <div className="active-rect"></div>
@@ -71,6 +71,18 @@ const Partners = ({ navigateTo }) => {
                 />
               </svg>
             </div>
+          </div>
+
+          <div className="frame-2 mobile-only-rects">
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="active-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
           </div>
         </div>
       </div>
@@ -152,6 +164,25 @@ const Partners = ({ navigateTo }) => {
               </div>
               <div className="ecosystem-card-title">Emerging Technology Innovators</div>
             </div>
+          </div>
+        </div>
+
+        {/* Licensing Section */}
+        <div className="partners-licensing-section">
+          <div className="partners-licensing-image-wrapper">
+            <img className="partners-licensing-image" src="/assets/official_license.png" alt="Official Business License" />
+          </div>
+          <div className="partners-licensing-content">
+            <div className="l-i-c-e-n-s-i-n-g">LICENSING</div>
+            <h2 className="partners-licensing-title">
+              Accelerating Digital Transformation Through Collaborative Technology <span className="partners-licensing-title-blue">Licensing</span>
+            </h2>
+            <p className="partners-licensing-desc">
+              At the core of our growth strategy lies a commitment to driving digital transformation through strong, strategic technology partnerships. By forging robust licensing agreements with leading technology providers, we are able to integrate cutting-edge solutions into our offerings, ensuring our clients benefit from the latest innovations. These partnerships not only enhance our technological capabilities but also enable us to deliver greater value, efficiency, and competitive advantage in an increasingly digital marketplace.
+            </p>
+            <button className="partners-licensing-button" onClick={() => navigateTo('cloud-licensing')}>
+              View Details
+            </button>
           </div>
         </div>
 
@@ -311,9 +342,11 @@ const Partners = ({ navigateTo }) => {
       </div>
 
       {/* Footer Wrapper */}
-      <div className="partners-footer-wrapper">
+      <div className="partners-footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
     </div>
   );
 };

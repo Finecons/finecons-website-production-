@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import azureIcon from '../assets/azure-icon.svg';
 import './CloudAzure.css';
 
@@ -319,9 +319,11 @@ const CloudAzure = ({ navigateTo }) => {
       </div>
 
       {/* Footer Wrapper */}
-      <div className="footer-wrapper">
+      <div className="footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
 
       {/* Use Case Modal */}
       {modalOpen && (

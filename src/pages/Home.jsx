@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterDesktop, FooterMobile } from '../components/Footer';
 
 const IconBadge = ({ icon }) => {
   const getIconPaths = () => {
@@ -33,9 +33,28 @@ const IconBadge = ({ icon }) => {
             <line x1="6" y1="18" x2="6.01" y2="18" />
           </>
         );
+      case 'messages':
+      case 'chat':
+        return (
+          <>
+            <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z" />
+            <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+          </>
+        );
       case 'cloud':
         return (
           <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+        );
+      case 'users':
+      case 'people':
+      case 'managed':
+        return (
+          <>
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </>
         );
       default:
         return null;
@@ -91,6 +110,8 @@ const Home = ({ navigateTo }) => {
   const [activeTouchCard, setActiveTouchCard] = React.useState(null);
   const [currentIndustryIndex, setCurrentIndustryIndex] = React.useState(0);
   const [touchedIndustry, setTouchedIndustry] = React.useState(null);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = React.useState(0);
+  const [touchedTestimonial, setTouchedTestimonial] = React.useState(false);
   const containerRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -124,6 +145,22 @@ const Home = ({ navigateTo }) => {
       container.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  React.useEffect(() => {
+    if (touchedIndustry !== null) return;
+    const interval = setInterval(() => {
+      setCurrentIndustryIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [touchedIndustry]);
+
+  React.useEffect(() => {
+    if (touchedTestimonial) return;
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prev) => (prev === 2 ? 0 : prev + 1));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [touchedTestimonial]);
 
   const handleItemClick = (index) => {
     const container = containerRef.current;
@@ -171,7 +208,7 @@ const Home = ({ navigateTo }) => {
       </div>
       <div className="frame-380">
         <div className="frame-379">
-          <div className="s-o-l-u-t-i-o-n-s">S O L U T I O N S</div>
+          <div className="s-o-l-u-t-i-o-n-s">S E R V I C E S</div>
           <div className="our-expertise">
             <span>
               <span className="our-expertise-span">Our </span>
@@ -179,83 +216,95 @@ const Home = ({ navigateTo }) => {
             </span>
           </div>
         </div>
-        <div className="frame-378">
-          <div className="frame-377">
-            <div className="capabilities-that-build-confidence">
-              Capabilities That Build
-              <br />
-              Confidence
+        <div className="capabilities-that-build-confidence">
+          Capabilities That Build Our
+          <br />
+          Confidence
+        </div>
+        <div className="frame-371">
+          {/* Card 1: Cyber security */}
+          <div
+            className={`solution-card white-card ${activeTouchCard === 0 ? 'active-touch' : ''}`}
+            onTouchStart={() => setActiveTouchCard(0)}
+            onTouchEnd={() => setActiveTouchCard(null)}
+            onTouchCancel={() => setActiveTouchCard(null)}
+          >
+            <IconBadge icon="shield" />
+            <div className="card-text-wrapper">
+              <h4 className="card-title">Cyber security</h4>
+              <p className="card-desc">
+                Integrated security Services that protect systems, networks, and data from evolving cyber and operational risks.
+              </p>
             </div>
-            <button className="see-all-solutions-btn">See All Solutions</button>
+            <a href="#learn-more" className="card-link">Learn More →</a>
           </div>
-          <div className="frame-371">
-            {/* Card 1: Cyber security */}
-            <div 
-              className={`solution-card white-card ${activeTouchCard === 0 ? 'active-touch' : ''}`}
-              onTouchStart={() => setActiveTouchCard(0)}
-              onTouchEnd={() => setActiveTouchCard(null)}
-              onTouchCancel={() => setActiveTouchCard(null)}
-            >
-              <IconBadge icon="shield" />
-              <div className="card-text-wrapper">
-                <h4 className="card-title">Cyber security</h4>
-                <p className="card-desc">
-                  Integrated security solutions that protect systems, networks, and data from evolving cyber and operational risks.
-                </p>
-              </div>
-              <a href="#learn-more" className="card-link">Learn More →</a>
-            </div>
 
-            {/* Card 2: Networking */}
-            <div 
-              className={`solution-card white-card ${activeTouchCard === 1 ? 'active-touch' : ''}`}
-              onTouchStart={() => setActiveTouchCard(1)}
-              onTouchEnd={() => setActiveTouchCard(null)}
-              onTouchCancel={() => setActiveTouchCard(null)}
-            >
-              <IconBadge icon="network" />
-              <div className="card-text-wrapper">
-                <h4 className="card-title">Networking</h4>
-                <p className="card-desc">
-                  Secure and high-performance networks that enable seamless connectivity across offices, campuses, and distributed locations.
-                </p>
-              </div>
-              <a href="#learn-more" className="card-link">Learn More →</a>
+          {/* Card 2: Physical Security & Networking */}
+          <div
+            className={`solution-card white-card ${activeTouchCard === 1 ? 'active-touch' : ''}`}
+            onTouchStart={() => setActiveTouchCard(1)}
+            onTouchEnd={() => setActiveTouchCard(null)}
+            onTouchCancel={() => setActiveTouchCard(null)}
+          >
+            <IconBadge icon="network" />
+            <div className="card-text-wrapper">
+              <h4 className="card-title">Physical Security & Networking</h4>
+              <p className="card-desc">
+                Secure and high-performance networks that enable seamless connectivity across offices, campuses, and distributed locations.
+              </p>
             </div>
+            <a href="#learn-more" className="card-link">Learn More →</a>
+          </div>
 
-            {/* Card 3: Smart IT Infrastructure */}
-            <div 
-              className={`solution-card white-card ${activeTouchCard === 2 ? 'active-touch' : ''}`}
-              onTouchStart={() => setActiveTouchCard(2)}
-              onTouchEnd={() => setActiveTouchCard(null)}
-              onTouchCancel={() => setActiveTouchCard(null)}
-            >
-              <IconBadge icon="server" />
-              <div className="card-text-wrapper">
-                <h4 className="card-title">Smart IT Infrastructure</h4>
-                <p className="card-desc">
-                  Design and deployment of reliable, scalable IT environments that support core business applications and data needs.
-                </p>
-              </div>
-              <a href="#learn-more" className="card-link">Learn More →</a>
+          {/* Card 3: Smart IT Infrastructure */}
+          <div
+            className={`solution-card white-card ${activeTouchCard === 2 ? 'active-touch' : ''}`}
+            onTouchStart={() => setActiveTouchCard(2)}
+            onTouchEnd={() => setActiveTouchCard(null)}
+            onTouchCancel={() => setActiveTouchCard(null)}
+          >
+            <IconBadge icon="messages" />
+            <div className="card-text-wrapper">
+              <h4 className="card-title">Smart IT Infrastructure</h4>
+              <p className="card-desc">
+                Design and deployment of reliable, scalable IT environments that support core business applications and data needs.
+              </p>
             </div>
+            <a href="#learn-more" className="card-link">Learn More →</a>
+          </div>
 
-            {/* Card 4: Cloud Solutions */}
-            <div 
-              className={`solution-card white-card ${activeTouchCard === 3 ? 'active-touch' : ''}`}
-              onTouchStart={() => setActiveTouchCard(3)}
-              onTouchEnd={() => setActiveTouchCard(null)}
-              onTouchCancel={() => setActiveTouchCard(null)}
-            >
-              <IconBadge icon="cloud" />
-              <div className="card-text-wrapper">
-                <h4 className="card-title">Cloud Solutions</h4>
-                <p className="card-desc">
-                  Cloud adoption, migration, and optimization services that help organizations scale with agility and control.
-                </p>
-              </div>
-              <a href="#learn-more" className="card-link">Learn More →</a>
+          {/* Card 4: Cloud Services */}
+          <div
+            className={`solution-card white-card ${activeTouchCard === 3 ? 'active-touch' : ''}`}
+            onTouchStart={() => setActiveTouchCard(3)}
+            onTouchEnd={() => setActiveTouchCard(null)}
+            onTouchCancel={() => setActiveTouchCard(null)}
+          >
+            <IconBadge icon="cloud" />
+            <div className="card-text-wrapper">
+              <h4 className="card-title">Cloud Services</h4>
+              <p className="card-desc">
+                Cloud adoption, migration, and optimization services that help organizations scale with agility and control.
+              </p>
             </div>
+            <a href="#learn-more" className="card-link">Learn More →</a>
+          </div>
+
+          {/* Card 5: Managed Services */}
+          <div
+            className={`solution-card white-card ${activeTouchCard === 4 ? 'active-touch' : ''}`}
+            onTouchStart={() => setActiveTouchCard(4)}
+            onTouchEnd={() => setActiveTouchCard(null)}
+            onTouchCancel={() => setActiveTouchCard(null)}
+          >
+            <IconBadge icon="users" />
+            <div className="card-text-wrapper">
+              <h4 className="card-title">Managed Services</h4>
+              <p className="card-desc">
+                Proactive monitoring, support, and maintenance services that ensure IT environments run smoothly and efficiently.
+              </p>
+            </div>
+            <a href="#learn-more" className="card-link">Learn More →</a>
           </div>
         </div>
       </div>
@@ -566,17 +615,17 @@ const Home = ({ navigateTo }) => {
         </div>
         <div className="frame-401">
           {/* Carousel navigation arrows - only displayed on mobile */}
-          <button 
-            className="carousel-arrow left-arrow" 
+          <button
+            className="carousel-arrow left-arrow"
             onClick={() => setCurrentIndustryIndex(prev => prev === 0 ? 1 : 0)}
             aria-label="Previous Slide"
           >
             ←
           </button>
-          
+
           <div className="frame-399">
             {/* Manufacturing Card */}
-            <div 
+            <div
               className={`frame-395 ${currentIndustryIndex === 0 ? 'active-slide' : 'hidden-slide'} ${touchedIndustry === 'manufacturing' ? 'active-touch' : ''}`}
               onTouchStart={() => setTouchedIndustry('manufacturing')}
               onTouchEnd={() => setTouchedIndustry(null)}
@@ -596,9 +645,9 @@ const Home = ({ navigateTo }) => {
                 </div>
               </div>
             </div>
-            
+
             {/* IT & ITES Card */}
-            <div 
+            <div
               className={`frame-398 ${currentIndustryIndex === 1 ? 'active-slide' : 'hidden-slide'} ${touchedIndustry === 'it-ites' ? 'active-touch' : ''}`}
               onTouchStart={() => setTouchedIndustry('it-ites')}
               onTouchEnd={() => setTouchedIndustry(null)}
@@ -619,9 +668,9 @@ const Home = ({ navigateTo }) => {
               </div>
             </div>
           </div>
-          
-          <button 
-            className="carousel-arrow right-arrow" 
+
+          <button
+            className="carousel-arrow right-arrow"
             onClick={() => setCurrentIndustryIndex(prev => prev === 1 ? 0 : 1)}
             aria-label="Next Slide"
           >
@@ -657,7 +706,12 @@ const Home = ({ navigateTo }) => {
         <div className="group-356">
           <div className="rectangle-294"></div>
           <div className="frame-406">
-            <div className="group-271">
+            <div
+              className={`group-271 ${currentTestimonialIndex === 0 ? 'active-slide' : 'hidden-slide'}`}
+              onTouchStart={() => setTouchedTestimonial(true)}
+              onTouchEnd={() => setTouchedTestimonial(false)}
+              onTouchCancel={() => setTouchedTestimonial(false)}
+            >
               <div className="rectangle-295"></div>
               <img className="rectangle-238" src="/assets/rectangle-2380.png" alt="img" />
               <div className="frame-404">
@@ -672,7 +726,12 @@ const Home = ({ navigateTo }) => {
                 </div>
               </div>
             </div>
-            <div className="group-273">
+            <div
+              className={`group-273 ${currentTestimonialIndex === 1 ? 'active-slide' : 'hidden-slide'}`}
+              onTouchStart={() => setTouchedTestimonial(true)}
+              onTouchEnd={() => setTouchedTestimonial(false)}
+              onTouchCancel={() => setTouchedTestimonial(false)}
+            >
               <div className="rectangle-2952"></div>
               <img className="rectangle-2382" src="/assets/rectangle-2381.png" alt="img" />
               <div className="frame-4042">
@@ -687,7 +746,12 @@ const Home = ({ navigateTo }) => {
                 </div>
               </div>
             </div>
-            <div className="testimonial-card-3">
+            <div
+              className={`testimonial-card-3 ${currentTestimonialIndex === 2 ? 'active-slide' : 'hidden-slide'}`}
+              onTouchStart={() => setTouchedTestimonial(true)}
+              onTouchEnd={() => setTouchedTestimonial(false)}
+              onTouchCancel={() => setTouchedTestimonial(false)}
+            >
               <div className="rectangle-2953"></div>
               <img className="rectangle-2383" src="/assets/rectangle-2380.png" alt="img" />
               <div className="frame-4043">
@@ -702,17 +766,20 @@ const Home = ({ navigateTo }) => {
                 </div>
               </div>
             </div>
-            <div className="frame-400">
-              <div className="ellipse-10"></div>
-              <div className="ellipse-11"></div>
+            <div className="frame-400 testimonials-dots">
+              <div className={`ellipse-10 ${currentTestimonialIndex === 0 ? 'active-dot' : ''}`} onClick={() => setCurrentTestimonialIndex(0)}></div>
+              <div className={`ellipse-11 ${currentTestimonialIndex === 1 ? 'active-dot' : ''}`} onClick={() => setCurrentTestimonialIndex(1)}></div>
+              <div className={`ellipse-12-dot ${currentTestimonialIndex === 2 ? 'active-dot' : ''}`} onClick={() => setCurrentTestimonialIndex(2)}></div>
               <div className="rectangle-287"></div>
             </div>
           </div>
         </div>
       </div>
-      <div className="footer-wrapper">
-        <Footer />
+      {/* Footer: desktop wrapper vs mobile standalone */}
+      <div className="footer-wrapper footer-desktop-only">
+        <FooterDesktop />
       </div>
+      <FooterMobile />
       <div className="ellipse-12"></div>
     </div>
   );

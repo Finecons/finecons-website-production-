@@ -257,6 +257,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
+
     .solutions-card-detail:nth-child(1),
     .solutions-card-detail:nth-child(2),
     .solutions-card-detail:nth-child(3),
@@ -572,6 +573,11 @@
   }
 
   /* Footer Wrapper Specificity Overrides for Solutions page context */
+  .footer-wrapper {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
   .footer-wrapper .rectangle-266 {
     position: absolute !important;
     top: 0 !important;
@@ -593,28 +599,70 @@
 
   .footer-wrapper .image-3 {
     position: absolute !important;
-    top: 50px !important;
-    left: 127px !important;
+    top: 30px !important;
+    left: 80px !important;
+    width: 250px !important;
+    height: 65px !important;
+    max-width: 250px !important;
+    max-height: 65px !important;
+    object-fit: contain !important;
   }
 
   .footer-wrapper .frame-424 {
     position: absolute !important;
-    top: 220px !important;
+    top: 115px !important;
     left: auto !important;
-    right: 127px !important;
+    right: 80px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px 28px !important;
+    width: auto !important;
+  }
+
+  .footer-wrapper .frame-424 .privacy-policy,
+  .footer-wrapper .frame-424 .terms-conditions,
+  .footer-wrapper .frame-424 .compliance-disclosure,
+  .footer-wrapper .frame-424 .case-studies {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+    font-weight: 400 !important;
   }
 
   .footer-wrapper .frame-423 {
     position: absolute !important;
-    top: 220px !important;
-    left: 145px !important;
+    top: 115px !important;
+    left: 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .footer-wrapper .frame-423 .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018,
+  .footer-wrapper .frame-423 ._91-44-43927600,
+  .footer-wrapper .frame-423 .info-finecons-com {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+    font-weight: 400 !important;
   }
 
   .footer-wrapper .copyright-finecons-2026 {
     position: absolute !important;
-    top: 460px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    bottom: 15px !important;
+    top: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    width: fit-content !important;
+    text-align: center !important;
+    transform: none !important;
+    font-size: 12px !important;
+    font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
   }
 
   @media (max-width: 1024px) {
@@ -624,6 +672,7 @@
       margin-top: 140px;
       padding: 0 24px;
     }
+
     .solutions-hero-content {
       width: 100%;
       height: auto;
@@ -634,12 +683,95 @@
       text-align: center;
       position: relative;
     }
+
     .solutions-hero-content .frame-2 {
       position: static;
       margin-top: 40px;
     }
+
     .solutions-that-deliver-results {
       text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .rectangle-218 {
+      background: linear-gradient(123.26deg, rgba(228, 234, 255, 0) 45.126545429229736%, rgba(38, 210, 222, 0.3) 90.87963700294495%), linear-gradient(223.8deg, rgba(228, 234, 255, 1) 38.33858370780945%, rgba(175, 175, 255, 1) 79.08464074134827%) !important;
+      width: 100% !important;
+      height: 667px !important;
+      position: absolute !important;
+      left: 0px !important;
+      top: 0px !important;
+    }
+
+    .frame-437 {
+      margin-top: 0px !important;
+      padding-top: 120px !important;
+      padding-bottom: 24px !important;
+      padding-left: 28px !important;
+      padding-right: 28px !important;
+      height: auto !important;
+      min-height: auto !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      gap: 20px !important;
+    }
+
+    .solutions-hero-content {
+      align-items: flex-start !important;
+      text-align: left !important;
+      width: 100% !important;
+      padding: 0 !important;
+      height: auto !important;
+      gap: 20px !important;
+    }
+
+    .solutions-that-deliver-results {
+      text-align: left !important;
+      width: 100% !important;
+    }
+
+    .desktop-only-rects {
+      display: none !important;
+    }
+
+    .mobile-only-rects {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin: 20px auto 0 auto !important;
+      position: static !important;
+      gap: 6px !important;
+    }
+
+    .about-hero-visual {
+      width: 420px !important;
+      height: 380px !important;
+      transform: scale(0.8) !important;
+      transform-origin: center center !important;
+      margin: 0 auto -24px auto !important;
+      display: block !important;
+      flex-shrink: 0 !important;
+      align-self: center !important;
+    }
+
+    .frame-441 {
+      margin-top: 50px !important;
+      padding: 0 28px !important;
+    }
+
+    .solutions-card-detail {
+      min-height: 300px !important;
+      padding: 24px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-hero-visual {
+      transform: scale(0.68) !important;
+      margin: -40px auto -60px auto !important;
     }
   }
 }

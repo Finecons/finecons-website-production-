@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import './ITInfrastructure.css';
 
 const ITInfrastructure = ({ navigateTo }) => {
@@ -609,9 +609,11 @@ const ITInfrastructure = ({ navigateTo }) => {
       </div>
 
       {/* Footer */}
-      <div className="footer-wrapper">
+      <div className="footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
     </div>
   );
 };

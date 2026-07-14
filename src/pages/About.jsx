@@ -1,51 +1,46 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './About.css';
 
 const About = ({ navigateTo }) => {
+  const years = ['2000', '2005', '2010', '2012', '2015', '2018', '2020', '2022', '2024', '2025'];
   const [activeYear, setActiveYear] = useState('2000');
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
   const mapRef = useRef(null);
   const mapContainerRef = useRef(null);
-  const timelineYearsRef = useRef(null);
-  const isInitialMount = useRef(true);
+
+  // Track viewport size to disable wrapping and hide half-circles on mobile/tablet
+  useEffect(() => {
+    const checkViewport = () => {
+      setIsMobileOrTablet(window.innerWidth <= 1024);
+    };
+    checkViewport();
+    window.addEventListener('resize', checkViewport);
+    return () => window.removeEventListener('resize', checkViewport);
+  }, []);
 
   // Always scroll to top (hero section) when About page first mounts
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
-    
-    // Reset timeline scroll to top to override browser scroll restoration or initial layout anomalies
-    const timer = setTimeout(() => {
-      if (timelineYearsRef.current) {
-        timelineYearsRef.current.scrollTop = 0;
-      }
-      isInitialMount.current = false;
-    }, 100);
-    
-    return () => clearTimeout(timer);
   }, []);
 
-  // Scroll the selected year into view — only scroll the inner container, leaving the main window scroll untouched
-  useEffect(() => {
-    if (isInitialMount.current) {
-      return;
-    }
-    if (timelineYearsRef.current) {
-      const activeEl = timelineYearsRef.current.querySelector('.active-year');
-      if (activeEl) {
-        const container = timelineYearsRef.current;
-        const calculatedScrollTop = activeEl.offsetTop - (container.clientHeight / 2) + (activeEl.clientHeight / 2);
-        const targetScrollTop = Math.max(0, calculatedScrollTop);
-        container.scrollTo({
-          top: targetScrollTop,
-          behavior: 'smooth'
-        });
-      }
-    }
-  }, [activeYear]);
+  const handlePrev = () => {
+    const currentIndex = years.indexOf(activeYear);
+    if (isMobileOrTablet && currentIndex === 0) return;
+    const prevIndex = (currentIndex - 1 + years.length) % years.length;
+    setActiveYear(years[prevIndex]);
+  };
+
+  const handleNext = () => {
+    const currentIndex = years.indexOf(activeYear);
+    if (isMobileOrTablet && currentIndex === years.length - 1) return;
+    const nextIndex = (currentIndex + 1) % years.length;
+    setActiveYear(years[nextIndex]);
+  };
 
   useEffect(() => {
     if (mapRef.current) return;
@@ -114,47 +109,44 @@ const About = ({ navigateTo }) => {
   const historyData = {
     '2000': {
       text: 'At Finecons Limited, we boast of a rich legacy, spanning over 26 years, dedicated to revolutionizing the IT landscape through cutting-edge solutions and seamless system integration. Since our inception in 2000, we’ve been at the forefront of innovation, driving digital transformation for businesses across diverse industries.',
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2005': {
       text: 'By 2005, we expanded our service catalog to include advanced network infrastructure design, database management, and early-stage security auditing systems to safeguard corporate IT assets.',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2010': {
       text: 'By 2010, Finecons expanded its operations, establishing key partnerships with global technology leaders and delivering enterprise-grade infrastructure systems to power critical applications and growing data workloads for our corporate clients.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2012': {
       text: 'In 2012, we migrated hundreds of physical server systems to highly consolidated virtualized architectures, resulting in immense hardware cost savings and enhanced resource utility.',
-      image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2015': {
       text: 'By 2015, we launched our dedicated Cybersecurity Division, designing comprehensive security frameworks and proactive threat-mitigation protocols to guard corporate endpoints.',
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2018': {
       text: 'In 2018, we integrated cloud infrastructure planning and hybrid cloud orchestration models, assisting enterprises in transitioning their critical workloads to scalable digital architectures.',
-      image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2020': {
       text: 'In 2020, we accelerated digital transformations at scale, enabling thousands of remote workers with secure networking, digital workspaces, and robust cybersecurity frameworks to navigate the evolving IT landscape during critical times.',
-      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2022': {
       text: 'Finecons pioneered advanced cloud migration protocols and machine learning operations, helping enterprises optimize their multicloud environments and harness the power of artificial intelligence to elevate productivity.',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2024': {
       text: 'Today, we continue to drive innovation globally. With a distributed team of experts and strategic hubs, we deliver next-generation systems integration and IT services that empower businesses to scale securely and drive sustained business growth.',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=500&q=80'
     },
     '2025': {
       text: 'By 2025, Finecons deployed zero-trust network access frameworks and sustainable, energy-efficient IT architectures, supporting clients in achieving green compliance goals globally.',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500&q=80'
+      // image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500&q=80'
     }
   };
-
-  const years = ['2000', '2005', '2010', '2012', '2015', '2018', '2020', '2022', '2024', '2025'];
 
   return (
     <div className="about-page">
@@ -170,7 +162,7 @@ const About = ({ navigateTo }) => {
               <span>Enabling businesses to deliver </span>
               <span className="blue-text">outstanding customer experiences.</span>
             </h1>
-            <div className="frame-2">
+            <div className="frame-2 desktop-only-rects">
               <div className="inactive-rect"></div>
               <div className="active-rect"></div>
               <div className="inactive-rect"></div>
@@ -182,6 +174,7 @@ const About = ({ navigateTo }) => {
               <div className="inactive-rect"></div>
             </div>
           </div>
+
           <div className="about-hero-visual">
             <div className="ellipse-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
@@ -211,6 +204,17 @@ const About = ({ navigateTo }) => {
                 />
               </svg>
             </div>
+          </div>
+
+          <div className="frame-2 mobile-only-rects">
+            <div className="inactive-rect"></div>
+            <div className="active-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
           </div>
         </div>
       </div>
@@ -278,33 +282,92 @@ const About = ({ navigateTo }) => {
           </h2>
           <p className="history-intro-desc">
             We stay ahead of the curve by continuously exploring new technologies and methodologies
-            to deliver innovative solutions that drive business growth.
+            to deliver innovative Services that drive business growth.
           </p>
         </div>
 
-        <div className="history-timeline-container">
-          <div className="timeline-years" ref={timelineYearsRef}>
-            {years.map((year) => (
-              <div
-                key={year}
-                className={`timeline-year-item ${activeYear === year ? 'active-year' : ''}`}
-                onClick={() => setActiveYear(year)}
-              >
-                <div className="year-bg"></div>
-                <div className="year-text">{year.split('').join(' ')}</div>
-              </div>
-            ))}
+        <div className="new-timeline-slider">
+          {/* Left Arrow Button */}
+          <button
+            className="timeline-arrow-btn"
+            onClick={handlePrev}
+            aria-label="Previous Year"
+            disabled={isMobileOrTablet && activeYear === years[0]}
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          {/* Timeline Track with Sliding Circles */}
+          <div className="timeline-track-wrapper">
+            <div className="timeline-horizontal-line"></div>
+            <div className="timeline-circles-container">
+              {years.map((year, idx) => {
+                const activeIdx = years.indexOf(activeYear);
+                const N = years.length;
+                let d = idx - activeIdx;
+                if (d > N / 2) d -= N;
+                if (d < -N / 2) d += N;
+
+                // Only render if within the visual range [-3, 3] or just render all for smoother animations
+                let circleClass = '';
+                if (d === 0) {
+                  circleClass = 'active-circle';
+                } else if (d === -1 || d === 1) {
+                  circleClass = 'clickable-circle year-circle';
+                } else if (d === -2 || d === 2 || d === -3 || d === 3) {
+                  circleClass = 'empty-circle';
+                } else {
+                  circleClass = 'hidden-circle';
+                }
+
+                return (
+                  <div
+                    key={year}
+                    className={`timeline-circle-item ${circleClass}`}
+                    style={{
+                      left: `calc(50% + var(--circle-spacing) * ${d})`
+                    }}
+                    onClick={() => {
+                      if (d === -1 || d === 1) {
+                        setActiveYear(year);
+                      }
+                    }}
+                  >
+                    {(d === 0 || d === -1 || d === 1) && year}
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="timeline-content-card">
+          {/* Right Arrow Button */}
+          <button
+            className="timeline-arrow-btn"
+            onClick={handleNext}
+            aria-label="Next Year"
+            disabled={isMobileOrTablet && activeYear === years[years.length - 1]}
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Timeline Content: Image (left) & Text (right) */}
+        <div className="new-timeline-content-row" key={activeYear}>
+          {/* <div className="new-timeline-image-wrapper">
             <img
-              className="timeline-image"
+              className="new-timeline-image"
               src={historyData[activeYear].image}
               alt={`Finecons milestone in ${activeYear}`}
             />
-            <div className="timeline-text">
+          </div> */}
+          <div className="new-timeline-text-wrapper">
+            <p className="new-timeline-text">
               {historyData[activeYear].text}
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -319,113 +382,123 @@ const About = ({ navigateTo }) => {
           </h2>
         </div>
 
-        <div className="team-gallery">
-          <div className="sir-mam">
-            <div className="group-378">
-              <img
-                className="rectangle-337"
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=969&h=654&q=80"
-                alt="Tyagi P Chairman & MD"
-              />
-              <div className="rectangle-342"></div>
-              <div className="frame-446">
-                <div className="tyagi-p">Tharun</div>
-                <div className="c-h-a-i-r-m-a-n-m-d">CHAIRMAN &amp; MD</div>
+        <div className="team-group-container">
+          <h3 className="team-group-title">OUR HEADS</h3>
+          <div className="heads-grid">
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/thyagi.jpg"
+                  alt="Tyagi P"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">TYAGI . P</div>
+                <div className="new-team-role">CHAIRMAN & MD</div>
               </div>
             </div>
 
-            <div className="team-member-card secondary-card">
-              <img
-                className="rectangle-338"
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=534&h=654&q=80"
-                alt="Anjali Tyagi Executive Director"
-              />
-              <div className="rectangle-342"></div>
-              <div className="frame-446">
-                <div className="tyagi-p">ANJALI</div>
-                <div className="c-h-a-i-r-m-a-n-m-d">EXECUTIVE DIRECTOR</div>
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/chithra%20thyagi.jpg"
+                  alt="Chitra Tyagi"
+                  className="new-team-img"
+                />
               </div>
-            </div>
-          </div>
-
-          <div className="frame-466">
-            <div className="team-member-card expertise-card">
-              <img
-                className="rectangle-341"
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=491&h=600&q=80"
-                alt="Vikram Mehta"
-              />
-              <div className="rectangle-342"></div>
-              <div className="expertise-member-info">
-                <div className="expertise-name">VIKRAM MEHTA</div>
-                <div className="expertise-role">VP, ENTERPRISE SOLUTIONS</div>
-              </div>
-            </div>
-
-            <div className="team-member-card expertise-card">
-              <img
-                className="rectangle-340"
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=490&h=600&q=80"
-                alt="Shalini Raman"
-              />
-              <div className="rectangle-342"></div>
-              <div className="expertise-member-info">
-                <div className="expertise-name">SHALINI RAMAN</div>
-                <div className="expertise-role">HEAD OF CYBERSECURITY</div>
-              </div>
-            </div>
-
-            <div className="team-member-card expertise-card">
-              <img
-                className="rectangle-339"
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=485&h=594&q=80"
-                alt="Kabir Behl"
-              />
-              <div className="rectangle-342"></div>
-              <div className="expertise-member-info">
-                <div className="expertise-name">KABIR BEHL</div>
-                <div className="expertise-role">CHIEF TECHNOLOGY OFFICER</div>
+              <div className="new-team-info">
+                <div className="new-team-name">CHITRA TYAGI</div>
+                <div className="new-team-role">DIRECTOR -</div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="frame-467">
-            <div className="team-member-card expertise-card">
-              <img
-                className="rectangle-339"
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=491&h=600&q=80"
-                alt="Meera Sen"
-              />
-              <div className="rectangle-342"></div>
-              <div className="expertise-member-info">
-                <div className="expertise-name">MEERA SEN</div>
-                <div className="expertise-role">VP, CLIENT SUCCESS</div>
+        <div className="team-group-container">
+          <h3 className="team-group-title">VERTICAL HEADS & CORE MANAGEMENT</h3>
+          <div className="management-grid">
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/govind%20prasad.jpg"
+                  alt="Govind Prakash"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">GOVIND PRAKASH</div>
+                <div className="new-team-role">CHIEF OPERATING OFFICER</div>
               </div>
             </div>
 
-            <div className="team-member-card expertise-card">
-              <img
-                className="rectangle-341"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=491&h=600&q=80"
-                alt="Rohan Deshmukh"
-              />
-              <div className="rectangle-342"></div>
-              <div className="expertise-member-info">
-                <div className="expertise-name">ROHAN DESHMUKH</div>
-                <div className="expertise-role">DIRECTOR, CLOUD SERVICES</div>
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/Arjun.jpg"
+                  alt="Arjun Tyagi"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">ARJUN TYAGI</div>
+                <div className="new-team-role">DIRECTOR -</div>
               </div>
             </div>
 
-            <div className="team-member-card expertise-card">
-              <img
-                className="rectangle-3422"
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=491&h=600&q=80"
-                alt="Dr. Arya Chandra"
-              />
-              <div className="rectangle-342"></div>
-              <div className="expertise-member-info">
-                <div className="expertise-name">DR. ARYA CHANDRA</div>
-                <div className="expertise-role">VP, ARTIFICIAL INTELLIGENCE</div>
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/Arun.jpg"
+                  alt="Arun Kumar"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">ARUN KUMAR</div>
+                <div className="new-team-role">DIRECTOR -</div>
+              </div>
+            </div>
+
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/Aishwariya.jpg"
+                  alt="Aishvarya Tyagi"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">AISHVARYA TYAGI</div>
+                <div className="new-team-role">DIRECTOR -</div>
+              </div>
+            </div>
+
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/durai.jpg"
+                  alt="Durai"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">DURAI</div>
+                <div className="new-team-role">DIRECTOR -</div>
+              </div>
+            </div>
+
+            <div className="new-team-card">
+              <div className="new-team-image-container">
+                <img
+                  src="/assets/kumaran.jpg"
+                  alt="Kumaran"
+                  className="new-team-img"
+                />
+              </div>
+              <div className="new-team-info">
+                <div className="new-team-name">KUMARAN</div>
+                <div className="new-team-role">DIRECTOR -</div>
               </div>
             </div>
           </div>
@@ -505,9 +578,11 @@ const About = ({ navigateTo }) => {
       </div>
 
       {/* Footer Wrapper to isolate absolute coordinates */}
-      <div className="about-footer-wrapper">
+      <div className="about-footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
     </div>
   );
 };

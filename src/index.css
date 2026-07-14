@@ -379,13 +379,25 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.9) translateY(20px); opacity: 0; }
-  to { transform: scale(1) translateY(0); opacity: 1; }
+  from {
+    transform: scale(0.9) translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Mobile Responsive */
@@ -394,17 +406,21 @@ body {
     padding: 28px 20px;
     border-radius: 16px;
   }
+
   .close-modal-btn {
     top: 16px;
     right: 16px;
   }
+
   .naturals-logo {
     margin-bottom: 24px;
     padding-bottom: 16px;
   }
+
   .modal-sections {
     gap: 28px;
   }
+
   .modal-section-header h3 {
     font-size: 18px;
   }
@@ -555,62 +571,8 @@ body {
   translate: none !important;
 }
 
-/* Footer Responsive Media Queries */
-@media (max-width: 768px) {
-  :root [class*="footer-wrapper"] {
-    height: auto !important;
-    padding: 40px 24px 60px 24px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 30px !important;
-  }
-  
-  :root [class*="footer-wrapper"] .rectangle-266,
-  :root [class*="footer-wrapper"] .mask-group {
-    height: 100% !important;
-  }
-  
-  :root [class*="footer-wrapper"] .image-3 {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    margin: 0 auto !important;
-  }
-  
-  :root [class*="footer-wrapper"] .frame-423 {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    align-items: center !important;
-  }
-  
-  :root [class*="footer-wrapper"] .group-246,
-  :root [class*="footer-wrapper"] .group-245,
-  :root [class*="footer-wrapper"] .frame-244 {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-  
-  :root [class*="footer-wrapper"] .frame-424 {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    grid-template-columns: 1fr !important;
-    text-align: center !important;
-    gap: 12px !important;
-  }
-  
-  :root [class*="footer-wrapper"] .copyright-finecons-2026 {
-    position: relative !important;
-    bottom: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin-top: 10px !important;
-  }
-}
+
+
 
 /* Global Mobile Navbar responsive overrides and Hamburger Menu */
 .navbar-hamburger {
@@ -661,11 +623,11 @@ body {
   .navbar-hamburger {
     display: flex !important;
   }
-  
+
   .desktop-only-nav-btn {
     display: none !important;
   }
-  
+
   .mobile-only-nav-btn {
     display: flex !important;
   }
@@ -734,9 +696,9 @@ body {
     margin: -30px auto !important;
     position: relative !important;
   }
-  
-  .about-hero-visual .ellipse-4, 
-  .about-hero-visual .ellipse-2, 
+
+  .about-hero-visual .ellipse-4,
+  .about-hero-visual .ellipse-2,
   .about-hero-visual .ellipse-3 {
     max-width: 100% !important;
   }
@@ -749,4 +711,314 @@ body {
   }
 }
 
+/* Hide footer completely on mobile */
+@media (max-width: 768px) {
+  html body .footer-wrapper {
+    display: none !important;
+  }
+}
 
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY BALANCING SYSTEM (Desktop, Tablet & Mobile)
+   ========================================================================== */
+
+/* 1. Main Hero Headings (All Page Titles) */
+.shaping-the-future-through-intelligent-solutions,
+.enabling-businesses-to-deliver-outstanding-customer-experiences,
+.solutions-that-deliver-results,
+.building-success-through-partnerships,
+.it-solutions-inquiry,
+.advanced-threat-defense-digital-forensics,
+.unified-defense-for-the-modern-perimeter,
+.resilient-infrastructure-for-the-modern-enterprise,
+.support-beyond-expectations,
+.scale-fast-spend-smart,
+.powered-by-aws-built-for-scale,
+.powered-by-azure-built-for-scale,
+h1 {
+  font-family: var(--display-desktop-font-family, "Merriweather", sans-serif) !important;
+  font-size: 52px !important;
+  line-height: 64px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.solutions-that-deliver-results span,
+.shaping-the-future-through-intelligent-solutions span,
+.enabling-businesses-to-deliver-outstanding-customer-experiences span,
+.building-success-through-partnerships span,
+.it-solutions-inquiry span,
+.advanced-threat-defense-digital-forensics span,
+.unified-defense-for-the-modern-perimeter span,
+.resilient-infrastructure-for-the-modern-enterprise span,
+.support-beyond-expectations span,
+.scale-fast-spend-smart span,
+.powered-by-aws-built-for-scale span,
+.powered-by-azure-built-for-scale span {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  display: inline !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+.solutions-that-deliver-results-span,
+.solutions-that-deliver-results-span2,
+.shaping-the-future-through-intelligent-solutions-span,
+.shaping-the-future-through-intelligent-solutions-span2,
+.enabling-businesses-to-deliver-outstanding-customer-experiences-span,
+.enabling-businesses-to-deliver-outstanding-customer-experiences-span2,
+.building-success-through-partnerships-span2,
+.it-solutions-inquiry-span,
+.it-solutions-inquiry-span2,
+.advanced-threat-defense-digital-forensics-span,
+.advanced-threat-defense-digital-forensics-span2,
+.unified-defense-for-the-modern-perimeter-span,
+.unified-defense-for-the-modern-perimeter-span2,
+.resilient-infrastructure-for-the-modern-enterprise-span,
+.resilient-infrastructure-for-the-modern-enterprise-span2,
+.support-beyond-expectations-span,
+.support-beyond-expectations-span2,
+.scale-fast-spend-smart-span,
+.scale-fast-spend-smart-span2,
+.powered-by-aws-built-for-scale-span,
+.powered-by-aws-built-for-scale-span2,
+.powered-by-azure-built-for-scale-span,
+.powered-by-azure-built-for-scale-span2 {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+/* 2. Page & Section Subheadings (H2, and equivalents) */
+h2,
+.our-smart-solutions,
+.partner-ecosystem,
+.powering-title,
+.our-aws-solutions,
+.our-azure-solutions,
+.digital-infrastructure,
+.client-testimonials,
+.why-choose-finecons,
+.key-offerings,
+.key-capabilities,
+.compliance-title,
+.leadership-team {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather", sans-serif) !important;
+  font-size: 36px !important;
+  line-height: 46px !important;
+  font-weight: 600 !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+.our-smart-solutions span,
+.partner-ecosystem span,
+.powering-title span,
+.our-aws-solutions span,
+.our-azure-solutions span {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  display: inline !important;
+}
+
+/* 3. Cards Titles, Subheadings and Labels (H3, H4 and equivalents) */
+h3, h4,
+.card-title,
+.offering-card-title,
+.service-card-title,
+.capability-title,
+.ecosystem-card-title {
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif) !important;
+  font-size: 22px !important;
+  line-height: 30px !important;
+  font-weight: 700 !important;
+}
+
+/* 4. Body Copy and Descriptions */
+p,
+.card-desc,
+.powering-desc,
+.overview-desc,
+.service-desc,
+.offering-desc,
+.description-text,
+.hero-description {
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif) !important;
+  font-size: 18px !important;
+  line-height: 28px !important;
+  color: #333333 !important;
+  font-weight: 400 !important;
+}
+
+/* 5. Small status labels, tags, captions */
+.badge,
+.tag,
+.label-text,
+.timeline-year,
+.timeline-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive Scaling for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .shaping-the-future-through-intelligent-solutions,
+  .enabling-businesses-to-deliver-outstanding-customer-experiences,
+  .solutions-that-deliver-results,
+  .building-success-through-partnerships,
+  .it-solutions-inquiry,
+  .advanced-threat-defense-digital-forensics,
+  .unified-defense-for-the-modern-perimeter,
+  .resilient-infrastructure-for-the-modern-enterprise,
+  .support-beyond-expectations,
+  .scale-fast-spend-smart,
+  .powered-by-aws-built-for-scale,
+  .powered-by-azure-built-for-scale,
+  h1 {
+    font-size: 42px !important;
+    line-height: 52px !important;
+  }
+
+  h2,
+  .our-smart-solutions,
+  .partner-ecosystem,
+  .powering-title,
+  .our-aws-solutions,
+  .our-azure-solutions,
+  .digital-infrastructure,
+  .client-testimonials,
+  .why-choose-finecons,
+  .key-offerings,
+  .key-capabilities,
+  .compliance-title,
+  .leadership-team {
+    font-size: 28px !important;
+    line-height: 38px !important;
+  }
+
+  h3, h4,
+  .card-title,
+  .offering-card-title,
+  .service-card-title,
+  .capability-title,
+  .ecosystem-card-title {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+
+  p,
+  .card-desc,
+  .powering-desc,
+  .overview-desc,
+  .service-desc,
+  .offering-desc,
+  .description-text,
+  .hero-description {
+    font-size: 16px !important;
+    line-height: 26px !important;
+  }
+}
+
+/* Responsive Scaling for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .shaping-the-future-through-intelligent-solutions,
+  .enabling-businesses-to-deliver-outstanding-customer-experiences,
+  .solutions-that-deliver-results,
+  .building-success-through-partnerships,
+  .it-solutions-inquiry,
+  .advanced-threat-defense-digital-forensics,
+  .unified-defense-for-the-modern-perimeter,
+  .resilient-infrastructure-for-the-modern-enterprise,
+  .support-beyond-expectations,
+  .scale-fast-spend-smart,
+  .powered-by-aws-built-for-scale,
+  .powered-by-azure-built-for-scale,
+  h1 {
+    font-size: 32px !important;
+    line-height: 42px !important;
+  }
+
+  h2,
+  .our-smart-solutions,
+  .partner-ecosystem,
+  .powering-title,
+  .our-aws-solutions,
+  .our-azure-solutions,
+  .digital-infrastructure,
+  .client-testimonials,
+  .why-choose-finecons,
+  .key-offerings,
+  .key-capabilities,
+  .compliance-title,
+  .leadership-team {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+
+  h3, h4,
+  .card-title,
+  .offering-card-title,
+  .service-card-title,
+  .capability-title,
+  .ecosystem-card-title {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+
+  p,
+  .card-desc,
+  .powering-desc,
+  .overview-desc,
+  .service-desc,
+  .offering-desc,
+  .description-text,
+  .hero-description {
+    font-size: 14px !important;
+    line-height: 22px !important;
+  }
+}
+
+/* Responsive Scaling for Smaller Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .shaping-the-future-through-intelligent-solutions,
+  .enabling-businesses-to-deliver-outstanding-customer-experiences,
+  .solutions-that-deliver-results,
+  .building-success-through-partnerships,
+  .it-solutions-inquiry,
+  .advanced-threat-defense-digital-forensics,
+  .unified-defense-for-the-modern-perimeter,
+  .resilient-infrastructure-for-the-modern-enterprise,
+  .support-beyond-expectations,
+  .scale-fast-spend-smart,
+  .powered-by-aws-built-for-scale,
+  .powered-by-azure-built-for-scale,
+  h1 {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  h2,
+  .our-smart-solutions,
+  .partner-ecosystem,
+  .powering-title,
+  .our-aws-solutions,
+  .our-azure-solutions {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+}
+
+* {
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}

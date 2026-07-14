@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import './GetInTouch.css';
 
 const GetInTouch = ({ navigateTo }) => {
@@ -340,9 +340,11 @@ const GetInTouch = ({ navigateTo }) => {
         </div>
       </div>
 
-      <div className="footer-wrapper">
+      <div className="footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
     </div>
   );
 };

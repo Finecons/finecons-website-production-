@@ -315,9 +315,9 @@
 
 .frame-371 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  width: calc(100% - 460px);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
 }
 
 .carousel-arrow {
@@ -337,13 +337,8 @@
   transition: transform 0.6s ease, box-shadow 0.6s ease, background-color 0.6s ease, border-color 0.6s ease;
 }
 
-.cyber-security-card {
-  background-color: #0e10ff;
-  color: #ffffff;
-}
-
 .white-card {
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   border: 1px solid #adaefa;
   color: #000000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
@@ -351,14 +346,14 @@
 
 .solution-card:hover,
 .solution-card.active-touch {
-  transform: translateY(-15px) rotate(-3deg);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .white-card:hover,
 .white-card.active-touch {
+  transform: translateY(-15px) rotate(-3deg);
   background-color: #0e10ff;
-  border-color: transparent;
+  /* border-color: transparent; */
 }
 
 .white-card:hover .card-title,
@@ -368,12 +363,12 @@
 
 .white-card:hover .card-desc,
 .white-card.active-touch .card-desc {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .white-card:hover .card-link,
 .white-card.active-touch .card-link {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .heptagon-badge {
@@ -453,6 +448,7 @@
   font-weight: 700;
   text-decoration: none;
   margin-top: auto;
+  align-self: flex-end;
   display: inline-flex;
   align-items: center;
   transition: color 0.3s ease, opacity 0.3s ease;
@@ -1564,7 +1560,8 @@
   aspect-ratio: 1;
 }
 
-.ellipse-11 {
+.ellipse-11,
+.ellipse-12-dot {
   background: #d9d9d9;
   border-radius: 50%;
   flex-shrink: 0;
@@ -2207,6 +2204,12 @@
   .solution-card {
     min-height: auto !important;
     padding: 24px !important;
+    transform: none !important;
+  }
+
+  .white-card:hover,
+  .white-card.active-touch {
+    transform: none !important;
   }
 
   /* Why Us Section */
@@ -2341,7 +2344,7 @@
   .frame-398 {
     position: relative !important;
     width: 100% !important;
-    height: 280px !important;
+    height: 420px !important;
     overflow: hidden !important;
     border-radius: 16px !important;
   }
@@ -2402,38 +2405,6 @@
     display: block !important;
   }
 
-  .carousel-arrow {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: absolute !important;
-    top: 140px !important;
-    transform: translateY(-50%) !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    background: rgba(14, 16, 255, 0.75) !important;
-    color: #ffffff !important;
-    border: none !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    cursor: pointer !important;
-    z-index: 100 !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
-    transition: background 0.3s, transform 0.2s !important;
-  }
-
-  .carousel-arrow:active {
-    transform: translateY(-50%) scale(0.9) !important;
-  }
-
-  .carousel-arrow.left-arrow {
-    left: 10px !important;
-  }
-
-  .carousel-arrow.right-arrow {
-    right: 10px !important;
-  }
 
   .frame-399 {
     width: 100% !important;
@@ -2459,13 +2430,17 @@
   .ellipse-11 {
     width: 12px !important;
     height: 12px !important;
+    border-radius: 50% !important;
     background: #d9d9d9 !important;
     cursor: pointer !important;
-    transition: background-color 0.3s ease !important;
+    transition: all 0.3s ease !important;
   }
 
   .ellipse-10.active-dot,
   .ellipse-11.active-dot {
+    width: 31px !important;
+    height: 10px !important;
+    border-radius: 30px !important;
     background: #0e10ff !important;
   }
 
@@ -2492,38 +2467,114 @@
   }
 
   .frame-406 {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    display: block !important;
     padding: 20px 0 !important;
+  }
+
+  .frame-406 .hidden-slide {
+    display: none !important;
+  }
+
+  .frame-406 .active-slide {
+    display: flex !important;
   }
 
   .group-271,
   .group-273,
   .testimonial-card-3 {
-    flex-direction: column !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
     height: auto !important;
-    border-radius: 24px !important;
+    border-radius: 36px !important;
     padding: 24px !important;
-    text-align: center !important;
-    gap: 16px !important;
+    background: #ffffff !important;
+    gap: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .rectangle-238,
   .rectangle-2382,
   .rectangle-2383 {
-    margin: 0 auto !important;
-    width: 100px !important;
-    height: 100px !important;
+    flex-shrink: 0 !important;
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0 !important;
   }
 
   .frame-404,
   .frame-4042,
   .frame-4043 {
-    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-align: left !important;
+    gap: 12px !important;
+    flex-grow: 1 !important;
   }
 
   .finecons-delivered-a-complete-it-overhaul-from-infrastructure-to-support-on-time-and-within-budget-their-team-is-responsive-skilled-and-committed-to-excellence {
-    font-size: 14px !important;
-    line-height: 20px !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    color: #0e10ff !important;
+    font-weight: 500 !important;
+  }
+
+  .frame-405 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+
+  .kate-williams {
+    font-size: 16px !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+  }
+
+  .it-manager-amazon {
+    font-size: 13px !important;
+    color: #555555 !important;
+  }
+
+  .frame-406 .frame-400 {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 24px !important;
+  }
+
+  .testimonials-dots .rectangle-287 {
+    display: none !important;
+  }
+
+  .testimonials-dots .ellipse-10,
+  .testimonials-dots .ellipse-11,
+  .testimonials-dots .ellipse-12-dot {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background: #d9d9d9 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .testimonials-dots .ellipse-10.active-dot,
+  .testimonials-dots .ellipse-11.active-dot,
+  .testimonials-dots .ellipse-12-dot.active-dot {
+    width: 31px !important;
+    height: 10px !important;
+    border-radius: 30px !important;
+    background: #0e10ff !important;
   }
 }

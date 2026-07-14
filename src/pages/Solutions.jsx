@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Footer, { FooterMobile } from '../components/Footer';
 import './Solutions.css';
 
 const IconBadge = ({ icon }) => {
@@ -125,7 +125,7 @@ const Solutions = ({ navigateTo }) => {
               <span className="solutions-that-deliver-results-span2">That Deliver Results</span>
             </span>
           </div>
-          <div className="frame-2">
+          <div className="frame-2 desktop-only-rects">
             <div className="inactive-rect"></div>
             <div className="inactive-rect"></div>
             <div className="inactive-rect"></div>
@@ -167,6 +167,18 @@ const Solutions = ({ navigateTo }) => {
               />
             </svg>
           </div>
+        </div>
+
+        <div className="frame-2 mobile-only-rects">
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="active-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
         </div>
       </div>
 
@@ -222,9 +234,11 @@ const Solutions = ({ navigateTo }) => {
       </div>
 
       {/* Reusable premium footer */}
-      <div className="footer-wrapper">
+      <div className="footer-wrapper footer-desktop-only">
         <Footer />
       </div>
+      {/* Mobile Footer */}
+      <FooterMobile />
     </div>
   );
 };
