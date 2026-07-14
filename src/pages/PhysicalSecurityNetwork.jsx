@@ -7,6 +7,7 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
   // Accordion toggle states
   const [approachOpen, setApproachOpen] = useState(true);
   const [advantagesOpen, setAdvantagesOpen] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Active solution tab indicator (always 'physical' on this page)
   const activeSolution = 'physical';
@@ -15,7 +16,7 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
     { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
     { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
     { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud & Licensing', path: 'cloud-licensing' },
+    { id: 'cloud', name: 'Cloud', path: 'cloud-licensing' },
     { id: 'managed', name: 'Managed Services', path: 'managed-services' }
   ];
 
@@ -50,10 +51,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
         </div>
         <div className="frame-2-bars">
           <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
           <div className="bar active"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
@@ -64,8 +65,8 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
       {/* Main content frame */}
       <div className="frame-465">
         <div className="frame-322">
-          {/* Sidebar Solutions Navigation */}
-          <div className="frame-289">
+          {/* Sidebar Solutions Navigation - Desktop */}
+          <div className="frame-289 desktop-sidebar">
             <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
               S O L U T I O N S
             </div>
@@ -110,6 +111,35 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Mobile Dropdown Navigation */}
+          <div className="mobile-solutions-dropdown">
+            <div className="dropdown-trigger" onClick={() => setDropdownOpen(!dropdownOpen)}>
+              <svg className="dropdown-cloud-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="dropdown-label">Physical Security & Network</span>
+              <svg className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {dropdownOpen && (
+              <div className="dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    {sol.name}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Main Details Area */}

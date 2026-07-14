@@ -16,7 +16,7 @@ const ManagedServices = ({ navigateTo }) => {
     { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
     { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
     { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud & Licensing', path: 'cloud-licensing' },
+    { id: 'cloud', name: 'Cloud', path: 'cloud-licensing' },
     { id: 'managed', name: 'Managed Services', path: 'managed-services' }
   ];
 

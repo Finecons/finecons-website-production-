@@ -139,7 +139,7 @@
   line-height: 58px;
   font-weight: 600;
   position: relative;
-  width: 666px;
+  flex: 1;
 }
 
 .cloud-aws .powered-by-aws-built-for-scale-span {
@@ -201,7 +201,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
   position: relative;
   align-self: stretch;
 }
@@ -240,7 +240,8 @@
   line-height: 26px;
   font-weight: 400;
   position: relative;
-  width: 622px;
+  width: 100%;
+  max-width: 622px;
 }
 
 .cloud-aws .group-380 {
@@ -304,7 +305,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
   position: relative;
   align-self: stretch;
 }
@@ -398,7 +399,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
 }
 
 .cloud-aws .aws-solutions-services {
@@ -542,7 +543,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
 }
 
 .cloud-aws .cloud-success-stories {
@@ -683,6 +684,7 @@
     font-size: 38px;
     line-height: 52px;
     text-align: center;
+    width: 100%;
   }
   .cloud-aws .group-294 {
     max-width: 100%;
@@ -698,6 +700,7 @@
   }
   .cloud-aws .as-an-aws-advanced-partner-fine-cons-works-in-close-alignment-with-aws-best-practices-and-proven-frameworks-we-enable-organisations-to-confidently-adopt-cloud-technologies-with-structured-and-reliable-approaches-our-solutions-are-designed-to-optimize-performance-scalability-and-cost-efficiency-across-cloud-environments-security-and-compliance-are-embedded-at-every-stage-of-the-cloud-lifecycle-this-ensures-resilient-well-governed-and-future-ready-aws-workloads-for-our-customers {
     text-align: center;
+    width: 100%;
   }
   .cloud-aws .group-380 {
     max-width: 100%;
@@ -725,21 +728,313 @@
 }
 
 @media (max-width: 768px) {
-  .cloud-aws .frame-505 {
-    grid-template-columns: 1fr;
+  .cloud-aws .rectangle-217 {
+    height: 520px;
   }
-  .cloud-aws .use-cases-grid {
-    grid-template-columns: 1fr;
+
+  .cloud-aws .ellipse-17,
+  .cloud-aws .ellipse-18,
+  .cloud-aws .ellipse-19,
+  .cloud-aws .ellipse-20,
+  .cloud-aws .ellipse-192,
+  .cloud-aws .ellipse-202 {
+    display: none;
   }
+
+  .cloud-aws .frame-508 {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .cloud-aws .frame-496 {
+    flex-direction: column;
+    margin-top: 120px;
+    gap: 24px;
+    padding: 0 16px;
+    text-align: left;
+  }
+
+  .cloud-aws .powered-by-aws-built-for-scale {
+    font-size: 28px;
+    line-height: 38px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .cloud-aws .group-294 {
+    width: calc(100% - 20px);
+    height: 250px;
+    max-width: none;
+    flex-shrink: 0;
+    border-radius: 0;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .cloud-aws .frame-498 {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+    margin: 32px auto 48px auto;
+    text-align: left;
+  }
+
+  .cloud-aws .frame-497 {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cloud-aws .f-i-n-e-c-o-n-s-aws {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .cloud-aws .our-aws-solutions {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cloud-aws .as-an-aws-advanced-partner-fine-cons-works-in-close-alignment-with-aws-best-practices-and-proven-frameworks-we-enable-organisations-to-confidently-adopt-cloud-technologies-with-structured-and-reliable-approaches-our-solutions-are-designed-to-optimize-performance-scalability-and-cost-efficiency-across-cloud-environments-security-and-compliance-are-embedded-at-every-stage-of-the-cloud-lifecycle-this-ensures-resilient-well-governed-and-future-ready-aws-workloads-for-our-customers {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .cloud-aws .group-380 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cloud-aws .group-381 {
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+
+  .cloud-aws .frame-503 {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 16px;
+    text-align: left;
+  }
+
+  .cloud-aws .frame-499 {
+    align-items: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+
+  .cloud-aws .a-w-s-c-e-r-t-i-f-i-c-a-t-e {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .cloud-aws .cloud-certifications-expertise {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
   .cloud-aws .frame-502 {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    width: 100%;
   }
+
+  .cloud-aws .frame-500,
+  .cloud-aws .frame-501 {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    padding: 24px;
+  }
+
+  .cloud-aws .frame-506 {
+    padding: 0 16px;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .cloud-aws .frame-504 {
+    gap: 8px;
+  }
+
+  .cloud-aws .w-h-a-t-w-e-d-o {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .cloud-aws .aws-solutions-services {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cloud-aws .frame-505 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    row-gap: 20px;
+  }
+
+  .cloud-aws .rectangle-314,
+  .cloud-aws .rectangle-315,
+  .cloud-aws .rectangle-316,
+  .cloud-aws .rectangle-3142,
+  .cloud-aws .rectangle-3152,
+  .cloud-aws .rectangle-3162 {
+    height: 180px;
+    margin-bottom: 16px;
+  }
+
+  .cloud-aws .cloud-migration-foundations,
+  .cloud-aws .cloud-operations-governance,
+  .cloud-aws .recovery-continuity,
+  .cloud-aws .cloud-performance-optimisation,
+  .cloud-aws .cloud-security-governance,
+  .cloud-aws .cloud-cost-optimisation-fin-ops {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 8px;
+  }
+
+  .cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks,
+  .cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks2,
+  .cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks3,
+  .cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks4,
+  .cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks5,
+  .cloud-aws .integrated-security-solutions-that-protect-systems-networks-and-data-from-evolving-cyber-and-operational-risks6 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .cloud-aws .group-298,
+  .cloud-aws .group-299,
+  .cloud-aws .group-300,
+  .cloud-aws .group-301,
+  .cloud-aws .group-302,
+  .cloud-aws .group-303 {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .cloud-aws .frame-507 {
+    padding: 0 16px;
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+
+  .cloud-aws .frame-304 {
+    gap: 8px;
+  }
+
+  .cloud-aws .a-w-s-u-s-e-c-a-s-e-s {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .cloud-aws .cloud-success-stories {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cloud-aws .use-cases-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cloud-aws .use-case-card {
+    height: auto;
+    min-height: 220px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .cloud-aws .use-cases-grid {
+    position: relative;
+    overflow: visible;
+  }
+
+  .cloud-aws .use-case-logo-container {
+    height: 100px;
+    padding: 12px;
+  }
+
+  .cloud-aws .use-case-title {
+    font-size: 14px;
+    margin: 10px 0 8px 0;
+  }
+
+  .cloud-aws .use-case-card:hover {
+    transform: none;
+  }
+
+  .cloud-aws .view-use-case-btn {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 8px 16px;
+  }
+
+  .cloud-aws .use-case-card:hover .view-use-case-btn {
+    transform: none;
+  }
+
+  .cloud-aws .view-use-case-btn .btn-text {
+    font-size: 12px;
+  }
+
+  .cloud-aws .footer-wrapper {
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .cloud-aws .frame-496 {
+    margin-top: 100px;
+    padding: 0 12px;
+  }
+
+  .cloud-aws .powered-by-aws-built-for-scale {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .cloud-aws .frame-498 {
+    padding: 0 12px;
+  }
+
   .cloud-aws .our-aws-solutions,
   .cloud-aws .cloud-certifications-expertise,
   .cloud-aws .aws-solutions-services,
   .cloud-aws .cloud-success-stories {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .cloud-aws .frame-500,
+  .cloud-aws .frame-501 {
+    height: 170px;
+    max-width: 240px;
+    padding: 20px;
+  }
+
+  .cloud-aws .frame-506 {
+    padding: 0 12px;
+  }
+
+  .cloud-aws .frame-507 {
+    padding: 0 12px;
+  }
+
+  .cloud-aws .frame-503 {
+    padding: 0 12px;
   }
 }

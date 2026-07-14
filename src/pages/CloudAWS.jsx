@@ -48,7 +48,7 @@ const CloudAWS = ({ navigateTo }) => {
         {/* About AWS Section */}
         <div className="frame-498">
           <div className="frame-497">
-            <div className="f-i-n-e-c-o-n-s-aws">F I N E C O N S AWS</div>
+            <div className="f-i-n-e-c-o-n-s-aws">FINECONS AWS</div>
             <div className="our-aws-solutions">
               <span>
                 <span className="our-aws-solutions-span">Our </span>
@@ -74,7 +74,7 @@ const CloudAWS = ({ navigateTo }) => {
           <div className="frame-503">
             <div className="frame-499">
               <div className="a-w-s-c-e-r-t-i-f-i-c-a-t-e">
-                A W S C E R T I F I C A T E
+                AWS CERTIFICATE
               </div>
               <div className="cloud-certifications-expertise">
                 <span>
@@ -106,7 +106,7 @@ const CloudAWS = ({ navigateTo }) => {
         <div className="frame-506">
           <div className="group-297">
             <div className="frame-504">
-              <div className="w-h-a-t-w-e-d-o">W H A T W E D O</div>
+              <div className="w-h-a-t-w-e-d-o">WHAT WE DO</div>
               <div className="aws-solutions-services">
                 <span>
                   <span className="aws-solutions-services-span">AWS </span>
@@ -196,7 +196,7 @@ const CloudAWS = ({ navigateTo }) => {
         {/* Success Stories */}
         <div className="frame-507">
           <div className="frame-304">
-            <div className="a-w-s-u-s-e-c-a-s-e-s">A W S U S E C A S E S</div>
+            <div className="a-w-s-u-s-e-c-a-s-e-s">AWS USE CASES</div>
             <div className="cloud-success-stories">
               <span>
                 <span className="cloud-success-stories-span">Cloud </span>
@@ -272,10 +272,9 @@ const CloudAWS = ({ navigateTo }) => {
 
             {/* Naturals Logo */}
             <div className="naturals-logo">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="180" height="48">
-                <text x="10" y="50" font-family="'Wix Madefor Text', sans-serif" font-weight="900" font-size="44" fill="#8d2983" letter-spacing="-1px">naturals</text>
-                <circle cx="218" cy="18" r="4" fill="#f47920" />
-                <text x="12" y="72" font-family="sans-serif" font-size="10" fill="#777777" letter-spacing="0.5px">India's No.1 hair and beauty salon</text>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="200" height="50">
+                <text x="150" y="42" fontFamily="'Wix Madefor Text', sans-serif" fontWeight="900" fontSize="40" fill="#8d2983" letterSpacing="-1px" textAnchor="middle">naturals</text>
+                <text x="150" y="62" fontFamily="sans-serif" fontSize="9" fill="#777777" letterSpacing="0.5px" textAnchor="middle">India's No.1 hair and beauty salon</text>
               </svg>
             </div>
 

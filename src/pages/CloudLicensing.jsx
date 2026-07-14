@@ -8,7 +8,8 @@ import './CloudLicensing.css';
 const CloudLicensing = ({ navigateTo }) => {
   // Accordion toggle states
   const [partnersOpen, setPartnersOpen] = useState(true);
-  const [licensingOpen, setLicensingOpen] = useState(true);
+  // Dropdown open state for mobile nav
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // Active solution tab indicator (always 'cloud' on this page)
   const activeSolution = 'cloud';
@@ -17,7 +18,7 @@ const CloudLicensing = ({ navigateTo }) => {
     { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
     { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
     { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud & Licensing', path: 'cloud-licensing' },
+    { id: 'cloud', name: 'Cloud Solutions', path: 'cloud-licensing' },
     { id: 'managed', name: 'Managed Services', path: 'managed-services' }
   ];
 
@@ -37,26 +38,26 @@ const CloudLicensing = ({ navigateTo }) => {
       <div className="frame-462">
         <div className="frame-461">
           <div className="frame-460">
-            <div className="c-l-o-u-d-l-i-c-e-n-s-i-n-g">C L O U D &amp; L I C E N S I N G</div>
+            <div className="c-l-o-u-d-l-i-c-e-n-s-i-n-g">C L O U D</div>
             <div className="scale-fast-spend-smart">
               <span>
-                <span className="scale-fast-spend-smart-span">Scale </span>
-                <span className="scale-fast-spend-smart-span2">Fast. Spend </span>
-                <span className="scale-fast-spend-smart-span">Smart</span>
-                <span className="scale-fast-spend-smart-span2">.</span>
+                <span className="scale-fast-spend-smart-span">Scale&nbsp;</span>
+                <span className="scale-fast-spend-smart-span2">Fast.&nbsp;</span>
+                <span className="scale-fast-spend-smart-span2">Spend&nbsp;</span>
+                <span className="scale-fast-spend-smart-span">Smart.</span>
               </span>
             </div>
           </div>
           <div className="hero-image-wrapper">
-            <img className="rectangle-323" src="/assets/cloud_licensing_hero.png" alt="Cloud & Licensing" />
+            <img className="rectangle-323" src="/assets/cloud_licensing_hero.png" alt="Cloud Solutions" />
           </div>
         </div>
         <div className="frame-2-bars">
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
-          <div className="bar active"></div>
           <div className="bar"></div>
+          <div className="bar active"></div>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
@@ -67,8 +68,8 @@ const CloudLicensing = ({ navigateTo }) => {
       {/* Main content frame */}
       <div className="frame-465">
         <div className="frame-322">
-          {/* Sidebar Solutions Navigation */}
-          <div className="frame-289">
+          {/* Sidebar Solutions Navigation - Desktop */}
+          <div className="frame-289 desktop-sidebar">
             <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
               S O L U T I O N S
             </div>
@@ -115,13 +116,42 @@ const CloudLicensing = ({ navigateTo }) => {
             </div>
           </div>
 
+          {/* Mobile Dropdown Navigation */}
+          <div className="mobile-solutions-dropdown">
+            <div className="dropdown-trigger" onClick={() => setDropdownOpen(!dropdownOpen)}>
+              <svg className="dropdown-cloud-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="dropdown-label">Cloud Solutions</span>
+              <svg className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {dropdownOpen && (
+              <div className="dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    {sol.name}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Main Details Area */}
           <div className="frame-561">
             {/* Title & Introduction Section */}
             <div className="frame-318">
               <h2 className="cloud-licensing-solutions-title">
                 <span>
-                  <span className="cloud-licensing-solutions-span">Cloud &amp; Licensing </span>
+                  <span className="cloud-licensing-solutions-span">Cloud </span>
                   <span className="cloud-licensing-solutions-span2">Solutions</span>
                 </span>
               </h2>
@@ -216,60 +246,6 @@ const CloudLicensing = ({ navigateTo }) => {
                 )}
               </div>
 
-              {/* Accordion 2: Licensing */}
-              <div className="accordion-wrapper">
-                <div className="group-327" onClick={() => setLicensingOpen(!licensingOpen)}>
-                  <div className="accordion-trigger-bg"></div>
-                  <h3 className="licensing">Licensing</h3>
-                  <svg className={`chevron-icon ${licensingOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-
-                {licensingOpen && (
-                  <div className="accordion-body-content fade-in">
-                    <div className="frame-351">
-                      <p className="licensing-intro-text">
-                        We provide comprehensive software licensing, renewal, and technical support services across multiple global vendors. Our expertise includes managing subscription-based and perpetual licenses, ensuring compliance, cost efficiency, and uninterrupted operations for our clients. We handle licensing and technical support for the following platforms and solutions:
-                      </p>
-
-                      {/* Licensing Partners Logo Grid */}
-                      <div className="licensing-logos-grid">
-                        {/* Microsoft */}
-                        <div className="license-partner-card shadow-sm">
-                          <div className="p-logo font-lenovo">MICROSOFT</div>
-                        </div>
-                        {/* Adobe */}
-                        <div className="license-partner-card shadow-sm">
-                          <div className="p-logo font-sophos">ADOBE</div>
-                        </div>
-                        {/* Sophos */}
-                        <div className="license-partner-card shadow-sm">
-                          <div className="p-logo font-sophos">SOPHOS</div>
-                        </div>
-                        {/* Cisco */}
-                        <div className="license-partner-card shadow-sm">
-                          <div className="p-logo font-cisco">CISCO</div>
-                        </div>
-                        {/* Autodesk */}
-                        <div className="license-partner-card shadow-sm">
-                          <div className="p-logo font-autodesk">AUTODESK</div>
-                        </div>
-                        {/* VMware / Oracle */}
-                        <div className="license-partner-card shadow-sm">
-                          <div className="p-logo font-vmware">VMWARE</div>
-                        </div>
-                      </div>
-
-                      {/* Centered gradient action button */}
-                      <div className="view-detail-btn">
-                        <div className="view-detail-bg"></div>
-                        <span className="btn-text">View Detail</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
             </div>
 
           </div>
