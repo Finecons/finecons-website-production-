@@ -7,6 +7,10 @@ const ITInfrastructure = ({ navigateTo }) => {
   // Accordion toggle states
   const [approachOpen, setApproachOpen] = useState(true);
   const [advantagesOpen, setAdvantagesOpen] = useState(true);
+  const [useCasesOpen, setUseCasesOpen] = useState(true);
+
+  // Mobile solutions dropdown state
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
 
   // Active solution tab indicator (always 'infra' on this page)
   const activeSolution = 'infra';
@@ -35,12 +39,20 @@ const ITInfrastructure = ({ navigateTo }) => {
       <div className="frame-462">
         <div className="frame-461">
           <div className="frame-460">
-            <div className="i-t-i-n-f-r-a">I T I N F R A</div>
-            <div className="resilient-infrastructure-for-the-modern-enterprise">
+            <div className="i-t-i-n-f-r-a desktop-label">I T I N F R A</div>
+            <div className="i-t-i-n-f-r-a mobile-label">IT INFRA</div>
+            <div className="resilient-infrastructure-for-the-modern-enterprise desktop-hero-text">
               <span>
                 <span className="resilient-infrastructure-for-the-modern-enterprise-span">Resilient </span>
                 <span className="resilient-infrastructure-for-the-modern-enterprise-span2">Infrastructure </span>
                 <span className="resilient-infrastructure-for-the-modern-enterprise-span">for the Modern Enterprise</span>
+              </span>
+            </div>
+            <div className="resilient-infrastructure-for-the-modern-enterprise mobile-hero-text">
+              <span>
+                <span className="resilient-infrastructure-for-the-modern-enterprise-span">Powering </span>
+                <span className="resilient-infrastructure-for-the-modern-enterprise-span2">Business </span>
+                <span className="resilient-infrastructure-for-the-modern-enterprise-span">Growth</span>
               </span>
             </div>
           </div>
@@ -64,6 +76,46 @@ const ITInfrastructure = ({ navigateTo }) => {
       {/* Main content frame */}
       <div className="frame-465">
         <div className="frame-322">
+          {/* Mobile Solutions Dropdown - visible only on mobile */}
+          <div className="mobile-solutions-dropdown">
+            <div
+              className="mobile-dropdown-trigger"
+              onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+            >
+              <svg className="mobile-dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <line x1="6" y1="18" x2="6.01" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+              <span className="mobile-dropdown-label">IT Infrastructure</span>
+              <svg
+                className={`mobile-dropdown-chevron ${solutionsDropdownOpen ? 'open' : ''}`}
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {solutionsDropdownOpen && (
+              <div className="mobile-dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`mobile-dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setSolutionsDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    <span className="mobile-dropdown-item-text">{sol.name}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Sidebar Solutions Navigation */}
           <div className="frame-289">
             <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
@@ -238,6 +290,67 @@ const ITInfrastructure = ({ navigateTo }) => {
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Accordion 3: Use Cases */}
+              <div className="accordion-wrapper">
+                <div className="group-285" onClick={() => setUseCasesOpen(!useCasesOpen)}>
+                  <div className="accordion-trigger-bg"></div>
+                  <h3 className="key-advantages-title">Use Cases</h3>
+                  <svg className={`chevron-icon ${useCasesOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                {useCasesOpen && (
+                  <div className="accordion-body-content fade-in">
+                    <div className="frame-3">
+                      <div className="advantages-visual-wrapper">
+                        <img className="rectangle-333" src="/assets/network_advantages.png" alt="IT Infrastructure Use Cases" />
+                      </div>
+                      <div className="advantages-list-wrapper">
+                        <ul className="advantages-list">
+                          <li>Data center consolidation and migration</li>
+                          <li>Server virtualization and optimization</li>
+                          <li>Enterprise storage deployment and management</li>
+                          <li>End-user device lifecycle management</li>
+                          <li>Disaster recovery and business continuity</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Mobile Services Section */}
+            <div className="mobile-services-section">
+              <h3 className="mobile-services-title">
+                <span className="it-infrastructure-2-span">IT </span>
+                <span className="it-infrastructure-2-span2">Infrastructure </span>
+                <span className="it-infrastructure-2-span">Services we offer</span>
+              </h3>
+              <div className="mobile-services-cards">
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/server_storage.png" alt="Servers & Storage" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Servers &amp; Storage</h4>
+                  <p className="mobile-service-card-desc">• Servers, storage arrays, backup systems</p>
+                </div>
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/datacenter_solutions.png" alt="Network & Security" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Network &amp; Security</h4>
+                  <p className="mobile-service-card-desc">• Core switches, firewalls</p>
+                </div>
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/end_user_computing.png" alt="Cloud & Software" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Cloud &amp; Software</h4>
+                  <p className="mobile-service-card-desc">• Virtualization platforms, OS licenses</p>
+                </div>
               </div>
             </div>
 
@@ -513,7 +626,7 @@ const ITInfrastructure = ({ navigateTo }) => {
               
               <div className="container22">
                 <div className="logistics-tag">
-                  G L O B A L I N F R A S T R U C T U R E L O G I S T I C S
+                  GLOBAL INFRASTRUCTURE LOGISTICS
                 </div>
                 <h3 className="secure-global-deployment-title">
                   Secure Global Deployment

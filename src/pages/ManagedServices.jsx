@@ -9,6 +9,9 @@ const ManagedServices = ({ navigateTo }) => {
   const [benefitsOpen, setBenefitsOpen] = useState(true);
   const [useCasesOpen, setUseCasesOpen] = useState(true);
 
+  // Mobile solutions dropdown state
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+
   // Active solution tab indicator (always 'managed' on this page)
   const activeSolution = 'managed';
 
@@ -36,7 +39,8 @@ const ManagedServices = ({ navigateTo }) => {
       <div className="frame-462">
         <div className="frame-461">
           <div className="frame-460">
-            <div className="m-a-n-a-g-e-d-s-e-r-v-i-c-e-s">M A N A G E D S E R V I C E S</div>
+            <div className="m-a-n-a-g-e-d-s-e-r-v-i-c-e-s desktop-label">M A N A G E D S E R V I C E S</div>
+            <div className="m-a-n-a-g-e-d-s-e-r-v-i-c-e-s mobile-label">MANAGED SERVICES</div>
             <div className="support-beyond-expectations">
               <span>
                 <span className="support-beyond-expectations-span">Support </span>
@@ -64,6 +68,44 @@ const ManagedServices = ({ navigateTo }) => {
       {/* Main content frame */}
       <div className="frame-465">
         <div className="frame-322">
+          {/* Mobile Solutions Dropdown - visible only on mobile */}
+          <div className="mobile-solutions-dropdown">
+            <div
+              className="mobile-dropdown-trigger"
+              onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+            >
+              <svg className="mobile-dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" />
+              </svg>
+              <span className="mobile-dropdown-label">Managed Services</span>
+              <svg
+                className={`mobile-dropdown-chevron ${solutionsDropdownOpen ? 'open' : ''}`}
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {solutionsDropdownOpen && (
+              <div className="mobile-dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`mobile-dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setSolutionsDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    <span className="mobile-dropdown-item-text">{sol.name}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Sidebar Solutions Navigation */}
           <div className="frame-289">
             <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
@@ -233,6 +275,9 @@ const ManagedServices = ({ navigateTo }) => {
                 {useCasesOpen && (
                   <div className="accordion-body-content fade-in">
                     <div className="frame-3">
+                      <div className="advantages-visual-wrapper">
+                        <img className="rectangle-333" src="/assets/managed_usecases.png" alt="Managed Use Cases" />
+                      </div>
                       <div className="advantages-list-wrapper">
                         <ul className="advantages-list">
                           <li>Infrastructure and network monitoring</li>
@@ -242,12 +287,37 @@ const ManagedServices = ({ navigateTo }) => {
                           <li>Performance optimization and reporting</li>
                         </ul>
                       </div>
-                      <div className="advantages-visual-wrapper">
-                        <img className="rectangle-333" src="/assets/managed_usecases.png" alt="Managed Use Cases" />
-                      </div>
                     </div>
                   </div>
                 )}
+              </div>
+            </div>
+
+            {/* Mobile Services Cards - visible only on mobile */}
+            <div className="mobile-services-section">
+              <h3 className="mobile-services-title">
+                <span className="managed-services-we-offer-span">Managed </span>
+                <span className="managed-services-we-offer-span2">Services we offer</span>
+              </h3>
+              <div className="mobile-services-cards">
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/managed_cloud_software.png" alt="Cloud & Software" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Cloud &amp; Software</h4>
+                </div>
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/managed_network_security.png" alt="Network & Security" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Network &amp; Security</h4>
+                </div>
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/managed_infrastructure.png" alt="End User Devices" />
+                  </div>
+                  <h4 className="mobile-service-card-title">End User Devices</h4>
+                </div>
               </div>
             </div>
 

@@ -181,12 +181,11 @@
   border-radius: 3px;
   width: 8px;
   height: 36px;
-  transition: background-color 0.3s ease, height 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .solutions-managed-services .bar.active {
   background: #0e10ff;
-  height: 48px;
 }
 
 /* Main Content Section styling (Sidebar & Content side-by-side) */
@@ -717,6 +716,23 @@
   }
 }
 
+/* Desktop defaults for mobile-only elements */
+.solutions-managed-services .mobile-label {
+  display: none;
+}
+
+.solutions-managed-services .desktop-label {
+  display: block;
+}
+
+.solutions-managed-services .mobile-solutions-dropdown {
+  display: none;
+}
+
+.solutions-managed-services .mobile-services-section {
+  display: none;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 1200px) {
   .solutions-managed-services .frame-322 {
@@ -805,5 +821,419 @@
   .solutions-managed-services .advantages-visual-wrapper {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+/* ============================
+   MOBILE STYLES (max-width: 480px)
+   Matches Figma mobile design
+   ============================ */
+@media (max-width: 480px) {
+  /* Label toggle */
+  .solutions-managed-services .desktop-label {
+    display: none;
+  }
+  .solutions-managed-services .mobile-label {
+    display: block;
+  }
+
+  /* Hide decorative ellipses */
+  .solutions-managed-services .ellipse-17,
+  .solutions-managed-services .ellipse-18,
+  .solutions-managed-services .ellipse-19,
+  .solutions-managed-services .ellipse-20 {
+    display: none;
+  }
+
+  .solutions-managed-services .rectangle-217 {
+    height: 600px;
+  }
+
+  /* Hero Section - Mobile */
+  .solutions-managed-services .frame-462 {
+    margin-top: 100px;
+    padding: 0 20px;
+    gap: 24px;
+  }
+
+  .solutions-managed-services .frame-461 {
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  .solutions-managed-services .frame-460 {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .solutions-managed-services .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.2em;
+    color: #191c1e;
+  }
+
+  .solutions-managed-services .support-beyond-expectations {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .solutions-managed-services .support-beyond-expectations-span {
+    color: #0e10ff;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #0e10ff;
+    font-style: normal;
+  }
+
+  .solutions-managed-services .support-beyond-expectations-span2 {
+    color: #191c1e;
+    font-style: normal;
+  }
+
+  .solutions-managed-services .hero-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 24px rgba(14, 16, 255, 0.08);
+  }
+
+  .solutions-managed-services .frame-2-bars {
+    margin-top: 16px;
+    justify-content: center;
+    width: 100%;
+    align-self: center;
+  }
+
+  .solutions-managed-services .bar {
+    width: 6px;
+    height: 28px;
+  }
+
+  .solutions-managed-services .bar.active {
+    height: 28px;
+  }
+
+  /* Main Content Frame - Mobile */
+  .solutions-managed-services .frame-465 {
+    margin-top: 12px;
+    padding: 0 16px;
+  }
+
+  .solutions-managed-services .frame-322 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Hide sidebar on mobile */
+  .solutions-managed-services .frame-289 {
+    display: none;
+  }
+
+  /* Mobile Solutions Dropdown - Show on mobile */
+  .solutions-managed-services .mobile-solutions-dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .solutions-managed-services .mobile-dropdown-trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: #ffffff;
+    border: 1.5px solid rgba(14, 16, 255, 0.12);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(14, 16, 255, 0.04);
+  }
+
+  .solutions-managed-services .mobile-dropdown-trigger:hover {
+    border-color: rgba(14, 16, 255, 0.25);
+    box-shadow: 0 4px 16px rgba(14, 16, 255, 0.08);
+  }
+
+  .solutions-managed-services .mobile-dropdown-icon {
+    width: 22px;
+    height: 22px;
+    color: #0e10ff;
+    flex-shrink: 0;
+  }
+
+  .solutions-managed-services .mobile-dropdown-label {
+    flex: 1;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #191c1e;
+  }
+
+  .solutions-managed-services .mobile-dropdown-chevron {
+    width: 20px;
+    height: 20px;
+    color: #0e10ff;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .solutions-managed-services .mobile-dropdown-chevron.open {
+    transform: rotate(180deg);
+  }
+
+  .solutions-managed-services .mobile-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(14, 16, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(14, 16, 255, 0.08);
+    animation: managedDropdownFadeIn 0.2s ease forwards;
+  }
+
+  @keyframes managedDropdownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .solutions-managed-services .mobile-dropdown-item {
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(14, 16, 255, 0.04);
+  }
+
+  .solutions-managed-services .mobile-dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .solutions-managed-services .mobile-dropdown-item:hover {
+    background: rgba(14, 16, 255, 0.04);
+  }
+
+  .solutions-managed-services .mobile-dropdown-item.active {
+    background: rgba(14, 16, 255, 0.06);
+  }
+
+  .solutions-managed-services .mobile-dropdown-item-text {
+    font-family: "MerriweatherSans-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  .solutions-managed-services .mobile-dropdown-item.active .mobile-dropdown-item-text {
+    color: #0e10ff;
+    font-weight: 700;
+  }
+
+  /* Content area */
+  .solutions-managed-services .frame-561 {
+    gap: 32px;
+  }
+
+  /* Title & Intro Section */
+  .solutions-managed-services .frame-368 {
+    gap: 16px;
+  }
+
+  .solutions-managed-services .managed-services-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .solutions-managed-services .frame-362 {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .solutions-managed-services .intro-text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .solutions-managed-services .group-319-svg {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Accordions - Mobile */
+  .solutions-managed-services .frame-367 {
+    gap: 12px;
+  }
+
+  .solutions-managed-services .accordion-wrapper {
+    border-radius: 12px;
+  }
+
+  .solutions-managed-services .group-284,
+  .solutions-managed-services .group-285 {
+    padding: 14px 16px;
+  }
+
+  .solutions-managed-services .our-approach-title,
+  .solutions-managed-services .key-benefits-title {
+    font-size: 15px;
+  }
+
+  .solutions-managed-services .chevron-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .solutions-managed-services .accordion-body-text {
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .solutions-managed-services .accordion-body-content {
+    padding: 14px 16px;
+  }
+
+  .solutions-managed-services .frame-3 {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .solutions-managed-services .advantages-visual-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .solutions-managed-services .advantages-list {
+    gap: 10px;
+  }
+
+  .solutions-managed-services .advantages-list li {
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 18px;
+  }
+
+  .solutions-managed-services .advantages-list li::before {
+    width: 6px;
+    height: 6px;
+    top: 6px;
+    border-radius: 50%;
+  }
+
+  /* Mobile Services Section - Show on mobile */
+  .solutions-managed-services .mobile-services-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .solutions-managed-services .mobile-services-title {
+    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .solutions-managed-services .mobile-services-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .solutions-managed-services .mobile-service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(14, 16, 255, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .solutions-managed-services .mobile-service-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .solutions-managed-services .mobile-service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .solutions-managed-services .mobile-service-card-title {
+    color: #0e10ff;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  /* Desktop offer section - hide on mobile */
+  .solutions-managed-services .frame-346 {
+    display: none;
+  }
+
+  /* Partners - Mobile */
+  .solutions-managed-services .group-348 {
+    margin-top: 16px;
+  }
+
+  .solutions-managed-services .frame-464 {
+    padding: 20px 16px;
+    border-radius: 16px;
+    gap: 16px;
+    background: rgba(14, 16, 255, 0.02);
+    border: 1px solid rgba(14, 16, 255, 0.06);
+  }
+
+  .solutions-managed-services .cyber-security-partners {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .solutions-managed-services .partners-grid-cyber {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .solutions-managed-services .partner-logo-box {
+    width: 100%;
+    height: 56px;
+    border-radius: 10px;
+  }
+
+  .solutions-managed-services .p-logo {
+    font-size: 16px;
+  }
+
+  /* Footer on mobile */
+  .solutions-managed-services .footer-wrapper {
+    margin-top: 12px;
   }
 }

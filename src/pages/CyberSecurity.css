@@ -1318,3 +1318,690 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Desktop defaults for mobile-only elements */
+.solutions-cyber-security .mobile-label {
+  display: none;
+}
+
+.solutions-cyber-security .desktop-label {
+  display: block;
+}
+
+.solutions-cyber-security .mobile-hero-text {
+  display: none;
+}
+
+.solutions-cyber-security .desktop-hero-text {
+  display: block;
+}
+
+.solutions-cyber-security .mobile-solutions-dropdown {
+  display: none;
+}
+
+.solutions-cyber-security .mobile-services-section {
+  display: none;
+}
+
+/* ============================
+   MOBILE STYLES (max-width: 480px)
+   ============================ */
+@media (max-width: 480px) {
+  /* Label toggle */
+  .solutions-cyber-security .desktop-label {
+    display: none;
+  }
+  .solutions-cyber-security .mobile-label {
+    display: block;
+  }
+
+  /* Hero text toggle */
+  .solutions-cyber-security .desktop-hero-text {
+    display: none;
+  }
+  .solutions-cyber-security .mobile-hero-text {
+    display: block;
+  }
+
+  /* Hide decorative ellipses */
+  .solutions-cyber-security .ellipse-17,
+  .solutions-cyber-security .ellipse-18,
+  .solutions-cyber-security .ellipse-19,
+  .solutions-cyber-security .ellipse-20 {
+    display: none;
+  }
+
+  .solutions-cyber-security .rectangle-217 {
+    height: 520px;
+  }
+
+  /* Hero Section - Mobile */
+  .solutions-cyber-security .frame-462 {
+    margin-top: 100px;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .solutions-cyber-security .frame-461 {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .solutions-cyber-security .frame-460 {
+    width: 100%;
+    text-align: left;
+  }
+
+  .solutions-cyber-security .c-y-b-e-r-s-e-c-u-r-i-t-y {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #191c1e;
+    text-align: left;
+  }
+
+  .solutions-cyber-security .advanced-threat-defense-digital-forensics {
+    font-size: 32px;
+    line-height: 44px;
+    text-align: left;
+  }
+
+  .solutions-cyber-security .advanced-threat-defense-digital-forensics-span {
+    color: #191c1e;
+  }
+
+  .solutions-cyber-security .advanced-threat-defense-digital-forensics-span2 {
+    color: #0e10ff;
+  }
+
+  .solutions-cyber-security .hero-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 16px;
+  }
+
+  .solutions-cyber-security .frame-2-bars {
+    margin-top: 8px;
+    justify-content: center;
+    width: 100%;
+    align-self: center;
+  }
+
+  .solutions-cyber-security .bar {
+    width: 6px;
+    height: 28px;
+  }
+
+  .solutions-cyber-security .bar.active {
+    height: 28px;
+  }
+
+  /* Main Content Frame - Mobile */
+  .solutions-cyber-security .frame-465 {
+    margin-top: 12px;
+    padding: 0 16px;
+  }
+
+  .solutions-cyber-security .frame-322 {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Hide sidebar on mobile */
+  .solutions-cyber-security .frame-289 {
+    display: none;
+  }
+
+  /* Mobile Solutions Dropdown */
+  .solutions-cyber-security .mobile-solutions-dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .solutions-cyber-security .mobile-dropdown-trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: #ffffff;
+    border: 1.5px solid rgba(14, 16, 255, 0.12);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 12px rgba(14, 16, 255, 0.04);
+  }
+
+  .solutions-cyber-security .mobile-dropdown-trigger:hover {
+    border-color: rgba(14, 16, 255, 0.25);
+    box-shadow: 0 4px 16px rgba(14, 16, 255, 0.08);
+  }
+
+  .solutions-cyber-security .mobile-dropdown-icon {
+    width: 22px;
+    height: 22px;
+    color: #0e10ff;
+    flex-shrink: 0;
+  }
+
+  .solutions-cyber-security .mobile-dropdown-label {
+    flex: 1;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #191c1e;
+  }
+
+  .solutions-cyber-security .mobile-dropdown-chevron {
+    width: 20px;
+    height: 20px;
+    color: #0e10ff;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .solutions-cyber-security .mobile-dropdown-chevron.open {
+    transform: rotate(180deg);
+  }
+
+  .solutions-cyber-security .mobile-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    background: #ffffff;
+    border: 1px solid rgba(14, 16, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(14, 16, 255, 0.08);
+    animation: cyberDropdownFadeIn 0.2s ease forwards;
+  }
+
+  @keyframes cyberDropdownFadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .solutions-cyber-security .mobile-dropdown-item {
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid rgba(14, 16, 255, 0.04);
+  }
+
+  .solutions-cyber-security .mobile-dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .solutions-cyber-security .mobile-dropdown-item:hover {
+    background: rgba(14, 16, 255, 0.04);
+  }
+
+  .solutions-cyber-security .mobile-dropdown-item.active {
+    background: rgba(14, 16, 255, 0.06);
+  }
+
+  .solutions-cyber-security .mobile-dropdown-item-text {
+    font-family: "MerriweatherSans-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  .solutions-cyber-security .mobile-dropdown-item.active .mobile-dropdown-item-text {
+    color: #0e10ff;
+    font-weight: 700;
+  }
+
+  /* Content area */
+  .solutions-cyber-security .frame-321 {
+    gap: 28px;
+  }
+
+  /* Title */
+  .solutions-cyber-security .cyber-security-cyberforensics {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .solutions-cyber-security .cyber-security-cyberforensics-span {
+    color: #0e10ff;
+  }
+
+  .solutions-cyber-security .cyber-security-cyberforensics-span2 {
+    color: #191c1e;
+  }
+
+  /* Intro section */
+  .solutions-cyber-security .frame-463 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .solutions-cyber-security .intro-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .solutions-cyber-security .group-319-fallback {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Accordions - styled like IT Infrastructure */
+  .solutions-cyber-security .frame-320 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .solutions-cyber-security .accordion-card {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  .solutions-cyber-security .accordion-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(180deg, #f0f4ff 0%, #e8eeff 100%);
+    border-radius: 8px;
+    margin-bottom: 0;
+  }
+
+  .solutions-cyber-security .accordion-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .solutions-cyber-security .rectangle-299 {
+    display: none;
+  }
+
+  .solutions-cyber-security .our-approach,
+  .solutions-cyber-security .key-advantages {
+    color: #191c1e;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .solutions-cyber-security .chevron-icon {
+    width: 22px;
+    height: 22px;
+    color: #0e10ff;
+    transition: transform 0.3s ease;
+  }
+
+  .solutions-cyber-security .chevron-icon.rotated {
+    transform: rotate(180deg);
+  }
+
+  .solutions-cyber-security .accordion-body {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+  }
+
+  .solutions-cyber-security .accordion-body.open {
+    padding: 20px 0;
+    max-height: none;
+    overflow: visible;
+    border: none;
+  }
+
+  .solutions-cyber-security .approach-text {
+    color: #333333;
+    font-family: "MerriweatherSans-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  .solutions-cyber-security .advantages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .solutions-cyber-security .advantages-visual-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .solutions-cyber-security .advantages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .solutions-cyber-security .advantages-list li {
+    color: #333333;
+    font-family: "MerriweatherSans-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    padding-left: 22px;
+    list-style: none;
+  }
+
+  .solutions-cyber-security .advantages-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: #0e10ff;
+    box-shadow: 0 0 6px rgba(14, 16, 255, 0.4);
+  }
+
+  /* Capabilities section */
+  .solutions-cyber-security .frame-554 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .solutions-cyber-security .end-to-end-cybersecurity-solutions {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .solutions-cyber-security .end-to-end-protection-sub {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .solutions-cyber-security .capability-card {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px 12px;
+    align-items: center;
+  }
+
+  .solutions-cyber-security .capability-card .card-top-glow {
+    grid-column: 1 / -1;
+    display: none;
+  }
+
+  .solutions-cyber-security .badge-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .solutions-cyber-security .background-badge svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .solutions-cyber-security .capability-card .heading-3 {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .solutions-cyber-security .capability-desc {
+    grid-column: 1 / -1;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .solutions-cyber-security .capability-list {
+    grid-column: 1 / -1;
+  }
+
+  .solutions-cyber-security .threat-traffic-visual {
+    grid-column: 1 / -1;
+  }
+
+  .solutions-cyber-security .active-monitoring-badge {
+    grid-column: 1 / -1;
+  }
+
+  .solutions-cyber-security .compliance-chips {
+    grid-column: 1 / -1;
+  }
+
+  /* Forensics section */
+  .solutions-cyber-security .frame-5572 {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .solutions-cyber-security .container18 {
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .solutions-cyber-security .cyberforensics-incident-response {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .solutions-cyber-security .four-stage-intro {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+  }
+
+  .solutions-cyber-security .container4-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .solutions-cyber-security .step-card {
+    padding: 16px;
+  }
+
+  .solutions-cyber-security .step-title {
+    font-size: 16px;
+  }
+
+  .solutions-cyber-security .step-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Forensic Lab */
+  .solutions-cyber-security .section-3-forensic-lab-capabilities {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .solutions-cyber-security .container26 {
+    display: none;
+  }
+
+  .solutions-cyber-security .state-of-the-art-forensic-lab {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .solutions-cyber-security .heading-42 {
+    font-size: 16px;
+  }
+
+  .solutions-cyber-security .lab-feature-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Use cases */
+  .solutions-cyber-security .cybersecurity-cyberforensics-use-cases {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .solutions-cyber-security .use-cases-intro {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .solutions-cyber-security .use-cases-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .solutions-cyber-security .use-case-card {
+    padding: 16px;
+  }
+
+  .solutions-cyber-security .use-case-title {
+    font-size: 16px;
+  }
+
+  .solutions-cyber-security .use-case-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Mobile Services Section */
+  .solutions-cyber-security .mobile-services-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .solutions-cyber-security .mobile-services-title {
+    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .solutions-cyber-security .cyber-services-span1 {
+    color: #0e10ff;
+  }
+
+  .solutions-cyber-security .cyber-services-span2 {
+    color: #191c1e;
+  }
+
+  .solutions-cyber-security .mobile-services-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .solutions-cyber-security .mobile-service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(14, 16, 255, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .solutions-cyber-security .mobile-service-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .solutions-cyber-security .mobile-service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .solutions-cyber-security .mobile-service-card-title {
+    color: #0e10ff;
+    font-family: "MerriweatherSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    padding: 16px 12px;
+  }
+
+  /* Partners - Mobile */
+  .solutions-cyber-security .group-348 {
+    margin-top: 16px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .solutions-cyber-security .frame-464 {
+    background: #ffffff;
+    border: 1px solid rgba(14, 16, 255, 0.06);
+    padding: 32px 20px;
+    border-radius: 24px;
+    gap: 24px;
+    box-shadow: 0 4px 20px rgba(14, 16, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .solutions-cyber-security .cyber-security-partners {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .solutions-cyber-security .partners-grid-cyber {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .solutions-cyber-security .partner-logo-box {
+    width: 100%;
+    height: 56px;
+    border-radius: 30px;
+    background: #f8f9fc;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .solutions-cyber-security .p-logo {
+    font-size: 20px;
+    opacity: 0.8;
+  }
+
+  /* Footer */
+  .solutions-cyber-security .footer-wrapper {
+    margin-top: 12px;
+  }
+}
