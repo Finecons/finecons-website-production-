@@ -8,6 +8,9 @@ const CyberSecurity = ({ navigateTo }) => {
   const [approachOpen, setApproachOpen] = useState(true);
   const [advantagesOpen, setAdvantagesOpen] = useState(true);
 
+  // Mobile solutions dropdown state
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+
   // Active solution tab indicator (always 'cyber' on this page)
   const activeSolution = 'cyber';
 
@@ -35,12 +38,22 @@ const CyberSecurity = ({ navigateTo }) => {
       <div className="frame-462">
         <div className="frame-461">
           <div className="frame-460">
-            <div className="c-y-b-e-r-s-e-c-u-r-i-t-y">C Y B E R S E C U R I T Y</div>
-            <div className="advanced-threat-defense-digital-forensics">
+            <div className="c-y-b-e-r-s-e-c-u-r-i-t-y desktop-label">C Y B E R S E C U R I T Y</div>
+            <div className="c-y-b-e-r-s-e-c-u-r-i-t-y mobile-label">CYBER SECURITY</div>
+            <div className="advanced-threat-defense-digital-forensics desktop-hero-text">
               <span>
                 <span className="advanced-threat-defense-digital-forensics-span">Advanced </span>
                 <span className="advanced-threat-defense-digital-forensics-span2">Threat </span>
                 <span className="advanced-threat-defense-digital-forensics-span">Defense &amp; Digital Forensics</span>
+              </span>
+            </div>
+            <div className="advanced-threat-defense-digital-forensics mobile-hero-text">
+              <span>
+                <span className="advanced-threat-defense-digital-forensics-span">Your </span>
+                <span className="advanced-threat-defense-digital-forensics-span2">Shield </span>
+                <span className="advanced-threat-defense-digital-forensics-span">in the</span>
+                <br />
+                <span className="advanced-threat-defense-digital-forensics-span">Digital World</span>
               </span>
             </div>
           </div>
@@ -64,6 +77,43 @@ const CyberSecurity = ({ navigateTo }) => {
       {/* Main content frame */}
       <div className="frame-465">
         <div className="frame-322">
+          {/* Mobile Solutions Dropdown - visible only on mobile */}
+          <div className="mobile-solutions-dropdown">
+            <div
+              className="mobile-dropdown-trigger"
+              onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
+            >
+              <svg className="mobile-dropdown-icon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7V14C2 20.2 6.3 26 12 28C17.7 26 22 20.2 22 14V7L12 2Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="mobile-dropdown-label">Cyber Security</span>
+              <svg
+                className={`mobile-dropdown-chevron ${solutionsDropdownOpen ? 'open' : ''}`}
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {solutionsDropdownOpen && (
+              <div className="mobile-dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`mobile-dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setSolutionsDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    <span className="mobile-dropdown-item-text">{sol.name}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Sidebar Solutions Navigation */}
           <div className="frame-289">
             <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
@@ -528,6 +578,34 @@ const CyberSecurity = ({ navigateTo }) => {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Services Section - visible only on mobile */}
+            <div className="mobile-services-section">
+              <h3 className="mobile-services-title">
+                <span className="cyber-services-span1">Cyber Security </span>
+                <span className="cyber-services-span2">Services we offer</span>
+              </h3>
+              <div className="mobile-services-cards">
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/managed_network_security.png" alt="Network & Security" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Network &amp; Security</h4>
+                </div>
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/managed_cloud_software.png" alt="Cloud & Software" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Cloud &amp; Software</h4>
+                </div>
+                <div className="mobile-service-card">
+                  <div className="mobile-service-card-image">
+                    <img src="/assets/server_storage.png" alt="Servers & Storage" />
+                  </div>
+                  <h4 className="mobile-service-card-title">Servers &amp; Storage</h4>
                 </div>
               </div>
             </div>
