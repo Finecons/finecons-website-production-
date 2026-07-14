@@ -1114,6 +1114,86 @@
   }
 }
 
+/* Mobile Dropdown Navigation */
+.solutions-physical-security .mobile-solutions-dropdown {
+  display: none;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.solutions-physical-security .dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 14px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(14, 16, 255, 0.12);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(14, 16, 255, 0.04);
+}
+
+.solutions-physical-security .dropdown-cloud-icon {
+  width: 20px;
+  height: 20px;
+  color: #0e10ff;
+  flex-shrink: 0;
+}
+
+.solutions-physical-security .dropdown-label {
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0e10ff;
+  flex: 1;
+}
+
+.solutions-physical-security .dropdown-chevron {
+  width: 20px;
+  height: 20px;
+  color: #0e10ff;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.solutions-physical-security .dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.solutions-physical-security .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid rgba(14, 16, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(14, 16, 255, 0.08);
+  overflow: hidden;
+}
+
+.solutions-physical-security .dropdown-item {
+  padding: 14px 20px;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(14, 16, 255, 0.04);
+}
+
+.solutions-physical-security .dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.solutions-physical-security .dropdown-item.active {
+  background: rgba(14, 16, 255, 0.06);
+  color: #0e10ff;
+  font-weight: 700;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 1200px) {
   .solutions-physical-security .frame-322 {
@@ -1137,6 +1217,12 @@
 @media (max-width: 992px) {
   .solutions-physical-security .frame-322 {
     flex-direction: column;
+  }
+  .solutions-physical-security .desktop-sidebar {
+    display: none;
+  }
+  .solutions-physical-security .mobile-solutions-dropdown {
+    display: block;
   }
   .solutions-physical-security .frame-289 {
     width: 100%;
@@ -1197,28 +1283,235 @@
 }
 
 @media (max-width: 768px) {
-  .solutions-physical-security .unified-defense-for-the-modern-perimeter {
-    font-size: 36px;
-    line-height: 50px;
+  .solutions-physical-security .rectangle-217 {
+    height: 540px;
   }
+
+  .solutions-physical-security .ellipse-17,
+  .solutions-physical-security .ellipse-18,
+  .solutions-physical-security .ellipse-19,
+  .solutions-physical-security .ellipse-20 {
+    display: none;
+  }
+
   .solutions-physical-security .frame-462 {
-    margin-top: 140px;
-    padding: 0 24px;
+    margin-top: 100px;
+    margin-bottom: 32px;
+    padding: 0 16px;
+    gap: 16px;
+    align-items: center;
   }
-  .solutions-physical-security .frame-465 {
-    margin-top: 120px;
-    padding: 0 24px;
-  }
-  .solutions-physical-security .pillars-grid,
-  .solutions-physical-security .products-grid {
-    grid-template-columns: 1fr;
-  }
-  .solutions-physical-security .frame-3 {
+
+  .solutions-physical-security .frame-461 {
     flex-direction: column;
     gap: 24px;
   }
+
+  .solutions-physical-security .n-e-t-w-o-r-k {
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+
+  .solutions-physical-security .unified-defense-for-the-modern-perimeter {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .solutions-physical-security .hero-image-wrapper {
+    width: 80%;
+    max-width: 450px;
+    height: 220px;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  .solutions-physical-security .frame-2-bars {
+    margin-top: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .solutions-physical-security .bar {
+    width: 5px;
+    height: 24px;
+  }
+
+  .solutions-physical-security .bar.active {
+    height: 24px;
+  }
+
+  .solutions-physical-security .frame-465 {
+    margin-top: 20px;
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  .solutions-physical-security .frame-322 {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .solutions-physical-security .frame-289 {
+    display: none;
+  }
+
+  .solutions-physical-security .mobile-solutions-dropdown {
+    display: block;
+  }
+
+  .solutions-physical-security .frame-561 {
+    gap: 32px;
+  }
+
+  .solutions-physical-security .physical-security-network-infrastructure {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .solutions-physical-security .intro-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .solutions-physical-security .intro-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .solutions-physical-security .group-319-svg {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .solutions-physical-security .accordion-wrapper {
+    border-radius: 14px;
+  }
+
+  .solutions-physical-security .group-284,
+  .solutions-physical-security .group-285 {
+    padding: 16px 18px;
+  }
+
+  .solutions-physical-security .our-approach-title,
+  .solutions-physical-security .key-advantages-title {
+    font-size: 18px;
+  }
+
+  .solutions-physical-security .chevron-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .solutions-physical-security .accordion-body-text,
+  .solutions-physical-security .accordion-body-content {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .solutions-physical-security .frame-3 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .solutions-physical-security .advantages-visual-wrapper {
     width: 100%;
     max-width: 100%;
+  }
+
+  .solutions-physical-security .physical-security-pillars-title {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .solutions-physical-security .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .solutions-physical-security .pillar-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .solutions-physical-security .pillar-card:hover {
+    transform: none;
+  }
+
+  .solutions-physical-security .precision-network-foundations-title {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .solutions-physical-security .section-network-foundations {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .solutions-physical-security .foundations-visual {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .solutions-physical-security .core-products-title {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .solutions-physical-security .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .solutions-physical-security .product-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .solutions-physical-security .product-card:hover {
+    transform: none;
+  }
+
+  .solutions-physical-security .implementation-lifecycle-title {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .solutions-physical-security .lifecycle-steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .solutions-physical-security .lifecycle-step-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .solutions-physical-security .lifecycle-step-card:hover {
+    transform: none;
+  }
+
+  .solutions-physical-security .connector-line {
+    display: none;
+  }
+
+  .solutions-physical-security .cyber-security-partners {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .solutions-physical-security .partners-grid-cyber {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .solutions-physical-security .footer-wrapper {
+    margin-top: 0;
   }
 }

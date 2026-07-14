@@ -7,6 +7,21 @@ const CloudLicensing = ({ navigateTo }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  // Accordion toggle states
+  const [partnersOpen, setPartnersOpen] = useState(true);
+  // Dropdown open state for mobile nav
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Active solution tab indicator (always 'cloud' on this page)
+  const activeSolution = 'cloud';
+
+  const solutionsList = [
+    { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
+    { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
+    { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
+    { id: 'cloud', name: 'Cloud Solutions', path: 'cloud-licensing' },
+    { id: 'managed', name: 'Managed Services', path: 'managed-services' }
+  ];
 
   return (
     <div className="licensing">
@@ -32,6 +47,17 @@ const CloudLicensing = ({ navigateTo }) => {
               <br />
               <span className="licensing-technical-support-services-span2">
                 Support Services
+      {/* Hero Section */}
+      <div className="frame-462">
+        <div className="frame-461">
+          <div className="frame-460">
+            <div className="c-l-o-u-d-l-i-c-e-n-s-i-n-g">C L O U D</div>
+            <div className="scale-fast-spend-smart">
+              <span>
+                <span className="scale-fast-spend-smart-span">Scale&nbsp;</span>
+                <span className="scale-fast-spend-smart-span2">Fast.&nbsp;</span>
+                <span className="scale-fast-spend-smart-span2">Spend&nbsp;</span>
+                <span className="scale-fast-spend-smart-span">Smart.</span>
               </span>
             </h1>
           </div>
@@ -66,6 +92,20 @@ const CloudLicensing = ({ navigateTo }) => {
               </svg>
             </div>
           </div>
+          <div className="hero-image-wrapper">
+            <img className="rectangle-323" src="/assets/cloud_licensing_hero.png" alt="Cloud Solutions" />
+          </div>
+        </div>
+        <div className="frame-2-bars">
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar active"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
         </div>
       </div>
 
@@ -88,6 +128,13 @@ const CloudLicensing = ({ navigateTo }) => {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
               </svg>
+      {/* Main content frame */}
+      <div className="frame-465">
+        <div className="frame-322">
+          {/* Sidebar Solutions Navigation - Desktop */}
+          <div className="frame-289 desktop-sidebar">
+            <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
+              S O L U T I O N S
             </div>
             <h3 className="bento-card-title">Microsoft Services</h3>
             <p className="bento-card-desc">
@@ -164,6 +211,35 @@ const CloudLicensing = ({ navigateTo }) => {
             </div>
           </div>
 
+          {/* Mobile Dropdown Navigation */}
+          <div className="mobile-solutions-dropdown">
+            <div className="dropdown-trigger" onClick={() => setDropdownOpen(!dropdownOpen)}>
+              <svg className="dropdown-cloud-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="dropdown-label">Cloud Solutions</span>
+              <svg className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {dropdownOpen && (
+              <div className="dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    {sol.name}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Security & Networking - Medium Bento Card */}
           <div className="bento-card security-networking-medium">
             <div className="security-title-row">
@@ -199,6 +275,27 @@ const CloudLicensing = ({ navigateTo }) => {
               Veeam, VMware, Nutanix infrastructure support.
             </p>
           </div>
+          {/* Main Details Area */}
+          <div className="frame-561">
+            {/* Title & Introduction Section */}
+            <div className="frame-318">
+              <h2 className="cloud-licensing-solutions-title">
+                <span>
+                  <span className="cloud-licensing-solutions-span">Cloud </span>
+                  <span className="cloud-licensing-solutions-span2">Solutions</span>
+                </span>
+              </h2>
+
+              <div className="frame-349">
+                <div className="intro-text">
+                  Finecons Cloud delivers secure, scalable, and intelligent cloud solutions tailored to enterprise needs. We help organisations modernise infrastructure, optimise costs, and improve operational agility.
+                  <br />
+                  <br />
+                  From cloud strategy and migration to management and optimization, we support every stage of your cloud journey.
+                  <br />
+                  <br />
+                  With FineCons Cloud, businesses gain a resilient, future-ready foundation for sustained growth.
+                </div>
 
           {/* Creative & Design */}
           <div className="bento-card creative">
@@ -343,6 +440,7 @@ const CloudLicensing = ({ navigateTo }) => {
 
         </div>
       </div>
+            </div>
 
       {/* CTA Section */}
       <div className="licensing-cta-section">

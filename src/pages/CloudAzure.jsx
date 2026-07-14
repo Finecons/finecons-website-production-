@@ -41,7 +41,7 @@ const CloudAzure = ({ navigateTo }) => {
         {/* About Azure Section */}
         <div className="frame-498">
           <div className="frame-497">
-            <div className="f-i-n-e-c-o-n-s-a-z-u-r-e">F I N E C O N S   A Z U R E</div>
+            <div className="f-i-n-e-c-o-n-s-a-z-u-r-e">FINECONS AZURE</div>
             <div className="our-azure-solutions">
               <span>
                 <span className="our-azure-solutions-span">Our </span>
@@ -67,7 +67,7 @@ const CloudAzure = ({ navigateTo }) => {
           <div className="frame-503">
             <div className="frame-499">
               <div className="a-z-u-r-e-c-e-r-t-i-f-i-c-a-t-e">
-                A Z U R E   C E R T I F I C A T E
+                AZURE CERTIFICATE
               </div>
               <div className="cloud-certifications-expertise">
                 <span>
@@ -172,7 +172,7 @@ const CloudAzure = ({ navigateTo }) => {
         <div className="frame-506">
           <div className="group-297">
             <div className="frame-5042">
-              <div className="w-h-a-t-w-e-d-o">W H A T   W E   D O</div>
+              <div className="w-h-a-t-w-e-d-o">WHAT WE DO</div>
               <div className="azure-solutions-services">
                 <span>
                   <span className="azure-solutions-services-span">Azure </span>
@@ -262,7 +262,7 @@ const CloudAzure = ({ navigateTo }) => {
         {/* Success Stories */}
         <div className="frame-507">
           <div className="frame-304">
-            <div className="a-z-u-r-e-u-s-e-c-a-s-e-s">A Z U R E   U S E   C A S E S</div>
+            <div className="a-z-u-r-e-u-s-e-c-a-s-e-s">AZURE USE CASES</div>
             <div className="cloud-success-stories">
               <span>
                 <span className="cloud-success-stories-span">Cloud </span>
