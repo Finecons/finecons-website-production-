@@ -118,58 +118,50 @@ const Solutions = ({ navigateTo }) => {
 
       {/* Hero / Banner Area */}
       <div className="frame-437">
-        <div className="solutions-hero-content">
-          <div className="solutions-that-deliver-results">
-            <span>
-              <span className="solutions-that-deliver-results-span">Solutions </span>
-              <span className="solutions-that-deliver-results-span2">That Deliver Results</span>
-            </span>
+        <div className="solutions-hero-row">
+          <div className="solutions-hero-content">
+            <div className="solutions-that-deliver-results">
+              <span>
+                <span className="solutions-that-deliver-results-span">Solutions </span>
+                <span className="solutions-that-deliver-results-span2">That Deliver Results</span>
+              </span>
+            </div>
           </div>
-          <div className="frame-2 desktop-only-rects">
-            <div className="inactive-rect"></div>
-            <div className="inactive-rect"></div>
-            <div className="inactive-rect"></div>
-            <div className="active-rect"></div>
-            <div className="inactive-rect"></div>
-            <div className="inactive-rect"></div>
-            <div className="inactive-rect"></div>
-            <div className="inactive-rect"></div>
-            <div className="inactive-rect"></div>
+
+          <div className="about-hero-visual">
+            <div className="ellipse-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
+                <path d="M178.593 87.0578C232.128 136.141 303.315 140.715 249.935 198.937C195.559 287.681 82.5975 242 29.0624 192.917C-24.4727 143.834 2.68641 79.4156 56.0668 21.1931C109.447 -37.0295 125.057 37.975 178.593 87.0578Z" fill="#B6A755" fillOpacity="0.8" />
+              </svg>
+            </div>
+            <div className="ellipse-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 234 323" fill="none">
+                <path d="M217.884 163.856C217.884 252.125 272.314 319.653 176.208 319.653C51.9119 343.828 0 205.117 0 116.848C0 28.5782 80.1025 0 176.208 0C272.314 0 217.884 75.5859 217.884 163.856Z" fill="#525299" fillOpacity="0.8" />
+              </svg>
+            </div>
+            <div className="ellipse-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 316 350" fill="none">
+                <defs>
+                  <clipPath id="solutionsLeafClip">
+                    <path d="M251.226 154.679C285.477 242.327 367.709 287.484 268.777 326.143C150.208 400.148 42.9472 283.296 8.69687 195.649C-25.5534 108.001 45.8151 47.4019 144.746 8.74241C243.677 -29.9171 216.976 67.0313 251.226 154.679Z" />
+                  </clipPath>
+                </defs>
+                <image
+                  href="/assets/solutions_hero_puzzle.png"
+                  x="0"
+                  y="0"
+                  width="316"
+                  height="350"
+                  preserveAspectRatio="xMidYMid slice"
+                  clipPath="url(#solutionsLeafClip)"
+                />
+              </svg>
+            </div>
           </div>
         </div>
 
-        <div className="about-hero-visual">
-          <div className="ellipse-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
-              <path d="M178.593 87.0578C232.128 136.141 303.315 140.715 249.935 198.937C195.559 287.681 82.5975 242 29.0624 192.917C-24.4727 143.834 2.68641 79.4156 56.0668 21.1931C109.447 -37.0295 125.057 37.975 178.593 87.0578Z" fill="#B6A755" fillOpacity="0.8" />
-            </svg>
-          </div>
-          <div className="ellipse-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 234 323" fill="none">
-              <path d="M217.884 163.856C217.884 252.125 272.314 319.653 176.208 319.653C51.9119 343.828 0 205.117 0 116.848C0 28.5782 80.1025 0 176.208 0C272.314 0 217.884 75.5859 217.884 163.856Z" fill="#525299" fillOpacity="0.8" />
-            </svg>
-          </div>
-          <div className="ellipse-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 316 350" fill="none">
-              <defs>
-                <clipPath id="solutionsLeafClip">
-                  <path d="M251.226 154.679C285.477 242.327 367.709 287.484 268.777 326.143C150.208 400.148 42.9472 283.296 8.69687 195.649C-25.5534 108.001 45.8151 47.4019 144.746 8.74241C243.677 -29.9171 216.976 67.0313 251.226 154.679Z" />
-                </clipPath>
-              </defs>
-              <image
-                href="/assets/solutions_hero_puzzle.png"
-                x="0"
-                y="0"
-                width="316"
-                height="350"
-                preserveAspectRatio="xMidYMid slice"
-                clipPath="url(#solutionsLeafClip)"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <div className="frame-2 mobile-only-rects">
+        {/* 9-bar indicator positioned at bottom-left */}
+        <div className="frame-2">
           <div className="inactive-rect"></div>
           <div className="inactive-rect"></div>
           <div className="inactive-rect"></div>
@@ -188,7 +180,7 @@ const Solutions = ({ navigateTo }) => {
         <div className="our-smart-solutions">
           <span>
             <span className="our-smart-solutions-span">Our </span>
-            <span className="our-smart-solutions-span2">Smart Solutions</span>
+            <span className="our-smart-solutions-span2">Smart Services</span>
           </span>
         </div>
       </div>
@@ -207,7 +199,7 @@ const Solutions = ({ navigateTo }) => {
               } else if (card.id === 'infra') {
                 navigateTo('it-infrastructure');
               } else if (card.id === 'cloud') {
-                navigateTo('cloud-licensing');
+                navigateTo('cloud-solutions');
               } else if (card.id === 'managed') {
                 navigateTo('managed-services');
               }

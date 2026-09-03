@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import './About.css';
 
 const About = ({ navigateTo }) => {
-  const years = ['2000', '2005', '2010', '2012', '2015', '2018', '2020', '2022', '2024', '2025'];
+  const years = ['2000', '2002', '2007', '2009', '2019', '2020', '2021', '2023'];
   const [activeYear, setActiveYear] = useState('2000');
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
@@ -45,13 +45,62 @@ const About = ({ navigateTo }) => {
   useEffect(() => {
     if (mapRef.current) return;
 
-    // Center coordinates for Chennai District (Alwarpet)
-    const position = [13.0339, 80.2486];
+    // All branch locations
+    const branches = [
+      {
+        position: [13.0339, 80.2486],
+        label: 'Chennai (HO)',
+        sublabel: 'No.22/35, Maharaja Surya Road, Alwarpet',
+        isHQ: true,
+      },
+      {
+        position: [13.0524, 80.2623],
+        label: 'Chennai',
+        sublabel: 'No.21/8, Balaji Nagar 4th Street, Royapettah',
+        isHQ: false,
+      },
+      {
+        position: [11.0259, 76.9673],
+        label: 'Coimbatore',
+        sublabel: 'Tharani Nagar, 8th Street, Ganapathy',
+        isHQ: false,
+      },
+      {
+        position: [10.7905, 78.7047],
+        label: 'Trichy',
+        sublabel: 'D-5, 7th Cross Thillai Nagar',
+        isHQ: false,
+      },
+      {
+        position: [9.9252, 78.1198],
+        label: 'Madurai',
+        sublabel: 'No.20/80, North Street, Palanganatham',
+        isHQ: false,
+      },
+      {
+        position: [11.9416, 79.8083],
+        label: 'Puducherry',
+        sublabel: 'No.30, Anna Nagar, Puducherry',
+        isHQ: false,
+      },
+      {
+        position: [25.2048, 55.2708],
+        label: 'Middle East – Dubai',
+        sublabel: 'Dubai, United Arab Emirates',
+        isHQ: false,
+        isInternational: true,
+      },
+      {
+        position: [1.3521, 103.8198],
+        label: 'Singapore',
+        sublabel: 'Singapore',
+        isHQ: false,
+        isInternational: true,
+      },
+    ];
 
-    // Initialize map centered at Chennai
+    // Initialize map — will be fit-bounded after adding markers
     const map = L.map(mapContainerRef.current, {
-      center: position,
-      zoom: 13,
       zoomControl: true,
       attributionControl: false,
       scrollWheelZoom: false,
@@ -59,44 +108,61 @@ const About = ({ navigateTo }) => {
 
     mapRef.current = map;
 
-    // Beautiful minimalist line map theme (CartoDB Positron)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 20
+    // Vibrant & attractive map layer (OpenStreetMap Humanitarian HOT style - 100% Free & No API key)
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/">Humanitarian OpenStreetMap Team</a>',
+      maxZoom: 19,
+      subdomains: 'abc'
     }).addTo(map);
 
-    // Custom SVG Pin Icon matching company blue color
-    const customPinIcon = L.divIcon({
-      className: 'custom-leaflet-pin',
-      html: `
-        <div class="pin-container">
-          <div class="pin-pulse"></div>
-          <div class="pin-marker">
-            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#0e10ff" stroke="#ffffff" stroke-width="1.5"/>
-            </svg>
+    // Factory for pin icons — blue for India HQ, slightly different for branches, gold for international
+    const makePinIcon = (isHQ, isInternational) => {
+      const fillColor = isHQ ? '#0e10ff' : (isInternational ? '#cb096d' : '#2563eb');
+      const pulseClass = isHQ ? 'pin-pulse pin-pulse-hq' : (isInternational ? 'pin-pulse pin-pulse-gold' : 'pin-pulse');
+      return L.divIcon({
+        className: 'custom-leaflet-pin',
+        html: `
+          <div class="pin-container">
+            <div class="${pulseClass}"></div>
+            <div class="pin-marker">
+              <svg viewBox="0 0 24 24" width="${isHQ ? 42 : 36}" height="${isHQ ? 42 : 36}" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="${fillColor}" stroke="#ffffff" stroke-width="1.8"/>
+              </svg>
+            </div>
           </div>
-        </div>
-      `,
-      iconSize: [36, 36],
-      iconAnchor: [18, 36],
-      popupAnchor: [0, -36]
+        `,
+        iconSize: [isHQ ? 42 : 36, isHQ ? 42 : 36],
+        iconAnchor: [isHQ ? 21 : 18, isHQ ? 42 : 36],
+        popupAnchor: [0, isHQ ? -42 : -36]
+      });
+    };
+
+    // Add all markers
+    const allLatLngs = [];
+    branches.forEach((branch) => {
+      const icon = makePinIcon(branch.isHQ, branch.isInternational);
+      const marker = L.marker(branch.position, { icon }).addTo(map);
+
+      marker.bindTooltip(
+        `<div class='tooltip-title'>${branch.label}</div><div class='tooltip-subtitle'>${branch.sublabel}</div>`,
+        {
+          permanent: false,
+          direction: 'top',
+          className: 'custom-map-tooltip',
+          offset: [0, -5]
+        }
+      );
+
+      marker.on('click', () => {
+        map.setView(branch.position, branch.isInternational ? 10 : 14, { animate: true });
+      });
+
+      allLatLngs.push(branch.position);
     });
 
-    // Create marker with dynamic tooltip
-    const marker = L.marker(position, { icon: customPinIcon }).addTo(map);
-
-    marker.bindTooltip("<div class='tooltip-title'>Chennai District</div><div class='tooltip-subtitle'>Alwarpet Office</div>", {
-      permanent: false,
-      direction: 'top',
-      className: 'custom-map-tooltip',
-      offset: [0, -5]
-    });
-
-    marker.on('click', () => {
-      map.setView(position, 16, { animate: true });
-    });
+    // Fit the map to show all markers with some padding
+    const bounds = L.latLngBounds(allLatLngs);
+    map.fitBounds(bounds, { padding: [50, 50] });
 
     return () => {
       if (mapRef.current) {
@@ -108,44 +174,29 @@ const About = ({ navigateTo }) => {
 
   const historyData = {
     '2000': {
-      text: 'At Finecons Limited, we boast of a rich legacy, spanning over 26 years, dedicated to revolutionizing the IT landscape through cutting-edge solutions and seamless system integration. Since our inception in 2000, we’ve been at the forefront of innovation, driving digital transformation for businesses across diverse industries.',
+      text: 'Began as a telecom partner with HCL, Samsung & Ericsson',
     },
-    '2005': {
-      text: 'By 2005, we expanded our service catalog to include advanced network infrastructure design, database management, and early-stage security auditing systems to safeguard corporate IT assets.',
-      // image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500&q=80'
+    '2002': {
+      text: 'Partnered with Airtel for voice, data & IP solutions',
     },
-    '2010': {
-      text: 'By 2010, Finecons expanded its operations, establishing key partnerships with global technology leaders and delivering enterprise-grade infrastructure systems to power critical applications and growing data workloads for our corporate clients.',
-      // image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500&q=80'
+    '2007': {
+      text: 'Evolved into a system integrator for IT & networking',
     },
-    '2012': {
-      text: 'In 2012, we migrated hundreds of physical server systems to highly consolidated virtualized architectures, resulting in immense hardware cost savings and enhanced resource utility.',
-      // image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500&q=80'
+    '2009': {
+      text: 'Became a channel partner for Hewlett-Packard',
     },
-    '2015': {
-      text: 'By 2015, we launched our dedicated Cybersecurity Division, designing comprehensive security frameworks and proactive threat-mitigation protocols to guard corporate endpoints.',
-      // image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500&q=80'
-    },
-    '2018': {
-      text: 'In 2018, we integrated cloud infrastructure planning and hybrid cloud orchestration models, assisting enterprises in transitioning their critical workloads to scalable digital architectures.',
-      // image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&h=500&q=80'
+    '2019': {
+      text: 'Expanded to Pondy & Coimbatore; entered automation, mobility & licensing',
     },
     '2020': {
-      text: 'In 2020, we accelerated digital transformations at scale, enabling thousands of remote workers with secure networking, digital workspaces, and robust cybersecurity frameworks to navigate the evolving IT landscape during critical times.',
-      // image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&h=500&q=80'
+      text: 'Reached all TN metros; crossed ₹50 Cr in revenue',
     },
-    '2022': {
-      text: 'Finecons pioneered advanced cloud migration protocols and machine learning operations, helping enterprises optimize their multicloud environments and harness the power of artificial intelligence to elevate productivity.',
-      // image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=500&q=80'
+    '2021': {
+      text: 'Added cloud & hyper-converged infrastructure verticals',
     },
-    '2024': {
-      text: 'Today, we continue to drive innovation globally. With a distributed team of experts and strategic hubs, we deliver next-generation systems integration and IT services that empower businesses to scale securely and drive sustained business growth.',
-      // image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=500&q=80'
+    '2023': {
+      text: 'Crossed ₹110 Cr revenue; entered cyber forensics',
     },
-    '2025': {
-      text: 'By 2025, Finecons deployed zero-trust network access frameworks and sustainable, energy-efficient IT architectures, supporting clients in achieving green compliance goals globally.',
-      // image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500&q=80'
-    }
   };
 
   return (
@@ -156,59 +207,52 @@ const About = ({ navigateTo }) => {
       {/* Hero Section */}
       <div className="about-hero">
         <div className="about-hero-inner">
-          <div className="about-hero-content">
-            <div className="a-b-o-u-t-u-s">ABOUT US</div>
-            <h1 className="enabling-businesses-to-deliver-outstanding-customer-experiences">
-              <span>Enabling businesses to deliver </span>
-              <span className="blue-text">outstanding customer experiences.</span>
-            </h1>
-            <div className="frame-2 desktop-only-rects">
-              <div className="inactive-rect"></div>
-              <div className="active-rect"></div>
-              <div className="inactive-rect"></div>
-              <div className="inactive-rect"></div>
-              <div className="inactive-rect"></div>
-              <div className="inactive-rect"></div>
-              <div className="inactive-rect"></div>
-              <div className="inactive-rect"></div>
-              <div className="inactive-rect"></div>
+          <div className="about-hero-row">
+            <div className="about-hero-content">
+              <div className="a-b-o-u-t-u-s">ABOUT US</div>
+              <h1 className="enabling-businesses-to-deliver-outstanding-customer-experiences">
+                <span>Enabling businesses to deliver </span>
+                <span className="blue-text">outstanding customer experiences.</span>
+              </h1>
+            </div>
+
+            <div className="about-hero-visual">
+              <div className="ellipse-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
+                  <path d="M178.593 87.0578C232.128 136.141 303.315 140.715 249.935 198.937C195.559 287.681 82.5975 242 29.0624 192.917C-24.4727 143.834 2.68641 79.4156 56.0668 21.1931C109.447 -37.0295 125.057 37.975 178.593 87.0578Z" fill="#B6A755" fillOpacity="0.8" />
+                </svg>
+              </div>
+              <div className="ellipse-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 234 323" fill="none">
+                  <path d="M217.884 163.856C217.884 252.125 272.314 319.653 176.208 319.653C51.9119 343.828 0 205.117 0 116.848C0 28.5782 80.1025 0 176.208 0C272.314 0 217.884 75.5859 217.884 163.856Z" fill="#525299" fillOpacity="0.8" />
+                </svg>
+              </div>
+              <div className="ellipse-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 316 350" fill="none">
+                  <defs>
+                    <clipPath id="aboutLeafClip">
+                      <path d="M251.226 154.679C285.477 242.327 367.709 287.484 268.777 326.143C150.208 400.148 42.9472 283.296 8.69687 195.649C-25.5534 108.001 45.8151 47.4019 144.746 8.74241C243.677 -29.9171 216.976 67.0313 251.226 154.679Z" />
+                    </clipPath>
+                  </defs>
+                  <image
+                    href="/assets/about_hero.png"
+                    x="0"
+                    y="0"
+                    width="316"
+                    height="350"
+                    preserveAspectRatio="xMidYMid slice"
+                    clipPath="url(#aboutLeafClip)"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
 
-          <div className="about-hero-visual">
-            <div className="ellipse-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
-                <path d="M178.593 87.0578C232.128 136.141 303.315 140.715 249.935 198.937C195.559 287.681 82.5975 242 29.0624 192.917C-24.4727 143.834 2.68641 79.4156 56.0668 21.1931C109.447 -37.0295 125.057 37.975 178.593 87.0578Z" fill="#B6A755" fillOpacity="0.8" />
-              </svg>
-            </div>
-            <div className="ellipse-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 234 323" fill="none">
-                <path d="M217.884 163.856C217.884 252.125 272.314 319.653 176.208 319.653C51.9119 343.828 0 205.117 0 116.848C0 28.5782 80.1025 0 176.208 0C272.314 0 217.884 75.5859 217.884 163.856Z" fill="#525299" fillOpacity="0.8" />
-              </svg>
-            </div>
-            <div className="ellipse-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 316 350" fill="none">
-                <defs>
-                  <clipPath id="aboutLeafClip">
-                    <path d="M251.226 154.679C285.477 242.327 367.709 287.484 268.777 326.143C150.208 400.148 42.9472 283.296 8.69687 195.649C-25.5534 108.001 45.8151 47.4019 144.746 8.74241C243.677 -29.9171 216.976 67.0313 251.226 154.679Z" />
-                  </clipPath>
-                </defs>
-                <image
-                  href="/assets/about_hero.jpg"
-                  x="0"
-                  y="0"
-                  width="316"
-                  height="350"
-                  preserveAspectRatio="xMidYMid slice"
-                  clipPath="url(#aboutLeafClip)"
-                />
-              </svg>
-            </div>
-          </div>
-
-          <div className="frame-2 mobile-only-rects">
+          {/* 9-bar indicator positioned at bottom-left */}
+          <div className="frame-2">
             <div className="inactive-rect"></div>
             <div className="active-rect"></div>
+            <div className="inactive-rect"></div>
             <div className="inactive-rect"></div>
             <div className="inactive-rect"></div>
             <div className="inactive-rect"></div>

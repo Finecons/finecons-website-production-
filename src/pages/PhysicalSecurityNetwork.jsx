@@ -1,24 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer, { FooterMobile } from '../components/Footer';
+import SolutionsSidebar from '../components/SolutionsSidebar';
 import './PhysicalSecurityNetwork.css';
 
 const PhysicalSecurityNetwork = ({ navigateTo }) => {
   // Accordion toggle states
   const [approachOpen, setApproachOpen] = useState(true);
   const [advantagesOpen, setAdvantagesOpen] = useState(true);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  // Active solution tab indicator (always 'physical' on this page)
-  const activeSolution = 'physical';
-
-  const solutionsList = [
-    { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
-    { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
-    { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud', path: 'cloud-licensing' },
-    { id: 'managed', name: 'Managed Services', path: 'managed-services' }
-  ];
 
   return (
     <div className="solutions-physical-security">
@@ -36,25 +25,30 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
       <div className="frame-462">
         <div className="frame-461">
           <div className="frame-460">
-            <div className="n-e-t-w-o-r-k">N E T W O R K</div>
-            <div className="unified-defense-for-the-modern-perimeter">
+            <div className="n-e-t-w-o-r-k-i-n-g desktop-label">N E T W O R K I N G</div>
+            <div className="n-e-t-w-o-r-k-i-n-g mobile-label">NETWORKING</div>
+            <h1 className="unified-defense-for-the-modern-perimeter">
               <span>
                 <span className="unified-defense-for-the-modern-perimeter-span">Unified </span>
                 <span className="unified-defense-for-the-modern-perimeter-span2">Defense </span>
-                <span className="unified-defense-for-the-modern-perimeter-span">for the Modern Perimeter</span>
+                <span className="unified-defense-for-the-modern-perimeter-span">
+                  for the Modern Perimeter
+                </span>
               </span>
-            </div>
+            </h1>
           </div>
           <div className="hero-image-wrapper">
-            <img className="rectangle-323" src="/assets/physical_security_hero.png" alt="Physical Security & Networking" />
+            <img className="rectangle-323" src="/assets/physical_security_hero.png" alt="Networking & Physical Security Hero" />
           </div>
         </div>
+
+        {/* Indicator bars - 2nd bar active */}
         <div className="frame-2-bars">
           <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
           <div className="bar active"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
@@ -62,85 +56,11 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
         </div>
       </div>
 
-      {/* Main content frame */}
+      {/* Main content frame (Sidebar + Detail) */}
       <div className="frame-465">
         <div className="frame-322">
-          {/* Sidebar Solutions Navigation - Desktop */}
-          <div className="frame-289 desktop-sidebar">
-            <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
-              S O L U T I O N S
-            </div>
-            <div className="frame-288">
-              {solutionsList.map((sol) => (
-                <div
-                  key={sol.id}
-                  className={`sidebar-item ${sol.id === activeSolution ? 'active' : ''}`}
-                  onClick={() => navigateTo(sol.path)}
-                >
-                  {sol.id === 'cyber' && (
-                    <svg className="vector-icon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L2 7V14C2 20.2 6.3 26 12 28C17.7 26 22 20.2 22 14V7L12 2Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'physical' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'infra' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="2" y="2" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                      <rect x="2" y="14" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                      <line x1="6" y1="6" x2="6.01" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      <line x1="6" y1="18" x2="6.01" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'cloud' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'managed' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
-                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" />
-                    </svg>
-                  )}
-                  <span className="sidebar-text">{sol.name}</span>
-                  {sol.id === activeSolution && <div className="active-dot"></div>}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Dropdown Navigation */}
-          <div className="mobile-solutions-dropdown">
-            <div className="dropdown-trigger" onClick={() => setDropdownOpen(!dropdownOpen)}>
-              <svg className="dropdown-cloud-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="dropdown-label">Physical Security & Network</span>
-              <svg className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            {dropdownOpen && (
-              <div className="dropdown-menu">
-                {solutionsList.map((sol) => (
-                  <div
-                    key={sol.id}
-                    className={`dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
-                    onClick={() => {
-                      setDropdownOpen(false);
-                      navigateTo(sol.path);
-                    }}
-                  >
-                    {sol.name}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          {/* Reusable Solutions Sidebar with right-edge active indicator */}
+          <SolutionsSidebar activeSolution="physical" navigateTo={navigateTo} />
 
           {/* Main Details Area */}
           <div className="frame-561">
@@ -155,86 +75,30 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                 </h2>
                 <div className="intro-container">
                   <div className="intro-text">
-                    Finecons provides Networking Solutions that enable secure, reliable, and high-performance connectivity across enterprise environments. We design and implement networks that support seamless connectivity between users, devices, and applications. 
+                    Finecons provides Networking Solutions that enable secure, reliable, and high-performance connectivity across enterprise environments. We design and implement networks that support seamless connectivity between users, devices, and applications.
                     <br />
                     <br />
                     Our solutions address office networks, campus environments, and multi-location connectivity, ensuring scalability, stability, and operational efficiency across the organization.
                   </div>
-                  
-                  {/* High-end SVG networking visualization */}
-                  <div className="group-319-svg">
-                    <svg viewBox="0 0 550 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="275" cy="240" r="180" stroke="rgba(14, 16, 255, 0.06)" strokeWidth="2" strokeDasharray="6 6" />
-                      <circle cx="275" cy="240" r="120" stroke="rgba(14, 16, 255, 0.08)" strokeWidth="1.5" />
-                      
-                      {/* Connecting laser lines */}
-                      <line x1="275" y1="240" x2="130" y2="150" stroke="url(#laserGrad1)" strokeWidth="2.5" />
-                      <line x1="275" y1="240" x2="420" y2="150" stroke="url(#laserGrad2)" strokeWidth="2.5" />
-                      <line x1="275" y1="240" x2="200" y2="360" stroke="url(#laserGrad3)" strokeWidth="2.5" />
-                      <line x1="275" y1="240" x2="350" y2="360" stroke="url(#laserGrad4)" strokeWidth="2.5" />
-                      
-                      {/* Core network node */}
-                      <g className="core-node">
-                        <circle cx="275" cy="240" r="42" fill="url(#coreGradient)" filter="drop-shadow(0px 8px 24px rgba(14, 16, 255, 0.3))" />
-                        <circle cx="275" cy="240" r="41.5" stroke="#ffffff" strokeOpacity="0.2" />
-                        {/* Core Server Icon */}
-                        <path d="M266 232h18M266 238h18M266 244h18M266 250h18" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" />
-                        <circle cx="275" cy="240" r="50" stroke="rgba(14, 16, 255, 0.15)" strokeWidth="1" className="pulse-ring" />
-                      </g>
 
-                      {/* Edge Node 1: AI Surveillance */}
-                      <g className="edge-node">
-                        <circle cx="130" cy="150" r="32" fill="#ffffff" filter="drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.08))" />
-                        <circle cx="130" cy="150" r="31.5" stroke="rgba(14, 16, 255, 0.2)" />
-                        <path d="M123 154h14l-3-3v-6a4 4 0 1 0-8 0v6l-3 3zM130 157v-1" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                      </g>
+                  {/* WiFi Graphic with Background Spherical Ellipses */}
+                  <div className="wifi-graphic-badge">
+                    {/* Top Right Concentric Donut Ellipses */}
+                    <div className="wifi-ellipse-tr-outer"></div>
+                    <div className="wifi-ellipse-tr-inner"></div>
 
-                      {/* Edge Node 2: Access Control */}
-                      <g className="edge-node">
-                        <circle cx="420" cy="150" r="32" fill="#ffffff" filter="drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.08))" />
-                        <circle cx="420" cy="150" r="31.5" stroke="rgba(14, 16, 255, 0.2)" />
-                        <rect x="412" y="146" width="16" height="11" rx="2" stroke="#0e10ff" strokeWidth="2" />
-                        <path d="M416 146v-3a4 4 0 0 1 8 0v3" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" />
-                      </g>
+                    {/* Bottom Left Concentric Donut Ellipses */}
+                    <div className="wifi-ellipse-bl-outer"></div>
+                    <div className="wifi-ellipse-bl-inner"></div>
 
-                      {/* Edge Node 3: Router */}
-                      <g className="edge-node">
-                        <circle cx="200" cy="360" r="32" fill="#ffffff" filter="drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.08))" />
-                        <circle cx="200" cy="360" r="31.5" stroke="rgba(14, 16, 255, 0.2)" />
-                        <path d="M192 360h16M196 355l-4 5 4 5M204 365l4-5-4-5" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </g>
-
-                      {/* Edge Node 4: Wi-Fi Access Point */}
-                      <g className="edge-node">
-                        <circle cx="350" cy="360" r="32" fill="#ffffff" filter="drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.08))" />
-                        <circle cx="350" cy="360" r="31.5" stroke="rgba(14, 16, 255, 0.2)" />
-                        <path d="M339 350a12 12 0 0 1 22 0M343 355a6 6 0 0 1 14 0M348 360a2 2 0 0 1 4 0" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" />
-                      </g>
-
-                      {/* Gradients */}
-                      <defs>
-                        <linearGradient id="coreGradient" x1="233" y1="198" x2="317" y2="282" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#0e10ff" />
-                          <stop offset="1" stopColor="#cb096d" />
-                        </linearGradient>
-                        <linearGradient id="laserGrad1" x1="275" y1="240" x2="130" y2="150" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#0e10ff" />
-                          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
-                        </linearGradient>
-                        <linearGradient id="laserGrad2" x1="275" y1="240" x2="420" y2="150" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#0e10ff" />
-                          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
-                        </linearGradient>
-                        <linearGradient id="laserGrad3" x1="275" y1="240" x2="200" y2="360" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#0e10ff" />
-                          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
-                        </linearGradient>
-                        <linearGradient id="laserGrad4" x1="275" y1="240" x2="350" y2="360" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#0e10ff" />
-                          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                    {/* Central WiFi Triangle with Glowing Blue Border */}
+                    <div className="wifi-triangle-wrapper">
+                      <img 
+                        className="wifi-triangle-image" 
+                        src="/assets/wifi_badge.png" 
+                        alt="Enterprise Wi-Fi Badge" 
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -248,12 +112,12 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   <div className="accordion-trigger-bg"></div>
                   <h3 className="our-approach-title">Our Approach</h3>
                   <svg className={`chevron-icon ${approachOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 {approachOpen && (
                   <div className="accordion-body-text fade-in">
-                    Our networking approach starts with evaluating current network performance, coverage, and security requirements. We identify gaps and design network architectures that support reliability, scalability, and secure access. 
+                    Our networking approach starts with evaluating current network performance, coverage, and security requirements. We identify gaps and design network architectures that support reliability, scalability, and secure access.
                     <br />
                     <br />
                     We implement and validate networks with a focus on performance optimization and future readiness. Post-deployment, we fine-tune configurations to ensure consistent connectivity and smooth operations.
@@ -267,14 +131,14 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   <div className="accordion-trigger-bg"></div>
                   <h3 className="key-advantages-title">Key Advantages</h3>
                   <svg className={`chevron-icon ${advantagesOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 {advantagesOpen && (
                   <div className="accordion-body-content fade-in">
                     <div className="frame-3">
                       <div className="advantages-visual-wrapper">
-                        <img className="rectangle-333" src="/assets/network_advantages.png" alt="Networking Advantages Illustration" />
+                        <img className="rectangle-333" src="/assets/network_advantages.png" alt="Networking Advantages" />
                       </div>
                       <div className="advantages-list-wrapper">
                         <ul className="advantages-list">
@@ -304,11 +168,12 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </h3>
                 </div>
               </div>
+
               <div className="pillars-grid">
-                {/* Pillar 1 */}
+                {/* Pillar 1: AI Surveillance */}
                 <div className="pillar-card">
                   <div className="pillar-badge">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                       <circle cx="12" cy="13" r="4" />
                     </svg>
@@ -319,24 +184,30 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                   <ul className="pillar-features">
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>4K Neural Processing</span>
                     </li>
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Automated Intrusion Detection</span>
                     </li>
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Object Tracking</span>
                     </li>
                   </ul>
                 </div>
 
-                {/* Pillar 2 */}
+                {/* Pillar 2: Access Control */}
                 <div className="pillar-card">
                   <div className="pillar-badge">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                       <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                     </svg>
@@ -347,25 +218,31 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                   <ul className="pillar-features">
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Biometric Scanners</span>
                     </li>
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Mobile Credentialing</span>
                     </li>
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Global Sync</span>
                     </li>
                   </ul>
                 </div>
 
-                {/* Pillar 3 */}
+                {/* Pillar 3: Centralized Monitoring */}
                 <div className="pillar-card">
                   <div className="pillar-badge">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" />
                     </svg>
                   </div>
                   <h4 className="pillar-title">Centralized Monitoring</h4>
@@ -374,15 +251,21 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                   <ul className="pillar-features">
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Leak Detection</span>
                     </li>
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Humidity Threshold Alerts</span>
                     </li>
                     <li>
-                      <span className="dot-bullet"></span>
+                      <svg className="item-icon-bullet" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       <span>Fire Suppression Integration</span>
                     </li>
                   </ul>
@@ -396,25 +279,21 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                 <h3 className="precision-network-foundations-title">
                   <span>
                     <span className="precision-network-foundations-span">Precision </span>
-                    <span className="precision-network-foundations-span2">Network <br /></span>
+                    <span className="precision-network-foundations-span2">Network </span>
                     <span className="precision-network-foundations-span">Foundations</span>
                   </span>
                 </h3>
 
                 <div className="foundations-features">
+                  {/* Structured Cabling */}
                   <div className="foundation-item">
-                    <div className="item-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="2" y="2" width="20" height="20" rx="2" />
-                        <circle cx="7" cy="7" r="1.5" />
-                        <circle cx="12" cy="7" r="1.5" />
-                        <circle cx="17" cy="7" r="1.5" />
-                        <circle cx="7" cy="12" r="1.5" />
-                        <circle cx="12" cy="12" r="1.5" />
-                        <circle cx="17" cy="12" r="1.5" />
-                        <circle cx="7" cy="17" r="1.5" />
-                        <circle cx="12" cy="17" r="1.5" />
-                        <circle cx="17" cy="17" r="1.5" />
+                    <div className="item-icon-box">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="4" />
+                        <circle cx="8" cy="8" r="2" fill="#0e10ff" />
+                        <circle cx="16" cy="8" r="2" fill="#0e10ff" />
+                        <circle cx="8" cy="16" r="2" fill="#0e10ff" />
+                        <circle cx="16" cy="16" r="2" fill="#0e10ff" />
                       </svg>
                     </div>
                     <div className="item-details">
@@ -425,13 +304,14 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                     </div>
                   </div>
 
+                  {/* Data Center Infrastructure */}
                   <div className="foundation-item">
-                    <div className="item-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="2" y="2" width="20" height="8" rx="2" />
-                        <rect x="2" y="14" width="20" height="8" rx="2" />
-                        <line x1="6" y1="6" x2="6.01" y2="6" />
-                        <line x1="6" y1="18" x2="6.01" y2="18" />
+                    <div className="item-icon-box">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="3" width="20" height="7" rx="2" />
+                        <rect x="2" y="14" width="20" height="7" rx="2" />
+                        <line x1="6" y1="6.5" x2="6.01" y2="6.5" />
+                        <line x1="6" y1="17.5" x2="6.01" y2="17.5" />
                       </svg>
                     </div>
                     <div className="item-details">
@@ -444,10 +324,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                 </div>
               </div>
 
-              {/* Cabling image and reliability card */}
+              {/* Cabling image and reliability floating badge */}
               <div className="foundations-visual">
                 <div className="image-card">
-                  <img className="technical-cabling" src="/assets/technical_cabling.png" alt="Structured Cabling Cabinet" />
+                  <img className="technical-cabling" src="/assets/technical_cabling.png" alt="Structured Cabling Rack" />
                 </div>
                 <div className="reliability-badge">
                   <div className="reliability-percent">99.99%</div>
@@ -468,14 +348,15 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                 </h3>
               </div>
               <div className="products-grid">
-                {/* Product 1: Switches */}
+                {/* 1. Switches */}
                 <div className="product-card">
                   <div className="product-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="2" y="5" width="20" height="14" rx="2" />
-                      <circle cx="6" cy="12" r="1" />
-                      <circle cx="12" cy="12" r="1" />
-                      <circle cx="18" cy="12" r="1" />
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="6" width="20" height="12" rx="2" />
+                      <circle cx="6" cy="12" r="1.5" fill="#0e10ff" />
+                      <circle cx="10" cy="12" r="1.5" fill="#0e10ff" />
+                      <circle cx="14" cy="12" r="1.5" fill="#0e10ff" />
+                      <circle cx="18" cy="12" r="1.5" fill="#0e10ff" />
                     </svg>
                   </div>
                   <h4 className="product-title">Switches</h4>
@@ -484,10 +365,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 2: Wi-Fi */}
+                {/* 2. Wi-Fi */}
                 <div className="product-card">
                   <div className="product-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.1a6 6 0 0 1 6.95 0M12 20h.01" />
                     </svg>
                   </div>
@@ -497,10 +378,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 3: Routers */}
+                {/* 3. Routers */}
                 <div className="product-card">
                   <div className="product-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10zM2 12h20" />
                     </svg>
@@ -511,10 +392,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 4: Surveillance */}
+                {/* 4. Surveillance */}
                 <div className="product-card">
                   <div className="product-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                       <circle cx="12" cy="13" r="4" />
                     </svg>
@@ -525,10 +406,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 5: Access Control */}
+                {/* 5. Access Control Systems */}
                 <div className="product-card">
                   <div className="product-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                       <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                     </svg>
@@ -539,10 +420,10 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 6: Cabling */}
+                {/* 6. Cabling */}
                 <div className="product-card">
                   <div className="product-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
                     </svg>
                   </div>
@@ -569,14 +450,14 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
               </div>
 
               <div className="lifecycle-steps">
-                {/* Desktop connection lines */}
-                <div className="connector-line"></div>
-                
+                {/* Horizontal connector line */}
+                <div className="connector-line-desktop-only"></div>
+
                 {/* Step 1 */}
                 <div className="lifecycle-step-card">
-                  <div className="step-num-icon">
+                  <div className="step-num-badge">
                     <div className="step-glow"></div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="11" cy="11" r="8" />
                       <line x1="21" y1="21" x2="16.65" y2="16.65" />
                     </svg>
@@ -589,9 +470,9 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
 
                 {/* Step 2 */}
                 <div className="lifecycle-step-card">
-                  <div className="step-num-icon">
+                  <div className="step-num-badge">
                     <div className="step-glow"></div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                     </svg>
                   </div>
@@ -603,9 +484,9 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
 
                 {/* Step 3 */}
                 <div className="lifecycle-step-card">
-                  <div className="step-num-icon">
+                  <div className="step-num-badge">
                     <div className="step-glow"></div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
                       <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg>
@@ -618,36 +499,82 @@ const PhysicalSecurityNetwork = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Partners block */}
-            <div className="group-348">
-              <div className="frame-464">
-                <div className="rectangle-282"></div>
-                <h3 className="cyber-security-partners">
-                  <span>
-                    <span className="cyber-security-partners-span">Physical Security &amp; Network </span>
-                    <span className="cyber-security-partners-span2">Partners</span>
-                  </span>
-                </h3>
-                <div className="partners-grid-cyber">
-                  <div className="partner-logo-box">
-                    <div className="p-logo sophos font-cisco">CISCO</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo autodesk font-autodesk">AUTODESK</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo vmware font-ubiquiti">UBIQUITI</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo lenovo font-lenovo">Lenovo</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo adobe font-sophos">SOPHOS</div>
-                  </div>
-                </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Physical Security & Network Infrastructure Partners - Full-Width Edge-to-Edge Section */}
+      <div className="section-partners-full-width">
+        <div className="frame-464">
+          <h3 className="physical-security-network-infrastructure-partners">
+            <span>
+              <span className="physical-security-network-infrastructure-partners-span">Physical Security &amp; Network Infrastructure </span>
+              <span className="physical-security-network-infrastructure-partners-span2">Partners</span>
+            </span>
+          </h3>
+
+          <div className="partners-grid-physical">
+            {/* Partner 1: SOPHOS */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-sophos">
+                <span className="partner-text sophos-text">SOPHOS</span>
               </div>
             </div>
 
+            {/* Partner 2: Symantec */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-symantec">
+                <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                  <circle cx="18" cy="18" r="16" fill="#FDB813" />
+                  <path d="M11 18L16 23L26 13" stroke="#000000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="partner-text symantec-text">Symantec</span>
+              </div>
+            </div>
+
+            {/* Partner 3: Palo Alto Networks */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-paloalto">
+                <svg width="36" height="32" viewBox="0 0 40 32" fill="none">
+                  <path d="M4 22L16 6L28 22L20 22L16 16L12 22Z" fill="#FA582D" />
+                  <path d="M16 26L24 16L32 26Z" fill="#FA582D" opacity="0.85" />
+                  <circle cx="16" cy="6" r="3.5" fill="#FA582D" />
+                  <circle cx="4" cy="22" r="3.5" fill="#FA582D" />
+                  <circle cx="28" cy="22" r="3.5" fill="#FA582D" />
+                  <circle cx="32" cy="26" r="3.5" fill="#FA582D" />
+                </svg>
+                <span className="partner-text paloalto-text">paloalto</span>
+              </div>
+            </div>
+
+            {/* Partner 4: Cisco */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-cisco">
+                <svg width="40" height="24" viewBox="0 0 48 28" fill="none">
+                  <rect x="2" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                  <rect x="10" y="6" width="4" height="20" rx="2" fill="#049FD9" />
+                  <rect x="18" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                  <rect x="26" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                  <rect x="34" y="6" width="4" height="20" rx="2" fill="#049FD9" />
+                  <rect x="42" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                </svg>
+                <span className="partner-text cisco-text">cisco</span>
+              </div>
+            </div>
+
+            {/* Partner 5: Fortinet */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-fortinet">
+                <svg width="34" height="28" viewBox="0 0 36 28" fill="none">
+                  <rect x="2" y="3" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="26" y="3" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="8" y="15" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="20" y="15" width="7" height="7" rx="1.5" fill="#EE3124" />
+                </svg>
+                <span className="partner-text fortinet-text">FORTINET</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

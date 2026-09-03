@@ -1,138 +1,152 @@
-/* IT Infrastructure Page Stylesheet */
+/* ==========================================================================
+   IT INFRASTRUCTURE PAGE STYLESHEET (FIGMA SPEC ALIGNED)
+   ========================================================================== */
 
 .solutions-it-infrastructure {
   background: #ffffff;
-  min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Background Gradients & Circles */
+.solutions-it-infrastructure * {
+  box-sizing: border-box;
+}
+
+/* Background gradient overlay & decorative shapes */
 .solutions-it-infrastructure .rectangle-217 {
-  background: linear-gradient(
-      123.26deg,
-      rgba(228, 234, 255, 0) 45.126545429229736%,
-      rgba(38, 210, 222, 0.3) 90.87963700294495%
-    ),
-    linear-gradient(
-      223.8deg,
-      rgba(228, 234, 255, 1) 38.33858370780945%,
-      rgba(175, 175, 255, 1) 79.08464074134827%
-    );
+  background: linear-gradient(123.26deg,
+      rgba(228, 234, 255, 0) 45.13%,
+      rgba(38, 210, 222, 0.3) 90.88%),
+    linear-gradient(223.8deg,
+      rgba(228, 234, 255, 1) 38.34%,
+      rgba(175, 175, 255, 1) 79.08%);
   opacity: 0.85;
   width: 100%;
-  height: 820px;
+  height: 100vh;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-it-infrastructure .ellipse-17 {
   border-radius: 50%;
   border-style: solid;
   border-color: rgba(34, 35, 147, 0.09);
-  border-width: 52px;
-  width: 324px;
-  height: 324px;
+  border-width: 3.25rem;
+  width: 20.25rem;
+  height: 20.25rem;
   position: absolute;
-  left: -80px;
-  top: -124px;
+  left: -5rem;
+  top: -7.75rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-it-infrastructure .ellipse-18 {
   border-radius: 50%;
   border-style: solid;
   border-color: rgba(34, 35, 147, 0.09);
-  border-width: 52px;
-  width: 184px;
-  height: 184px;
+  border-width: 3.25rem;
+  width: 11.5rem;
+  height: 11.5rem;
   position: absolute;
-  left: -10px;
-  top: -54px;
+  left: -0.625rem;
+  top: -3.375rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-it-infrastructure .ellipse-19 {
   border-radius: 50%;
   border-style: solid;
   border-color: rgba(34, 35, 147, 0.05);
-  border-width: 52px;
-  width: 324px;
-  height: 324px;
+  border-width: 3.25rem;
+  width: 20.25rem;
+  height: 20.25rem;
   position: absolute;
-  left: 244px;
-  top: 376px;
+  left: 15.25rem;
+  top: 23.5rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-it-infrastructure .ellipse-20 {
   border-radius: 50%;
   border-style: solid;
   border-color: rgba(34, 35, 147, 0.05);
-  border-width: 52px;
-  width: 184px;
-  height: 184px;
+  border-width: 3.25rem;
+  width: 11.5rem;
+  height: 11.5rem;
   position: absolute;
-  left: 314px;
-  top: 446px;
+  left: 19.625rem;
+  top: 27.875rem;
   z-index: 1;
+  pointer-events: none;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   HERO SECTION (Header Banner)
+   ========================================================================== */
+
 .solutions-it-infrastructure .frame-462 {
+  max-width: 80rem;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1440px;
-  margin: 180px auto 60px auto;
-  padding: 0 48px;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .solutions-it-infrastructure .frame-461 {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: clamp(1.5rem, 3.5vw, 4.5rem);
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: auto 0;
 }
 
 .solutions-it-infrastructure .frame-460 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  gap: 0.875rem;
   flex: 1;
+  max-width: 51.25rem;
 }
 
 .solutions-it-infrastructure .i-t-i-n-f-r-a {
-  color: #0e10ff;
+  color: #000000;
   text-align: left;
-  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-  font-size: var(--heading-sans-2-desktop-font-size, 20px);
-  line-height: var(--heading-sans-2-desktop-line-height, 28px);
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.15rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  text-transform: uppercase;
   margin: 0;
+}
+
+.solutions-it-infrastructure .i-t-i-n-f-r-a.mobile-label {
+  display: none;
 }
 
 .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
   text-align: left;
-  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: var(--display-desktop-font-size, 54px);
-  line-height: var(--display-desktop-line-height, 76px);
-  font-weight: 700;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -142,58 +156,62 @@
 
 .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise-span2 {
   color: #0e10ff;
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .solutions-it-infrastructure .hero-image-wrapper {
-  width: 50%;
-  max-width: 600px;
-  height: 400px;
-  border-radius: 24px;
+  flex: 0 0 clamp(18rem, 28vw, 30rem);
+  max-height: min(36vh, 280px);
+  aspect-ratio: 4 / 3;
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0px 20px 40px rgba(14, 16, 255, 0.12);
+  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
 }
 
 .solutions-it-infrastructure .rectangle-323 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 1.25rem;
   transition: transform 0.8s ease;
 }
 
 .solutions-it-infrastructure .hero-image-wrapper:hover .rectangle-323 {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
+/* 9-bar indicator underneath hero */
 .solutions-it-infrastructure .frame-2-bars {
   display: flex;
   flex-direction: row;
-  gap: 8px;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 16px;
+  gap: 0.375rem;
+  width: 100%;
+  margin: 0;
 }
 
-.solutions-it-infrastructure .bar {
-  background: rgba(14, 16, 255, 0.15);
-  border-radius: 3px;
-  width: 8px;
-  height: 36px;
+.solutions-it-infrastructure .frame-2-bars .bar {
+  background: #9d9dff;
+  border-radius: 1.875rem;
+  width: 0.375rem;
+  height: 1.75rem;
   transition: background-color 0.3s ease;
 }
 
-.solutions-it-infrastructure .bar.active {
+.solutions-it-infrastructure .frame-2-bars .bar.active {
   background: #0e10ff;
+  height: 2.125rem;
 }
 
-/* Main Content Section styling (Sidebar & Content side-by-side) */
+/* ==========================================================================
+   MAIN CONTENT SPLIT (Sidebar + Details Column)
+   ========================================================================== */
+
 .solutions-it-infrastructure .frame-465 {
   width: 100%;
-  max-width: 1440px;
-  margin: 180px auto 100px auto;
-  padding: 0 48px 0 16px;
+  max-width: 96rem;
+  margin: 4.5rem auto 6rem auto;
+  padding: 0 3.5rem;
   position: relative;
   z-index: 2;
 }
@@ -201,237 +219,214 @@
 .solutions-it-infrastructure .frame-322 {
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 4.625rem;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
 }
 
-/* Sidebar Solutions Navigation Panel */
-.solutions-it-infrastructure .frame-289 {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 320px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 24px;
-  padding: 40px 24px;
-  position: sticky;
-  top: 120px;
-}
+/* ==========================================================================
+   RIGHT CONTENT COLUMN
+   ========================================================================== */
 
-.solutions-it-infrastructure .s-o-l-u-t-i-o-n-s {
-  color: #191c1e;
-  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.solutions-it-infrastructure .s-o-l-u-t-i-o-n-s:hover {
-  color: #0e10ff;
-}
-
-.solutions-it-infrastructure .frame-288 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 100%;
-}
-
-.solutions-it-infrastructure .sidebar-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  color: #555555;
-  position: relative;
-}
-
-.solutions-it-infrastructure .sidebar-item:hover {
-  background: rgba(14, 16, 255, 0.04);
-  color: #000000;
-}
-
-.solutions-it-infrastructure .sidebar-item.active {
-  background: rgba(14, 16, 255, 0.08);
-  color: #0e10ff;
-}
-
-.solutions-it-infrastructure .vector-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  transition: color 0.3s ease;
-}
-
-.solutions-it-infrastructure .sidebar-text {
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-}
-
-.solutions-it-infrastructure .sidebar-item.active .sidebar-text {
-  font-weight: 700;
-}
-
-.solutions-it-infrastructure .active-dot {
-  position: absolute;
-  right: 16px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0e10ff;
-  box-shadow: 0 0 8px rgba(14, 16, 255, 0.8);
-}
-
-/* Content Details Column */
 .solutions-it-infrastructure .frame-561 {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  flex: 1;
+  gap: 5.5rem;
+  min-width: 0;
 }
 
-/* Page Sub-Heading & Intro */
+/* Section Title & Intro */
+.solutions-it-infrastructure .frame-330 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
 .solutions-it-infrastructure .frame-325 {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2rem;
   width: 100%;
 }
 
 .solutions-it-infrastructure .it-infrastructure-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 44px;
-  line-height: 56px;
-  font-weight: 700;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
   margin: 0;
+  text-align: left;
 }
 
-.solutions-it-infrastructure .it-infrastructure-2-span {
+.solutions-it-infrastructure .it-infrastructure-span {
   color: #0e10ff;
 }
 
-.solutions-it-infrastructure .it-infrastructure-2-span2 {
-  color: #191c1e;
+.solutions-it-infrastructure .it-infrastructure-span2 {
+  color: #000000;
 }
 
 .solutions-it-infrastructure .intro-container {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 2.5rem;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
 .solutions-it-infrastructure .intro-text {
-  color: #333333;
-  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
   flex: 1;
+  color: #000000;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
 }
 
-/* Interactive SVG Topology Map styling */
-.solutions-it-infrastructure .group-319-svg {
-  width: 45%;
-  max-width: 420px;
-  flex-shrink: 0;
-  background: radial-gradient(circle, rgba(14, 16, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+/* Concentric Background Rings & Triangular Server Rack Badge */
+.solutions-it-infrastructure .infra-graphic-badge {
+  flex: 0 0 19rem;
+  width: 19rem;
+  height: 19rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Top-Right Concentric Donut Ellipses */
+.solutions-it-infrastructure .infra-ellipse-tr-outer {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  width: 13rem;
+  height: 13rem;
   border-radius: 50%;
-  padding: 10px;
+  border: 1.95rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
 }
 
-.solutions-it-infrastructure .server-slot {
-  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  cursor: pointer;
+.solutions-it-infrastructure .infra-ellipse-tr-inner {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 2.25rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
 }
 
-.solutions-it-infrastructure .server-slot:hover {
-  transform: scale(1.03) translateX(4px);
+/* Bottom-Left Concentric Donut Ellipses */
+.solutions-it-infrastructure .infra-ellipse-bl-outer {
+  position: absolute;
+  bottom: -1.25rem;
+  left: -1.25rem;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  border: 1.95rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
 }
 
-@keyframes pingPulse {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(2.2);
-    opacity: 0;
-  }
+.solutions-it-infrastructure .infra-ellipse-bl-inner {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 2.25rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
 }
 
-.solutions-it-infrastructure .radar-ping {
-  transform-origin: center;
-  animation: pingPulse 2s infinite ease-out;
+.solutions-it-infrastructure .infra-triangle-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  height: 14rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Accordions Section */
+.solutions-it-infrastructure .infra-triangle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px #0084ff) drop-shadow(0 0 6px rgba(0, 132, 255, 0.5)) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.2));
+}
+
+.solutions-it-infrastructure .infra-graphic-badge:hover .infra-triangle-wrapper {
+  transform: translateY(-0.35rem) scale(1.05);
+}
+
+/* ==========================================================================
+   ACCORDIONS (Our Approach & Key Advantages)
+   ========================================================================== */
+
 .solutions-it-infrastructure .frame-329 {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 3.5rem;
   width: 100%;
 }
 
 .solutions-it-infrastructure .accordion-wrapper {
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0px 4px 20px rgba(14, 16, 255, 0.02);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.solutions-it-infrastructure .accordion-wrapper:hover {
-  border-color: rgba(14, 16, 255, 0.16);
-  box-shadow: 0px 8px 30px rgba(14, 16, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  width: 100%;
 }
 
 .solutions-it-infrastructure .group-284,
 .solutions-it-infrastructure .group-285 {
+  background: linear-gradient(180deg,
+      rgba(240, 248, 255, 1) 0%,
+      rgba(173, 215, 255, 1) 100%);
+  border-radius: 1.25rem;
+  min-height: 5.875rem;
+  padding: 1.625rem 2.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 24px 32px;
+  justify-content: space-between;
   cursor: pointer;
-  position: relative;
-  background: linear-gradient(180deg, #f8faff 0%, #edf4ff 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.04);
+}
+
+.solutions-it-infrastructure .group-284:hover,
+.solutions-it-infrastructure .group-285:hover {
+  background: linear-gradient(180deg,
+      rgba(232, 245, 255, 1) 0%,
+      rgba(160, 208, 255, 1) 100%);
+  box-shadow: 0 0.75rem 2rem rgba(14, 16, 255, 0.08);
 }
 
 .solutions-it-infrastructure .our-approach-title,
 .solutions-it-infrastructure .key-advantages-title {
-  color: #191c1e;
+  color: #000000;
   font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 22px;
+  font-size: 1.75rem;
   font-weight: 700;
   margin: 0;
-  z-index: 2;
 }
 
 .solutions-it-infrastructure .chevron-icon {
-  width: 28px;
-  height: 28px;
+  width: 2rem;
+  height: 2rem;
   color: #0e10ff;
-  transition: transform 0.3s ease;
-  z-index: 2;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-it-infrastructure .chevron-icon.open {
@@ -439,41 +434,40 @@
 }
 
 .solutions-it-infrastructure .accordion-body-text {
-  padding: 32px;
-  color: #333333;
-  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 18px;
-  line-height: 28px;
-  border-top: 1px solid rgba(14, 16, 255, 0.05);
+  color: #000000;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  padding: 0 1rem;
 }
 
 .solutions-it-infrastructure .accordion-body-content {
-  padding: 32px;
-  border-top: 1px solid rgba(14, 16, 255, 0.05);
+  padding: 0 1rem;
 }
 
 .solutions-it-infrastructure .frame-3 {
   display: flex;
   flex-direction: row;
-  gap: 48px;
+  gap: 3rem;
   align-items: center;
-  justify-content: flex-start;
   width: 100%;
 }
 
 .solutions-it-infrastructure .advantages-visual-wrapper {
-  width: 40%;
-  max-width: 336px;
-  height: 240px;
-  border-radius: 16px;
+  flex: 0 0 21rem;
+  height: 18rem;
+  border-radius: 0.625rem;
   overflow: hidden;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.06);
 }
 
 .solutions-it-infrastructure .rectangle-333 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 0.625rem;
+  display: block;
 }
 
 .solutions-it-infrastructure .advantages-list-wrapper {
@@ -481,49 +475,46 @@
 }
 
 .solutions-it-infrastructure .advantages-list {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.25rem;
 }
 
 .solutions-it-infrastructure .advantages-list li {
-  color: #333333;
-  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 18px;
-  line-height: 24px;
-  position: relative;
-  padding-left: 28px;
+  color: #000000;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
 }
 
-.solutions-it-infrastructure .advantages-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background-color: #0e10ff;
-  box-shadow: 0 0 6px rgba(14, 16, 255, 0.4);
+.solutions-it-infrastructure .advantages-list li::marker {
+  color: #0e10ff;
+  font-size: 1.25rem;
 }
 
-/* Strategic Pillars Section */
+/* ==========================================================================
+   CORE INFRASTRUCTURE PILLARS (3-Column Grid)
+   ========================================================================== */
+
 .solutions-it-infrastructure .section-strategic-pillars {
+  padding: 3rem 0 0 0;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 3.5rem;
   width: 100%;
-  margin-top: 24px;
+  max-width: 100%;
+  margin: 0;
 }
 
-.solutions-it-infrastructure .core-infrastructure-pillars-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
+.solutions-it-infrastructure .core-infrastructure-pillars {
+  text-align: center;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 3.75rem;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -535,704 +526,600 @@
   color: #0e10ff;
 }
 
-.solutions-it-infrastructure .pillars-subtitle {
-  color: #555555;
+.solutions-it-infrastructure .foundational-technical-services {
+  color: #434654;
+  text-align: center;
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
   margin: 0;
+  max-width: 42rem;
 }
 
-.solutions-it-infrastructure .pillars-grid {
+.solutions-it-infrastructure .pillars-grid-infra {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  gap: 1.5rem;
   width: 100%;
 }
 
-.solutions-it-infrastructure .pillar-column {
-  background: rgba(14, 16, 255, 0.02);
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 24px;
-  padding: 32px;
+.solutions-it-infrastructure .pillar-card-infra {
+  background: #ffffff;
+  border-radius: 0.625rem;
+  border: 1px solid #d0d5dd;
+  padding: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  transition: all 0.4s ease;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
 }
 
-.solutions-it-infrastructure .pillar-column:hover {
-  transform: translateY(-8px);
-  border-color: rgba(14, 16, 255, 0.2);
-  background: #ffffff;
-  box-shadow: 0 16px 40px rgba(14, 16, 255, 0.08);
+.solutions-it-infrastructure .pillar-card-infra:hover {
+  transform: translateY(-0.35rem);
+  border-color: #0e10ff;
+  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.08);
 }
 
-.solutions-it-infrastructure .pillar-image-card {
+.solutions-it-infrastructure .pillar-img-wrapper {
   width: 100%;
-  height: 200px;
-  border-radius: 16px;
+  height: 13.5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.25rem;
 }
 
-.solutions-it-infrastructure .pillar-image {
+.solutions-it-infrastructure .pillar-card-img {
   width: 100%;
   height: 100%;
+  border-radius: 0.5rem;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
-.solutions-it-infrastructure .pillar-column:hover .pillar-image {
-  transform: scale(1.05);
+.solutions-it-infrastructure .pillar-card-infra:hover .pillar-card-img {
+  transform: scale(1.04);
 }
 
-.solutions-it-infrastructure .pillar-title {
-  color: #191c1e;
+.solutions-it-infrastructure .pillar-card-title {
+  color: #101828;
   font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 24px;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
   font-weight: 700;
   margin: 0;
 }
 
-.solutions-it-infrastructure .pillar-desc {
-  color: #555555;
+.solutions-it-infrastructure .pillar-card-desc {
+  color: #475467;
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  font-weight: 400;
   margin: 0;
-  flex-grow: 1;
+  min-height: 5.25rem;
 }
 
-.solutions-it-infrastructure .pillar-bullets {
+.solutions-it-infrastructure .pillar-card-features {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  border-top: 1px solid rgba(14, 16, 255, 0.06);
-  padding-top: 20px;
+  gap: 0.875rem;
+  margin-top: auto;
 }
 
-.solutions-it-infrastructure .pillar-bullets li {
+.solutions-it-infrastructure .pillar-card-features li {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 12px;
-  color: #333333;
+  gap: 0.625rem;
+  color: #101828;
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
-.solutions-it-infrastructure .bullet-svg {
-  width: 16px;
-  height: 16px;
-  color: #cb096d;
+.solutions-it-infrastructure .pillar-item-icon {
+  width: 1.25rem;
+  height: 1.25rem;
   flex-shrink: 0;
 }
 
-/* Featured Enterprise Hardware Section */
-.solutions-it-infrastructure .section-enterprise-hardware {
+/* ==========================================================================
+   FEATURED ENTERPRISE HARDWARE (4-Column Grid)
+   ========================================================================== */
+
+.solutions-it-infrastructure .section-featured-hardware {
+  background: #f4f9ff;
+  border-radius: 0.75rem;
+  padding: 3.5rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 3rem;
+  align-items: center;
   width: 100%;
-  margin-top: 24px;
 }
 
-.solutions-it-infrastructure .featured-hardware-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
+.solutions-it-infrastructure .featured-enterprise-hardware {
+  text-align: center;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 3.75rem;
+  font-weight: 600;
   margin: 0;
 }
 
-.solutions-it-infrastructure .featured-hardware-span {
+.solutions-it-infrastructure .featured-enterprise-hardware-span {
   color: #191c1e;
 }
 
-.solutions-it-infrastructure .featured-hardware-span2 {
+.solutions-it-infrastructure .featured-enterprise-hardware-span2 {
   color: #0e10ff;
 }
 
-.solutions-it-infrastructure .hardware-subtitle {
-  color: #555555;
+.solutions-it-infrastructure .precision-hardware-desc {
+  color: #434654;
+  text-align: center;
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
   margin: 0;
+  max-width: 42rem;
 }
 
-.solutions-it-infrastructure .hardware-products-grid {
+.solutions-it-infrastructure .hardware-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
+  gap: 1.25rem;
   width: 100%;
 }
 
 .solutions-it-infrastructure .hardware-card {
-  background: rgba(14, 16, 255, 0.01);
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 20px;
-  padding: 24px;
+  background: #ffffff;
+  border-radius: 0.625rem;
+  border: 1px solid #d0d5dd;
+  padding: 1.25rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0.875rem;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
 }
 
 .solutions-it-infrastructure .hardware-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(14, 16, 255, 0.2);
-  background: #ffffff;
-  box-shadow: 0 12px 30px rgba(14, 16, 255, 0.06);
+  transform: translateY(-0.35rem);
+  border-color: #0e10ff;
+  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.1);
 }
 
-.solutions-it-infrastructure .hardware-image-box {
-  width: 100%;
-  height: 140px;
-  border-radius: 12px;
+.solutions-it-infrastructure .hardware-img-container {
+  background: #f2f4f6;
+  border-radius: 0.375rem;
+  height: 10.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-}
-
-.solutions-it-infrastructure .product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.solutions-it-infrastructure .hardware-card:hover .product-image {
-  transform: scale(1.05);
-}
-
-.solutions-it-infrastructure .hardware-title {
-  color: #191c1e;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-it-infrastructure .hardware-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0;
-  flex-grow: 1;
-}
-
-/* Technical Expertise Panel */
-.solutions-it-infrastructure .section-technical-capabilities-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-.solutions-it-infrastructure .container15 {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  width: 100%;
-}
-
-.solutions-it-infrastructure .container16 {
-  flex: 0.8;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: sticky;
-  top: 120px;
-  height: max-content;
-}
-
-.solutions-it-infrastructure .technical-expertise-title {
-  color: #191c1e;
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-it-infrastructure .expertise-subtitle {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 18px;
-  margin: 0;
-}
-
-.solutions-it-infrastructure .container17 {
-  flex: 1.2;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.solutions-it-infrastructure .background-border {
-  background: rgba(14, 16, 255, 0.02);
-  border: 1px solid rgba(14, 16, 255, 0.06);
-  border-radius: 20px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: all 0.3s ease;
-}
-
-.solutions-it-infrastructure .background-border:hover {
-  background: #ffffff;
-  border-color: rgba(14, 16, 255, 0.16);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(14, 16, 255, 0.04);
-}
-
-.solutions-it-infrastructure .expertise-icon-box {
-  background: rgba(14, 16, 255, 0.05);
-  border-radius: 12px;
-  width: 48px;
-  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0e10ff;
-  transition: all 0.3s ease;
 }
 
-.solutions-it-infrastructure .background-border:hover .expertise-icon-box {
-  background: #0e10ff;
-  color: #ffffff;
+.solutions-it-infrastructure .hardware-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.solutions-it-infrastructure .heading-4 {
-  color: #191c1e;
+.solutions-it-infrastructure .hardware-card:hover .hardware-img {
+  transform: scale(1.06);
+}
+
+.solutions-it-infrastructure .hardware-title {
+  color: #101828;
   font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 20px;
+  font-size: 1.0625rem;
+  line-height: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  min-height: 2.75rem;
+  display: flex;
+  align-items: flex-start;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.solutions-it-infrastructure .hardware-desc {
+  color: #475467;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  font-weight: 400;
+  margin: 0;
+  flex: 1;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+/* ==========================================================================
+   TECHNICAL EXPERTISE GRID (Split 2-Column Section)
+   ========================================================================== */
+
+.solutions-it-infrastructure .section-technical-expertise {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.solutions-it-infrastructure .expertise-left-col {
+  flex: 0 0 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.solutions-it-infrastructure .technical-expertise-title {
+  color: #0e10ff;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: 700;
   margin: 0;
 }
 
-.solutions-it-infrastructure .expertise-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 15px;
-  line-height: 22px;
+.solutions-it-infrastructure .technical-expertise-desc {
+  color: #000000;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
   margin: 0;
-  margin-top: 8px;
 }
 
-/* Global Logistics Split Section */
-.solutions-it-infrastructure .section-global-logistics {
+.solutions-it-infrastructure .expertise-right-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.solutions-it-infrastructure .expertise-item-card {
+  background: #f4f9ff;
+  border-radius: 0.25rem;
+  border: 1px solid #c3c6d6;
+  padding: 1.5rem;
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.solutions-it-infrastructure .expertise-item-card:hover {
+  transform: translateY(-0.25rem);
+  border-color: #0e10ff;
+  box-shadow: 0 0.75rem 2rem rgba(14, 16, 255, 0.08);
+}
+
+.solutions-it-infrastructure .expertise-icon-box {
+  background: #ffffff;
+  border-radius: 0.3125rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 24px;
+  justify-content: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(14, 16, 255, 0.06);
+  flex-shrink: 0;
 }
 
-.solutions-it-infrastructure .container21 {
-  flex: 0.8;
-  max-width: 420px;
+.solutions-it-infrastructure .expertise-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.solutions-it-infrastructure .logistics-image-card {
+.solutions-it-infrastructure .expertise-item-title {
+  color: #0e10ff;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .expertise-item-text {
+  color: #5e5e5e;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   GLOBAL INFRASTRUCTURE LOGISTICS (Split Banner Layout)
+   ========================================================================== */
+
+.solutions-it-infrastructure .section-global-logistics {
+  background: #f4f9ff;
+  border-radius: 0.5rem;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
-  height: 380px;
-  border-radius: 24px;
+}
+
+.solutions-it-infrastructure .logistics-img-wrapper {
+  flex: 0 0 clamp(20rem, 32vw, 32.125rem);
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0.5rem 0.625rem -0.375rem rgba(0, 0, 0, 0.04),
+    0 1.25rem 1.5625rem -0.3125rem rgba(0, 0, 0, 0.04);
 }
 
 .solutions-it-infrastructure .global-infrastructure-logistics {
   width: 100%;
   height: 100%;
+  min-height: 24rem;
   object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
 }
 
-.solutions-it-infrastructure .container22 {
-  flex: 1.2;
+.solutions-it-infrastructure .logistics-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
-.solutions-it-infrastructure .logistics-tag {
-  color: #cb096d;
+.solutions-it-infrastructure .logistics-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.solutions-it-infrastructure .logistics-subtitle {
+  color: #000000;
   font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
 }
 
-.solutions-it-infrastructure .secure-global-deployment-title {
-  color: #191c1e;
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
+.solutions-it-infrastructure .secure-global-deployment {
+  color: #0e10ff;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: 700;
   margin: 0;
 }
 
-.solutions-it-infrastructure .logistics-subtitle-desc {
-  color: #555555;
+.solutions-it-infrastructure .precision-logistics-desc {
+  color: #434654;
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 400;
   margin: 0;
 }
 
-.solutions-it-infrastructure .container23 {
+.solutions-it-infrastructure .logistics-features {
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-top: 16px;
+  gap: 1.5rem;
 }
 
-.solutions-it-infrastructure .container24 {
+.solutions-it-infrastructure .logistics-feature-item {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 1rem;
   align-items: flex-start;
 }
 
-.solutions-it-infrastructure .bullet-icon {
-  background: rgba(14, 16, 255, 0.05);
-  border-radius: 10px;
-  width: 40px;
-  height: 40px;
+.solutions-it-infrastructure .logistics-icon-box {
+  background: #ffffff;
+  border-radius: 0.3125rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0e10ff;
+  box-shadow: 0 0.25rem 0.75rem rgba(14, 16, 255, 0.06);
   flex-shrink: 0;
 }
 
-.solutions-it-infrastructure .logistics-point-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 15px;
-  line-height: 22px;
-  margin: 0;
-  margin-top: 4px;
+.solutions-it-infrastructure .logistics-feature-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
 }
 
-/* Partners Block Styling */
-.solutions-it-infrastructure .group-348 {
+.solutions-it-infrastructure .logistics-feature-title {
+  color: #191c1e;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-it-infrastructure .logistics-feature-text {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   PARTNERS SECTION
+   ========================================================================== */
+
+/* ==========================================================================
+   IT INFRASTRUCTURE PARTNERS (FULL-WIDTH SECTION)
+   ========================================================================== */
+
+.solutions-it-infrastructure .section-partners-full-width {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 5rem;
+  background: radial-gradient(closest-side,
+      rgba(255, 255, 255, 0) 42.3%,
+      rgba(207, 245, 255, 0.25) 100%),
+    linear-gradient(180deg,
+      #ffffff 12.4%,
+      rgba(135, 205, 255, 0.28) 58.1%,
+      rgba(255, 255, 255, 0.32) 96.2%);
+  backdrop-filter: blur(15px);
+  position: relative;
+  z-index: 2;
 }
 
 .solutions-it-infrastructure .frame-464 {
-  background: rgba(14, 16, 255, 0.02);
-  border: 1px solid rgba(14, 16, 255, 0.06);
-  border-radius: 28px;
-  padding: 48px;
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4.5rem 3rem 5.5rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  width: 100%;
-}
-
-.solutions-it-infrastructure .cyber-security-partners {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0;
+  gap: 3.5rem;
+  align-items: center;
   text-align: center;
 }
 
-.solutions-it-infrastructure .cyber-security-partners-span {
-  color: #191c1e;
+.solutions-it-infrastructure .it-infrastructure-partners {
+  text-align: center;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
 }
 
-.solutions-it-infrastructure .cyber-security-partners-span2 {
+.solutions-it-infrastructure .it-infrastructure-partners-span {
   color: #0e10ff;
 }
 
-.solutions-it-infrastructure .partners-grid-cyber {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
+.solutions-it-infrastructure .it-infrastructure-partners-span2 {
+  color: #111112;
+}
+
+.solutions-it-infrastructure .partners-grid-infra {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
   width: 100%;
 }
 
 .solutions-it-infrastructure .partner-logo-box {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  width: 180px;
-  height: 80px;
+  border: 1px solid #7ea8db;
+  border-radius: 0.75rem;
+  height: 8.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(87, 147, 206, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-it-infrastructure .partner-logo-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(14, 16, 255, 0.06);
-  border-color: rgba(14, 16, 255, 0.1);
+  transform: translateY(-4px);
+  border-color: #0e10ff;
+  box-shadow: 0 10px 24px rgba(14, 16, 255, 0.12);
 }
 
-.solutions-it-infrastructure .p-logo {
-  font-size: 22px;
+.solutions-it-infrastructure .partner-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.solutions-it-infrastructure .partner-text {
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.375rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  letter-spacing: 0.03rem;
 }
 
-.solutions-it-infrastructure .partner-logo-box:hover .p-logo {
-  opacity: 1;
+.solutions-it-infrastructure .sophos-text {
+  color: #005696;
+  letter-spacing: 0.12rem;
+  font-size: 1.625rem;
 }
 
-.solutions-it-infrastructure .font-cisco {
-  font-family: "Arial Black", sans-serif;
-  color: #00b4e5;
+.solutions-it-infrastructure .symantec-text {
+  color: #000000;
 }
 
-.solutions-it-infrastructure .font-autodesk {
-  font-family: "Century Gothic", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  color: #0696d7;
+.solutions-it-infrastructure .paloalto-text {
+  color: #FA582D;
+  font-weight: 700;
 }
 
-.solutions-it-infrastructure .font-vmware {
-  font-family: "Georgia", serif;
-  font-weight: 900;
-  color: #5b2d82;
-  text-transform: lowercase;
+.solutions-it-infrastructure .cisco-text {
+  color: #049FD9;
+  letter-spacing: 0.1rem;
 }
 
-.solutions-it-infrastructure .font-lenovo {
-  font-family: "Arial Black", sans-serif;
-  color: #e2231a;
-  text-transform: uppercase;
+.solutions-it-infrastructure .fortinet-text {
+  color: #EE3124;
+  letter-spacing: 0.05rem;
 }
 
-.solutions-it-infrastructure .font-sophos {
-  font-family: "Georgia", serif;
-  font-weight: 900;
-  color: #00508f;
-  text-transform: uppercase;
-  font-style: italic;
-}
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
 
-/* Footer Wrapper */
-.solutions-it-infrastructure .footer-wrapper {
-  margin-top: 80px;
-  width: 100%;
-}
+/* Large Monitors (1920px+ XL breakpoints) */
+@media (min-width: 120rem) {
 
-/* Fade-in transitions */
-.solutions-it-infrastructure .fade-in {
-  animation: fadeInEffect 0.5s ease forwards;
-}
-
-@keyframes fadeInEffect {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile Hero Text & Services Section - Desktop defaults */
-.solutions-it-infrastructure .mobile-hero-text {
-  display: none;
-}
-
-.solutions-it-infrastructure .desktop-hero-text {
-  display: block;
-}
-
-.solutions-it-infrastructure .mobile-label {
-  display: none;
-}
-
-.solutions-it-infrastructure .desktop-label {
-  display: block;
-}
-
-.solutions-it-infrastructure .mobile-services-section {
-  display: none;
-}
-
-/* Mobile Solutions Dropdown - Hidden on desktop */
-.solutions-it-infrastructure .mobile-solutions-dropdown {
-  display: none;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 1200px) {
-  .solutions-it-infrastructure .frame-322 {
-    gap: 40px;
-  }
-  .solutions-it-infrastructure .frame-289 {
-    width: 260px;
-    padding: 32px 16px;
-  }
-  .solutions-it-infrastructure .container15 {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .solutions-it-infrastructure .container16 {
-    position: static;
-  }
-  .solutions-it-infrastructure .container17 {
-    width: 100%;
-  }
-  .solutions-it-infrastructure .section-global-logistics {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .solutions-it-infrastructure .container21 {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 992px) {
-  .solutions-it-infrastructure .frame-322 {
-    flex-direction: column;
-  }
-  .solutions-it-infrastructure .frame-289 {
-    width: 100%;
-    position: static;
-    padding: 24px;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 20px;
-  }
-  .solutions-it-infrastructure .s-o-l-u-t-i-o-n-s {
-    display: none;
-  }
-  .solutions-it-infrastructure .frame-288 {
-    flex-direction: row;
-    gap: 12px;
-    width: auto;
-  }
-  .solutions-it-infrastructure .sidebar-item {
-    padding: 12px 16px;
-    width: max-content;
-  }
-  .solutions-it-infrastructure .active-dot {
-    bottom: 4px;
-    right: 50%;
-    transform: translateX(50%);
-    top: auto;
-    width: 4px;
-    height: 4px;
-  }
-  .solutions-it-infrastructure .frame-461 {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .solutions-it-infrastructure .hero-image-wrapper {
-    width: 100%;
-    max-width: 100%;
-    height: 360px;
-  }
-  .solutions-it-infrastructure .intro-container {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .solutions-it-infrastructure .group-319-svg {
-    width: 100%;
-    max-width: 320px;
-  }
-  .solutions-it-infrastructure .pillars-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .solutions-it-infrastructure .hardware-products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
-    font-size: 36px;
-    line-height: 50px;
-  }
-  .solutions-it-infrastructure .frame-462 {
-    margin-top: 140px;
-    padding: 0 24px;
-  }
+  .solutions-it-infrastructure .frame-462,
   .solutions-it-infrastructure .frame-465 {
-    margin-top: 120px;
-    padding: 0 24px;
-  }
-  .solutions-it-infrastructure .pillars-grid,
-  .solutions-it-infrastructure .hardware-products-grid,
-  .solutions-it-infrastructure .container17 {
-    grid-template-columns: 1fr;
-  }
-  .solutions-it-infrastructure .frame-3 {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .solutions-it-infrastructure .advantages-visual-wrapper {
-    width: 100%;
-    max-width: 100%;
+    max-width: 96rem !important;
   }
 }
 
-/* ============================
-   MOBILE STYLES (max-width: 480px)
-   Matches Figma mobile design
-   ============================ */
-@media (max-width: 480px) {
-  /* Hero Section - Mobile */
-  .solutions-it-infrastructure .desktop-hero-text {
-    display: none;
-  }
-  .solutions-it-infrastructure .mobile-hero-text {
-    display: block;
+/* Medium Desktop & Laptops (max-width: 90rem / 1440px) */
+@media (max-width: 90rem) {
+
+  .solutions-it-infrastructure .frame-462,
+  .solutions-it-infrastructure .frame-465 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  /* Label toggle - show "IT INFRA" compact on mobile */
-  .solutions-it-infrastructure .desktop-label {
-    display: none;
-  }
-  .solutions-it-infrastructure .mobile-label {
-    display: block;
+  .solutions-it-infrastructure .hardware-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .solutions-it-infrastructure .rectangle-217 {
-    height: 520px;
+  .solutions-it-infrastructure .partners-grid-infra {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  .solutions-it-infrastructure .ellipse-17,
-  .solutions-it-infrastructure .ellipse-18,
-  .solutions-it-infrastructure .ellipse-19,
-  .solutions-it-infrastructure .ellipse-20 {
-    display: none;
-  }
-
-  .solutions-it-infrastructure .frame-462 {
-    margin-top: 100px;
-    padding: 0 16px;
-    gap: 16px;
-  }
-
+/* Tablet viewports (max-width: 64rem / 1024px) */
+@media (max-width: 64rem) {
   .solutions-it-infrastructure .frame-461 {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column-reverse;
+    gap: 2rem;
     align-items: flex-start;
   }
 
@@ -1240,546 +1127,279 @@
     width: 100%;
   }
 
-  .solutions-it-infrastructure .i-t-i-n-f-r-a {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.05em;
-    color: #191c1e;
-  }
-
-  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
-    font-size: 32px;
-    line-height: 44px;
-  }
-
   .solutions-it-infrastructure .hero-image-wrapper {
     width: 100%;
-    max-width: 100%;
-    height: 200px;
-    border-radius: 16px;
-  }
-
-  .solutions-it-infrastructure .frame-2-bars {
-    margin-top: 8px;
-    justify-content: center;
-    width: 100%;
-    align-self: center;
-  }
-
-  .solutions-it-infrastructure .bar {
-    width: 6px;
-    height: 28px;
-  }
-
-  .solutions-it-infrastructure .bar.active {
-    height: 28px;
-  }
-
-  /* Main Content Frame - Mobile */
-  .solutions-it-infrastructure .frame-465 {
-    margin-top: 12px;
-    padding: 0 16px;
+    flex: unset;
   }
 
   .solutions-it-infrastructure .frame-322 {
     flex-direction: column;
-    gap: 24px;
-  }
-
-  /* Hide sidebar on mobile */
-  .solutions-it-infrastructure .frame-289 {
-    display: none;
-  }
-
-  /* Mobile Solutions Dropdown - Show on mobile */
-  .solutions-it-infrastructure .mobile-solutions-dropdown {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    margin-bottom: 16px;
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-trigger {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 20px;
-    background: #ffffff;
-    border: 1.5px solid rgba(14, 16, 255, 0.12);
-    border-radius: 40px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 12px rgba(14, 16, 255, 0.04);
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-trigger:hover {
-    border-color: rgba(14, 16, 255, 0.25);
-    box-shadow: 0 4px 16px rgba(14, 16, 255, 0.08);
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-icon {
-    width: 22px;
-    height: 22px;
-    color: #0e10ff;
-    flex-shrink: 0;
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-label {
-    flex: 1;
-    font-family: "MerriweatherSans-Bold", sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: #191c1e;
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-chevron {
-    width: 20px;
-    height: 20px;
-    color: #0e10ff;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-chevron.open {
-    transform: rotate(180deg);
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 8px;
-    background: #ffffff;
-    border: 1px solid rgba(14, 16, 255, 0.1);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(14, 16, 255, 0.08);
-    animation: dropdownFadeIn 0.2s ease forwards;
-  }
-
-  @keyframes dropdownFadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-item {
-    padding: 14px 20px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    border-bottom: 1px solid rgba(14, 16, 255, 0.04);
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-item:last-child {
-    border-bottom: none;
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-item:hover {
-    background: rgba(14, 16, 255, 0.04);
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-item.active {
-    background: rgba(14, 16, 255, 0.06);
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-item-text {
-    font-family: "MerriweatherSans-Regular", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333333;
-  }
-
-  .solutions-it-infrastructure .mobile-dropdown-item.active .mobile-dropdown-item-text {
-    color: #0e10ff;
-    font-weight: 700;
-  }
-
-  /* Content area full width */
-  .solutions-it-infrastructure .frame-561 {
-    gap: 40px;
-  }
-
-  /* IT Infrastructure title section */
-  .solutions-it-infrastructure .it-infrastructure-title {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .solutions-it-infrastructure .frame-325 {
-    gap: 20px;
+    gap: 2.5rem;
   }
 
   .solutions-it-infrastructure .intro-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+    align-items: flex-start;
   }
 
-  .solutions-it-infrastructure .intro-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .solutions-it-infrastructure .group-319-svg {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  /* Accordions - Mobile */
-  .solutions-it-infrastructure .frame-329 {
-    gap: 16px;
-  }
-
-  .solutions-it-infrastructure .group-284,
-  .solutions-it-infrastructure .group-285 {
-    padding: 16px 20px;
-  }
-
-  .solutions-it-infrastructure .our-approach-title,
-  .solutions-it-infrastructure .key-advantages-title {
-    font-size: 16px;
-  }
-
-  .solutions-it-infrastructure .chevron-icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .solutions-it-infrastructure .accordion-body-text {
-    padding: 16px 20px;
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .solutions-it-infrastructure .accordion-body-content {
-    padding: 16px 20px;
+  .solutions-it-infrastructure .infra-graphic-badge {
+    align-self: center;
   }
 
   .solutions-it-infrastructure .frame-3 {
     flex-direction: column;
-    gap: 16px;
+    gap: 2rem;
+    align-items: flex-start;
   }
 
   .solutions-it-infrastructure .advantages-visual-wrapper {
     width: 100%;
-    max-width: 100%;
-    height: 180px;
+    flex: unset;
   }
 
-  .solutions-it-infrastructure .advantages-list li {
-    font-size: 14px;
-    line-height: 20px;
-    padding-left: 22px;
-  }
-
-  .solutions-it-infrastructure .advantages-list li::before {
-    width: 10px;
-    height: 10px;
-    top: 5px;
-  }
-
-  /* Mobile Services Section - Show on mobile */
-  .solutions-it-infrastructure .mobile-services-section {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-  }
-
-  .solutions-it-infrastructure .mobile-services-title {
-    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  .solutions-it-infrastructure .mobile-services-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-  }
-
-  .solutions-it-infrastructure .mobile-service-card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    width: 100%;
-  }
-
-  .solutions-it-infrastructure .mobile-service-card-image {
-    width: 100%;
-    height: 200px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  }
-
-  .solutions-it-infrastructure .mobile-service-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .solutions-it-infrastructure .mobile-service-card-title {
-    color: #0e10ff;
-    font-family: "MerriweatherSans-Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
-  }
-
-  .solutions-it-infrastructure .mobile-service-card-desc {
-    color: #555555;
-    font-family: "MerriweatherSans-Regular", sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 0;
-    text-align: center;
-  }
-
-  /* Core Infrastructure Pillars - Mobile */
-  .solutions-it-infrastructure .section-strategic-pillars {
-    gap: 24px;
-    margin-top: 0;
-  }
-
-  .solutions-it-infrastructure .core-infrastructure-pillars-title {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .solutions-it-infrastructure .pillars-subtitle {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .solutions-it-infrastructure .pillars-grid {
+  .solutions-it-infrastructure .pillars-grid-infra {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 1.5rem;
   }
 
-  .solutions-it-infrastructure .pillar-column {
-    padding: 20px;
-    border-radius: 16px;
-    gap: 16px;
+  .solutions-it-infrastructure .section-featured-hardware {
+    padding: 3rem 2rem;
+    gap: 2.5rem;
   }
 
-  .solutions-it-infrastructure .pillar-image-card {
-    height: 160px;
-    border-radius: 12px;
+  .solutions-it-infrastructure .hardware-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .solutions-it-infrastructure .pillar-title {
-    font-size: 18px;
-  }
-
-  .solutions-it-infrastructure .pillar-desc {
-    font-size: 13px;
-    line-height: 20px;
-  }
-
-  .solutions-it-infrastructure .pillar-bullets li {
-    font-size: 13px;
-  }
-
-  .solutions-it-infrastructure .pillar-bullets {
-    padding-top: 14px;
-    gap: 10px;
-  }
-
-  /* Featured Enterprise Hardware - Mobile */
-  .solutions-it-infrastructure .section-enterprise-hardware {
-    gap: 24px;
-    margin-top: 0;
-  }
-
-  .solutions-it-infrastructure .featured-hardware-title {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .solutions-it-infrastructure .hardware-subtitle {
-    font-size: 14px;
-  }
-
-  .solutions-it-infrastructure .hardware-products-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .solutions-it-infrastructure .hardware-card {
-    padding: 16px;
-    border-radius: 14px;
-    gap: 12px;
-  }
-
-  .solutions-it-infrastructure .hardware-image-box {
-    height: 140px;
-    border-radius: 10px;
-  }
-
-  .solutions-it-infrastructure .hardware-title {
-    font-size: 16px;
-  }
-
-  .solutions-it-infrastructure .hardware-desc {
-    font-size: 13px;
-    line-height: 18px;
-  }
-
-  /* Technical Expertise - Mobile */
-  .solutions-it-infrastructure .section-technical-capabilities-grid {
-    gap: 24px;
-    margin-top: 0;
-  }
-
-  .solutions-it-infrastructure .container15 {
+  .solutions-it-infrastructure .section-technical-expertise {
     flex-direction: column;
-    gap: 24px;
+    padding: 4rem 2rem;
+    gap: 2.5rem;
   }
 
-  .solutions-it-infrastructure .container16 {
-    position: static;
+  .solutions-it-infrastructure .expertise-left-col {
     width: 100%;
+    flex: unset;
   }
 
-  .solutions-it-infrastructure .technical-expertise-title {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  .solutions-it-infrastructure .expertise-subtitle {
-    font-size: 14px;
-  }
-
-  .solutions-it-infrastructure .container17 {
+  .solutions-it-infrastructure .expertise-right-grid {
+    width: 100%;
     grid-template-columns: 1fr;
-    gap: 14px;
   }
 
-  .solutions-it-infrastructure .background-border {
-    padding: 20px;
-    border-radius: 14px;
-    gap: 14px;
-  }
-
-  .solutions-it-infrastructure .expertise-icon-box {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
-
-  .solutions-it-infrastructure .heading-4 {
-    font-size: 16px;
-  }
-
-  .solutions-it-infrastructure .expertise-desc {
-    font-size: 13px;
-    line-height: 19px;
-  }
-
-  /* Global Logistics - Mobile */
   .solutions-it-infrastructure .section-global-logistics {
     flex-direction: column;
-    gap: 24px;
-    margin-top: 0;
+    padding: 3rem 2rem;
+    gap: 3rem;
   }
 
-  .solutions-it-infrastructure .container21 {
+  .solutions-it-infrastructure .logistics-img-wrapper {
     width: 100%;
-    max-width: 100%;
+    flex: unset;
   }
 
-  .solutions-it-infrastructure .logistics-image-card {
-    height: 220px;
-    border-radius: 16px;
+  .solutions-it-infrastructure .global-infrastructure-logistics {
+    height: 18rem;
   }
 
-  .solutions-it-infrastructure .container22 {
-    gap: 16px;
+  .solutions-it-infrastructure .partners-grid-infra {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Small Tablets and Mobile Landscapes (max-width: 48rem / 768px) */
+@media (max-width: 48rem) {
+  .solutions-it-infrastructure .rectangle-217 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
   }
 
-  .solutions-it-infrastructure .logistics-tag {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(203, 9, 109, 0.1);
-    margin-bottom: 4px;
+  .solutions-it-infrastructure .frame-462 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    margin-top: 0 !important;
+    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    gap: 0 !important;
   }
 
-  .solutions-it-infrastructure .secure-global-deployment-title {
-    font-size: 22px;
-    line-height: 30px;
+  .solutions-it-infrastructure .frame-461 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    min-height: 0 !important;
   }
 
-  .solutions-it-infrastructure .logistics-subtitle-desc {
-    font-size: 14px;
+  .solutions-it-infrastructure .frame-460 {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
+    padding: 0 !important;
+    height: auto !important;
+    gap: 0.375rem !important;
   }
 
-  .solutions-it-infrastructure .container23 {
-    gap: 16px;
-    margin-top: 8px;
+  .solutions-it-infrastructure .i-t-i-n-f-r-a.desktop-label {
+    display: none !important;
   }
 
-  .solutions-it-infrastructure .container24 {
-    gap: 14px;
+  .solutions-it-infrastructure .i-t-i-n-f-r-a.mobile-label {
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.125rem !important;
+    margin: 0 !important;
+    width: 100% !important;
   }
 
-  .solutions-it-infrastructure .bullet-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 8px;
+  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
+    font-size: clamp(1.65rem, 6.2vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    letter-spacing: -0.4px !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
   }
 
-  .solutions-it-infrastructure .logistics-point-desc {
-    font-size: 13px;
-    line-height: 19px;
+  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise span,
+  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise-span,
+  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise-span2 {
+    text-align: center !important;
+    display: inline !important;
   }
 
-  /* Partners - Mobile */
-  .solutions-it-infrastructure .group-348 {
-    margin-top: 24px;
+  .solutions-it-infrastructure .hero-image-wrapper {
+    width: 100% !important;
+    max-width: 22rem !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: auto auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .solutions-it-infrastructure .frame-464 {
-    padding: 24px 16px;
-    border-radius: 20px;
-    gap: 20px;
+  .solutions-it-infrastructure .rectangle-323 {
+    width: 100% !important;
+    height: auto !important;
+    max-height: clamp(13rem, 34vh, 17.5rem) !important;
+    object-fit: cover !important;
+    border-radius: 1.25rem !important;
+    display: block !important;
+    box-shadow: none !important;
   }
 
-  .solutions-it-infrastructure .cyber-security-partners {
-    font-size: 20px;
+  .solutions-it-infrastructure .ellipse-17,
+  .solutions-it-infrastructure .ellipse-18,
+  .solutions-it-infrastructure .ellipse-19,
+  .solutions-it-infrastructure .ellipse-20 {
+    display: none !important;
   }
 
-  .solutions-it-infrastructure .partners-grid-cyber {
-    flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
+  .solutions-it-infrastructure .frame-2-bars {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 5 !important;
   }
 
-  .solutions-it-infrastructure .partner-logo-box {
-    width: 100%;
-    height: 60px;
-    border-radius: 12px;
+  .solutions-it-infrastructure .frame-2-bars .bar {
+    background: #9d9dff !important;
+    border-radius: 1.875rem !important;
+    width: 0.375rem !important;
+    height: 1.75rem !important;
   }
 
-  .solutions-it-infrastructure .p-logo {
-    font-size: 18px;
+  .solutions-it-infrastructure .frame-2-bars .bar.active {
+    background: #0e10ff !important;
+    height: 2.125rem !important;
   }
 
-  /* Footer on mobile */
-  .solutions-it-infrastructure .footer-wrapper {
-    margin-top: 12px;
+  .solutions-it-infrastructure .frame-465 {
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .solutions-it-infrastructure .frame-561 {
+    gap: 3.5rem;
+  }
+
+  .solutions-it-infrastructure .hardware-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-it-infrastructure .partners-grid-infra {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile Viewports (max-width: 30rem / 480px) */
+@media (max-width: 30rem) {
+
+  .solutions-it-infrastructure .frame-462,
+  .solutions-it-infrastructure .frame-465 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .solutions-it-infrastructure .group-284,
+  .solutions-it-infrastructure .group-285 {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .solutions-it-infrastructure .our-approach-title,
+  .solutions-it-infrastructure .key-advantages-title {
+    font-size: 1.25rem;
+  }
+
+  .solutions-it-infrastructure .section-featured-hardware,
+  .solutions-it-infrastructure .section-global-logistics {
+    padding: 2.5rem 1.25rem;
   }
 }

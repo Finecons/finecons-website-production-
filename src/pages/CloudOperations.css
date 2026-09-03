@@ -1,0 +1,956 @@
+/* ==========================================================================
+   CLOUD OPERATIONS & GOVERNANCE PAGE STYLING
+   ========================================================================== */
+
+.cloud-operations-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.cloud-operations-page * {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   HERO WRAPPER - EXACT 100VH VIEWPORT
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .cloud-operations-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(123.26deg,
+      rgba(228, 234, 255, 0) 45%,
+      rgba(38, 210, 222, 0.3) 90%),
+    linear-gradient(223.8deg,
+      rgba(228, 234, 255, 1) 38%,
+      rgba(175, 175, 255, 1) 79%);
+}
+
+.cloud-operations-page .rectangle-217 {
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Background decorative concentric donut rings */
+.cloud-operations-page .ellipse-17 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  width: 20.25rem;
+  height: 20.25rem;
+  position: absolute;
+  left: -5rem;
+  top: -7.75rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-operations-page .ellipse-18 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  left: -0.625rem;
+  top: -3.375rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-operations-page .ellipse-19 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  width: 20.25rem;
+  height: 20.25rem;
+  position: absolute;
+  left: 15.25rem;
+  top: 23.5rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-operations-page .ellipse-20 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  left: 19.625rem;
+  top: 27.875rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   HERO BANNER CONTENT CONTAINER
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .frame-490 {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  max-height: 100vh;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cloud-operations-page .frame-489 {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.5rem, 3.5vw, 4.5rem);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto 0;
+}
+
+.cloud-operations-page .frame-488 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex: 1;
+}
+
+.cloud-operations-page .c-l-o-u-d-s-e-r-v-i-c-e-s {
+  color: #091426;
+  text-align: left;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  letter-spacing: 0.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cloud-operations-page .reliable-cloud-operations-proactive-governance {
+  text-align: left;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cloud-operations-page .reliable-cloud-operations-proactive-governance-span {
+  color: #091426;
+}
+
+.cloud-operations-page .reliable-cloud-operations-proactive-governance-span2 {
+  color: #0e10ff;
+}
+
+.cloud-operations-page .hero-img-box {
+  flex: 0 0 clamp(18rem, 28vw, 30rem);
+  max-height: min(36vh, 280px);
+  aspect-ratio: 4 / 3;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
+}
+
+.cloud-operations-page .rectangle-323 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.cloud-operations-page .hero-img-box:hover .rectangle-323 {
+  transform: scale(1.05);
+}
+
+/* 9-Segment Visual Bar Indicator */
+.cloud-operations-page .frame-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+  width: 100%;
+  margin: 0;
+}
+
+.cloud-operations-page .frame-2 .bar {
+  border-radius: 1.875rem;
+  width: 0.375rem;
+  height: 1.75rem;
+  background: #9d9dff;
+  transition: all 0.3s ease;
+}
+
+.cloud-operations-page .frame-2 .bar.active {
+  background: #0e10ff;
+  height: 2.125rem;
+}
+
+/* --------------------------------------------------------------------------
+   MAIN BODY CONTENT WRAPPER
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .cloud-operations-content-wrapper {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+  padding-top: 4.5rem;
+  padding-bottom: 6rem;
+}
+
+/* Section Title: Cloud Operations & Governance */
+.cloud-operations-page .main-section-title-wrap {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  padding: 0 3rem;
+}
+
+.cloud-operations-page .cloud-operations-governance-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-operations-page .cloud-operations-governance-span {
+  color: #0e10ff;
+}
+
+.cloud-operations-page .cloud-operations-governance-span2 {
+  color: #010101;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: CORE VALUE PROPOSITION
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .section-core-value-proposition {
+  background: #f8f9ff;
+  padding: 4.5rem 0;
+  width: 100%;
+  margin-bottom: 5.5rem;
+}
+
+.cloud-operations-page .frame-567 {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cloud-operations-page .value-prop-img-box {
+  flex: 1;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+}
+
+.cloud-operations-page .rectangle-353 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.cloud-operations-page .value-prop-img-box:hover .rectangle-353 {
+  transform: scale(1.03);
+}
+
+.cloud-operations-page .container5-grid {
+  flex: 1.1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.cloud-operations-page .grid-span-full-row {
+  grid-column: 1 / span 2;
+}
+
+.cloud-operations-page .background-border {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #c5c6cd;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 6px 18px rgba(14, 16, 255, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cloud-operations-page .background-border:hover {
+  transform: translateY(-4px);
+  border-color: #0e10ff;
+  box-shadow: 0 12px 28px rgba(14, 16, 255, 0.12);
+}
+
+.cloud-operations-page .icon-blue-badge {
+  width: 3rem;
+  height: 3rem;
+  background: #0e10ff;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(14, 16, 255, 0.25);
+}
+
+.cloud-operations-page .badge-svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: #ffffff;
+}
+
+.cloud-operations-page .proactive-monitoring,
+.cloud-operations-page .intelligent-automation,
+.cloud-operations-page .governance-framework {
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-operations-page .feature-desc-text {
+  color: #45474c;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: SERVICES ECOSYSTEM
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .section-services-grid {
+  background: #eff4ff;
+  padding: 5.5rem 0;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.cloud-operations-page .container10 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3rem;
+}
+
+.cloud-operations-page .services-ecosystem {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-operations-page .services-ecosystem-span {
+  color: #091426;
+}
+
+.cloud-operations-page .services-ecosystem-span2 {
+  color: #0e10ff;
+}
+
+.cloud-operations-page .background2-title-bar {
+  width: 4rem;
+  height: 4px;
+  background: #0e10ff;
+  border-radius: 2px;
+}
+
+.cloud-operations-page .ecosystem-lead-subtext {
+  color: #45474c;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  max-width: 48rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.cloud-operations-page .container11-ecosystem-grid {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.cloud-operations-page .ecosystem-grid-item {
+  background: #ffffff;
+  border: 1px solid rgba(14, 16, 255, 0.16);
+  border-radius: 0.75rem;
+  padding: 2.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+  min-height: 13.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(14, 16, 255, 0.04);
+  cursor: default;
+}
+
+.cloud-operations-page .ecosystem-grid-item:hover {
+  background: #0e10ff !important;
+  border-color: #0e10ff !important;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(14, 16, 255, 0.32);
+}
+
+.cloud-operations-page .margin-icon-wrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e10ff;
+  transition: color 0.3s ease;
+}
+
+.cloud-operations-page .ecosystem-icon-svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  stroke: currentColor;
+  display: block;
+}
+
+.cloud-operations-page .ecosystem-grid-item:hover .margin-icon-wrap {
+  color: #ffffff !important;
+}
+
+.cloud-operations-page .item-title {
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.cloud-operations-page .ecosystem-grid-item:hover .item-title {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: CENTRALIZED GOVERNANCE HUB
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .governance-compliance-section {
+  background: #0e10ff;
+  padding: 5.5rem 0;
+  width: 100%;
+  margin-bottom: 6rem;
+  color: #ffffff;
+}
+
+.cloud-operations-page .governance-compliance-section p {
+  color: #ffffff !important;
+}
+
+.cloud-operations-page .container31-governance-hub {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cloud-operations-page .background-border4-left {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.cloud-operations-page .container32-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cloud-operations-page .overlay-border-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.cloud-operations-page .overlay-border-card:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(4px);
+}
+
+.cloud-operations-page .gov-card-icon-wrap {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.cloud-operations-page .gov-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: #ffffff;
+}
+
+.cloud-operations-page .container34-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cloud-operations-page .policy-enforcement,
+.cloud-operations-page .security-controls,
+.cloud-operations-page .resource-management {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-operations-page .gov-card-desc {
+  color: #ffffff !important;
+  opacity: 0.95;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.cloud-operations-page .container37-right {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.cloud-operations-page .centralized-governance-hub {
+  color: #ffffff !important;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-operations-page .hub-desc-text {
+  color: #ffffff !important;
+  opacity: 0.95;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+.cloud-operations-page .gov-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cloud-operations-page .gov-check-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cloud-operations-page .check-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  stroke: #ffffff;
+}
+
+.cloud-operations-page .check-text {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: READY TO OPTIMIZE YOUR CLOUD? (FINAL CTA BANNER)
+   -------------------------------------------------------------------------- */
+.cloud-operations-page .section-final-cta {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  padding: 0 3rem;
+}
+
+.cloud-operations-page .cta-container {
+  background: #396caa;
+  border-radius: 1.25rem;
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 1rem 3rem rgba(57, 108, 170, 0.2);
+}
+
+.cloud-operations-page .gradient-overlay {
+  background: radial-gradient(closest-side,
+      rgba(0, 106, 97, 0.2) 0%,
+      rgba(0, 106, 97, 0) 100%);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cloud-operations-page .ready-to-optimize-your-cloud {
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud-operations-page .cta-subtext {
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  max-width: 44rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud-operations-page .cta-button-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.5rem;
+}
+
+.cloud-operations-page .cta-contact-btn {
+  background: #ffffff;
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1.125rem 2.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cloud-operations-page .cta-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #f0f4ff;
+  color: #0e10ff;
+}
+
+.cloud-operations-page .cta-arrow-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .cloud-operations-page .frame-489 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cloud-operations-page .hero-img-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cloud-operations-page .frame-567 {
+    flex-direction: column;
+  }
+
+  .cloud-operations-page .value-prop-img-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cloud-operations-page .container11-ecosystem-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cloud-operations-page .container31-governance-hub {
+    flex-direction: column;
+  }
+
+  .cloud-operations-page .background-border4-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-operations-page .cloud-operations-hero-wrapper {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cloud-operations-page .rectangle-217 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+
+  .cloud-operations-page .frame-490 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    margin-top: 0 !important;
+    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .cloud-operations-page .frame-489 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .cloud-operations-page .frame-488 {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
+    padding: 0 !important;
+    height: auto !important;
+    gap: 0.375rem !important;
+  }
+
+  .cloud-operations-page .c-l-o-u-d-s-e-r-v-i-c-e-s {
+    text-align: center !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.125rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .cloud-operations-page .reliable-cloud-operations-proactive-governance {
+    font-size: clamp(1.65rem, 6.2vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    letter-spacing: -0.4px !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .cloud-operations-page .reliable-cloud-operations-proactive-governance span,
+  .cloud-operations-page .reliable-cloud-operations-proactive-governance-span,
+  .cloud-operations-page .reliable-cloud-operations-proactive-governance-span2 {
+    text-align: center !important;
+    display: inline !important;
+  }
+
+  .cloud-operations-page .hero-img-box {
+    width: 100% !important;
+    max-width: 22rem !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: auto auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .cloud-operations-page .rectangle-323 {
+    width: 100% !important;
+    height: auto !important;
+    max-height: clamp(13rem, 34vh, 17.5rem) !important;
+    object-fit: cover !important;
+    border-radius: 1.25rem !important;
+    display: block !important;
+    box-shadow: none !important;
+  }
+
+  .cloud-operations-page .ellipse-17,
+  .cloud-operations-page .ellipse-18,
+  .cloud-operations-page .ellipse-19,
+  .cloud-operations-page .ellipse-20 {
+    display: none !important;
+  }
+
+  .cloud-operations-page .frame-2 {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 5 !important;
+  }
+
+  .cloud-operations-page .frame-2 .bar {
+    background: #9d9dff !important;
+    border-radius: 1.875rem !important;
+    width: 0.375rem !important;
+    height: 1.75rem !important;
+  }
+
+  .cloud-operations-page .frame-2 .bar.active,
+  .cloud-operations-page .frame-2 .rectangle-324 {
+    background: #0e10ff !important;
+    height: 2.125rem !important;
+  }
+
+  .cloud-operations-page .cloud-operations-content-wrapper {
+    padding-top: 3.5rem !important;
+  }
+
+  .cloud-operations-page .main-section-title-wrap {
+    margin-bottom: 2rem !important;
+  }
+
+  .cloud-operations-page .main-section-title-wrap,
+  .cloud-operations-page .frame-567,
+  .cloud-operations-page .container10,
+  .cloud-operations-page .container11-ecosystem-grid,
+  .cloud-operations-page .container31-governance-hub,
+  .cloud-operations-page .section-final-cta {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .cloud-operations-page .container5-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cloud-operations-page .grid-span-full-row {
+    grid-column: 1 / span 1;
+  }
+
+  .cloud-operations-page .container11-ecosystem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cloud-operations-page .cta-container {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cloud-operations-page .container11-ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+}

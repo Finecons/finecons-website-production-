@@ -2,6 +2,8 @@ import React from 'react';
 import './Home.css';
 import Navbar from '../components/Navbar';
 import Footer, { FooterDesktop, FooterMobile } from '../components/Footer';
+import awsLogo from '../assets/Amazon_Web_Services_Logo.svg';
+import azureLogo from '../assets/azure-icon.svg';
 
 const IconBadge = ({ icon }) => {
   const getIconPaths = () => {
@@ -206,9 +208,9 @@ const Home = ({ navigateTo }) => {
           <div className="inactive-rect"></div>
         </div>
       </div>
-      <div className="frame-380">
-        <div className="frame-379">
-          <div className="s-o-l-u-t-i-o-n-s">S E R V I C E S</div>
+      <div className="frame-380 home-expertise-section">
+        <div className="frame-379 home-expertise-header">
+          <div className="home-services-label">S E R V I C E S</div>
           <div className="our-expertise">
             <span>
               <span className="our-expertise-span">Our </span>
@@ -217,7 +219,7 @@ const Home = ({ navigateTo }) => {
           </div>
         </div>
         <div className="capabilities-that-build-confidence">
-          Capabilities That Build Our
+          Capabilities That Build Our{" "}
           <br />
           Confidence
         </div>
@@ -225,6 +227,7 @@ const Home = ({ navigateTo }) => {
           {/* Card 1: Cyber security */}
           <div
             className={`solution-card white-card ${activeTouchCard === 0 ? 'active-touch' : ''}`}
+            onClick={() => (navigateTo ? navigateTo('cyber-security') : (window.location.hash = '#/cyber-security'))}
             onTouchStart={() => setActiveTouchCard(0)}
             onTouchEnd={() => setActiveTouchCard(null)}
             onTouchCancel={() => setActiveTouchCard(null)}
@@ -236,12 +239,13 @@ const Home = ({ navigateTo }) => {
                 Integrated security Services that protect systems, networks, and data from evolving cyber and operational risks.
               </p>
             </div>
-            <a href="#learn-more" className="card-link">Learn More →</a>
+            <span className="card-link">Learn More →</span>
           </div>
 
           {/* Card 2: Physical Security & Networking */}
           <div
             className={`solution-card white-card ${activeTouchCard === 1 ? 'active-touch' : ''}`}
+            onClick={() => (navigateTo ? navigateTo('physical-security-network') : (window.location.hash = '#/physical-security-network'))}
             onTouchStart={() => setActiveTouchCard(1)}
             onTouchEnd={() => setActiveTouchCard(null)}
             onTouchCancel={() => setActiveTouchCard(null)}
@@ -253,29 +257,31 @@ const Home = ({ navigateTo }) => {
                 Secure and high-performance networks that enable seamless connectivity across offices, campuses, and distributed locations.
               </p>
             </div>
-            <a href="#learn-more" className="card-link">Learn More →</a>
+            <span className="card-link">Learn More →</span>
           </div>
 
-          {/* Card 3: Smart IT Infrastructure */}
+          {/* Card 3: IT Infrastructure */}
           <div
             className={`solution-card white-card ${activeTouchCard === 2 ? 'active-touch' : ''}`}
+            onClick={() => (navigateTo ? navigateTo('it-infrastructure') : (window.location.hash = '#/it-infrastructure'))}
             onTouchStart={() => setActiveTouchCard(2)}
             onTouchEnd={() => setActiveTouchCard(null)}
             onTouchCancel={() => setActiveTouchCard(null)}
           >
             <IconBadge icon="messages" />
             <div className="card-text-wrapper">
-              <h4 className="card-title">Smart IT Infrastructure</h4>
+              <h4 className="card-title">IT Infrastructure</h4>
               <p className="card-desc">
                 Design and deployment of reliable, scalable IT environments that support core business applications and data needs.
               </p>
             </div>
-            <a href="#learn-more" className="card-link">Learn More →</a>
+            <span className="card-link">Learn More →</span>
           </div>
 
           {/* Card 4: Cloud Services */}
           <div
             className={`solution-card white-card ${activeTouchCard === 3 ? 'active-touch' : ''}`}
+            onClick={() => (navigateTo ? navigateTo('cloud-solutions') : (window.location.hash = '#/cloud-solutions'))}
             onTouchStart={() => setActiveTouchCard(3)}
             onTouchEnd={() => setActiveTouchCard(null)}
             onTouchCancel={() => setActiveTouchCard(null)}
@@ -287,12 +293,13 @@ const Home = ({ navigateTo }) => {
                 Cloud adoption, migration, and optimization services that help organizations scale with agility and control.
               </p>
             </div>
-            <a href="#learn-more" className="card-link">Learn More →</a>
+            <span className="card-link">Learn More →</span>
           </div>
 
           {/* Card 5: Managed Services */}
           <div
             className={`solution-card white-card ${activeTouchCard === 4 ? 'active-touch' : ''}`}
+            onClick={() => (navigateTo ? navigateTo('managed-services') : (window.location.hash = '#/managed-services'))}
             onTouchStart={() => setActiveTouchCard(4)}
             onTouchEnd={() => setActiveTouchCard(null)}
             onTouchCancel={() => setActiveTouchCard(null)}
@@ -304,7 +311,7 @@ const Home = ({ navigateTo }) => {
                 Proactive monitoring, support, and maintenance services that ensure IT environments run smoothly and efficiently.
               </p>
             </div>
-            <a href="#learn-more" className="card-link">Learn More →</a>
+            <span className="card-link">Learn More →</span>
           </div>
         </div>
       </div>
@@ -405,155 +412,58 @@ const Home = ({ navigateTo }) => {
           <div className="partners-marquee-track">
             {/* First Set of Logos */}
             <div className="partner-logo aws-logo">
-              <svg viewBox="0 0 100 50" fill="currentColor">
-                <path d="M 12 32 C 12 28, 14 26, 17 26 C 20 26, 21 28, 21 32 L 21 35 L 12 35 Z M 21 24 L 21 38 L 24 38 L 24 35 L 23.8 35 C 23 38, 20 39.5, 17.5 39.5 C 13 39.5, 9 36.5, 9 31 C 9 25.5, 13 22.5, 18.5 22.5 C 20 22.5, 21 23, 21 24 Z" />
-                <path d="M 28 20 L 31.5 20 L 35 34 L 38 20 L 41.5 20 L 44.5 34 L 48 20 L 51.5 20 L 46.5 38 L 42.5 38 L 39.5 25 L 36.5 38 L 32.5 38 Z" />
-                <path d="M 56 35 C 56 36.5, 58 37.5, 60.5 37.5 C 63 37.5, 64.5 36.5, 64.5 35 C 64.5 33.5, 63.5 33, 60 32 C 56 31, 53.5 29.5, 53.5 26 C 53.5 22, 57 19.5, 61 19.5 C 65 19.5, 68 21.5, 68 25 L 64.5 25 C 64.5 23.5, 63 22.5, 61 22.5 C 59 22.5, 57 23.5, 57 25 C 57 26.5, 58.5 27, 61.5 28 C 65.5 29, 68 30.5, 68 34 C 68 38, 64.5 40.5, 60.5 40.5 C 56 40.5, 53 38.5, 53 35 Z" />
-                <path d="M 12 43 C 24 50, 52 50, 64 43 C 66.5 41.5, 69.5 39.5, 71.5 38 L 68 35 L 78 37 L 75 46 L 71.5 41 C 67.5 43, 63.5 45.5, 60.5 46.5 C 47 51.5, 23 48.5, 12 43 Z" />
-              </svg>
+              <img src={awsLogo} alt="AWS" className="partner-img-logo aws-img" />
             </div>
             <div className="partner-logo azure-logo">
-              <svg viewBox="0 0 120 50" fill="currentColor">
-                <g transform="translate(5, 8)">
-                  <path d="M17.4 3.4L2.8 19.3h17.9L17.4 3.4z" opacity="0.85" />
-                  <path d="M25.8 14.5L13.7 27.7h23.5L25.8 14.5z" opacity="0.75" />
-                  <path d="M2.8 19.3l-2.6 2.8 8.1 8.8h29L25.8 14.5 13.7 27.7 2.8 19.3z" />
+              <svg viewBox="0 0 120 40" className="partner-img-logo" fill="#707070">
+                <g transform="translate(0, 4) scale(0.16)" fill="#707070">
+                  <path d="M118.43 187.7 C151.32 181.89 178.49 177.08 178.8 177.01 L179.37 176.89 L148.32 139.96 C131.24 119.64 117.26 102.95 117.26 102.85 C117.26 102.67 149.33 14.37 149.51 14.06 C149.57 13.95 171.39 51.62 202.4 105.38 C231.44 155.7 255.37 197.19 255.6 197.58 L256 198.29 L157.32 198.27 L58.63 198.26 L118.43 187.7 Z M0 176.43 C0 176.38 14.63 150.98 32.51 119.99 L65.03 63.65 L102.92 31.85 C123.76 14.36 140.87 0.03 140.94 0 C141 -0.02 140.73 0.67 140.33 1.53 C139.92 2.4 121.41 42.12 99.18 89.79 L58.77 176.46 L29.39 176.49 C13.22 176.51 0 176.49 0 176.43 Z" />
                 </g>
-                <text x="50" y="34" fontStyle="normal" fontFamily="'Merriweather Sans', Arial, sans-serif" fontWeight="700" fontSize="20">Azure</text>
+                <text x="50" y="27" fill="#707070" fontStyle="normal" fontFamily="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" fontWeight="700" fontSize="22">Azure</text>
               </svg>
             </div>
             <div className="partner-logo hp-logo">
-              <svg viewBox="0 0 50 50" fill="currentColor">
-                <defs>
-                  <clipPath id="hpCircleClip">
-                    <circle cx="25" cy="25" r="24" />
-                  </clipPath>
-                </defs>
-                <circle cx="25" cy="25" r="24" />
-                <g clipPath="url(#hpCircleClip)">
-                  <g fill="#ffffff" transform="skewX(-28) translate(14, 0)">
-                    <rect x="0" y="-10" width="3.2" height="42" />
-                    <path d="M 0 13.5 C 2 10.5, 5.5 9.5, 8.5 9.5 C 13.5 9.5, 15.5 12.5, 15.5 17.5 L 15.5 32 L 12.3 32 L 12.3 18.5 C 12.3 14.5, 10.5 12.5, 7.5 12.5 C 4.5 12.5, 2 15, 0 18.5 Z" />
-                    <rect x="18" y="10" width="3.2" height="32" />
-                    <path d="M 18 10.5 C 20 8, 23 7, 26 7 C 32 7, 35 11, 35 18 C 35 25, 31 29, 26 29 C 23.5 29, 20.5 28, 18 25 Z" />
-                    <circle cx="26.5" cy="18" r="5.5" fill="currentColor" />
-                  </g>
-                </g>
-              </svg>
+              <img src="/assets/partners/1200px-HP_logo_2012.svg 1.png" alt="HP" className="partner-img-logo" />
             </div>
             <div className="partner-logo cisco-logo">
-              <svg viewBox="0 0 100 50" fill="currentColor">
-                <g transform="translate(16, 2)">
-                  <rect x="0" y="24" width="4" height="12" rx="2" />
-                  <rect x="8" y="16" width="4" height="20" rx="2" />
-                  <rect x="16" y="16" width="4" height="20" rx="2" />
-                  <rect x="24" y="6" width="4" height="30" rx="2" />
-                  <rect x="32" y="24" width="4" height="12" rx="2" />
-                  <rect x="40" y="6" width="4" height="30" rx="2" />
-                  <rect x="48" y="16" width="4" height="20" rx="2" />
-                  <rect x="56" y="16" width="4" height="20" rx="2" />
-                  <rect x="64" y="24" width="4" height="12" rx="2" />
-                </g>
-                <text x="50" y="46" textAnchor="middle" fontStyle="normal" fontFamily="'Merriweather Sans', Arial, sans-serif" fontWeight="900" fontSize="14" letterSpacing="1">CISCO</text>
-              </svg>
+              <img src="/assets/partners/2017-cisco-logo-3 1.png" alt="Cisco" className="partner-img-logo" />
             </div>
             <div className="partner-logo sophos-logo">
-              <svg viewBox="0 0 130 50" fill="currentColor">
-                <text x="65" y="34" textAnchor="middle" fontStyle="normal" fontFamily="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" fontWeight="800" fontSize="24" letterSpacing="2">SOPHOS</text>
-              </svg>
+              <img src="/assets/partners/Sophos-Logo.wine 1.png" alt="Sophos" className="partner-img-logo" />
             </div>
             <div className="partner-logo dell-logo">
-              <svg viewBox="0 0 50 50" fill="currentColor">
-                <circle cx="25" cy="25" r="22" stroke="currentColor" strokeWidth="2.8" fill="none" />
-                <g transform="translate(9, 19)" fill="currentColor">
-                  <path d="M 0 0 L 3.5 0 C 5.5 0, 7 1, 7 3 L 7 9 C 7 11, 5.5 12, 3.5 12 L 0 12 Z M 2 2 L 2 10 L 3.2 10 C 4.5 10, 5 9.5, 5 8 L 5 4 C 5 2.5, 4.5 2, 3.2 2 Z" />
-                  <g transform="translate(11.2, 6) rotate(-45) translate(-3, -6)">
-                    <path d="M 0 0 L 6 0 L 6 2 L 2 2 L 2 5 L 5.5 5 L 5.5 7 L 2 7 L 2 10 L 6 10 L 6 12 L 0 12 Z" />
-                  </g>
-                  <path d="M 18.2 0 L 20.2 0 L 20.2 10 L 24.2 10 L 24.2 12 L 18.2 12 Z" />
-                  <path d="M 25.5 0 L 27.5 0 L 27.5 10 L 31.5 10 L 31.5 12 L 25.5 12 Z" />
-                </g>
-              </svg>
+              <img src="/assets/partners/Dell_Logo.svg 1.png" alt="Dell" className="partner-img-logo" />
             </div>
             <div className="partner-logo lenovo-logo">
-              <svg viewBox="0 0 100 50" fill="currentColor">
-                <rect x="0" y="8" width="100" height="34" rx="4" />
-                <text x="50" y="31" fill="#ffffff" text-anchor="middle" fontStyle="normal" fontFamily="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" fontWeight="700" fontSize="18">Lenovo</text>
-              </svg>
+              <img src="/assets/partners/Lenovo-Logo 1.png" alt="Lenovo" className="partner-img-logo" />
             </div>
 
             {/* Second Set of Logos (Identical for seamless looping) */}
             <div className="partner-logo aws-logo">
-              <svg viewBox="0 0 100 50" fill="currentColor">
-                <path d="M 12 32 C 12 28, 14 26, 17 26 C 20 26, 21 28, 21 32 L 21 35 L 12 35 Z M 21 24 L 21 38 L 24 38 L 24 35 L 23.8 35 C 23 38, 20 39.5, 17.5 39.5 C 13 39.5, 9 36.5, 9 31 C 9 25.5, 13 22.5, 18.5 22.5 C 20 22.5, 21 23, 21 24 Z" />
-                <path d="M 28 20 L 31.5 20 L 35 34 L 38 20 L 41.5 20 L 44.5 34 L 48 20 L 51.5 20 L 46.5 38 L 42.5 38 L 39.5 25 L 36.5 38 L 32.5 38 Z" />
-                <path d="M 56 35 C 56 36.5, 58 37.5, 60.5 37.5 C 63 37.5, 64.5 36.5, 64.5 35 C 64.5 33.5, 63.5 33, 60 32 C 56 31, 53.5 29.5, 53.5 26 C 53.5 22, 57 19.5, 61 19.5 C 65 19.5, 68 21.5, 68 25 L 64.5 25 C 64.5 23.5, 63 22.5, 61 22.5 C 59 22.5, 57 23.5, 57 25 C 57 26.5, 58.5 27, 61.5 28 C 65.5 29, 68 30.5, 68 34 C 68 38, 64.5 40.5, 60.5 40.5 C 56 40.5, 53 38.5, 53 35 Z" />
-                <path d="M 12 43 C 24 50, 52 50, 64 43 C 66.5 41.5, 69.5 39.5, 71.5 38 L 68 35 L 78 37 L 75 46 L 71.5 41 C 67.5 43, 63.5 45.5, 60.5 46.5 C 47 51.5, 23 48.5, 12 43 Z" />
-              </svg>
+              <img src={awsLogo} alt="AWS" className="partner-img-logo aws-img" />
             </div>
             <div className="partner-logo azure-logo">
-              <svg viewBox="0 0 120 50" fill="currentColor">
-                <g transform="translate(5, 8)">
-                  <path d="M17.4 3.4L2.8 19.3h17.9L17.4 3.4z" opacity="0.85" />
-                  <path d="M25.8 14.5L13.7 27.7h23.5L25.8 14.5z" opacity="0.75" />
-                  <path d="M2.8 19.3l-2.6 2.8 8.1 8.8h29L25.8 14.5 13.7 27.7 2.8 19.3z" />
+              <svg viewBox="0 0 120 40" className="partner-img-logo" fill="#707070">
+                <g transform="translate(0, 4) scale(0.16)" fill="#707070">
+                  <path d="M118.43 187.7 C151.32 181.89 178.49 177.08 178.8 177.01 L179.37 176.89 L148.32 139.96 C131.24 119.64 117.26 102.95 117.26 102.85 C117.26 102.67 149.33 14.37 149.51 14.06 C149.57 13.95 171.39 51.62 202.4 105.38 C231.44 155.7 255.37 197.19 255.6 197.58 L256 198.29 L157.32 198.27 L58.63 198.26 L118.43 187.7 Z M0 176.43 C0 176.38 14.63 150.98 32.51 119.99 L65.03 63.65 L102.92 31.85 C123.76 14.36 140.87 0.03 140.94 0 C141 -0.02 140.73 0.67 140.33 1.53 C139.92 2.4 121.41 42.12 99.18 89.79 L58.77 176.46 L29.39 176.49 C13.22 176.51 0 176.49 0 176.43 Z" />
                 </g>
-                <text x="50" y="34" fontStyle="normal" fontFamily="'Merriweather Sans', Arial, sans-serif" fontWeight="700" fontSize="20">Azure</text>
+                <text x="50" y="27" fill="#707070" fontStyle="normal" fontFamily="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" fontWeight="700" fontSize="22">Azure</text>
               </svg>
             </div>
             <div className="partner-logo hp-logo">
-              <svg viewBox="0 0 50 50" fill="currentColor">
-                <circle cx="25" cy="25" r="24" />
-                <g clipPath="url(#hpCircleClip)">
-                  <g fill="#ffffff" transform="skewX(-28) translate(14, 0)">
-                    <rect x="0" y="-10" width="3.2" height="42" />
-                    <path d="M 0 13.5 C 2 10.5, 5.5 9.5, 8.5 9.5 C 13.5 9.5, 15.5 12.5, 15.5 17.5 L 15.5 32 L 12.3 32 L 12.3 18.5 C 12.3 14.5, 10.5 12.5, 7.5 12.5 C 4.5 12.5, 2 15, 0 18.5 Z" />
-                    <rect x="18" y="10" width="3.2" height="32" />
-                    <path d="M 18 10.5 C 20 8, 23 7, 26 7 C 32 7, 35 11, 35 18 C 35 25, 31 29, 26 29 C 23.5 29, 20.5 28, 18 25 Z" />
-                    <circle cx="26.5" cy="18" r="5.5" fill="currentColor" />
-                  </g>
-                </g>
-              </svg>
+              <img src="/assets/partners/1200px-HP_logo_2012.svg 1.png" alt="HP" className="partner-img-logo" />
             </div>
             <div className="partner-logo cisco-logo">
-              <svg viewBox="0 0 100 50" fill="currentColor">
-                <g transform="translate(16, 2)">
-                  <rect x="0" y="24" width="4" height="12" rx="2" />
-                  <rect x="8" y="16" width="4" height="20" rx="2" />
-                  <rect x="16" y="16" width="4" height="20" rx="2" />
-                  <rect x="24" y="6" width="4" height="30" rx="2" />
-                  <rect x="32" y="24" width="4" height="12" rx="2" />
-                  <rect x="40" y="6" width="4" height="30" rx="2" />
-                  <rect x="48" y="16" width="4" height="20" rx="2" />
-                  <rect x="56" y="16" width="4" height="20" rx="2" />
-                  <rect x="64" y="24" width="4" height="12" rx="2" />
-                </g>
-                <text x="50" y="46" textAnchor="middle" fontStyle="normal" fontFamily="'Merriweather Sans', Arial, sans-serif" fontWeight="900" fontSize="14" letterSpacing="1">CISCO</text>
-              </svg>
+              <img src="/assets/partners/2017-cisco-logo-3 1.png" alt="Cisco" className="partner-img-logo" />
             </div>
             <div className="partner-logo sophos-logo">
-              <svg viewBox="0 0 130 50" fill="currentColor">
-                <text x="65" y="34" textAnchor="middle" fontStyle="normal" fontFamily="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" fontWeight="800" fontSize="24" letterSpacing="2">SOPHOS</text>
-              </svg>
+              <img src="/assets/partners/Sophos-Logo.wine 1.png" alt="Sophos" className="partner-img-logo" />
             </div>
             <div className="partner-logo dell-logo">
-              <svg viewBox="0 0 50 50" fill="currentColor">
-                <circle cx="25" cy="25" r="22" stroke="currentColor" strokeWidth="2.8" fill="none" />
-                <g transform="translate(9, 19)" fill="currentColor">
-                  <path d="M 0 0 L 3.5 0 C 5.5 0, 7 1, 7 3 L 7 9 C 7 11, 5.5 12, 3.5 12 L 0 12 Z M 2 2 L 2 10 L 3.2 10 C 4.5 10, 5 9.5, 5 8 L 5 4 C 5 2.5, 4.5 2, 3.2 2 Z" />
-                  <g transform="translate(11.2, 6) rotate(-45) translate(-3, -6)">
-                    <path d="M 0 0 L 6 0 L 6 2 L 2 2 L 2 5 L 5.5 5 L 5.5 7 L 2 7 L 2 10 L 6 10 L 6 12 L 0 12 Z" />
-                  </g>
-                  <path d="M 18.2 0 L 20.2 0 L 20.2 10 L 24.2 10 L 24.2 12 L 18.2 12 Z" />
-                  <path d="M 25.5 0 L 27.5 0 L 27.5 10 L 31.5 10 L 31.5 12 L 25.5 12 Z" />
-                </g>
-              </svg>
+              <img src="/assets/partners/Dell_Logo.svg 1.png" alt="Dell" className="partner-img-logo" />
             </div>
             <div className="partner-logo lenovo-logo">
-              <svg viewBox="0 0 100 50" fill="currentColor">
-                <rect x="0" y="8" width="100" height="34" rx="4" />
-                <text x="50" y="31" fill="#ffffff" text-anchor="middle" fontStyle="normal" fontFamily="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" fontWeight="700" fontSize="18">Lenovo</text>
-              </svg>
+              <img src="/assets/partners/Lenovo-Logo 1.png" alt="Lenovo" className="partner-img-logo" />
             </div>
           </div>
         </div>
@@ -631,7 +541,7 @@ const Home = ({ navigateTo }) => {
               onTouchEnd={() => setTouchedIndustry(null)}
               onTouchCancel={() => setTouchedIndustry(null)}
             >
-              <img className="rectangle-283" src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=640&h=384&q=80" alt="Manufacturing" />
+              <img className="rectangle-283" src="/assets/Rectangle 283.png" alt="Manufacturing" />
               <div className={`frame-394 ${touchedIndustry === 'manufacturing' ? 'active-touch' : ''}`}>
                 <div className="frame-393">
                   <div className="manufacturing">Manufacturing</div>
@@ -653,7 +563,7 @@ const Home = ({ navigateTo }) => {
               onTouchEnd={() => setTouchedIndustry(null)}
               onTouchCancel={() => setTouchedIndustry(null)}
             >
-              <img className="rectangle-284" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=640&h=384&q=80" alt="IT & ITES" />
+              <img className="rectangle-284" src="/assets/Rectangle 284.png" alt="IT & ITES" />
               <div className={`frame-397 ${touchedIndustry === 'it-ites' ? 'active-touch' : ''}`}>
                 <div className="frame-396">
                   <div className="it-ites">IT &amp; ITES</div>
@@ -677,14 +587,14 @@ const Home = ({ navigateTo }) => {
             →
           </button>
 
-          <div className="frame-400">
+          {/* <div className="frame-400">
             <div className={`ellipse-10 ${currentIndustryIndex === 0 ? 'active-dot' : ''}`} onClick={() => setCurrentIndustryIndex(0)}></div>
             <div className={`ellipse-11 ${currentIndustryIndex === 1 ? 'active-dot' : ''}`} onClick={() => setCurrentIndustryIndex(1)}></div>
             <div className="rectangle-287"></div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="frame-414">
+      {/* <div className="frame-414">
         <div className="frame-269">
           <div className="frame-402">
             <div className="t-e-s-t-i-m-o-n-i-a-l-s">T E S T I M O N I A L S</div>
@@ -774,7 +684,7 @@ const Home = ({ navigateTo }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Footer: desktop wrapper vs mobile standalone */}
       <div className="footer-wrapper footer-desktop-only">
         <FooterDesktop />

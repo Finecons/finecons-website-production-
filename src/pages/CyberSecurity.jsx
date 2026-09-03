@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer, { FooterMobile } from '../components/Footer';
+import SolutionsSidebar from '../components/SolutionsSidebar';
 import './CyberSecurity.css';
 
 const CyberSecurity = ({ navigateTo }) => {
@@ -8,647 +9,680 @@ const CyberSecurity = ({ navigateTo }) => {
   const [approachOpen, setApproachOpen] = useState(true);
   const [advantagesOpen, setAdvantagesOpen] = useState(true);
 
-  // Mobile solutions dropdown state
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  // 10 End-to-End Solutions Cards Data
+  const endToEndSolutions = [
+    {
+      id: 'network-sec',
+      title: 'Network Security',
+      desc: 'Protect your perimeter and internal traffic with multi-layered defense. Our solutions include next-generation firewalls (NGFW), intrusion detection and prevention systems (IDPS), and secure SD-WAN to ensure high availability and robust data encryption across all branches.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+          <line x1="8" y1="21" x2="16" y2="21" />
+          <line x1="12" y1="17" x2="12" y2="21" />
+        </svg>
+      )
+    },
+    {
+      id: 'app-sec',
+      title: 'Application Security',
+      desc: 'Secure your software lifecycle from development to production. We provide comprehensive static and dynamic testing (SAST/DAST), Web Application Firewalls (WAF), and API protection to defend against OWASP Top 10 threats and logic-based attacks.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
+      )
+    },
+    {
+      id: 'endpoint-sec',
+      title: 'Endpoint Security',
+      desc: 'Defend every device on your network with AI-driven detection. Our Endpoint Detection and Response (EDR) and Extended Detection and Response (XDR) solutions identify sophisticated malware, ransomware, and fileless attacks in real-time.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="4" width="18" height="12" rx="2" />
+          <line x1="2" y1="20" x2="22" y2="20" />
+        </svg>
+      )
+    },
+    {
+      id: 'cloud-sec',
+      title: 'Cloud Security',
+      desc: 'Gain full visibility and control over your multi-cloud and hybrid environments. We specialize in Cloud Security Posture Management (CSPM) and Cloud Workload Protection (CWPP) to prevent misconfigurations and secure serverless architectures.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+        </svg>
+      )
+    },
+    {
+      id: 'soc-services',
+      title: 'SOC Services',
+      desc: '24/7 proactive monitoring and incident response from our elite Security Operations Center. We leverage advanced SIEM and SOAR technologies to reduce Mean Time to Detect (MTTD) and neutralize threats before they impact your business.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="6" x2="12" y2="12" />
+          <line x1="12" y1="12" x2="16" y2="14" />
+        </svg>
+      )
+    },
+    {
+      id: 'email-sec',
+      title: 'Email Security',
+      desc: 'Stop phishing, business email compromise (BEC), and advanced persistent threats at the gateway. Our AI-enhanced email filtering analyzes sender reputation and attachment behavior to ensure your workforce stays productive and secure.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+      )
+    },
+    {
+      id: 'data-protection',
+      title: 'Data Protection & DLP',
+      desc: 'Identify, classify, and protect your most sensitive information. We implement data-at-rest and data-in-motion encryption alongside strict Data Loss Prevention (DLP) policies to prevent unauthorized exfiltration and ensure regulatory compliance.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        </svg>
+      )
+    },
+    {
+      id: 'ot-industrial',
+      title: 'OT / Industrial Security',
+      desc: 'Bridge the gap between IT and OT with specialized industrial security. We provide visibility into SCADA, ICS, and IoT devices, protecting critical infrastructure from cyber-physical threats without disrupting operational uptime.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      )
+    },
+    {
+      id: 'mssp',
+      title: 'Managed Security Services (MSSP)',
+      desc: 'Extend your team with our managed security expertise. We handle the complexity of managing and optimizing your security stack, providing expert guidance, regular audits, and executive-level reporting.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M12 8v4" />
+          <path d="M12 16h.01" />
+        </svg>
+      )
+    },
+    {
+      id: 'transformation',
+      title: 'Enterprise Security Transformation',
+      desc: 'Modernize your security posture for the digital age. We help organizations transition to a Zero Trust architecture, align security with business goals, and foster a culture of cyber resilience through comprehensive strategy and training.',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+      )
+    }
+  ];
 
-  // Active solution tab indicator (always 'cyber' on this page)
-  const activeSolution = 'cyber';
-
-  const solutionsList = [
-    { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
-    { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
-    { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud', path: 'cloud-licensing' },
-    { id: 'managed', name: 'Managed Services', path: 'managed-services' }
+  // Customer Success Stories Data
+  const successStories = [
+    {
+      id: 'healthcare',
+      tag: 'HEALTH CARE',
+      title: 'Modernizing Patient Care Workflows with AWS & Cloud Infrastructure',
+      image: '/assets/cybersecurity/Rectangle 352.png'
+    },
+    {
+      id: 'manufacturing',
+      tag: 'MANUFACTURING',
+      title: 'Scaling Smart Factory Operations with AWS IoT & Analytics',
+      image: '/assets/cybersecurity/Rectangle 352-1.png'
+    },
+    {
+      id: 'personal-care',
+      tag: 'PERSONAL CARE',
+      title: 'Elevating Your Personal Care Routine with Natural & Sustainable Products with AWS',
+      image: '/assets/cybersecurity/Rectangle 352-2.png'
+    },
+    {
+      id: 'it-ites',
+      tag: 'IT & ITES',
+      title: 'Transforming IT Infrastructure with Scalable AWS Solutions',
+      image: '/assets/cybersecurity/Rectangle 352-3.png'
+    }
   ];
 
   return (
     <div className="solutions-cyber-security">
-      {/* Background patterns */}
-      <div className="rectangle-217"></div>
-      <div className="ellipse-17"></div>
-      <div className="ellipse-18"></div>
-      <div className="ellipse-19"></div>
-      <div className="ellipse-20"></div>
+      {/* Full-Screen 100vh Hero Wrapper */}
+      <div className="cyber-hero-wrapper">
+        {/* Background shapes & decorative rings */}
+        <div className="rectangle-217"></div>
+        <div className="ellipse-17"></div>
+        <div className="ellipse-18"></div>
+        <div className="ellipse-19"></div>
+        <div className="ellipse-20"></div>
 
-      {/* Header Navbar */}
-      <Navbar navigateTo={navigateTo} activeLink="solutions" />
+        {/* Global Navigation Bar */}
+        <Navbar navigateTo={navigateTo} activeLink="solutions" />
 
-      {/* Hero Section */}
-      <div className="frame-462">
-        <div className="frame-461">
-          <div className="frame-460">
-            <div className="c-y-b-e-r-s-e-c-u-r-i-t-y desktop-label">C Y B E R S E C U R I T Y</div>
-            <div className="c-y-b-e-r-s-e-c-u-r-i-t-y mobile-label">CYBER SECURITY</div>
-            <div className="advanced-threat-defense-digital-forensics desktop-hero-text">
-              <span>
-                <span className="advanced-threat-defense-digital-forensics-span">Advanced </span>
-                <span className="advanced-threat-defense-digital-forensics-span2">Threat </span>
-                <span className="advanced-threat-defense-digital-forensics-span">Defense &amp; Digital Forensics</span>
-              </span>
+        {/* Hero / Banner Content */}
+        <div className="frame-462">
+          <div className="frame-461">
+            <div className="frame-460">
+              <div className="c-y-b-e-r-s-e-c-u-r-i-t-y">C Y B E R S E C U R I T Y</div>
+              <h1 className="advanced-threat-defense-digital-forensics">
+                <span>
+                  <span className="advanced-threat-defense-digital-forensics-span">Advanced </span>
+                  <span className="advanced-threat-defense-digital-forensics-span2">Threat </span>
+                  <span className="advanced-threat-defense-digital-forensics-span">Defense &amp; Digital Forensics</span>
+                </span>
+              </h1>
             </div>
-            <div className="advanced-threat-defense-digital-forensics mobile-hero-text">
-              <span>
-                <span className="advanced-threat-defense-digital-forensics-span">Your </span>
-                <span className="advanced-threat-defense-digital-forensics-span2">Shield </span>
-                <span className="advanced-threat-defense-digital-forensics-span">in the</span>
-                <br />
-                <span className="advanced-threat-defense-digital-forensics-span">Digital World</span>
-              </span>
+            <div className="hero-image-wrapper">
+              <img
+                className="rectangle-323"
+                src="/assets/cybersecurity/Rectangle 323.png"
+                alt="Cyber Security Operations"
+                onError={(e) => { e.currentTarget.src = '/assets/cybersecurity_hero.png'; }}
+              />
             </div>
           </div>
-          <div className="hero-image-wrapper">
-            <img className="rectangle-323" src="/assets/cybersecurity_hero.png" alt="Cyber Security" />
+
+          {/* 9-Segment Visual Indicator */}
+          <div className="frame-2">
+            <div className="rectangle-324 bar active"></div>
+            <div className="rectangle-325 bar"></div>
+            <div className="rectangle-326 bar"></div>
+            <div className="rectangle-327 bar"></div>
+            <div className="rectangle-328 bar"></div>
+            <div className="rectangle-329 bar"></div>
+            <div className="rectangle-330 bar"></div>
+            <div className="rectangle-331 bar"></div>
+            <div className="rectangle-332 bar"></div>
           </div>
-        </div>
-        <div className="frame-2-bars">
-          <div className="bar active"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
         </div>
       </div>
 
-      {/* Main content frame */}
-      <div className="frame-465">
-        <div className="frame-322">
-          {/* Mobile Solutions Dropdown - visible only on mobile */}
-          <div className="mobile-solutions-dropdown">
-            <div
-              className="mobile-dropdown-trigger"
-              onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
-            >
-              <svg className="mobile-dropdown-icon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7V14C2 20.2 6.3 26 12 28C17.7 26 22 20.2 22 14V7L12 2Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="mobile-dropdown-label">Cyber Security</span>
-              <svg
-                className={`mobile-dropdown-chevron ${solutionsDropdownOpen ? 'open' : ''}`}
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            {solutionsDropdownOpen && (
-              <div className="mobile-dropdown-menu">
-                {solutionsList.map((sol) => (
-                  <div
-                    key={sol.id}
-                    className={`mobile-dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
-                    onClick={() => {
-                      setSolutionsDropdownOpen(false);
-                      navigateTo(sol.path);
-                    }}
-                  >
-                    <span className="mobile-dropdown-item-text">{sol.name}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+      {/* Main Content Area (Below Hero) */}
+      <div className="content-white-section">
+        <div className="frame-465">
+          <div className="frame-322">
+            {/* Solutions Sticky Sidebar */}
+            <SolutionsSidebar activeSolution="cyber" navigateTo={navigateTo} heading="S O L U T I O N S" />
 
-          {/* Sidebar Solutions Navigation */}
-          <div className="frame-289">
-            <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
-              S O L U T I O N S
-            </div>
-            <div className="frame-288">
-              {solutionsList.map((sol) => (
-                <div
-                  key={sol.id}
-                  className={`sidebar-item ${sol.id === activeSolution ? 'active' : ''}`}
-                  onClick={() => navigateTo(sol.path)}
-                >
-                  {sol.id === 'cyber' && (
-                    <svg className="vector-icon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L2 7V14C2 20.2 6.3 26 12 28C17.7 26 22 20.2 22 14V7L12 2Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'physical' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'infra' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="2" y="2" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                      <rect x="2" y="14" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                      <line x1="6" y1="6" x2="6.01" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      <line x1="6" y1="18" x2="6.01" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'cloud' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'managed' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
-                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" />
-                    </svg>
-                  )}
-                  <span className="sidebar-link-text">{sol.name}</span>
-                  {sol.id === activeSolution && <div className="active-bullet-bar"></div>}
-                </div>
-              ))}
-            </div>
-          </div>
+            {/* Right Column Content */}
+            <div className="frame-321">
+              {/* Heading */}
+              <h2 className="cyber-security-cyberforensics">
+                <span>
+                  <span className="cyber-security-cyberforensics-span">Cyber </span>
+                  <span className="cyber-security-cyberforensics-span2">Security &amp; Cyberforensics</span>
+                </span>
+              </h2>
 
-          {/* Main Service Content Detail */}
-          <div className="frame-321">
-            <div className="cyber-security-cyberforensics">
-              <span>
-                <span className="cyber-security-cyberforensics-span">Cyber </span>
-                <span className="cyber-security-cyberforensics-span2">Security &amp; Cyberforensics</span>
-              </span>
-            </div>
-
-            <div className="frame-560">
-              <div className="group-332">
-                <div className="frame-463">
-                  <div className="intro-text">
-                    Finecons’ Cybersecurity Solutions help organizations protect their IT environments from evolving digital threats while ensuring compliance and operational continuity. We secure infrastructure, networks, and endpoints through layered security architectures. 
-                    <br />
-                    <br />
-                    Our solutions are designed to reduce risk, improve visibility, and strengthen overall security posture across enterprise environments.
-                  </div>
-                  {/* Styled visual lock container instead of missing SVG */}
-                  <div className="group-319-fallback">
-                    <div className="visual-circle-grad">
-                      <svg className="lock-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="url(#lockGrad)" strokeWidth="2" fill="rgba(14, 16, 255, 0.05)" />
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="url(#lockGrad)" strokeWidth="2" />
-                        <circle cx="12" cy="16" r="1.5" fill="#e6007a" />
-                        <defs>
-                          <linearGradient id="lockGrad" x1="0" y1="0" x2="24" y2="24">
-                            <stop offset="0%" stopColor="#0e10ff" />
-                            <stop offset="100%" stopColor="#e6007a" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
+              <div className="frame-560">
+                {/* Intro Text & Triangular Security Graphic with Concentric Rings (Matching Physical Security Network) */}
+                <div className="group-332">
+                  <div className="frame-463">
+                    <div className="finecons-cybersecurity-intro">
+                      Finecons’ Cybersecurity Solutions help organizations protect their IT environments from evolving digital threats while ensuring compliance and operational continuity. We secure infrastructure, networks, and endpoints through layered security architectures.
+                      <br />
+                      <br />
+                      Our solutions are designed to reduce risk, improve visibility, and strengthen overall security posture across enterprise environments.
                     </div>
+                    
+                    {/* Security Graphic Badge (Position & Size matching Physical Security Network) */}
+                    <div className="security-graphic-badge">
+                      {/* Top Right Concentric Donut Ellipses */}
+                      <div className="security-ellipse-tr-outer"></div>
+                      <div className="security-ellipse-tr-inner"></div>
+
+                      {/* Bottom Left Concentric Donut Ellipses */}
+                      <div className="security-ellipse-bl-outer"></div>
+                      <div className="security-ellipse-bl-inner"></div>
+
+                      {/* Central Security Triangle with Glowing Blue Border */}
+                      <div className="security-triangle-wrapper">
+                        <img
+                          className="security-triangle-image"
+                          src="/assets/cybersecurity/Polygon 3.png"
+                          alt="Cyber Security"
+                          onError={(e) => { e.currentTarget.src = '/assets/security_polygon.png'; }}
+                        />
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-              </div>
 
-              {/* Accordion Approach and Advantages */}
-              <div className="frame-320">
-                {/* Our Approach Accordion */}
-                <div className="accordion-card">
-                  <div className="accordion-header" onClick={() => setApproachOpen(!approachOpen)}>
-                    <div className="accordion-title-wrapper">
+                {/* Interactive Accordions: Our Approach & Key Advantages */}
+                <div className="frame-320">
+                  {/* Our Approach Accordion */}
+                  <div className="frame-291">
+                    <div
+                      className="group-284 accordion-trigger"
+                      onClick={() => setApproachOpen(!approachOpen)}
+                      role="button"
+                      tabIndex={0}
+                    >
                       <div className="rectangle-299"></div>
                       <div className="our-approach">Our Approach</div>
+                      <svg
+                        className={`lucide-chevron-up ${approachOpen ? 'open' : 'closed'}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#0e10ff"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="18 15 12 9 6 15" />
+                      </svg>
                     </div>
-                    <svg className={`chevron-icon ${approachOpen ? 'rotated' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="18 15 12 9 6 15" />
-                    </svg>
+                    {approachOpen && (
+                      <div className="accordion-content-panel">
+                        <p className="approach-body-text">
+                          We follow a layered security approach that begins with identifying vulnerabilities, compliance requirements, and threat exposure. Based on this assessment, we design security frameworks aligned with the organization’s risk profile.
+                          <br />
+                          <br />
+                          We deploy integrated security controls across networks, endpoints, and access layers, ensuring proactive protection and continuous improvement against emerging threats.
+                        </p>
+                      </div>
+                    )}
                   </div>
-                  <div className={`accordion-body ${approachOpen ? 'open' : ''}`}>
-                    <p className="approach-text">
-                      We follow a layered security approach that begins with identifying vulnerabilities, compliance requirements, and threat exposure. Based on this assessment, we design security frameworks aligned with the organization’s risk profile.
-                      <br />
-                      <br />
-                      We deploy integrated security controls across networks, endpoints, and access layers, ensuring proactive protection and continuous improvement against emerging threats.
-                    </p>
-                  </div>
-                </div>
 
-                {/* Key Advantages Accordion */}
-                <div className="accordion-card">
-                  <div className="accordion-header" onClick={() => setAdvantagesOpen(!advantagesOpen)}>
-                    <div className="accordion-title-wrapper">
+                  {/* Key Advantages Accordion */}
+                  <div className="frame-317">
+                    <div
+                      className="group-285 accordion-trigger"
+                      onClick={() => setAdvantagesOpen(!advantagesOpen)}
+                      role="button"
+                      tabIndex={0}
+                    >
                       <div className="rectangle-299"></div>
                       <div className="key-advantages">Key Advantages</div>
+                      <svg
+                        className={`lucide-chevron-up2 ${advantagesOpen ? 'open' : 'closed'}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#0e10ff"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="18 15 12 9 6 15" />
+                      </svg>
                     </div>
-                    <svg className={`chevron-icon ${advantagesOpen ? 'rotated' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="18 15 12 9 6 15" />
-                    </svg>
-                  </div>
-                  <div className={`accordion-body ${advantagesOpen ? 'open' : ''}`}>
-                    <div className="advantages-container">
-                      <div className="advantages-visual-wrapper">
-                        {/* Styled representation of key advantages badge */}
-                        <div className="advantages-visual-badge">
-                          <svg viewBox="0 0 100 100" fill="none" className="badge-svg">
-                            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" stroke="url(#shieldGrad)" strokeWidth="3" fill="rgba(14, 16, 255, 0.03)" />
-                            <path d="M35 50 L45 60 L65 40" stroke="#0e10ff" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-                            <linearGradient id="shieldGrad" x1="0" y1="0" x2="100" y2="100">
-                              <stop offset="0%" stopColor="#0e10ff" />
-                              <stop offset="100%" stopColor="#26d2de" />
-                            </linearGradient>
-                          </svg>
+                    {advantagesOpen && (
+                      <div className="accordion-content-panel">
+                        <div className="frame-3-advantages">
+                          <img
+                            className="rectangle-333"
+                            src="/assets/cybersecurity/Rectangle 333.png"
+                            alt="Key Advantages in Cyber Security"
+                            onError={(e) => { e.currentTarget.src = '/assets/about_hero.jpg'; }}
+                          />
+                          <ul className="advantages-bullet-list">
+                            <li>Reduced exposure to cyber threats</li>
+                            <li>Improved visibility and control across IT environments</li>
+                            <li>Stronger compliance with security standards</li>
+                            <li>Proactive risk mitigation</li>
+                            <li>Enhanced protection of critical data and systems</li>
+                          </ul>
                         </div>
                       </div>
-                      <ul className="advantages-list">
-                        <li>Reduced exposure to cyber threats</li>
-                        <li>Improved visibility and control across IT environments</li>
-                        <li>Stronger compliance with security standards</li>
-                        <li>Proactive risk mitigation</li>
-                        <li>Enhanced protection of critical data and systems</li>
-                      </ul>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* End-to-End Capabilities Section */}
-            <div className="group-346">
-              <div className="frame-557">
-                <div className="frame-556">
-                  <div className="end-to-end-cybersecurity-solutions">
-                    <span>
-                      <span className="end-to-end-cybersecurity-solutions-span">End-to-End </span>
-                      <span className="end-to-end-cybersecurity-solutions-span2">Cybersecurity </span>
-                      <span className="end-to-end-cybersecurity-solutions-span3">Solutions</span>
-                    </span>
-                  </div>
-                  <div className="group-3462">
-                    <div className="frame-552">
-                      <div className="end-to-end-protection-sub">
-                        End-to-end protection across networks, cloud, endpoints, and identity — tailored for your business.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="frame-554">
-                  {/* Network Security Card */}
-                  <div className="capability-card network-security">
-                    <div className="card-top-glow"></div>
-                    <div className="badge-wrapper">
-                      <div className="background-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                          <line x1="8" y1="21" x2="16" y2="21" />
-                          <line x1="12" y1="17" x2="12" y2="21" />
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 className="heading-3">Network Security</h3>
-                    <p className="capability-desc">
-                      Securing the perimeter and internal traffic flows with advanced orchestration.
-                    </p>
-                    <div className="capability-list">
-                      <div className="item">
-                        <span className="bullet">&#9670;</span>
-                        <span className="item-text">Firewall Management</span>
-                      </div>
-                      <div className="item">
-                        <span className="bullet">&#9670;</span>
-                        <span className="item-text">Next-Gen IDS/IPS</span>
-                      </div>
-                      <div className="item">
-                        <span className="bullet">&#9670;</span>
-                        <span className="item-text">Enterprise VPN &amp; SD-WAN Security</span>
-                      </div>
-                    </div>
-                    <div className="threat-traffic-visual">
-                      <div className="threat-box">
-                        <div className="threat-title">THREAT TRAFFIC MONITOR</div>
-                        <div className="threat-graph">
-                          <svg viewBox="0 0 200 60" className="threat-svg">
-                            <path d="M 0,40 Q 25,10 50,30 T 100,20 T 150,50 T 200,10" fill="none" stroke="url(#threatGrad)" strokeWidth="3" />
-                            <circle cx="150" cy="50" r="4" fill="#e6007a" className="pulse-dot" />
-                            <defs>
-                              <linearGradient id="threatGrad" x1="0" y1="0" x2="200" y2="0">
-                                <stop offset="0%" stopColor="#0e10ff" />
-                                <stop offset="50%" stopColor="#7e14ff" />
-                                <stop offset="100%" stopColor="#e6007a" />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Endpoint Protection Card */}
-                  <div className="capability-card endpoint-protection">
-                    <div className="card-top-glow"></div>
-                    <div className="badge-wrapper">
-                      <div className="background-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="3" y="2" width="18" height="12" rx="2" ry="2" />
-                          <path d="M12 18H12.01M8 21h8" />
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 className="heading-3">Endpoint Protection</h3>
-                    <p className="capability-desc">
-                      Advanced EDR/MDR solutions to neutralize threats at the device level before they spread.
-                    </p>
-                    <div className="active-monitoring-badge">
-                      <div className="monitoring-pulse"></div>
-                      <span className="monitoring-txt">ACTIVE MONITORING</span>
-                    </div>
-                  </div>
-
-                  {/* Cloud Security Card */}
-                  <div className="capability-card cloud-security">
-                    <div className="card-top-glow"></div>
-                    <div className="badge-wrapper">
-                      <div className="background-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 className="heading-3">Cloud Security</h3>
-                    <p className="capability-desc">
-                      Secure cloud migration and native SaaS protection for AWS, Azure, and Google Cloud environments.
-                    </p>
-                  </div>
-
-                  {/* Identity & Access Card */}
-                  <div className="capability-card identity-management">
-                    <div className="card-top-glow"></div>
-                    <div className="badge-wrapper">
-                      <div className="background-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                          <circle cx="12" cy="7" r="4" />
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 className="heading-3">Identity &amp; Access</h3>
-                    <p className="capability-desc">
-                      Zero Trust IAM implementation featuring multi-factor authentication and seamless SSO experiences.
-                    </p>
-                  </div>
-
-                  {/* Audits & Compliance Card */}
-                  <div className="capability-card audits-compliance">
-                    <div className="card-top-glow"></div>
-                    <div className="badge-wrapper">
-                      <div className="background-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                          <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 className="heading-3">Audits &amp; Compliance</h3>
-                    <p className="capability-desc">
-                      Rigorous vulnerability assessments and alignment with ISO 27001 &amp; SOC2 Type II frameworks.
-                    </p>
-                    <div className="compliance-chips">
-                      <div className="chip">ISO 27001</div>
-                      <div className="chip">SOC2 TYPE II</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Cyberforensics Incident Response Section */}
-            <div className="frame-5572">
-              <div className="section-2-cyberforensics-incident-response">
-                <div className="container18">
-                  <div className="container19">
-                    <div className="heading-2">
-                      <div className="cyberforensics-incident-response">
-                        <span>
-                          <span className="cyberforensics-incident-response-span">Cyberforensics </span>
-                          <span className="cyberforensics-incident-response-span3">&amp; Incident Response</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div className="container20">
-                      <p className="four-stage-intro">
-                        A rigorous, four-stage investigative framework designed to reconstruct digital events and secure actionable evidence.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="container4-steps">
-                    <div className="step-card step-1">
-                      <div className="step-num-badge">01</div>
-                      <h4 className="step-title">Identification</h4>
-                      <p className="step-desc">
-                        Defining the scope of the incident and identifying all affected digital assets and systems.
-                      </p>
-                    </div>
-
-                    <div className="step-card step-2">
-                      <div className="step-num-badge">02</div>
-                      <h4 className="step-title">Preservation</h4>
-                      <p className="step-desc">
-                        Securing data through bit-stream imaging and maintaining strict chain-of-custody protocols.
-                      </p>
-                    </div>
-
-                    <div className="step-card step-3">
-                      <div className="step-num-badge">03</div>
-                      <h4 className="step-title">Analysis</h4>
-                      <p className="step-desc">
-                        Extracting and correlating artifacts to determine the root cause and extent of the breach.
-                      </p>
-                    </div>
-
-                    <div className="step-card step-4">
-                      <div className="step-num-badge">04</div>
-                      <h4 className="step-title">Reporting</h4>
-                      <p className="step-desc">
-                        Delivering detailed technical findings and executive summaries for legal or remedial action.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Forensic Lab Capabilities Section */}
-            <div className="section-3-forensic-lab-capabilities">
-              <div className="container26">
-                <img className="forensic-lab-view" src="/assets/forensic_lab.png" alt="Forensic Lab Capabilities" />
-              </div>
-              <div className="container27">
-                <div className="heading-22">
-                  <h3 className="state-of-the-art-forensic-lab">State-of-the-Art Forensic Lab</h3>
-                </div>
-                <div className="container28">
-                  <div className="lab-feature-item">
-                    <div className="lab-feature-icon-wrapper">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" className="lab-svg-icon">
-                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                      </svg>
-                    </div>
-                    <div className="container31">
-                      <h4 className="heading-42">Advanced Hardware Imagers</h4>
-                      <p className="lab-feature-desc">
-                        We utilize Atola and Tableau write-blockers to ensure data integrity during image acquisition without altering the source drive.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="lab-feature-item">
-                    <div className="lab-feature-icon-wrapper">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" className="lab-svg-icon">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                        <polyline points="14 2 14 8 20 8" />
-                        <line x1="16" y1="13" x2="8" y2="13" />
-                        <line x1="16" y1="17" x2="8" y2="17" />
-                        <polyline points="10 9 9 9 8 9" />
-                      </svg>
-                    </div>
-                    <div className="container31">
-                      <h4 className="heading-42">Chain-of-Custody Integrity</h4>
-                      <p className="lab-feature-desc">
-                        Rigorous evidence logging systems that track every individual who touches a physical or digital asset, ensuring legal admissibility.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="lab-feature-item">
-                    <div className="lab-feature-icon-wrapper">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" className="lab-svg-icon">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                      </svg>
-                    </div>
-                    <div className="container31">
-                      <h4 className="heading-42">Secured Data Vaults</h4>
-                      <p className="lab-feature-desc">
-                        Multi-layered physical security and encryption protocols for all stored evidence and investigative findings.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Use cases Section */}
-            <div className="frame-349">
-              <div className="rectangle-347"></div>
-              <div className="frame-5573">
-                <div className="frame-559">
+              {/* End-to-End Cybersecurity Solutions Section */}
+              <div className="frame-346">
+                <div className="frame-557">
                   <div className="frame-556">
-                    <h3 className="cybersecurity-cyberforensics-use-cases">
+                    <h3 className="end-to-end-cybersecurity-solutions">
                       <span>
-                        <span className="cybersecurity-cyberforensics-use-cases-span2">Cybersecurity &amp; Cyberforensics </span>
-                        <span className="cybersecurity-cyberforensics-use-cases-span3">Use cases</span>
+                        <span className="end-to-end-cybersecurity-solutions-span">End-to-End </span>
+                        <span className="end-to-end-cybersecurity-solutions-span2">Cybersecurity </span>
+                        <span className="end-to-end-cybersecurity-solutions-span3">Solutions</span>
                       </span>
                     </h3>
-                    <div className="group-3463">
-                      <p className="use-cases-intro">
-                        Explore how our cybersecurity services help organizations detect threats, reduce vulnerabilities, protect sensitive data, and strengthen security across their digital infrastructure.
-                      </p>
+                    <div className="group-346">
+                      <div className="frame-552">
+                        <p className="end-to-end-subtext">
+                          End-to-end protection across networks, cloud, endpoints, and identity — tailored for your business.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="frame-5542">
-                    <div className="use-cases-grid">
-                      <div className="use-case-card">
-                        <div className="use-case-header">
-                          <span className="use-case-num">01</span>
-                          <h4 className="use-case-title">Ransomware Containment</h4>
-                        </div>
-                        <p className="use-case-desc">
-                          Active isolation of infected host endpoints, root-cause forensic analysis to detect infection pathways, and secure recovery logs implementation.
-                        </p>
-                      </div>
 
-                      <div className="use-case-card">
-                        <div className="use-case-header">
-                          <span className="use-case-num">02</span>
-                          <h4 className="use-case-title">Insider Threat Audits</h4>
+                  {/* 10 Solutions Grid */}
+                  <div className="frame-554">
+                    <div className="container-solutions-grid">
+                      {endToEndSolutions.map((item) => (
+                        <div key={item.id} className="solution-capability-card">
+                          <div className="card-inner">
+                            <div className="background-icon-badge">
+                              {item.icon}
+                            </div>
+                            <div className="heading-3-wrapper">
+                              <h4 className="solution-card-title">{item.title}</h4>
+                            </div>
+                            <div className="card-desc-wrapper">
+                              <p className="solution-card-desc">{item.desc}</p>
+                            </div>
+                          </div>
                         </div>
-                        <p className="use-case-desc">
-                          Comprehensive analysis of internal data exfiltration pathways, identifying unauthorized privilege escalations and securing proof of intellectual property theft.
-                        </p>
-                      </div>
-
-                      <div className="use-case-card">
-                        <div className="use-case-header">
-                          <span className="use-case-num">03</span>
-                          <h4 className="use-case-title">Regulatory Verification</h4>
-                        </div>
-                        <p className="use-case-desc">
-                          Validating systems against global standard specifications (ISO 27001, SOC2 Type II) to ensure compliance during legal disputes or client verification audits.
-                        </p>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Mobile Services Section - visible only on mobile */}
-            <div className="mobile-services-section">
-              <h3 className="mobile-services-title">
-                <span className="cyber-services-span1">Cyber Security </span>
-                <span className="cyber-services-span2">Services we offer</span>
-              </h3>
-              <div className="mobile-services-cards">
-                <div className="mobile-service-card">
-                  <div className="mobile-service-card-image">
-                    <img src="/assets/managed_network_security.png" alt="Network & Security" />
-                  </div>
-                  <h4 className="mobile-service-card-title">Network &amp; Security</h4>
-                </div>
-                <div className="mobile-service-card">
-                  <div className="mobile-service-card-image">
-                    <img src="/assets/managed_cloud_software.png" alt="Cloud & Software" />
-                  </div>
-                  <h4 className="mobile-service-card-title">Cloud &amp; Software</h4>
-                </div>
-                <div className="mobile-service-card">
-                  <div className="mobile-service-card-image">
-                    <img src="/assets/server_storage.png" alt="Servers & Storage" />
-                  </div>
-                  <h4 className="mobile-service-card-title">Servers &amp; Storage</h4>
-                </div>
-              </div>
-            </div>
-
-            {/* Partners block */}
-            <div className="group-348">
-              <div className="frame-464">
-                <div className="rectangle-282"></div>
-                <h3 className="cyber-security-partners">
+        {/* Section 2: Cyberforensics & Incident Response (Full-Width Blue Banner) */}
+        <div className="section-2-cyberforensics-incident-response">
+          <div className="container16">
+            <div className="container17">
+              <div className="heading-2">
+                <h2 className="cyberforensics-incident-response">
                   <span>
-                    <span className="cyber-security-partners-span">Cyber Security </span>
-                    <span className="cyber-security-partners-span2">Partners</span>
+                    <span className="cyberforensics-incident-response-span">Cyberforensics </span>
+                    <span className="cyberforensics-incident-response-span3">&amp; Incident Response</span>
+                  </span>
+                </h2>
+              </div>
+              <div className="container18">
+                <p className="cyberforensics-subtext">
+                  A rigorous, four-stage investigative framework designed to reconstruct digital events and secure actionable evidence.
+                </p>
+              </div>
+            </div>
+
+            {/* 4 Process Steps */}
+            <div className="container19-steps-grid">
+              {/* Step 1: Identification */}
+              <div className="step-item step-1">
+                <div className="step-icon-wrap">
+                  <img
+                    className="identification-icon-img"
+                    src="/assets/cybersecurity/identification_icon_svg_1 1.png"
+                    alt="Identification"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                  <svg className="step-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2">
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2" />
+                  </svg>
+                </div>
+                <div className="heading-4-margin">
+                  <h3 className="step-heading">Identification</h3>
+                </div>
+                <div className="container20">
+                  <p className="step-desc">
+                    Defining the scope of the incident and identifying all affected digital assets and systems.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 2: Preservation */}
+              <div className="step-item step-2">
+                <div className="step-icon-wrap">
+                  <img
+                    className="preservation-shield-img"
+                    src="/assets/cybersecurity/shield.png"
+                    alt="Preservation"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                  <svg className="step-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div className="heading-4-margin">
+                  <h3 className="step-heading">Preservation</h3>
+                </div>
+                <div className="container21">
+                  <p className="step-desc">
+                    Securing data through bit-stream imaging and maintaining strict chain-of-custody protocols.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 3: Analysis */}
+              <div className="step-item step-3">
+                <div className="step-icon-wrap">
+                  <svg className="step-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <path d="M11 8v6M8 11h6" />
+                  </svg>
+                </div>
+                <div className="heading-4-margin">
+                  <h3 className="step-heading">Analysis</h3>
+                </div>
+                <div className="container22">
+                  <p className="step-desc">
+                    Extracting and correlating artifacts to determine the root cause and extent of the breach.
+                  </p>
+                </div>
+              </div>
+
+              {/* Step 4: Reporting */}
+              <div className="step-item step-4">
+                <div className="step-icon-wrap">
+                  <svg className="step-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                </div>
+                <div className="heading-4-margin">
+                  <h3 className="step-heading">Reporting</h3>
+                </div>
+                <div className="container23">
+                  <p className="step-desc">
+                    Delivering detailed technical findings and executive summaries for legal or remedial action.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 3: State-of-the-Art Forensic Lab */}
+        <div className="forensic-lab-outer-wrapper">
+          <div className="section-3-forensic-lab-capabilities">
+            <div className="container24-lab-media">
+              <img
+                className="forensic-lab-view-img"
+                src="/assets/cybersecurity/Forensic Lab View.png"
+                alt="State-of-the-Art Forensic Lab"
+                onError={(e) => { e.currentTarget.src = '/assets/forensic_lab.png'; }}
+              />
+            </div>
+            <div className="container25-lab-content">
+              <div className="heading-22">
+                <h3 className="state-of-the-art-forensic-lab">State-of-the-Art Forensic Lab</h3>
+              </div>
+              <div className="container26-features">
+                {/* Feature 1 */}
+                <div className="container27-feature-item">
+                  <div className="lab-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                      <line x1="6" y1="6" x2="6.01" y2="6" />
+                      <line x1="6" y1="18" x2="6.01" y2="18" />
+                    </svg>
+                  </div>
+                  <div className="container29-text">
+                    <h4 className="advanced-hardware-imagers">Advanced Hardware Imagers</h4>
+                    <p className="lab-feature-desc">
+                      We utilize Atola and Tableau write-blockers to ensure data integrity during image acquisition without altering the source drive.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 2 */}
+                <div className="container27-feature-item">
+                  <div className="lab-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <path d="M9 15l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div className="container29-text">
+                    <h4 className="chain-of-custody-integrity">Chain-of-Custody Integrity</h4>
+                    <p className="lab-feature-desc">
+                      Rigorous evidence logging systems that track every individual who touches a physical or digital asset, ensuring legal admissibility.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Feature 3 */}
+                <div className="container27-feature-item">
+                  <div className="lab-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                  </div>
+                  <div className="container29-text">
+                    <h4 className="secured-data-vaults">Secured Data Vaults</h4>
+                    <p className="lab-feature-desc">
+                      Multi-layered physical security and encryption protocols for all stored evidence and investigative findings.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 4: Customer Success Stories (Commented out)
+        <div className="frame-411-customer-stories">
+          <div className="section-customer-success-stories">
+            <div className="container32">
+              <div className="frame-564">
+                <h3 className="customer-success-stories">
+                  <span>
+                    <span className="customer-success-stories-span">Customer </span>
+                    <span className="customer-success-stories-span2">Success Stories</span>
                   </span>
                 </h3>
-                <div className="partners-grid-cyber">
-                  <div className="partner-logo-box">
-                    <div className="p-logo sophos">SOPHOS</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo autodesk font-autodesk">AUTODESK</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo vmware">vmware</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo lenovo font-lenovo">Lenovo</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo adobe">Adobe</div>
-                  </div>
+                <div className="container33">
+                  <p className="stories-subtext">
+                    Collaborating with industry leaders to deliver world-class infrastructure solutions.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
+          <div className="frame-566-cards-row">
+            {successStories.map((story) => (
+              <div key={story.id} className="case-study-card-item">
+                <div className="case-study-image-box">
+                  <img
+                    className="case-study-img"
+                    src={story.image}
+                    alt={story.title}
+                    onError={(e) => { e.currentTarget.src = '/assets/about_hero.jpg'; }}
+                  />
+                </div>
+                <div className="case-study-content-panel">
+                  <div className="case-study-tag-category">{story.tag}</div>
+                  <h4 className="case-study-title">{story.title}</h4>
+                  <div className="case-study-link-wrap" onClick={() => navigateTo('about')}>
+                    <span className="read-more-text">Read More</span>
+                    <svg className="arrow-right-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        */}
+
+        {/* Section 5: Cyber Security Partners */}
+        <div className="cyber-partners-section">
+          <div className="group-348-partners">
+            <div className="frame-464-partners">
+              <div className="rectangle-282-backdrop"></div>
+              <h3 className="cyber-security-partners-heading">
+                <span>
+                  <span className="cyber-security-partners-span">Cyber Security </span>
+                  <span className="cyber-security-partners-span2">Partners</span>
+                </span>
+              </h3>
+              <div className="partners-grid-cyber-container">
+                <div className="partner-box">
+                  <img
+                    className="partner-logo-img sophos-logo"
+                    src="/assets/cybersecurity/Sophos-Logo.wine 2.png"
+                    alt="Sophos"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div className="partner-box">
+                  <img
+                    className="partner-logo-img f5-logo"
+                    src="/assets/cybersecurity/F5_Networks_logo 1.png"
+                    alt="F5 Networks"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div className="partner-box">
+                  <img
+                    className="partner-logo-img autodesk-logo"
+                    src="/assets/cybersecurity/logo-11-color-autodesk-black-421x280@2x 1.png"
+                    alt="Autodesk"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div className="partner-box">
+                  <img
+                    className="partner-logo-img workplace-logo"
+                    src="/assets/cybersecurity/workplace-logo 1.png"
+                    alt="Workplace"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div className="partner-box">
+                  <img
+                    className="partner-logo-img trendmicro-logo"
+                    src="/assets/cybersecurity/Trend_Micro_logo 1.png"
+                    alt="Trend Micro"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+                <div className="partner-box">
+                  <img
+                    className="partner-logo-img defender-logo"
+                    src="/assets/cybersecurity/Windows-defender 1.png"
+                    alt="Windows Defender"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
+      {/* Global Desktop & Mobile Footers */}
       <div className="footer-wrapper footer-desktop-only">
         <Footer />
       </div>
-      {/* Mobile Footer */}
       <FooterMobile />
     </div>
   );

@@ -1,27 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer, { FooterMobile } from '../components/Footer';
+import SolutionsSidebar from '../components/SolutionsSidebar';
 import './ITInfrastructure.css';
 
 const ITInfrastructure = ({ navigateTo }) => {
   // Accordion toggle states
   const [approachOpen, setApproachOpen] = useState(true);
   const [advantagesOpen, setAdvantagesOpen] = useState(true);
-  const [useCasesOpen, setUseCasesOpen] = useState(true);
-
-  // Mobile solutions dropdown state
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
-
-  // Active solution tab indicator (always 'infra' on this page)
-  const activeSolution = 'infra';
-
-  const solutionsList = [
-    { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
-    { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
-    { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud', path: 'cloud-licensing' },
-    { id: 'managed', name: 'Managed Services', path: 'managed-services' }
-  ];
 
   return (
     <div className="solutions-it-infrastructure">
@@ -39,27 +25,22 @@ const ITInfrastructure = ({ navigateTo }) => {
       <div className="frame-462">
         <div className="frame-461">
           <div className="frame-460">
-            <div className="i-t-i-n-f-r-a desktop-label">I T I N F R A</div>
+            <div className="i-t-i-n-f-r-a desktop-label">I T &nbsp; I N F R A</div>
             <div className="i-t-i-n-f-r-a mobile-label">IT INFRA</div>
-            <div className="resilient-infrastructure-for-the-modern-enterprise desktop-hero-text">
+            <h1 className="resilient-infrastructure-for-the-modern-enterprise">
               <span>
                 <span className="resilient-infrastructure-for-the-modern-enterprise-span">Resilient </span>
                 <span className="resilient-infrastructure-for-the-modern-enterprise-span2">Infrastructure </span>
                 <span className="resilient-infrastructure-for-the-modern-enterprise-span">for the Modern Enterprise</span>
               </span>
-            </div>
-            <div className="resilient-infrastructure-for-the-modern-enterprise mobile-hero-text">
-              <span>
-                <span className="resilient-infrastructure-for-the-modern-enterprise-span">Powering </span>
-                <span className="resilient-infrastructure-for-the-modern-enterprise-span2">Business </span>
-                <span className="resilient-infrastructure-for-the-modern-enterprise-span">Growth</span>
-              </span>
-            </div>
+            </h1>
           </div>
           <div className="hero-image-wrapper">
-            <img className="rectangle-323" src="/assets/it_infra_hero.png" alt="IT Infrastructure" />
+            <img className="rectangle-323" src="/assets/it_infra_hero.png" alt="IT Infrastructure Hero" />
           </div>
         </div>
+
+        {/* Indicator bars - 3rd bar active */}
         <div className="frame-2-bars">
           <div className="bar"></div>
           <div className="bar"></div>
@@ -73,96 +54,11 @@ const ITInfrastructure = ({ navigateTo }) => {
         </div>
       </div>
 
-      {/* Main content frame */}
+      {/* Main content frame (Sidebar + Detail) */}
       <div className="frame-465">
         <div className="frame-322">
-          {/* Mobile Solutions Dropdown - visible only on mobile */}
-          <div className="mobile-solutions-dropdown">
-            <div
-              className="mobile-dropdown-trigger"
-              onClick={() => setSolutionsDropdownOpen(!solutionsDropdownOpen)}
-            >
-              <svg className="mobile-dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                <rect x="2" y="14" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                <line x1="6" y1="6" x2="6.01" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                <line x1="6" y1="18" x2="6.01" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-              <span className="mobile-dropdown-label">IT Infrastructure</span>
-              <svg
-                className={`mobile-dropdown-chevron ${solutionsDropdownOpen ? 'open' : ''}`}
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            {solutionsDropdownOpen && (
-              <div className="mobile-dropdown-menu">
-                {solutionsList.map((sol) => (
-                  <div
-                    key={sol.id}
-                    className={`mobile-dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
-                    onClick={() => {
-                      setSolutionsDropdownOpen(false);
-                      navigateTo(sol.path);
-                    }}
-                  >
-                    <span className="mobile-dropdown-item-text">{sol.name}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Sidebar Solutions Navigation */}
-          <div className="frame-289">
-            <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
-              S O L U T I O N S
-            </div>
-            <div className="frame-288">
-              {solutionsList.map((sol) => (
-                <div
-                  key={sol.id}
-                  className={`sidebar-item ${sol.id === activeSolution ? 'active' : ''}`}
-                  onClick={() => navigateTo(sol.path)}
-                >
-                  {sol.id === 'cyber' && (
-                    <svg className="vector-icon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L2 7V14C2 20.2 6.3 26 12 28C17.7 26 22 20.2 22 14V7L12 2Z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'physical' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm14 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'infra' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="2" y="2" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                      <rect x="2" y="14" width="20" height="8" rx="2" stroke="currentColor" strokeWidth="2" />
-                      <line x1="6" y1="6" x2="6.01" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      <line x1="6" y1="18" x2="6.01" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'cloud' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                  {sol.id === 'managed' && (
-                    <svg className="vector-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
-                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" />
-                    </svg>
-                  )}
-                  <span className="sidebar-text">{sol.name}</span>
-                  {sol.id === activeSolution && <div className="active-dot"></div>}
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Reusable Solutions Sidebar */}
+          <SolutionsSidebar activeSolution="infra" navigateTo={navigateTo} />
 
           {/* Main Details Area */}
           <div className="frame-561">
@@ -171,72 +67,36 @@ const ITInfrastructure = ({ navigateTo }) => {
               <div className="frame-325">
                 <h2 className="it-infrastructure-title">
                   <span>
-                    <span className="it-infrastructure-2-span">IT </span>
-                    <span className="it-infrastructure-2-span2">Infrastructure</span>
+                    <span className="it-infrastructure-span">IT </span>
+                    <span className="it-infrastructure-span2">Infrastructure</span>
                   </span>
                 </h2>
                 <div className="intro-container">
                   <div className="intro-text">
-                    Finecons IT Infrastructure Solutions help organisations build a strong and dependable foundation for their digital operations. We design, deploy, and optimise IT environments that support business-critical applications, data storage, and enterprise workloads. 
+                    Finecons IT Infrastructure Solutions help organisations build a strong and dependable foundation for their digital operations. We design, deploy, and optimise IT environments that support business-critical applications, data storage, and enterprise workloads.
                     <br />
                     <br />
                     Our solutions focus on performance, scalability, and resilience—ensuring infrastructure that adapts to business growth and evolving technology requirements. From on-premises environments to hybrid architectures, we deliver infrastructure aligned with operational and compliance needs.
                   </div>
-                  
-                  {/* High-end SVG virtualization & server topology visualization */}
-                  <div className="group-319-svg">
-                    <svg viewBox="0 0 550 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      {/* Grid background effect */}
-                      <path d="M50 0v480M150 0v480M250 0v480M350 0v480M450 0v480M0 80h550M0 180h550M0 280h550M0 380h550" stroke="rgba(14, 16, 255, 0.03)" strokeWidth="1" />
-                      
-                      {/* Interactive server slot racks */}
-                      <rect x="110" y="90" width="330" height="300" rx="16" fill="rgba(14, 16, 255, 0.01)" stroke="rgba(14, 16, 255, 0.08)" strokeWidth="1.5" />
-                      
-                      {/* Server Slot 1 */}
-                      <g className="server-slot shadow-sm">
-                        <rect x="130" y="120" width="290" height="42" rx="8" fill="#ffffff" stroke="rgba(14, 16, 255, 0.12)" strokeWidth="1.5" />
-                        <circle cx="160" cy="141" r="5" fill="#00b4e5" className="glow-node" />
-                        <line x1="185" y1="141" x2="330" y2="141" stroke="#e0e0e0" strokeWidth="4" strokeLinecap="round" />
-                        <line x1="185" y1="141" x2="270" y2="141" stroke="#0e10ff" strokeWidth="4" strokeLinecap="round" />
-                        <rect x="360" y="132" width="40" height="18" rx="4" fill="rgba(14, 16, 255, 0.08)" />
-                        <text x="380" y="144" fill="#0e10ff" fontSize="9" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">VM-A</text>
-                      </g>
 
-                      {/* Server Slot 2 */}
-                      <g className="server-slot shadow-sm">
-                        <rect x="130" y="180" width="290" height="42" rx="8" fill="#ffffff" stroke="rgba(14, 16, 255, 0.12)" strokeWidth="1.5" />
-                        <circle cx="160" cy="201" r="5" fill="#cb096d" className="glow-node" />
-                        <line x1="185" y1="201" x2="330" y2="201" stroke="#e0e0e0" strokeWidth="4" strokeLinecap="round" />
-                        <line x1="185" y1="201" x2="310" y2="201" stroke="#cb096d" strokeWidth="4" strokeLinecap="round" />
-                        <rect x="360" y="192" width="40" height="18" rx="4" fill="rgba(203, 9, 109, 0.08)" />
-                        <text x="380" y="204" fill="#cb096d" fontSize="9" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">VM-B</text>
-                      </g>
+                  {/* Server Graphic with Background Spherical Ellipses */}
+                  <div className="infra-graphic-badge">
+                    {/* Top Right Concentric Donut Ellipses */}
+                    <div className="infra-ellipse-tr-outer"></div>
+                    <div className="infra-ellipse-tr-inner"></div>
 
-                      {/* Server Slot 3 */}
-                      <g className="server-slot shadow-sm">
-                        <rect x="130" y="240" width="290" height="42" rx="8" fill="#ffffff" stroke="rgba(14, 16, 255, 0.12)" strokeWidth="1.5" />
-                        <circle cx="160" cy="261" r="5" fill="#10b981" className="glow-node" />
-                        <line x1="185" y1="261" x2="330" y2="261" stroke="#e0e0e0" strokeWidth="4" strokeLinecap="round" />
-                        <line x1="185" y1="261" x2="230" y2="261" stroke="#10b981" strokeWidth="4" strokeLinecap="round" />
-                        <rect x="360" y="252" width="40" height="18" rx="4" fill="rgba(16, 185, 129, 0.08)" />
-                        <text x="380" y="264" fill="#10b981" fontSize="9" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">VM-C</text>
-                      </g>
+                    {/* Bottom Left Concentric Donut Ellipses */}
+                    <div className="infra-ellipse-bl-outer"></div>
+                    <div className="infra-ellipse-bl-inner"></div>
 
-                      {/* Server Slot 4 */}
-                      <g className="server-slot shadow-sm">
-                        <rect x="130" y="300" width="290" height="42" rx="8" fill="#ffffff" stroke="rgba(14, 16, 255, 0.12)" strokeWidth="1.5" />
-                        <circle cx="160" cy="321" r="5" fill="#f59e0b" className="glow-node" />
-                        <line x1="185" y1="321" x2="330" y2="321" stroke="#e0e0e0" strokeWidth="4" strokeLinecap="round" />
-                        <line x1="185" y1="321" x2="295" y2="321" stroke="#f59e0b" strokeWidth="4" strokeLinecap="round" />
-                        <rect x="360" y="312" width="40" height="18" rx="4" fill="rgba(245, 158, 11, 0.08)" />
-                        <text x="380" y="324" fill="#f59e0b" fontSize="9" fontWeight="700" textAnchor="middle" fontFamily="sans-serif">VM-D</text>
-                      </g>
-                      
-                      {/* Connection flows from hypervisor */}
-                      <path d="M275 390v30" stroke="rgba(14, 16, 255, 0.2)" strokeWidth="2" strokeDasharray="4 4" />
-                      <circle cx="275" cy="425" r="8" fill="#0e10ff" className="radar-ping" />
-                      <circle cx="275" cy="425" r="4" fill="#0e10ff" />
-                    </svg>
+                    {/* Central Server Rack Triangle Image */}
+                    <div className="infra-triangle-wrapper">
+                      <img 
+                        className="infra-triangle-image" 
+                        src="/assets/it_infra_triangle.png" 
+                        alt="IT Infrastructure Server Racks" 
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -250,12 +110,12 @@ const ITInfrastructure = ({ navigateTo }) => {
                   <div className="accordion-trigger-bg"></div>
                   <h3 className="our-approach-title">Our Approach</h3>
                   <svg className={`chevron-icon ${approachOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 {approachOpen && (
                   <div className="accordion-body-text fade-in">
-                    We begin by assessing the organization’s existing IT landscape, business requirements, and future growth plans. Based on this understanding, we design infrastructure architectures that balance performance, availability, and scalability. 
+                    We begin by assessing the organization’s existing IT landscape, business requirements, and future growth plans. Based on this understanding, we design infrastructure architectures that Balance Performance, Availability and Scalability.
                     <br />
                     <br />
                     Our team manages the complete deployment process—from hardware selection and configuration to implementation and testing—ensuring minimal disruption to operations. We continue to support and optimize infrastructure to keep it aligned with changing business needs.
@@ -269,14 +129,14 @@ const ITInfrastructure = ({ navigateTo }) => {
                   <div className="accordion-trigger-bg"></div>
                   <h3 className="key-advantages-title">Key Advantages</h3>
                   <svg className={`chevron-icon ${advantagesOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 {advantagesOpen && (
                   <div className="accordion-body-content fade-in">
                     <div className="frame-3">
                       <div className="advantages-visual-wrapper">
-                        <img className="rectangle-333" src="/assets/it_advantages.png" alt="IT Advantages Illustration" />
+                        <img className="rectangle-333" src="/assets/it_advantages.png" alt="IT Infrastructure Advantages" />
                       </div>
                       <div className="advantages-list-wrapper">
                         <ul className="advantages-list">
@@ -291,74 +151,13 @@ const ITInfrastructure = ({ navigateTo }) => {
                   </div>
                 )}
               </div>
-
-              {/* Accordion 3: Use Cases */}
-              <div className="accordion-wrapper">
-                <div className="group-285" onClick={() => setUseCasesOpen(!useCasesOpen)}>
-                  <div className="accordion-trigger-bg"></div>
-                  <h3 className="key-advantages-title">Use Cases</h3>
-                  <svg className={`chevron-icon ${useCasesOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 15L12 9L6 15" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                {useCasesOpen && (
-                  <div className="accordion-body-content fade-in">
-                    <div className="frame-3">
-                      <div className="advantages-visual-wrapper">
-                        <img className="rectangle-333" src="/assets/network_advantages.png" alt="IT Infrastructure Use Cases" />
-                      </div>
-                      <div className="advantages-list-wrapper">
-                        <ul className="advantages-list">
-                          <li>Data center consolidation and migration</li>
-                          <li>Server virtualization and optimization</li>
-                          <li>Enterprise storage deployment and management</li>
-                          <li>End-user device lifecycle management</li>
-                          <li>Disaster recovery and business continuity</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
             </div>
 
-            {/* Mobile Services Section */}
-            <div className="mobile-services-section">
-              <h3 className="mobile-services-title">
-                <span className="it-infrastructure-2-span">IT </span>
-                <span className="it-infrastructure-2-span2">Infrastructure </span>
-                <span className="it-infrastructure-2-span">Services we offer</span>
-              </h3>
-              <div className="mobile-services-cards">
-                <div className="mobile-service-card">
-                  <div className="mobile-service-card-image">
-                    <img src="/assets/server_storage.png" alt="Servers & Storage" />
-                  </div>
-                  <h4 className="mobile-service-card-title">Servers &amp; Storage</h4>
-                  <p className="mobile-service-card-desc">• Servers, storage arrays, backup systems</p>
-                </div>
-                <div className="mobile-service-card">
-                  <div className="mobile-service-card-image">
-                    <img src="/assets/datacenter_solutions.png" alt="Network & Security" />
-                  </div>
-                  <h4 className="mobile-service-card-title">Network &amp; Security</h4>
-                  <p className="mobile-service-card-desc">• Core switches, firewalls</p>
-                </div>
-                <div className="mobile-service-card">
-                  <div className="mobile-service-card-image">
-                    <img src="/assets/end_user_computing.png" alt="Cloud & Software" />
-                  </div>
-                  <h4 className="mobile-service-card-title">Cloud &amp; Software</h4>
-                  <p className="mobile-service-card-desc">• Virtualization platforms, OS licenses</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Core Infrastructure Pillars Section */}
+            {/* Core Infrastructure Pillars */}
             <div className="section-strategic-pillars">
               <div className="container">
                 <div className="heading-2">
-                  <h3 className="core-infrastructure-pillars-title">
+                  <h3 className="core-infrastructure-pillars">
                     <span>
                       <span className="core-infrastructure-pillars-span">Core </span>
                       <span className="core-infrastructure-pillars-span2">Infrastructure </span>
@@ -367,38 +166,41 @@ const ITInfrastructure = ({ navigateTo }) => {
                   </h3>
                 </div>
                 <div className="container2">
-                  <p className="pillars-subtitle">
+                  <p className="foundational-technical-services">
                     Foundational technical services designed to drive operational excellence and enterprise-grade stability.
                   </p>
                 </div>
               </div>
-              
-              <div className="pillars-grid">
+
+              <div className="pillars-grid-infra">
                 {/* Pillar 1: Server & Storage */}
-                <div className="pillar-column">
-                  <div className="pillar-image-card">
-                    <img className="pillar-image" src="/assets/server_storage.png" alt="Server & Storage" />
+                <div className="pillar-card-infra">
+                  <div className="pillar-img-wrapper">
+                    <img className="pillar-card-img" src="/assets/server_storage.png" alt="Server & Storage" />
                   </div>
-                  <h4 className="pillar-title">Server &amp; Storage</h4>
-                  <p className="pillar-desc">
+                  <h4 className="pillar-card-title">Server &amp; Storage</h4>
+                  <p className="pillar-card-desc">
                     Deployment and management of physical, virtual, and cloud server environments. Expert integration of SAN/NAS architectures and high-availability clusters.
                   </p>
-                  <ul className="pillar-bullets">
+                  <ul className="pillar-card-features">
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Hybrid Cloud Integration</span>
                     </li>
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Scalable Tiered Storage</span>
                     </li>
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Performance Monitoring</span>
                     </li>
@@ -406,30 +208,33 @@ const ITInfrastructure = ({ navigateTo }) => {
                 </div>
 
                 {/* Pillar 2: Data Center Solutions */}
-                <div className="pillar-column">
-                  <div className="pillar-image-card">
-                    <img className="pillar-image" src="/assets/datacenter_solutions.png" alt="Data Center Solutions" />
+                <div className="pillar-card-infra">
+                  <div className="pillar-img-wrapper">
+                    <img className="pillar-card-img" src="/assets/datacenter_solutions.png" alt="Data Center Solutions" />
                   </div>
-                  <h4 className="pillar-title">Data Center Solutions</h4>
-                  <p className="pillar-desc">
+                  <h4 className="pillar-card-title">Data Center Solutions</h4>
+                  <p className="pillar-card-desc">
                     Comprehensive planning, setup, and optimization. We focus on N+1 redundancy, power management, and operational efficiency.
                   </p>
-                  <ul className="pillar-bullets">
+                  <ul className="pillar-card-features">
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Rack Migration Services</span>
                     </li>
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Redundant Power &amp; Cooling</span>
                     </li>
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>24/7 Monitoring &amp; NOC</span>
                     </li>
@@ -437,30 +242,33 @@ const ITInfrastructure = ({ navigateTo }) => {
                 </div>
 
                 {/* Pillar 3: End-User Computing */}
-                <div className="pillar-column">
-                  <div className="pillar-image-card">
-                    <img className="pillar-image" src="/assets/end_user_computing.png" alt="End-User Computing" />
+                <div className="pillar-card-infra">
+                  <div className="pillar-img-wrapper">
+                    <img className="pillar-card-img" src="/assets/end_user_computing.png" alt="End-User Computing" />
                   </div>
-                  <h4 className="pillar-title">End-User Computing</h4>
-                  <p className="pillar-desc">
+                  <h4 className="pillar-card-title">End-User Computing</h4>
+                  <p className="pillar-card-desc">
                     Empowering workforce productivity through lifecycle management of desktops, laptops, and remote collaboration tools.
                   </p>
-                  <ul className="pillar-bullets">
+                  <ul className="pillar-card-features">
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Automated Provisioning</span>
                     </li>
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>VDI &amp; Remote Work</span>
                     </li>
                     <li>
-                      <svg className="bullet-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
-                        <polyline points="20 6 9 17 4 12" />
+                      <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Fleet Lifecycle Management</span>
                     </li>
@@ -469,29 +277,29 @@ const ITInfrastructure = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Featured Enterprise Hardware Section */}
-            <div className="section-enterprise-hardware">
+            {/* Featured Enterprise Hardware */}
+            <div className="section-featured-hardware">
               <div className="container">
                 <div className="heading-2">
-                  <h3 className="featured-hardware-title">
+                  <h3 className="featured-enterprise-hardware">
                     <span>
-                      <span className="featured-hardware-span">Featured </span>
-                      <span className="featured-hardware-span2">Enterprise Hardware</span>
+                      <span className="featured-enterprise-hardware-span">Featured </span>
+                      <span className="featured-enterprise-hardware-span2">Enterprise Hardware</span>
                     </span>
                   </h3>
                 </div>
                 <div className="container2">
-                  <p className="hardware-subtitle">
+                  <p className="precision-hardware-desc">
                     Precision-engineered hardware designed for the most demanding enterprise workloads.
                   </p>
                 </div>
               </div>
 
-              <div className="hardware-products-grid">
-                {/* Product 1 */}
+              <div className="hardware-grid">
+                {/* Product 1: Nexus Edge Nodes */}
                 <div className="hardware-card">
-                  <div className="hardware-image-box">
-                    <img className="product-image" src="/assets/nexus_edge_nodes.png" alt="Nexus Edge Nodes" />
+                  <div className="hardware-img-container">
+                    <img className="hardware-img" src="/assets/nexus_edge_nodes.png" alt="Nexus Edge Nodes" />
                   </div>
                   <h4 className="hardware-title">Nexus Edge Nodes</h4>
                   <p className="hardware-desc">
@@ -499,10 +307,10 @@ const ITInfrastructure = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 2 */}
+                {/* Product 2: Enterprise Rack Servers */}
                 <div className="hardware-card">
-                  <div className="hardware-image-box">
-                    <img className="product-image" src="/assets/enterprise_rack_servers.png" alt="Enterprise Rack Servers" />
+                  <div className="hardware-img-container">
+                    <img className="hardware-img" src="/assets/enterprise_rack_servers.png" alt="Enterprise Rack Servers" />
                   </div>
                   <h4 className="hardware-title">Enterprise Rack Servers</h4>
                   <p className="hardware-desc">
@@ -510,10 +318,10 @@ const ITInfrastructure = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 3 */}
+                {/* Product 3: GPU-Accelerated Units */}
                 <div className="hardware-card">
-                  <div className="hardware-image-box">
-                    <img className="product-image" src="/assets/gpu_accelerated_units.png" alt="GPU-Accelerated Units" />
+                  <div className="hardware-img-container">
+                    <img className="hardware-img" src="/assets/gpu_accelerated_units.png" alt="GPU-Accelerated Units" />
                   </div>
                   <h4 className="hardware-title">GPU-Accelerated Units</h4>
                   <p className="hardware-desc">
@@ -521,10 +329,10 @@ const ITInfrastructure = ({ navigateTo }) => {
                   </p>
                 </div>
 
-                {/* Product 4 */}
+                {/* Product 4: Performance Workstations */}
                 <div className="hardware-card">
-                  <div className="hardware-image-box">
-                    <img className="product-image" src="/assets/performance_workstations.png" alt="Performance Workstations" />
+                  <div className="hardware-img-container">
+                    <img className="hardware-img" src="/assets/performance_workstations.png" alt="Performance Workstations" />
                   </div>
                   <h4 className="hardware-title">Performance Workstations</h4>
                   <p className="hardware-desc">
@@ -535,82 +343,82 @@ const ITInfrastructure = ({ navigateTo }) => {
             </div>
 
             {/* Technical Expertise Grid */}
-            <div className="section-technical-capabilities-grid">
-              <div className="container15">
-                <div className="container16">
-                  <h3 className="technical-expertise-title">
-                    Technical
-                    <br />
-                    Expertise
-                  </h3>
-                  <p className="expertise-subtitle">
-                    Deep-level domain expertise across specialized infrastructure domains.
-                  </p>
+            <div className="section-technical-expertise">
+              <div className="expertise-left-col">
+                <h3 className="technical-expertise-title">
+                  Technical<br />Expertise
+                </h3>
+                <p className="technical-expertise-desc">
+                  Deep-level domain expertise across specialized infrastructure domains.
+                </p>
+              </div>
+
+              <div className="expertise-right-grid">
+                {/* 1. Server Virtualization */}
+                <div className="expertise-item-card">
+                  <div className="expertise-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="3" width="20" height="7" rx="2" />
+                      <rect x="2" y="14" width="20" height="7" rx="2" />
+                      <line x1="6" y1="6.5" x2="6.01" y2="6.5" />
+                      <line x1="6" y1="17.5" x2="6.01" y2="17.5" />
+                    </svg>
+                  </div>
+                  <div className="expertise-item-content">
+                    <h4 className="expertise-item-title">Server Virtualization</h4>
+                    <p className="expertise-item-text">
+                      Optimizing resource utilization with VMware and Hyper-V deployments.
+                    </p>
+                  </div>
                 </div>
-                
-                <div className="container17">
-                  {/* Card 1 */}
-                  <div className="background-border shadow-sm">
-                    <div className="expertise-icon-box">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="2" y="2" width="20" height="20" rx="2" />
-                        <path d="M12 2v20M2 12h20" />
-                      </svg>
-                    </div>
-                    <div className="container18">
-                      <h4 className="heading-4">Server Virtualization</h4>
-                      <p className="expertise-desc">
-                        Optimizing resource utilization with VMware and Hyper-V deployments.
-                      </p>
-                    </div>
-                  </div>
 
-                  {/* Card 2 */}
-                  <div className="background-border shadow-sm">
-                    <div className="expertise-icon-box">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                        <path d="M12 6v6l4 2" />
-                      </svg>
-                    </div>
-                    <div className="container18">
-                      <h4 className="heading-4">Disaster Recovery</h4>
-                      <p className="expertise-desc">
-                        RTO/RPO optimization with multi-site failover and off-site backup.
-                      </p>
-                    </div>
+                {/* 2. Disaster Recovery */}
+                <div className="expertise-item-card">
+                  <div className="expertise-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <polyline points="12 8 12 12 14 14" />
+                    </svg>
                   </div>
-
-                  {/* Card 3 */}
-                  <div className="background-border shadow-sm">
-                    <div className="expertise-icon-box">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M3 15h18M3 9h18M21 21H3v-2h18v2zm0-18H3v2h18V3z" />
-                      </svg>
-                    </div>
-                    <div className="container18">
-                      <h4 className="heading-4">Storage Tiering</h4>
-                      <p className="expertise-desc">
-                        Intelligent data placement across NVMe SSD, and HDD for cost-perf balance.
-                      </p>
-                    </div>
+                  <div className="expertise-item-content">
+                    <h4 className="expertise-item-title">Disaster Recovery</h4>
+                    <p className="expertise-item-text">
+                      RTO/RPO optimization with multi-site failover and off-site backup.
+                    </p>
                   </div>
+                </div>
 
-                  {/* Card 4 */}
-                  <div className="background-border shadow-sm">
-                    <div className="expertise-icon-box">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="2" y="3" width="20" height="14" rx="2" />
-                        <line x1="8" y1="21" x2="16" y2="21" />
-                        <line x1="12" y1="17" x2="12" y2="21" />
-                      </svg>
-                    </div>
-                    <div className="container18">
-                      <h4 className="heading-4">Virtual Desktop (VDI)</h4>
-                      <p className="expertise-desc">
-                        Centralized desktop management for secure, high-performance remote work.
-                      </p>
-                    </div>
+                {/* 3. Storage Tiering */}
+                <div className="expertise-item-card">
+                  <div className="expertise-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <ellipse cx="12" cy="5" rx="9" ry="3" />
+                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                    </svg>
+                  </div>
+                  <div className="expertise-item-content">
+                    <h4 className="expertise-item-title">Storage Tiering</h4>
+                    <p className="expertise-item-text">
+                      Intelligent data placement across NVMe SSD, and HDD for cost-perf balance.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 4. Virtual Desktop (VDI) */}
+                <div className="expertise-item-card">
+                  <div className="expertise-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                  </div>
+                  <div className="expertise-item-content">
+                    <h4 className="expertise-item-title">Virtual Desktop (VDI)</h4>
+                    <p className="expertise-item-text">
+                      Centralized desktop management for secure, high-performance remote work.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -618,67 +426,63 @@ const ITInfrastructure = ({ navigateTo }) => {
 
             {/* Global Infrastructure Logistics */}
             <div className="section-global-logistics">
-              <div className="container21">
-                <div className="logistics-image-card">
-                  <img className="global-infrastructure-logistics" src="/assets/global_logistics.png" alt="Global Infrastructure Logistics Map" />
-                </div>
+              <div className="logistics-img-wrapper">
+                <img className="global-infrastructure-logistics" src="/assets/global_logistics.png" alt="Global Infrastructure Logistics" />
               </div>
-              
-              <div className="container22">
-                <div className="logistics-tag">
-                  GLOBAL INFRASTRUCTURE LOGISTICS
+
+              <div className="logistics-content">
+                <div className="logistics-header">
+                  <div className="logistics-subtitle">G L O B A L &nbsp; I N F R A S T R U C T U R E &nbsp; L O G I S T I C S</div>
+                  <h3 className="secure-global-deployment">Secure Global Deployment</h3>
+                  <p className="precision-logistics-desc">Precision logistics for seamless multi-site rollouts.</p>
                 </div>
-                <h3 className="secure-global-deployment-title">
-                  Secure Global Deployment
-                </h3>
-                <p className="logistics-subtitle-desc">
-                  Precision logistics for seamless multi-site rollouts.
-                </p>
-                
-                <div className="container23">
-                  {/* Point 1 */}
-                  <div className="container24">
-                    <div className="bullet-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+
+                <div className="logistics-features">
+                  {/* Feature 1 */}
+                  <div className="logistics-feature-item">
+                    <div className="logistics-icon-box">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M9 12l2 2 4-4" />
                       </svg>
                     </div>
-                    <div className="container25">
-                      <h4 className="heading-4">Secure Chain of Custody</h4>
-                      <p className="logistics-point-desc">
+                    <div className="logistics-feature-details">
+                      <h4 className="logistics-feature-title">Secure Chain of Custody</h4>
+                      <p className="logistics-feature-text">
                         End-to-end tracking and secure handling for high-value enterprise hardware.
                       </p>
                     </div>
                   </div>
 
-                  {/* Point 2 */}
-                  <div className="container24">
-                    <div className="bullet-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  {/* Feature 2 */}
+                  <div className="logistics-feature-item">
+                    <div className="logistics-icon-box">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />
-                        <line x1="2" y1="12" x2="22" y2="12" />
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10zM2 12h20" />
                       </svg>
                     </div>
-                    <div className="container25">
-                      <h4 className="heading-4">Global Reach, Local Presence</h4>
-                      <p className="logistics-point-desc">
+                    <div className="logistics-feature-details">
+                      <h4 className="logistics-feature-title">Global Reach, Local Presence</h4>
+                      <p className="logistics-feature-text">
                         Delivering to over 150 countries with local customs expertise and white-glove installation.
                       </p>
                     </div>
                   </div>
 
-                  {/* Point 3 */}
-                  <div className="container24">
-                    <div className="bullet-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                  {/* Feature 3 */}
+                  <div className="logistics-feature-item">
+                    <div className="logistics-icon-box">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="1" y="3" width="15" height="13" />
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                        <circle cx="5.5" cy="18.5" r="2.5" />
+                        <circle cx="18.5" cy="18.5" r="2.5" />
                       </svg>
                     </div>
-                    <div className="container25">
-                      <h4 className="heading-4">Staged Logistics</h4>
-                      <p className="logistics-point-desc">
+                    <div className="logistics-feature-details">
+                      <h4 className="logistics-feature-title">Staged Logistics</h4>
+                      <p className="logistics-feature-text">
                         Batch-synchronized shipping to align with your project timelines and implementation phases.
                       </p>
                     </div>
@@ -687,36 +491,82 @@ const ITInfrastructure = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Partners Section */}
-            <div className="group-348">
-              <div className="frame-464">
-                <div className="rectangle-282"></div>
-                <h3 className="cyber-security-partners">
-                  <span>
-                    <span className="cyber-security-partners-span">IT Infrastructure </span>
-                    <span className="cyber-security-partners-span2">Partners</span>
-                  </span>
-                </h3>
-                <div className="partners-grid-cyber">
-                  <div className="partner-logo-box">
-                    <div className="p-logo sophos font-cisco">CISCO</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo autodesk font-autodesk">AUTODESK</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo vmware font-vmware">VMWARE</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo lenovo font-lenovo">Lenovo</div>
-                  </div>
-                  <div className="partner-logo-box">
-                    <div className="p-logo adobe font-sophos">SOPHOS</div>
-                  </div>
-                </div>
+          </div>
+        </div>
+      </div>
+
+      {/* IT Infrastructure Partners - Full-Width Edge-to-Edge Section */}
+      <div className="section-partners-full-width">
+        <div className="frame-464">
+          <h3 className="it-infrastructure-partners">
+            <span>
+              <span className="it-infrastructure-partners-span">IT Infrastructure </span>
+              <span className="it-infrastructure-partners-span2">Partners</span>
+            </span>
+          </h3>
+
+          <div className="partners-grid-infra">
+            {/* Partner 1: SOPHOS */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-sophos">
+                <span className="partner-text sophos-text">SOPHOS</span>
               </div>
             </div>
 
+            {/* Partner 2: Symantec */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-symantec">
+                <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                  <circle cx="18" cy="18" r="16" fill="#FDB813" />
+                  <path d="M11 18L16 23L26 13" stroke="#000000" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="partner-text symantec-text">Symantec</span>
+              </div>
+            </div>
+
+            {/* Partner 3: Palo Alto Networks */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-paloalto">
+                <svg width="36" height="32" viewBox="0 0 40 32" fill="none">
+                  <path d="M4 22L16 6L28 22L20 22L16 16L12 22Z" fill="#FA582D" />
+                  <path d="M16 26L24 16L32 26Z" fill="#FA582D" opacity="0.85" />
+                  <circle cx="16" cy="6" r="3.5" fill="#FA582D" />
+                  <circle cx="4" cy="22" r="3.5" fill="#FA582D" />
+                  <circle cx="28" cy="22" r="3.5" fill="#FA582D" />
+                  <circle cx="32" cy="26" r="3.5" fill="#FA582D" />
+                </svg>
+                <span className="partner-text paloalto-text">paloalto</span>
+              </div>
+            </div>
+
+            {/* Partner 4: Cisco */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-cisco">
+                <svg width="40" height="24" viewBox="0 0 48 28" fill="none">
+                  <rect x="2" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                  <rect x="10" y="6" width="4" height="20" rx="2" fill="#049FD9" />
+                  <rect x="18" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                  <rect x="26" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                  <rect x="34" y="6" width="4" height="20" rx="2" fill="#049FD9" />
+                  <rect x="42" y="14" width="4" height="12" rx="2" fill="#049FD9" />
+                </svg>
+                <span className="partner-text cisco-text">cisco</span>
+              </div>
+            </div>
+
+            {/* Partner 5: Fortinet */}
+            <div className="partner-logo-box">
+              <div className="partner-brand brand-fortinet">
+                <svg width="34" height="28" viewBox="0 0 36 28" fill="none">
+                  <rect x="2" y="3" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="26" y="3" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="8" y="15" width="7" height="7" rx="1.5" fill="#EE3124" />
+                  <rect x="20" y="15" width="7" height="7" rx="1.5" fill="#EE3124" />
+                </svg>
+                <span className="partner-text fortinet-text">FORTINET</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

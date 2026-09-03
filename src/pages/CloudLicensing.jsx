@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer, { FooterMobile } from '../components/Footer';
 import './CloudLicensing.css';
@@ -19,13 +19,13 @@ const CloudLicensing = ({ navigateTo }) => {
     { id: 'cyber', name: 'Cyber Security', path: 'cyber-security' },
     { id: 'physical', name: 'Physical Security & Network', path: 'physical-security-network' },
     { id: 'infra', name: 'IT Infrastructure', path: 'it-infrastructure' },
-    { id: 'cloud', name: 'Cloud Solutions', path: 'cloud-licensing' },
+    { id: 'cloud', name: 'Cloud Solutions', path: 'cloud-solutions' },
     { id: 'managed', name: 'Managed Services', path: 'managed-services' }
   ];
 
   return (
     <div className="licensing">
-      {/* Background Decorative Elements (Ellipses only, no absolute top rectangle) */}
+      {/* Background Decorative Elements */}
       <div className="ellipse-17"></div>
       <div className="ellipse-18"></div>
       <div className="ellipse-19"></div>
@@ -36,32 +36,22 @@ const CloudLicensing = ({ navigateTo }) => {
       {/* Navigation Bar */}
       <Navbar navigateTo={navigateTo} activeLink="solutions" />
 
-      {/* Hero Section Container (with background gradient) */}
+      {/* Hero Section */}
       <div className="licensing-hero-section">
         <div className="licensing-hero-inner">
+          {/* Left: Title */}
           <div className="licensing-hero-content">
             <h1 className="licensing-technical-support-services">
-              <span className="licensing-technical-support-services-span">
+              <span className="licensing-technical-support-services-span" style={{whiteSpace: 'nowrap', display: 'block'}}>
                 Licensing &amp; Technical
               </span>
-              <br />
-              <span className="licensing-technical-support-services-span2">
+              <span className="licensing-technical-support-services-span2" style={{whiteSpace: 'nowrap', display: 'block'}}>
                 Support Services
-      {/* Hero Section */}
-      <div className="frame-462">
-        <div className="frame-461">
-          <div className="frame-460">
-            <div className="c-l-o-u-d-l-i-c-e-n-s-i-n-g">C L O U D</div>
-            <div className="scale-fast-spend-smart">
-              <span>
-                <span className="scale-fast-spend-smart-span">Scale&nbsp;</span>
-                <span className="scale-fast-spend-smart-span2">Fast.&nbsp;</span>
-                <span className="scale-fast-spend-smart-span2">Spend&nbsp;</span>
-                <span className="scale-fast-spend-smart-span">Smart.</span>
               </span>
             </h1>
           </div>
-          
+
+          {/* Right: Hero Visual - exact same structure as Partners page */}
           <div className="about-hero-visual">
             <div className="ellipse-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
@@ -81,7 +71,7 @@ const CloudLicensing = ({ navigateTo }) => {
                   </clipPath>
                 </defs>
                 <image
-                  href="/assets/cybersecurity_hero.png"
+                  href="/assets/cloud_licensing_hero.png"
                   x="0"
                   y="0"
                   width="316"
@@ -92,22 +82,22 @@ const CloudLicensing = ({ navigateTo }) => {
               </svg>
             </div>
           </div>
-          <div className="hero-image-wrapper">
-            <img className="rectangle-323" src="/assets/cloud_licensing_hero.png" alt="Cloud Solutions" />
+
+          {/* 9-bar indicator */}
+          <div className="frame-2">
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="active-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
+            <div className="inactive-rect"></div>
           </div>
         </div>
-        <div className="frame-2-bars">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar active"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
       </div>
+
 
       {/* Bento Grid - Ecosystem Partnerships */}
       <div className="section-vendor-solutions-bento-grid">
@@ -128,13 +118,6 @@ const CloudLicensing = ({ navigateTo }) => {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
               </svg>
-      {/* Main content frame */}
-      <div className="frame-465">
-        <div className="frame-322">
-          {/* Sidebar Solutions Navigation - Desktop */}
-          <div className="frame-289 desktop-sidebar">
-            <div className="s-o-l-u-t-i-o-n-s" onClick={() => navigateTo('solutions')}>
-              S O L U T I O N S
             </div>
             <h3 className="bento-card-title">Microsoft Services</h3>
             <p className="bento-card-desc">
@@ -211,36 +194,7 @@ const CloudLicensing = ({ navigateTo }) => {
             </div>
           </div>
 
-          {/* Mobile Dropdown Navigation */}
-          <div className="mobile-solutions-dropdown">
-            <div className="dropdown-trigger" onClick={() => setDropdownOpen(!dropdownOpen)}>
-              <svg className="dropdown-cloud-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span className="dropdown-label">Cloud Solutions</span>
-              <svg className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            {dropdownOpen && (
-              <div className="dropdown-menu">
-                {solutionsList.map((sol) => (
-                  <div
-                    key={sol.id}
-                    className={`dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
-                    onClick={() => {
-                      setDropdownOpen(false);
-                      navigateTo(sol.path);
-                    }}
-                  >
-                    {sol.name}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Security & Networking - Medium Bento Card */}
+          {/* Security & Networking */}
           <div className="bento-card security-networking-medium">
             <div className="security-title-row">
               <div className="bento-icon-wrapper">
@@ -275,27 +229,6 @@ const CloudLicensing = ({ navigateTo }) => {
               Veeam, VMware, Nutanix infrastructure support.
             </p>
           </div>
-          {/* Main Details Area */}
-          <div className="frame-561">
-            {/* Title & Introduction Section */}
-            <div className="frame-318">
-              <h2 className="cloud-licensing-solutions-title">
-                <span>
-                  <span className="cloud-licensing-solutions-span">Cloud </span>
-                  <span className="cloud-licensing-solutions-span2">Solutions</span>
-                </span>
-              </h2>
-
-              <div className="frame-349">
-                <div className="intro-text">
-                  Finecons Cloud delivers secure, scalable, and intelligent cloud solutions tailored to enterprise needs. We help organisations modernise infrastructure, optimise costs, and improve operational agility.
-                  <br />
-                  <br />
-                  From cloud strategy and migration to management and optimization, we support every stage of your cloud journey.
-                  <br />
-                  <br />
-                  With FineCons Cloud, businesses gain a resilient, future-ready foundation for sustained growth.
-                </div>
 
           {/* Creative & Design */}
           <div className="bento-card creative">
@@ -310,20 +243,50 @@ const CloudLicensing = ({ navigateTo }) => {
               Adobe Creative Cloud &amp; Autodesk licensing experts.
             </p>
           </div>
+
+
+          {/* Mobile Dropdown Navigation */}
+          <div className="mobile-solutions-dropdown">
+            <div className="dropdown-trigger" onClick={() => setDropdownOpen(!dropdownOpen)}>
+              <svg className="dropdown-cloud-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="dropdown-label">Cloud Solutions</span>
+              <svg className={`dropdown-chevron ${dropdownOpen ? 'open' : ''}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {dropdownOpen && (
+              <div className="dropdown-menu">
+                {solutionsList.map((sol) => (
+                  <div
+                    key={sol.id}
+                    className={`dropdown-item ${sol.id === activeSolution ? 'active' : ''}`}
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      navigateTo(sol.path);
+                    }}
+                  >
+                    {sol.name}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Responsibilities & Why Choose Us Section */}
       <div className="section-responsibilities-why-choose-us">
         <div className="responsibilities-split-container">
-          
+
           {/* Left Column: Responsibilities */}
           <div className="our-responsibilities">
             <h2 className="heading-22">
               <span className="our-responsibilities-2-span">Our </span>
               <span className="our-responsibilities-2-span2">Responsibilities</span>
             </h2>
-            
+
             <div className="responsibilities-list-container">
               {/* Card 1 */}
               <div className="background-border-shadow">
@@ -401,7 +364,7 @@ const CloudLicensing = ({ navigateTo }) => {
             <h2 className="why-partner-with-finecons">
               Why Partner with Finecons?
             </h2>
-            
+
             <div className="why-choose-us-list">
               {/* Step 1 */}
               <div className="why-choose-item">
@@ -440,7 +403,6 @@ const CloudLicensing = ({ navigateTo }) => {
 
         </div>
       </div>
-            </div>
 
       {/* CTA Section */}
       <div className="licensing-cta-section">

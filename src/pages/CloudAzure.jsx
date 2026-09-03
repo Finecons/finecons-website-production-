@@ -26,14 +26,29 @@ const CloudAzure = ({ navigateTo }) => {
 
       {/* Hero Content */}
       <div className="frame-496">
-        <div className="powered-by-azure-built-for-scale">
-          <span>
-            <span className="powered-by-azure-built-for-scale-span">Powered by </span>
-            <span className="powered-by-azure-built-for-scale-span2">AZURE</span>
-            <span className="powered-by-azure-built-for-scale-span">. Built for Scale</span>
-          </span>
+        <div className="azure-hero-row">
+          <div className="powered-by-azure-built-for-scale">
+            <span>
+              <span className="powered-by-azure-built-for-scale-span">Powered by </span>
+              <span className="powered-by-azure-built-for-scale-span2">AZURE</span>
+              <span className="powered-by-azure-built-for-scale-span">. Built for Scale</span>
+            </span>
+          </div>
+          <img className="group-294" src="/assets/azure_logo.png" alt="Azure Hero" />
         </div>
-        <img className="group-294" src="/assets/azure_logo.png" alt="Azure Hero" />
+
+        {/* 9-bar indicator positioned at bottom-left */}
+        <div className="frame-2">
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="active-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+        </div>
       </div>
 
       {/* Main content frame */}
@@ -259,7 +274,7 @@ const CloudAzure = ({ navigateTo }) => {
           </div>
         </div>
 
-        {/* Success Stories */}
+        {/* Success Stories (Commented out)
         <div className="frame-507">
           <div className="frame-304">
             <div className="a-z-u-r-e-u-s-e-c-a-s-e-s">AZURE USE CASES</div>
@@ -271,7 +286,6 @@ const CloudAzure = ({ navigateTo }) => {
             </div>
           </div>
           <div className="use-cases-grid">
-            {/* Case 1 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/ecosoft_logo.png" alt="Ecosoft Zolutions" />
@@ -282,7 +296,6 @@ const CloudAzure = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Case 2 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/naturals_logo.png" alt="Naturals Salon" />
@@ -293,7 +306,6 @@ const CloudAzure = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Case 3 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/agarwals_logo.png" alt="Dr. Agarwal's Eye Hospital" />
@@ -304,7 +316,6 @@ const CloudAzure = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Case 4 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/inexo_logo.png" alt="Inexo" />
@@ -316,6 +327,7 @@ const CloudAzure = ({ navigateTo }) => {
             </div>
           </div>
         </div>
+        */}
       </div>
 
       {/* Footer Wrapper */}

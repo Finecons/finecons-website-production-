@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    Footer.css — loaded on every page via Footer.jsx import
    ============================================================ */
 
@@ -14,16 +14,16 @@
 }
 
 /* On mobile: hide the desktop wrapper */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .footer-desktop-only {
     display: none !important;
   }
 }
 
 /* ================================================================
-   MOBILE ONLY (max-width: 768px)
+   MOBILE ONLY (max-width: 48rem)
    ================================================================ */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
 
   .rectangle-267,
   .rectangle-267 * {
@@ -37,7 +37,7 @@
     align-items: flex-start !important;
     width: 100% !important;
     background: #534eeb !important;
-    padding: 48px 28px 36px 28px !important;
+    padding: 3rem 1.75rem 2.25rem 1.75rem !important;
     position: relative !important;
     overflow: hidden !important;
   }
@@ -46,10 +46,10 @@
   .rectangle-267::after {
     content: '' !important;
     position: absolute !important;
-    bottom: -60px !important;
-    right: -60px !important;
-    width: 220px !important;
-    height: 220px !important;
+    bottom: -3.75rem !important;
+    right: -3.75rem !important;
+    width: 13.75rem !important;
+    height: 13.75rem !important;
     border-radius: 50% !important;
     background: rgba(255, 255, 255, 0.07) !important;
     pointer-events: none !important;
@@ -58,8 +58,8 @@
   /* ── Logo: left-aligned, white ── */
   .r267-logo {
     display: block !important;
-    margin: 0 0 48px 0 !important;
-    height: 64px !important;
+    margin: 0 0 3rem 0 !important;
+    height: 4rem !important;
     width: auto !important;
     object-fit: contain !important;
     filter: brightness(0) invert(1) !important;
@@ -70,9 +70,9 @@
   .r267-contacts {
     display: flex !important;
     flex-direction: column !important;
-    gap: 28px !important;
+    gap: 1.75rem !important;
     width: 100% !important;
-    margin-bottom: 44px !important;
+    margin-bottom: 2.75rem !important;
   }
 
   /* Each row: white circle icon on left + text on right */
@@ -80,27 +80,27 @@
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 20px !important;
+    gap: 1.25rem !important;
     width: 100% !important;
   }
 
   /* White circle icon container */
   .r267-icon {
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    min-width: 3rem !important;
     border-radius: 50% !important;
     background: #ffffff !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     flex-shrink: 0 !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.18) !important;
   }
 
   .r267-icon svg {
-    width: 22px !important;
-    height: 22px !important;
+    width: 1.375rem !important;
+    height: 1.375rem !important;
     stroke: #0e10ff !important;
     fill: none !important;
     flex-shrink: 0 !important;
@@ -110,8 +110,8 @@
   /* Contact text */
   .r267-text {
     color: #ffffff !important;
-    font-size: 14px !important;
-    line-height: 22px !important;
+    font-size: 0.875rem !important;
+    line-height: 1.375rem !important;
     font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
   }
 
@@ -120,22 +120,22 @@
     width: 100% !important;
     height: 1px !important;
     background: rgba(255, 255, 255, 0.2) !important;
-    margin-bottom: 32px !important;
+    margin-bottom: 2rem !important;
   }
 
   /* ── Links 2-column grid ── */
   .r267-links {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 24px 20px !important;
+    gap: 1.5rem 1.25rem !important;
     width: 100% !important;
-    margin-bottom: 44px !important;
+    margin-bottom: 2.75rem !important;
   }
 
   .r267-link {
     color: #ffffff !important;
-    font-size: 14px !important;
-    line-height: 20px !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
     font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
     cursor: pointer !important;
     font-weight: 500 !important;
@@ -144,7 +144,7 @@
   /* ── Copyright ── */
   .r267-copy {
     color: rgba(255, 255, 255, 0.80) !important;
-    font-size: 13px !important;
+    font-size: 0.8125rem !important;
     text-align: center !important;
     width: 100% !important;
     margin: 0 !important;

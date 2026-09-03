@@ -1,0 +1,838 @@
+/* ==========================================================================
+   CLOUD RECOVERY & CONTINUITY PAGE STYLING
+   ========================================================================== */
+
+.cloud-recovery-continuity {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.cloud-recovery-continuity * {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   HERO WRAPPER - EXACT 100VH VIEWPORT
+   -------------------------------------------------------------------------- */
+.cloud-recovery-continuity .recovery-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(123.26deg,
+      rgba(228, 234, 255, 0) 45%,
+      rgba(38, 210, 222, 0.25) 90%),
+    linear-gradient(223.8deg,
+      rgba(228, 234, 255, 1) 38%,
+      rgba(175, 175, 255, 1) 79%);
+}
+
+.cloud-recovery-continuity .rectangle-217 {
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Background decorative concentric rings */
+.cloud-recovery-continuity .ellipse-17 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.06);
+  width: 20.25rem;
+  height: 20.25rem;
+  position: absolute;
+  left: -5rem;
+  top: -7.75rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-recovery-continuity .ellipse-18 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.06);
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  left: -0.625rem;
+  top: -3.375rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-recovery-continuity .ellipse-19 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  width: 20.25rem;
+  height: 20.25rem;
+  position: absolute;
+  left: 15.25rem;
+  top: 23.5rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-recovery-continuity .ellipse-20 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  left: 19.625rem;
+  top: 27.875rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   HERO CONTENT CONTAINER (Strict 100vh with standardized padding)
+   -------------------------------------------------------------------------- */
+.cloud-recovery-continuity .frame-490 {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  max-height: 100vh;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cloud-recovery-continuity .frame-489 {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.5rem, 3.5vw, 4.5rem);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto 0;
+}
+
+.cloud-recovery-continuity .frame-488 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex: 1;
+}
+
+.cloud-recovery-continuity .c-l-o-u-d-s-e-r-v-i-c-e-s {
+  color: #091426;
+  text-align: left;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  letter-spacing: 0.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business {
+  text-align: left;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business-span {
+  color: #000000;
+}
+
+.cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business-span2 {
+  color: #0e10ff;
+}
+
+.cloud-recovery-continuity .hero-img-box {
+  flex: 0 0 clamp(18rem, 28vw, 30rem);
+  max-height: min(36vh, 280px);
+  aspect-ratio: 4 / 3;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
+}
+
+.cloud-recovery-continuity .rectangle-323 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.cloud-recovery-continuity .hero-img-box:hover .rectangle-323 {
+  transform: scale(1.05);
+}
+
+/* 9-Segment Visual Bar Indicator */
+.cloud-recovery-continuity .frame-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+  width: 100%;
+  margin: 0;
+}
+
+.cloud-recovery-continuity .frame-2 .bar {
+  border-radius: 1.875rem;
+  width: 0.375rem;
+  height: 1.75rem;
+  background: #9d9dff;
+  transition: all 0.3s ease;
+}
+
+.cloud-recovery-continuity .frame-2 .bar.active {
+  background: #0e10ff;
+  height: 2.125rem;
+}
+
+/* --------------------------------------------------------------------------
+   MAIN BODY CONTENT WRAPPER
+   -------------------------------------------------------------------------- */
+.cloud-recovery-continuity .recovery-content-wrapper {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: CORE VALUE PROPOSITION
+   -------------------------------------------------------------------------- */
+.section-core-value-proposition-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 5rem 3rem 4rem 3rem;
+}
+
+.core-value-header {
+  margin-bottom: 2.5rem;
+}
+
+.cloud-recovery-continuity-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cloud-blue {
+  color: #0e10ff;
+}
+
+.recovery-dark {
+  color: #010101;
+}
+
+.section-core-value-proposition-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+.value-props-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  flex: 1.2;
+}
+
+.value-prop-card {
+  background: #ffffff;
+  border-left: 2px solid transparent;
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.value-prop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14, 16, 255, 0.09);
+  border-left-color: #0e10ff;
+}
+
+.value-prop-3 {
+  grid-column: 1 / span 2;
+}
+
+.value-prop-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.value-prop-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.value-prop-title {
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  margin: 0 0 0.625rem 0;
+}
+
+.value-prop-desc {
+  color: #45474c;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.value-prop-visual-wrapper {
+  flex: 0 0 clamp(20rem, 34vw, 36rem);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+}
+
+.rectangle-353 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 605 / 527;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: SERVICES ECOSYSTEM GRID (Light Blue Background)
+   -------------------------------------------------------------------------- */
+.section-services-ecosystem {
+  background: #eff4ff;
+  padding: 5.5rem 3rem 6rem 3rem;
+  width: 100%;
+}
+
+.services-ecosystem-header {
+  max-width: 80rem;
+  margin: 0 auto 3.5rem auto;
+  text-align: center;
+}
+
+.section-tag-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.services-main-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #091426;
+  margin: 0;
+}
+
+.heading-blue {
+  color: #0e10ff;
+}
+
+.heading-underline-bar {
+  width: 4rem;
+  height: 4px;
+  background: #0e10ff;
+  border-radius: 2px;
+  margin: 0.75rem auto 1rem auto;
+}
+
+.services-subheading {
+  color: #45474c;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ecosystem-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.ecosystem-card {
+  background: #ffffff;
+  border: 1px solid rgba(14, 16, 255, 0.16);
+  border-radius: 0.75rem;
+  padding: 2.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.ecosystem-card:hover {
+  transform: translateY(-5px);
+  border-color: #0e10ff;
+  box-shadow: 0 12px 24px rgba(14, 16, 255, 0.12);
+}
+
+.ecosystem-icon-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem-card-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.ecosystem-card-icon.blue-filter,
+.ecosystem-card-icon[src*="Icon-12"] {
+  filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(244deg) brightness(97%) contrast(143%);
+}
+
+.ecosystem-card-title {
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: WHAT WE DO (Vibrant Blue Banner with 3 White Cards)
+   -------------------------------------------------------------------------- */
+.section-what-we-do-blue {
+  background: #0e10ff;
+  padding: 5.5rem 3rem 6rem 3rem;
+  width: 100%;
+}
+
+.what-we-do-header {
+  max-width: 80rem;
+  margin: 0 auto 3.5rem auto;
+  text-align: center;
+}
+
+.what-we-do-heading {
+  color: #ffffff;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.875rem, 3.2vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.what-we-do-underline-bar {
+  width: 4rem;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin: 0.75rem auto 0 auto;
+}
+
+.pillars-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.pillar-card {
+  background: #ffffff;
+  border-radius: 0.875rem;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-5px);
+}
+
+.pillar-card-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pillar-icon-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pillar-title {
+  color: #0e10ff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pillar-desc {
+  color: #333333;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.horizontal-divider {
+  height: 2px;
+  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: FINAL CTA CARD
+   -------------------------------------------------------------------------- */
+.section-final-cta-wrapper {
+  padding: 4.5rem 3rem 5rem 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-final-cta-card {
+  background: #396caa;
+  border-radius: 1.25rem;
+  padding: 3.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.1);
+  text-align: center;
+}
+
+.cta-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(closest-side,
+      rgba(0, 106, 97, 0.25) 0%,
+      transparent 100%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.cta-heading {
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.cta-desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cta-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background: #ffffff;
+  color: #091426;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.cta-contact-btn:hover {
+  background: #f0f4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-mail-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .section-core-value-proposition-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-prop-visual-wrapper {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .ecosystem-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pillars-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-recovery-continuity .cloud-recovery-hero-wrapper {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cloud-recovery-continuity .rectangle-217 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+
+  .cloud-recovery-continuity .frame-490 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    margin-top: 0 !important;
+    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .cloud-recovery-continuity .frame-489 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .cloud-recovery-continuity .frame-488 {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
+    padding: 0 !important;
+    height: auto !important;
+    gap: 0.375rem !important;
+  }
+
+  .cloud-recovery-continuity .c-l-o-u-d-s-e-r-v-i-c-e-s {
+    text-align: center !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.125rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business {
+    font-size: clamp(1.65rem, 6.2vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    letter-spacing: -0.4px !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business span,
+  .cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business-span,
+  .cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business-span2 {
+    text-align: center !important;
+    display: inline !important;
+  }
+
+  .cloud-recovery-continuity .hero-img-box {
+    width: 100% !important;
+    max-width: 22rem !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: auto auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .cloud-recovery-continuity .rectangle-323 {
+    width: 100% !important;
+    height: auto !important;
+    max-height: clamp(13rem, 34vh, 17.5rem) !important;
+    object-fit: cover !important;
+    border-radius: 1.25rem !important;
+    display: block !important;
+    box-shadow: none !important;
+  }
+
+  .cloud-recovery-continuity .ellipse-17,
+  .cloud-recovery-continuity .ellipse-18,
+  .cloud-recovery-continuity .ellipse-19,
+  .cloud-recovery-continuity .ellipse-20 {
+    display: none !important;
+  }
+
+  .cloud-recovery-continuity .frame-2 {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 5 !important;
+  }
+
+  .cloud-recovery-continuity .frame-2 .bar {
+    background: #9d9dff !important;
+    border-radius: 1.875rem !important;
+    width: 0.375rem !important;
+    height: 1.75rem !important;
+  }
+
+  .cloud-recovery-continuity .frame-2 .bar.active {
+    background: #0e10ff !important;
+    height: 2.125rem !important;
+  }
+
+  .value-props-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-prop-3 {
+    grid-column: 1 / span 1;
+  }
+
+  .ecosystem-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .pillars-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-core-value-proposition-container,
+  .section-services-ecosystem,
+  .section-what-we-do-blue,
+  .section-final-cta-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecosystem-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

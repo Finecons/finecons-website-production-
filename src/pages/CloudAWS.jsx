@@ -33,14 +33,29 @@ const CloudAWS = ({ navigateTo }) => {
 
       {/* Hero Content */}
       <div className="frame-496">
-        <div className="powered-by-aws-built-for-scale">
-          <span>
-            <span className="powered-by-aws-built-for-scale-span">Powered by </span>
-            <span className="powered-by-aws-built-for-scale-span2">AWS</span>
-            <span className="powered-by-aws-built-for-scale-span">. Built for Scale</span>
-          </span>
+        <div className="aws-hero-row">
+          <div className="powered-by-aws-built-for-scale">
+            <span>
+              <span className="powered-by-aws-built-for-scale-span">Powered by </span>
+              <span className="powered-by-aws-built-for-scale-span2">AWS</span>
+              <span className="powered-by-aws-built-for-scale-span">. Built for Scale</span>
+            </span>
+          </div>
+          <img className="group-294" src="/assets/aws_hero_illustration.png" alt="AWS Hero" />
         </div>
-        <img className="group-294" src="/assets/aws_hero_illustration.png" alt="AWS Hero" />
+
+        {/* 9-bar indicator positioned at bottom-left */}
+        <div className="frame-2">
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="active-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+          <div className="inactive-rect"></div>
+        </div>
       </div>
 
       {/* Main content frame */}
@@ -193,7 +208,7 @@ const CloudAWS = ({ navigateTo }) => {
           </div>
         </div>
 
-        {/* Success Stories */}
+        {/* Success Stories (Commented out)
         <div className="frame-507">
           <div className="frame-304">
             <div className="a-w-s-u-s-e-c-a-s-e-s">AWS USE CASES</div>
@@ -205,7 +220,6 @@ const CloudAWS = ({ navigateTo }) => {
             </div>
           </div>
           <div className="use-cases-grid">
-            {/* Case 1 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/ecosoft_logo.png" alt="Ecosoft Zolutions" />
@@ -216,7 +230,6 @@ const CloudAWS = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Case 2 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/naturals_logo.png" alt="Naturals Salon" />
@@ -227,7 +240,6 @@ const CloudAWS = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Case 3 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/agarwals_logo.png" alt="Dr. Agarwal's Eye Hospital" />
@@ -238,7 +250,6 @@ const CloudAWS = ({ navigateTo }) => {
               </div>
             </div>
 
-            {/* Case 4 */}
             <div className="use-case-card" onClick={() => setModalOpen(true)}>
               <div className="use-case-logo-container">
                 <img className="use-case-logo-img" src="/assets/inexo_logo.png" alt="Inexo" />
@@ -250,6 +261,7 @@ const CloudAWS = ({ navigateTo }) => {
             </div>
           </div>
         </div>
+        */}
       </div>
 
       {/* Footer Wrapper */}

@@ -1,0 +1,774 @@
+/* ==========================================================================
+   CLOUD MIGRATION & FOUNDATIONS PAGE STYLING
+   ========================================================================== */
+
+.cloud-migration-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.cloud-migration-page * {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   HERO WRAPPER - EXACT 100VH VIEWPORT
+   -------------------------------------------------------------------------- */
+.cloud-migration-page .cloud-migration-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(123.26deg,
+      rgba(228, 234, 255, 0) 45%,
+      rgba(38, 210, 222, 0.3) 90%),
+    linear-gradient(223.8deg,
+      rgba(228, 234, 255, 1) 38%,
+      rgba(175, 175, 255, 1) 79%);
+}
+
+.cloud-migration-page .rectangle-217 {
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Background decorative concentric ring shapes */
+.cloud-migration-page .ellipse-17 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  width: 20.25rem;
+  height: 20.25rem;
+  position: absolute;
+  left: -5rem;
+  top: -7.75rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-migration-page .ellipse-18 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  left: -0.625rem;
+  top: -3.375rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-migration-page .ellipse-19 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  width: 20.25rem;
+  height: 20.25rem;
+  position: absolute;
+  left: 15.25rem;
+  top: 23.5rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-migration-page .ellipse-20 {
+  border-radius: 50%;
+  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  width: 11.5rem;
+  height: 11.5rem;
+  position: absolute;
+  left: 19.625rem;
+  top: 27.875rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   HERO BANNER CONTENT CONTAINER
+   -------------------------------------------------------------------------- */
+.cloud-migration-page .frame-490 {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  max-height: 100vh;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cloud-migration-page .frame-489 {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(1.5rem, 3.5vw, 4.5rem);
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto 0;
+}
+
+.cloud-migration-page .frame-488 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  flex: 1;
+}
+
+.cloud-migration-page .c-l-o-u-d-s-e-r-v-i-c-e-s {
+  color: #091426;
+  text-align: left;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+  letter-spacing: 0.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations {
+  text-align: left;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations-span {
+  color: #0e10ff;
+}
+
+.cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations-span2 {
+  color: #000000;
+}
+
+.cloud-migration-page .hero-img-box {
+  flex: 0 0 clamp(18rem, 28vw, 30rem);
+  max-height: min(36vh, 280px);
+  aspect-ratio: 4 / 3;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
+}
+
+.cloud-migration-page .rectangle-323 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.cloud-migration-page .hero-img-box:hover .rectangle-323 {
+  transform: scale(1.05);
+}
+
+/* 9-Segment Visual Bar Indicator */
+.cloud-migration-page .frame-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
+  width: 100%;
+  margin: 0;
+}
+
+.cloud-migration-page .frame-2 .bar {
+  border-radius: 1.875rem;
+  width: 0.375rem;
+  height: 1.75rem;
+  background: #9d9dff;
+  transition: all 0.3s ease;
+}
+
+.cloud-migration-page .frame-2 .bar.active {
+  background: #0e10ff;
+  height: 2.125rem;
+}
+
+/* --------------------------------------------------------------------------
+   MAIN BODY CONTENT WRAPPER
+   -------------------------------------------------------------------------- */
+.cloud-migration-page .cloud-migration-content-wrapper {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+  padding-top: 4.5rem;
+  padding-bottom: 6rem;
+}
+
+/* Section Title: Cloud Migration & Foundations */
+.cloud-migration-page .main-section-title-wrap {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  padding: 0 3rem;
+}
+
+.cloud-migration-page .cloud-migration-foundations-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-migration-page .cloud-migration-foundations-span {
+  color: #0e10ff;
+}
+
+.cloud-migration-page .cloud-migration-foundations-span2 {
+  color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: CORE VALUE PROPOSITION
+   -------------------------------------------------------------------------- */
+.cloud-migration-page .section-core-value-proposition {
+  background: #f8f9ff;
+  padding: 4.5rem 0;
+  width: 100%;
+  margin-bottom: 5.5rem;
+}
+
+.cloud-migration-page .frame-567 {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cloud-migration-page .value-prop-img-box {
+  flex: 1;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+}
+
+.cloud-migration-page .rectangle-353 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.cloud-migration-page .value-prop-img-box:hover .rectangle-353 {
+  transform: scale(1.03);
+}
+
+.cloud-migration-page .container5 {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cloud-migration-page .overlay-border-overlay-blur {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(14, 16, 255, 0.12);
+  border-left: 4px solid #0e10ff;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 6px 18px rgba(14, 16, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cloud-migration-page .overlay-border-overlay-blur:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14, 16, 255, 0.1);
+  border-color: rgba(14, 16, 255, 0.3);
+  border-left-color: #0e10ff;
+}
+
+.cloud-migration-page .feature-icon-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #0e10ff;
+}
+
+.cloud-migration-page .feature-icon-svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  stroke: currentColor;
+}
+
+.cloud-migration-page .enterprise-landing-zones,
+.cloud-migration-page .seamless-execution {
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-migration-page .feature-card-desc {
+  color: #45474c;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: MIGRATION SERVICES ECOSYSTEM
+   -------------------------------------------------------------------------- */
+.cloud-migration-page .section-services-grid {
+  background: #eff4ff;
+  padding: 5.5rem 0;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.cloud-migration-page .container7 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.cloud-migration-page .migration-services-ecosystem {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cloud-migration-page .migration-services-ecosystem-span {
+  color: #0e10ff;
+}
+
+.cloud-migration-page .migration-services-ecosystem-span2 {
+  color: #091426;
+}
+
+.cloud-migration-page .ecosystem-title-bar {
+  width: 4rem;
+  height: 4px;
+  background: #0e10ff;
+  border-radius: 2px;
+}
+
+.cloud-migration-page .container8-services-grid {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.cloud-migration-page .ecosystem-service-card {
+  background: #ffffff;
+  border: 1px solid rgba(14, 16, 255, 0.16);
+  border-radius: 0.75rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(14, 16, 255, 0.04);
+  cursor: default;
+}
+
+.cloud-migration-page .ecosystem-service-card:hover {
+  background: #0e10ff !important;
+  border-color: #0e10ff !important;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(14, 16, 255, 0.32);
+}
+
+.cloud-migration-page .service-card-icon-box {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #0e10ff;
+  transition: color 0.3s ease;
+}
+
+.cloud-migration-page .ecosystem-icon-svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  stroke: currentColor;
+  display: block;
+}
+
+.cloud-migration-page .ecosystem-service-card:hover .service-card-icon-box {
+  color: #ffffff !important;
+}
+
+.cloud-migration-page .ecosystem-service-card:hover .ecosystem-icon-svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.cloud-migration-page .service-card-title {
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.cloud-migration-page .ecosystem-service-card:hover .service-card-title {
+  color: #ffffff !important;
+}
+
+.cloud-migration-page .service-card-desc {
+  color: #45474c;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.cloud-migration-page .ecosystem-service-card:hover .service-card-desc {
+  color: #ffffff !important;
+  opacity: 0.95;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: READY TO OPTIMIZE YOUR CLOUD? (FINAL CTA BANNER)
+   -------------------------------------------------------------------------- */
+.cloud-migration-page .section-final-cta {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  padding: 0 3rem;
+}
+
+.cloud-migration-page .cta-container {
+  background: #396caa;
+  border-radius: 1.25rem;
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 1rem 3rem rgba(57, 108, 170, 0.2);
+}
+
+.cloud-migration-page .gradient-overlay {
+  background: radial-gradient(closest-side,
+      rgba(0, 106, 97, 0.2) 0%,
+      rgba(0, 106, 97, 0) 100%);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cloud-migration-page .ready-to-optimize-your-cloud {
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud-migration-page .cta-subtext {
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  max-width: 44rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cloud-migration-page .cta-button-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.5rem;
+}
+
+.cloud-migration-page .cta-contact-btn {
+  background: #ffffff;
+  color: #091426;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1.125rem 2.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cloud-migration-page .cta-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #f0f4ff;
+  color: #0e10ff;
+}
+
+.cloud-migration-page .cta-arrow-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .cloud-migration-page .frame-489 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cloud-migration-page .hero-img-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cloud-migration-page .frame-567 {
+    flex-direction: column;
+  }
+
+  .cloud-migration-page .value-prop-img-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cloud-migration-page .container8-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-migration-page .cloud-migration-hero-wrapper {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cloud-migration-page .rectangle-217 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+
+  .cloud-migration-page .frame-490 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    margin-top: 0 !important;
+    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .cloud-migration-page .frame-489 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .cloud-migration-page .frame-488 {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
+    padding: 0 !important;
+    height: auto !important;
+    gap: 0.375rem !important;
+  }
+
+  .cloud-migration-page .c-l-o-u-d-s-e-r-v-i-c-e-s {
+    text-align: center !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.125rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations {
+    font-size: clamp(1.65rem, 6.2vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    letter-spacing: -0.4px !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations span,
+  .cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations-span,
+  .cloud-migration-page .effortless-cloud-maximum-uptime-future-ready-operations-span2 {
+    text-align: center !important;
+    display: inline !important;
+  }
+
+  .cloud-migration-page .hero-img-box {
+    width: 100% !important;
+    max-width: 22rem !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: auto auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .cloud-migration-page .rectangle-323 {
+    width: 100% !important;
+    height: auto !important;
+    max-height: clamp(13rem, 34vh, 17.5rem) !important;
+    object-fit: cover !important;
+    border-radius: 1.25rem !important;
+    display: block !important;
+    box-shadow: none !important;
+  }
+
+  .cloud-migration-page .ellipse-17,
+  .cloud-migration-page .ellipse-18,
+  .cloud-migration-page .ellipse-19,
+  .cloud-migration-page .ellipse-20 {
+    display: none !important;
+  }
+
+  .cloud-migration-page .frame-2 {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 5 !important;
+  }
+
+  .cloud-migration-page .frame-2 .bar {
+    background: #9d9dff !important;
+    border-radius: 1.875rem !important;
+    width: 0.375rem !important;
+    height: 1.75rem !important;
+  }
+
+  .cloud-migration-page .frame-2 .bar.active,
+  .cloud-migration-page .frame-2 .rectangle-324 {
+    background: #0e10ff !important;
+    height: 2.125rem !important;
+  }
+
+  .cloud-migration-page .cloud-migration-content-wrapper {
+    padding-top: 3.5rem !important;
+  }
+
+  .cloud-migration-page .main-section-title-wrap {
+    margin-bottom: 2rem !important;
+  }
+
+  .cloud-migration-page .main-section-title-wrap,
+  .cloud-migration-page .frame-567,
+  .cloud-migration-page .container8-services-grid,
+  .cloud-migration-page .section-final-cta {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .cloud-migration-page .container8-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cloud-migration-page .cta-container {
+    padding: 2.5rem 1.5rem;
+  }
+}

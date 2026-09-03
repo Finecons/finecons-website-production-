@@ -1,159 +1,159 @@
-/* Physical Security & Network Page Stylesheet */
+/* ==========================================================================
+   PHYSICAL SECURITY & NETWORK INFRASTRUCTURE PAGE STYLESHEET
+   ========================================================================== */
 
 .solutions-physical-security {
   background: #ffffff;
-  min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Background Gradients & Circles */
+.solutions-physical-security * {
+  box-sizing: border-box;
+}
+
+/* Background gradient overlay & decorative shapes */
 .solutions-physical-security .rectangle-217 {
-  background: linear-gradient(
-      123.26deg,
-      rgba(228, 234, 255, 0) 45.126545429229736%,
-      rgba(38, 210, 222, 0.3) 90.87963700294495%
-    ),
-    linear-gradient(
-      223.8deg,
-      rgba(228, 234, 255, 1) 38.33858370780945%,
-      rgba(175, 175, 255, 1) 79.08464074134827%
-    );
+  background: linear-gradient(123.26deg,
+      rgba(228, 234, 255, 0) 45%,
+      rgba(38, 210, 222, 0.3) 90.8%),
+    linear-gradient(223.8deg,
+      rgba(228, 234, 255, 1) 38.3%,
+      rgba(175, 175, 255, 1) 79%);
   opacity: 0.85;
   width: 100%;
-  height: 820px;
+  height: 100vh;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-physical-security .ellipse-17 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
-  border-width: 52px;
-  width: 324px;
-  height: 324px;
+  border: 3.25rem solid rgba(34, 35, 147, 0.08);
+  width: 20.25rem;
+  height: 20.25rem;
   position: absolute;
-  left: -80px;
-  top: -124px;
+  left: -5rem;
+  top: -7.75rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-physical-security .ellipse-18 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
-  border-width: 52px;
-  width: 184px;
-  height: 184px;
+  border: 3.25rem solid rgba(34, 35, 147, 0.08);
+  width: 11.5rem;
+  height: 11.5rem;
   position: absolute;
-  left: -10px;
-  top: -54px;
+  left: -0.625rem;
+  top: -3.375rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-physical-security .ellipse-19 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
-  border-width: 52px;
-  width: 324px;
-  height: 324px;
+  border: 3.25rem solid rgba(34, 35, 147, 0.04);
+  width: 20.25rem;
+  height: 20.25rem;
   position: absolute;
-  left: 244px;
-  top: 376px;
+  left: 15.25rem;
+  top: 23.5rem;
   z-index: 1;
+  pointer-events: none;
 }
 
 .solutions-physical-security .ellipse-20 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
-  border-width: 52px;
-  width: 184px;
-  height: 184px;
+  border: 3.25rem solid rgba(34, 35, 147, 0.04);
+  width: 11.5rem;
+  height: 11.5rem;
   position: absolute;
-  left: 314px;
-  top: 446px;
+  left: 19.625rem;
+  top: 27.875rem;
   z-index: 1;
+  pointer-events: none;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   HERO SECTION (Header Banner)
+   ========================================================================== */
+
 .solutions-physical-security .frame-462 {
+  max-width: 80rem;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1440px;
-  margin: 180px auto 60px auto;
-  padding: 0 48px;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .solutions-physical-security .frame-461 {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: clamp(1.5rem, 3.5vw, 4.5rem);
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: auto 0;
 }
 
 .solutions-physical-security .frame-460 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  gap: 0.875rem;
   flex: 1;
 }
 
-.solutions-physical-security .n-e-t-w-o-r-k {
+.solutions-physical-security .n-e-t-w-o-r-k-i-n-g {
   color: #0e10ff;
   text-align: left;
-  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-  font-size: var(--heading-sans-2-desktop-font-size, 20px);
-  line-height: var(--heading-sans-2-desktop-line-height, 28px);
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.125rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  margin: 0;
+  text-transform: uppercase;
+}
+
+.solutions-physical-security .n-e-t-w-o-r-k-i-n-g.mobile-label {
+  display: none;
 }
 
 .solutions-physical-security .unified-defense-for-the-modern-perimeter {
   text-align: left;
-  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: var(--display-desktop-font-size, 54px);
-  line-height: var(--display-desktop-line-height, 76px);
-  font-weight: 700;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
   margin: 0;
 }
 
 .solutions-physical-security .unified-defense-for-the-modern-perimeter-span {
-  color: #191c1e;
+  color: #000000;
 }
 
 .solutions-physical-security .unified-defense-for-the-modern-perimeter-span2 {
   color: #0e10ff;
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .solutions-physical-security .hero-image-wrapper {
-  width: 50%;
-  max-width: 600px;
-  height: 400px;
-  border-radius: 24px;
+  flex: 0 0 clamp(18rem, 28vw, 30rem);
+  max-height: min(36vh, 280px);
+  aspect-ratio: 4 / 3;
+  border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0px 20px 40px rgba(14, 16, 255, 0.12);
+  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.1);
 }
 
 .solutions-physical-security .rectangle-323 {
@@ -164,37 +164,42 @@
 }
 
 .solutions-physical-security .hero-image-wrapper:hover .rectangle-323 {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
+/* 9-bar indicator underneath hero */
 .solutions-physical-security .frame-2-bars {
   display: flex;
   flex-direction: row;
-  gap: 8px;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 16px;
+  gap: 0.375rem;
+  width: 100%;
+  margin: 0;
 }
 
-.solutions-physical-security .bar {
-  background: rgba(14, 16, 255, 0.15);
-  border-radius: 3px;
-  width: 8px;
-  height: 36px;
-  transition: background-color 0.3s ease, height 0.3s ease;
+.solutions-physical-security .frame-2-bars .bar {
+  background: #9d9dff;
+  border-radius: 1.875rem;
+  width: 0.375rem;
+  height: 1.75rem;
+  transition: background-color 0.3s ease;
 }
 
-.solutions-physical-security .bar.active {
+.solutions-physical-security .frame-2-bars .bar.active {
   background: #0e10ff;
-  height: 48px;
+  height: 2.125rem;
 }
 
-/* Main Content Section styling (Sidebar & Content side-by-side) */
+/* ==========================================================================
+   MAIN CONTENT SPLIT (Sidebar + Details Column)
+   ========================================================================== */
+
 .solutions-physical-security .frame-465 {
   width: 100%;
-  max-width: 1440px;
-  margin: 180px auto 100px auto;
-  padding: 0 48px 0 16px;
+  max-width: 90rem;
+  margin: 5.5rem auto 6rem auto;
+  padding: 0 3rem;
   position: relative;
   z-index: 2;
 }
@@ -202,47 +207,36 @@
 .solutions-physical-security .frame-322 {
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 4.25rem;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
 }
 
-/* Sidebar Solutions Navigation Panel */
+/* Left Sidebar Menu */
 .solutions-physical-security .frame-289 {
+  flex: 0 0 20rem;
+  position: sticky;
+  top: 8rem;
+  align-self: start;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 320px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 24px;
-  padding: 40px 24px;
-  position: sticky;
-  top: 120px;
+  gap: 2.5rem;
 }
 
-.solutions-physical-security .s-o-l-u-t-i-o-n-s {
-  color: #191c1e;
-  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-  font-size: 20px;
+.solutions-physical-security .s-e-r-v-i-c-e-s {
+  color: #091426;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.125rem;
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.solutions-physical-security .s-o-l-u-t-i-o-n-s:hover {
-  color: #0e10ff;
 }
 
 .solutions-physical-security .frame-288 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -250,912 +244,91 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  border-radius: 16px;
+  gap: 1.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  color: #555555;
   position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #434654;
 }
 
 .solutions-physical-security .sidebar-item:hover {
   background: rgba(14, 16, 255, 0.04);
-  color: #000000;
+  color: #0e10ff;
+  transform: translateX(0.25rem);
 }
 
 .solutions-physical-security .sidebar-item.active {
-  background: rgba(14, 16, 255, 0.08);
   color: #0e10ff;
+  font-weight: 700;
 }
 
-.solutions-physical-security .vector-icon {
-  width: 24px;
-  height: 24px;
+.solutions-physical-security .sidebar-item .vector-icon {
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
-  transition: color 0.3s ease;
 }
 
-.solutions-physical-security .sidebar-text {
+.solutions-physical-security .sidebar-item .sidebar-text {
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
+  font-size: 1.0625rem;
+  flex: 1;
 }
 
 .solutions-physical-security .sidebar-item.active .sidebar-text {
-  font-weight: 700;
-}
-
-.solutions-physical-security .active-dot {
-  position: absolute;
-  right: 16px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0e10ff;
-  box-shadow: 0 0 8px rgba(14, 16, 255, 0.8);
-}
-
-/* Content Details Column */
-.solutions-physical-security .frame-561 {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  flex: 1;
-}
-
-/* Page Sub-Heading & Intro */
-.solutions-physical-security .frame-325 {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 100%;
-}
-
-.solutions-physical-security .physical-security-network-infrastructure {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 44px;
-  line-height: 56px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .physical-security-network-infrastructure-span {
-  color: #0e10ff;
-}
-
-.solutions-physical-security .physical-security-network-infrastructure-span2 {
-  color: #191c1e;
-}
-
-.solutions-physical-security .intro-container {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.solutions-physical-security .intro-text {
-  color: #333333;
-  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-  flex: 1;
-}
-
-/* Interactive SVG Network Map styling */
-.solutions-physical-security .group-319-svg {
-  width: 45%;
-  max-width: 420px;
-  flex-shrink: 0;
-  background: radial-gradient(circle, rgba(14, 16, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
-  border-radius: 50%;
-  padding: 10px;
-}
-
-/* SVG Animations */
-@keyframes networkPulse {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
-  }
-}
-
-.solutions-physical-security .pulse-ring {
-  transform-origin: center;
-  animation: networkPulse 2.5s infinite ease-out;
-}
-
-.solutions-physical-security .edge-node {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.solutions-physical-security .edge-node:hover {
-  transform: translateY(-4px);
-}
-
-.solutions-physical-security .core-node {
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.solutions-physical-security .core-node:hover {
-  transform: scale(1.08);
-}
-
-/* Accordions Section */
-.solutions-physical-security .frame-329 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 100%;
-}
-
-.solutions-physical-security .accordion-wrapper {
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0px 4px 20px rgba(14, 16, 255, 0.02);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.solutions-physical-security .accordion-wrapper:hover {
-  border-color: rgba(14, 16, 255, 0.16);
-  box-shadow: 0px 8px 30px rgba(14, 16, 255, 0.04);
-}
-
-.solutions-physical-security .group-284,
-.solutions-physical-security .group-285 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 32px;
-  cursor: pointer;
-  position: relative;
-  background: linear-gradient(180deg, #f8faff 0%, #edf4ff 100%);
-}
-
-.solutions-physical-security .our-approach-title,
-.solutions-physical-security .key-advantages-title {
-  color: #191c1e;
   font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 22px;
   font-weight: 700;
-  margin: 0;
-  z-index: 2;
 }
 
-.solutions-physical-security .chevron-icon {
-  width: 28px;
-  height: 28px;
-  color: #0e10ff;
-  transition: transform 0.3s ease;
-  z-index: 2;
-}
-
-.solutions-physical-security .chevron-icon.open {
-  transform: rotate(180deg);
-}
-
-.solutions-physical-security .accordion-body-text {
-  padding: 32px;
-  color: #333333;
-  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 18px;
-  line-height: 28px;
-  border-top: 1px solid rgba(14, 16, 255, 0.05);
-}
-
-.solutions-physical-security .accordion-body-content {
-  padding: 32px;
-  border-top: 1px solid rgba(14, 16, 255, 0.05);
-}
-
-.solutions-physical-security .frame-3 {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.solutions-physical-security .advantages-visual-wrapper {
-  width: 40%;
-  max-width: 336px;
-  height: 240px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-.solutions-physical-security .rectangle-333 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.solutions-physical-security .advantages-list-wrapper {
-  flex: 1;
-}
-
-.solutions-physical-security .advantages-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.solutions-physical-security .advantages-list li {
-  color: #333333;
-  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 18px;
-  line-height: 24px;
-  position: relative;
-  padding-left: 28px;
-}
-
-.solutions-physical-security .advantages-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background-color: #0e10ff;
-  box-shadow: 0 0 6px rgba(14, 16, 255, 0.4);
-}
-
-/* Physical Security Pillars Section */
-.solutions-physical-security .section-physical-security-pillars {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-.solutions-physical-security .physical-security-pillars-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .physical-security-pillars-span {
-  color: #191c1e;
-}
-
-.solutions-physical-security .physical-security-pillars-span2 {
-  color: #0e10ff;
-}
-
-.solutions-physical-security .pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  width: 100%;
-}
-
-.solutions-physical-security .pillar-card {
-  background: rgba(14, 16, 255, 0.02);
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 20px;
-  padding: 40px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: all 0.4s ease;
-}
-
-.solutions-physical-security .pillar-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(14, 16, 255, 0.2);
-  background: #ffffff;
-  box-shadow: 0 16px 40px rgba(14, 16, 255, 0.08);
-}
-
-.solutions-physical-security .pillar-badge {
-  background: linear-gradient(135deg, rgba(14, 16, 255, 0.1) 0%, rgba(203, 9, 109, 0.1) 100%);
-  border-radius: 16px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0e10ff;
-  transition: transform 0.4s ease;
-}
-
-.solutions-physical-security .pillar-card:hover .pillar-badge {
-  transform: rotate(10deg) scale(1.05);
-}
-
-.solutions-physical-security .pillar-title {
-  color: #191c1e;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .pillar-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-  flex-grow: 1;
-}
-
-.solutions-physical-security .pillar-features {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border-top: 1px solid rgba(14, 16, 255, 0.06);
-  padding-top: 20px;
-}
-
-.solutions-physical-security .pillar-features li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  color: #333333;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.solutions-physical-security .dot-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #cb096d;
-  flex-shrink: 0;
-}
-
-/* Precision Network Foundations Styles */
-.solutions-physical-security .section-network-foundations {
-  display: flex;
-  flex-direction: row;
-  gap: 60px;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background: linear-gradient(135deg, rgba(14, 16, 255, 0.02) 0%, rgba(203, 9, 109, 0.02) 100%);
-  border: 1px solid rgba(14, 16, 255, 0.06);
-  border-radius: 28px;
-  padding: 56px;
-}
-
-.solutions-physical-security .foundations-content {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.solutions-physical-security .precision-network-foundations-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .precision-network-foundations-span {
-  color: #191c1e;
-}
-
-.solutions-physical-security .precision-network-foundations-span2 {
-  color: #0e10ff;
-}
-
-.solutions-physical-security .foundations-features {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.solutions-physical-security .foundation-item {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.solutions-physical-security .item-icon {
-  background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.1);
-  border-radius: 12px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0e10ff;
-  flex-shrink: 0;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.02);
-}
-
-.solutions-physical-security .item-details {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.solutions-physical-security .foundation-item-title {
-  color: #191c1e;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .foundation-item-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-}
-
-.solutions-physical-security .foundations-visual {
-  flex: 0.8;
-  max-width: 400px;
-  position: relative;
-}
-
-.solutions-physical-security .image-card {
-  width: 100%;
-  height: 360px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-}
-
-.solutions-physical-security .technical-cabling {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.solutions-physical-security .reliability-badge {
-  position: absolute;
-  bottom: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
-  border-radius: 16px;
-  padding: 16px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 10px 25px rgba(14, 16, 255, 0.25);
-  width: 85%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.solutions-physical-security .reliability-percent {
-  color: #ffffff;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 32px;
-}
-
-.solutions-physical-security .reliability-label {
-  color: rgba(255, 255, 255, 0.85);
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  margin-top: 4px;
-  text-align: center;
-}
-
-/* Core Products Section Styles */
-.solutions-physical-security .section-core-products {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-.solutions-physical-security .core-products-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .core-products-span {
-  color: #191c1e;
-}
-
-.solutions-physical-security .core-products-span2 {
-  color: #0e10ff;
-}
-
-.solutions-physical-security .products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  width: 100%;
-}
-
-.solutions-physical-security .product-card {
-  background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.08);
-  border-radius: 20px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
-}
-
-.solutions-physical-security .product-card:hover {
-  border-color: rgba(14, 16, 255, 0.2);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(14, 16, 255, 0.05);
-}
-
-.solutions-physical-security .product-icon-box {
-  background: rgba(14, 16, 255, 0.05);
-  border-radius: 12px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0e10ff;
-  transition: all 0.3s ease;
-}
-
-.solutions-physical-security .product-card:hover .product-icon-box {
+.solutions-physical-security .sidebar-item .active-dot {
+  width: 0.375rem;
+  height: 2.25rem;
   background: #0e10ff;
-  color: #ffffff;
-}
-
-.solutions-physical-security .product-title {
-  color: #191c1e;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .product-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 15px;
-  line-height: 22px;
-  margin: 0;
-}
-
-/* Implementation Lifecycle Styles */
-.solutions-physical-security .section-implementation-lifecycle {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-.solutions-physical-security .lifecycle-header {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-
-.solutions-physical-security .implementation-lifecycle-title {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .implementation-lifecycle-span {
-  color: #191c1e;
-}
-
-.solutions-physical-security .implementation-lifecycle-span2 {
-  color: #cb096d;
-}
-
-.solutions-physical-security .lifecycle-subtitle {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 18px;
-  margin: 0;
-}
-
-.solutions-physical-security .lifecycle-steps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
-  width: 100%;
-  position: relative;
-}
-
-/* Desktop Connecting Line */
-.solutions-physical-security .connector-line {
+  border-radius: 2.5rem;
   position: absolute;
-  top: 48px;
-  left: 12%;
-  right: 12%;
-  height: 2px;
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
-  z-index: 1;
-  opacity: 0.3;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.solutions-physical-security .lifecycle-step-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  z-index: 2;
-}
-
-.solutions-physical-security .step-num-icon {
-  background: #ffffff;
-  border: 3px solid #0e10ff;
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0e10ff;
-  position: relative;
-  box-shadow: 0px 8px 24px rgba(14, 16, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.solutions-physical-security .lifecycle-step-card:nth-child(3) .step-num-icon {
-  border-color: #5533ff;
-  color: #5533ff;
-}
-
-.solutions-physical-security .lifecycle-step-card:nth-child(4) .step-num-icon {
-  border-color: #cb096d;
-  color: #cb096d;
-}
-
-.solutions-physical-security .step-glow {
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 1px solid rgba(14, 16, 255, 0.3);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.solutions-physical-security .lifecycle-step-card:hover .step-num-icon {
-  transform: scale(1.05);
-}
-
-.solutions-physical-security .lifecycle-step-card:hover .step-glow {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.solutions-physical-security .step-title {
-  color: #191c1e;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.solutions-physical-security .step-desc {
-  color: #555555;
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
-  max-width: 280px;
-}
-
-/* Partners Block Styling */
-.solutions-physical-security .group-348 {
-  width: 100%;
-  margin-top: 40px;
-}
-
-.solutions-physical-security .frame-464 {
-  background: rgba(14, 16, 255, 0.02);
-  border: 1px solid rgba(14, 16, 255, 0.06);
-  border-radius: 28px;
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 100%;
-}
-
-.solutions-physical-security .cyber-security-partners {
-  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-}
-
-.solutions-physical-security .cyber-security-partners-span {
-  color: #191c1e;
-}
-
-.solutions-physical-security .cyber-security-partners-span2 {
-  color: #0e10ff;
-}
-
-.solutions-physical-security .partners-grid-cyber {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.solutions-physical-security .partner-logo-box {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 16px;
-  width: 180px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
-}
-
-.solutions-physical-security .partner-logo-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(14, 16, 255, 0.06);
-  border-color: rgba(14, 16, 255, 0.1);
-}
-
-.solutions-physical-security .p-logo {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.solutions-physical-security .partner-logo-box:hover .p-logo {
-  opacity: 1;
-}
-
-.solutions-physical-security .font-cisco {
-  font-family: "Arial Black", sans-serif;
-  color: #00b4e5;
-}
-
-.solutions-physical-security .font-autodesk {
-  font-family: "Century Gothic", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  color: #0696d7;
-}
-
-.solutions-physical-security .font-ubiquiti {
-  font-family: "Futura", sans-serif;
-  font-weight: 900;
-  color: #0559cc;
-}
-
-.solutions-physical-security .font-lenovo {
-  font-family: "Arial Black", sans-serif;
-  color: #e2231a;
-  text-transform: uppercase;
-}
-
-.solutions-physical-security .font-sophos {
-  font-family: "Georgia", serif;
-  font-weight: 900;
-  color: #00508f;
-  text-transform: uppercase;
-  font-style: italic;
-}
-
-/* Footer Wrapper */
-.solutions-physical-security .footer-wrapper {
-  margin-top: 80px;
-  width: 100%;
-}
-
-/* Fade-in transitions */
-.solutions-physical-security .fade-in {
-  animation: fadeInEffect 0.5s ease forwards;
-}
-
-@keyframes fadeInEffect {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile Dropdown Navigation */
+/* Mobile Dropdown */
 .solutions-physical-security .mobile-solutions-dropdown {
   display: none;
   width: 100%;
-  position: relative;
-  z-index: 10;
+  margin-bottom: 2rem;
 }
 
 .solutions-physical-security .dropdown-trigger {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  padding: 14px 20px;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.12);
-  border-radius: 12px;
+  border: 1px solid rgba(14, 16, 255, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 1rem rgba(14, 16, 255, 0.05);
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(14, 16, 255, 0.04);
 }
 
 .solutions-physical-security .dropdown-cloud-icon {
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
   color: #0e10ff;
-  flex-shrink: 0;
 }
 
 .solutions-physical-security .dropdown-label {
   font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 1rem;
   color: #0e10ff;
-  flex: 1;
+  font-weight: 700;
 }
 
 .solutions-physical-security .dropdown-chevron {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   color: #0e10ff;
   transition: transform 0.3s ease;
-  flex-shrink: 0;
 }
 
 .solutions-physical-security .dropdown-chevron.open {
@@ -1163,25 +336,21 @@
 }
 
 .solutions-physical-security .dropdown-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
+  margin-top: 0.5rem;
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(14, 16, 255, 0.08);
+  border: 1px solid rgba(14, 16, 255, 0.15);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
 
 .solutions-physical-security .dropdown-item {
-  padding: 14px 20px;
+  padding: 0.875rem 1.25rem;
   font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #555555;
+  font-size: 0.9375rem;
+  color: #091426;
+  border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
-  border-bottom: 1px solid rgba(14, 16, 255, 0.04);
 }
 
 .solutions-physical-security .dropdown-item:last-child {
@@ -1194,324 +363,1132 @@
   font-weight: 700;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 1200px) {
-  .solutions-physical-security .frame-322 {
-    gap: 40px;
-  }
-  .solutions-physical-security .frame-289 {
-    width: 260px;
-    padding: 32px 16px;
-  }
-  .solutions-physical-security .section-network-foundations {
-    flex-direction: column;
-    padding: 40px;
-    gap: 40px;
-  }
-  .solutions-physical-security .foundations-visual {
-    width: 100%;
-    max-width: 100%;
+/* ==========================================================================
+   RIGHT CONTENT COLUMN
+   ========================================================================== */
+
+.solutions-physical-security .frame-561 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  min-width: 0;
+}
+
+/* Section Title & Intro */
+.solutions-physical-security .frame-330 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.solutions-physical-security .frame-325 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.solutions-physical-security .physical-security-network-infrastructure {
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+}
+
+.solutions-physical-security .physical-security-network-infrastructure-span {
+  color: #0e10ff;
+}
+
+.solutions-physical-security .physical-security-network-infrastructure-span2 {
+  color: #091426;
+}
+
+.solutions-physical-security .intro-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.solutions-physical-security .intro-text {
+  flex: 1;
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.solutions-physical-security .wifi-graphic-badge {
+  flex: 0 0 18rem;
+  width: 18rem;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Top-Right Concentric Donut Ellipses */
+.solutions-physical-security .wifi-ellipse-tr-outer {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  border: 1.85rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.solutions-physical-security .wifi-ellipse-tr-inner {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  border: 2.15rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Bottom-Left Concentric Donut Ellipses */
+.solutions-physical-security .wifi-ellipse-bl-outer {
+  position: absolute;
+  bottom: -1.25rem;
+  left: -1.25rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  border: 1.85rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.solutions-physical-security .wifi-ellipse-bl-inner {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  border: 2.15rem solid rgba(228, 234, 255, 0.95);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Central Triangle Wrapper & Image */
+.solutions-physical-security .wifi-triangle-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13rem;
+  height: 13rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solutions-physical-security .wifi-triangle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 1.5px #0084ff) drop-shadow(0 0 3px #0084ff) drop-shadow(0 0 6px rgba(0, 132, 255, 0.6)) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.2));
+}
+
+.solutions-physical-security .wifi-graphic-badge:hover .wifi-triangle-wrapper {
+  transform: translateY(-0.35rem) scale(1.05);
+}
+
+/* ==========================================================================
+   ACCORDIONS (Our Approach & Key Advantages)
+   ========================================================================== */
+
+.solutions-physical-security .frame-329 {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.solutions-physical-security .accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.solutions-physical-security .group-284,
+.solutions-physical-security .group-285 {
+  background: linear-gradient(180deg,
+      rgba(240, 248, 255, 1) 0%,
+      rgba(173, 215, 255, 0.75) 100%);
+  border: 1px solid rgba(14, 16, 255, 0.12);
+  border-radius: 1.25rem;
+  padding: 1.5rem 2.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.04);
+}
+
+.solutions-physical-security .group-284:hover,
+.solutions-physical-security .group-285:hover {
+  background: linear-gradient(180deg,
+      rgba(230, 243, 255, 1) 0%,
+      rgba(155, 205, 255, 0.9) 100%);
+  box-shadow: 0 0.75rem 2rem rgba(14, 16, 255, 0.08);
+}
+
+.solutions-physical-security .our-approach-title,
+.solutions-physical-security .key-advantages-title {
+  color: #091426;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-physical-security .chevron-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #0e10ff;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solutions-physical-security .chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.solutions-physical-security .accordion-body-text {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  padding: 0.5rem 1rem;
+}
+
+.solutions-physical-security .accordion-body-content {
+  padding: 0.5rem 1rem;
+}
+
+.solutions-physical-security .frame-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.solutions-physical-security .advantages-visual-wrapper {
+  flex: 0 0 20rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.solutions-physical-security .rectangle-333 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.solutions-physical-security .advantages-list-wrapper {
+  flex: 1;
+}
+
+.solutions-physical-security .advantages-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.solutions-physical-security .advantages-list li {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.solutions-physical-security .advantages-list li::marker {
+  color: #0e10ff;
+  font-size: 1.25rem;
+}
+
+/* ==========================================================================
+   PHYSICAL SECURITY PILLARS (3-Column Card Grid)
+   ========================================================================== */
+
+.solutions-physical-security .section-physical-security-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.solutions-physical-security .physical-security-pillars-title {
+  text-align: center;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.solutions-physical-security .physical-security-pillars-span {
+  color: #091426;
+}
+
+.solutions-physical-security .physical-security-pillars-span2 {
+  color: #0e10ff;
+}
+
+.solutions-physical-security .pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.solutions-physical-security .pillar-card {
+  background: #f8faff;
+  border: 1px solid #c3c6d6;
+  border-radius: 0.75rem;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.03);
+}
+
+.solutions-physical-security .pillar-card:hover {
+  transform: translateY(-0.35rem);
+  border-color: #0e10ff;
+  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.08);
+}
+
+.solutions-physical-security .pillar-badge {
+  background: #0e10ff;
+  border-radius: 0.75rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1.25rem rgba(14, 16, 255, 0.3);
+}
+
+.solutions-physical-security .pillar-title {
+  color: #091426;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-physical-security .pillar-desc {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.solutions-physical-security .pillar-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(14, 16, 255, 0.08);
+  padding-top: 1rem;
+}
+
+.solutions-physical-security .pillar-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.solutions-physical-security .item-icon-bullet {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   PRECISION NETWORK FOUNDATIONS (Light Blue Banner with Image & Badge)
+   ========================================================================== */
+
+.solutions-physical-security .section-network-foundations {
+  background: #f1f8ff;
+  border-radius: 1.25rem;
+  padding: 4.5rem 3.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.solutions-physical-security .foundations-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.solutions-physical-security .precision-network-foundations-title {
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-align: left;
+}
+
+.solutions-physical-security .precision-network-foundations-span {
+  color: #091426;
+}
+
+.solutions-physical-security .precision-network-foundations-span2 {
+  color: #0e10ff;
+}
+
+.solutions-physical-security .foundations-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.solutions-physical-security .foundation-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.solutions-physical-security .item-icon-box {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1.25rem rgba(14, 16, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.solutions-physical-security .item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.solutions-physical-security .foundation-item-title {
+  color: #091426;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-physical-security .foundation-item-desc {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.solutions-physical-security .foundations-visual {
+  flex: 0 0 24rem;
+  position: relative;
+}
+
+.solutions-physical-security .image-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.solutions-physical-security .technical-cabling {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  display: block;
+}
+
+.solutions-physical-security .reliability-badge {
+  background: #0e10ff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.75rem;
+  position: absolute;
+  left: -2rem;
+  bottom: -1.75rem;
+  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.solutions-physical-security .reliability-percent {
+  color: #ffffff;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.solutions-physical-security .reliability-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   CORE NETWORKING & SECURITY PRODUCTS (3x2 Grid)
+   ========================================================================== */
+
+.solutions-physical-security .section-core-products {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.solutions-physical-security .core-products-title {
+  text-align: center;
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.solutions-physical-security .core-products-span {
+  color: #091426;
+}
+
+.solutions-physical-security .core-products-span2 {
+  color: #0e10ff;
+}
+
+.solutions-physical-security .products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.solutions-physical-security .product-card {
+  background: #ffffff;
+  border: 1px solid #0e10ff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.04);
+}
+
+.solutions-physical-security .product-card:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.12);
+  background: #fdfdff;
+}
+
+.solutions-physical-security .product-icon-box {
+  background: #eceef0;
+  border-radius: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solutions-physical-security .product-title {
+  color: #0e10ff;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-physical-security .product-desc {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   IMPLEMENTATION LIFECYCLE (3-Step Roadmap)
+   ========================================================================== */
+
+.solutions-physical-security .section-implementation-lifecycle {
+  background: #f0f8ff;
+  border-radius: 1.25rem;
+  padding: 4.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.solutions-physical-security .lifecycle-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: center;
+}
+
+.solutions-physical-security .implementation-lifecycle-title {
+  font-family: "Merriweather-SemiBold", sans-serif;
+  font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.solutions-physical-security .implementation-lifecycle-span {
+  color: #0e10ff;
+}
+
+.solutions-physical-security .implementation-lifecycle-span2 {
+  color: #091426;
+}
+
+.solutions-physical-security .lifecycle-subtitle {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 1.0625rem;
+  margin: 0;
+}
+
+.solutions-physical-security .lifecycle-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.solutions-physical-security .connector-line-desktop-only {
+  position: absolute;
+  top: 2.75rem;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: #c3c6d6;
+  z-index: 1;
+}
+
+.solutions-physical-security .lifecycle-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-physical-security .step-num-badge {
+  background: #0e10ff;
+  border: 4px solid #f7f9fb;
+  border-radius: 0.875rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.25);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.solutions-physical-security .lifecycle-step-card:hover .step-num-badge {
+  transform: translateY(-0.25rem) scale(1.05);
+}
+
+.solutions-physical-security .step-title {
+  color: #091426;
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-physical-security .step-desc {
+  color: #434654;
+  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 18rem;
+}
+
+/* ==========================================================================
+   PHYSICAL SECURITY & NETWORK PARTNERS (FULL-WIDTH SECTION)
+   ========================================================================== */
+
+.solutions-physical-security .section-partners-full-width {
+  width: 100%;
+  margin-top: 5rem;
+  background: radial-gradient(closest-side,
+      rgba(255, 255, 255, 0) 42.3%,
+      rgba(207, 245, 255, 0.25) 100%),
+    linear-gradient(180deg,
+      #ffffff 12.4%,
+      rgba(135, 205, 255, 0.28) 58.1%,
+      rgba(255, 255, 255, 0.32) 96.2%);
+  backdrop-filter: blur(15px);
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-physical-security .frame-464 {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4.5rem 3rem 5.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.solutions-physical-security .physical-security-network-infrastructure-partners {
+  text-align: center;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0;
+}
+
+.solutions-physical-security .physical-security-network-infrastructure-partners-span {
+  color: #0e10ff;
+}
+
+.solutions-physical-security .physical-security-network-infrastructure-partners-span2 {
+  color: #111112;
+}
+
+.solutions-physical-security .partners-grid-physical {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.solutions-physical-security .partner-logo-box {
+  background: #ffffff;
+  border: 1px solid #7ea8db;
+  border-radius: 0.75rem;
+  height: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(87, 147, 206, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solutions-physical-security .partner-logo-box:hover {
+  transform: translateY(-4px);
+  border-color: #0e10ff;
+  box-shadow: 0 10px 24px rgba(14, 16, 255, 0.12);
+}
+
+.solutions-physical-security .sophos-text {
+  color: #005696;
+  letter-spacing: 0.12rem;
+  font-size: 1.625rem;
+}
+
+.solutions-physical-security .partner-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.solutions-physical-security .partner-text {
+  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 800;
+  letter-spacing: 0.03rem;
+}
+
+.solutions-physical-security .symantec-text {
+  color: #000000;
+}
+
+.solutions-physical-security .paloalto-text {
+  color: #FA582D;
+  font-weight: 700;
+}
+
+.solutions-physical-security .cisco-text {
+  color: #049FD9;
+  letter-spacing: 0.1rem;
+}
+
+.solutions-physical-security .fortinet-text {
+  color: #EE3124;
+  letter-spacing: 0.05rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Large Monitors (1920px+ XL breakpoints) */
+@media (min-width: 120rem) {
+
+  .solutions-physical-security .frame-462,
+  .solutions-physical-security .frame-465 {
+    max-width: 95rem !important;
   }
 }
 
-@media (max-width: 992px) {
+/* Medium Desktop & Laptops (max-width: 90rem / 1440px) */
+@media (max-width: 90rem) {
+
+  .solutions-physical-security .frame-462,
+  .solutions-physical-security .frame-465 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .solutions-physical-security .partners-grid-physical {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet viewports (max-width: 64rem / 1024px) */
+@media (max-width: 64rem) {
+  .solutions-physical-security .frame-461 {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .solutions-physical-security .frame-460 {
+    width: 100%;
+  }
+
+  .solutions-physical-security .hero-image-wrapper {
+    width: 100%;
+    flex: unset;
+  }
+
   .solutions-physical-security .frame-322 {
     flex-direction: column;
+    gap: 2.5rem;
   }
-  .solutions-physical-security .desktop-sidebar {
+
+  .solutions-physical-security .frame-289.desktop-sidebar {
     display: none;
   }
+
   .solutions-physical-security .mobile-solutions-dropdown {
     display: block;
   }
-  .solutions-physical-security .frame-289 {
-    width: 100%;
-    position: static;
-    padding: 24px;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 20px;
-  }
-  .solutions-physical-security .s-o-l-u-t-i-o-n-s {
-    display: none; /* Hide header solutions on mobile slider */
-  }
-  .solutions-physical-security .frame-288 {
-    flex-direction: row;
-    gap: 12px;
-    width: auto;
-  }
-  .solutions-physical-security .sidebar-item {
-    padding: 12px 16px;
-    width: max-content;
-  }
-  .solutions-physical-security .active-dot {
-    bottom: 4px;
-    right: 50%;
-    transform: translateX(50%);
-    top: auto;
-    width: 4px;
-    height: 4px;
-  }
-  .solutions-physical-security .frame-461 {
-    flex-direction: column;
-    gap: 32px;
-  }
-  .solutions-physical-security .hero-image-wrapper {
-    width: 100%;
-    max-width: 100%;
-    height: 360px;
-  }
+
   .solutions-physical-security .intro-container {
     flex-direction: column;
-    gap: 32px;
+    gap: 2rem;
+    align-items: flex-start;
   }
-  .solutions-physical-security .group-319-svg {
+
+  .solutions-physical-security .wifi-graphic-badge {
+    align-self: center;
+  }
+
+  .solutions-physical-security .frame-3 {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .solutions-physical-security .advantages-visual-wrapper {
     width: 100%;
-    max-width: 320px;
+    flex: unset;
   }
-  .solutions-physical-security .pillars-grid,
+
+  .solutions-physical-security .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .solutions-physical-security .section-network-foundations {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 3rem;
+  }
+
+  .solutions-physical-security .foundations-visual {
+    width: 100%;
+    flex: unset;
+  }
+
+  .solutions-physical-security .technical-cabling {
+    height: 18rem;
+  }
+
+  .solutions-physical-security .reliability-badge {
+    left: 1rem;
+    bottom: -1.25rem;
+  }
+
   .solutions-physical-security .products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
+
   .solutions-physical-security .lifecycle-steps {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 2.5rem;
   }
-  .solutions-physical-security .connector-line {
+
+  .solutions-physical-security .connector-line-desktop-only {
     display: none;
+  }
+
+  .solutions-physical-security .partners-grid-physical {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 
-@media (max-width: 768px) {
+/* Small Tablets and Mobile Landscapes (max-width: 48rem / 768px) */
+@media (max-width: 48rem) {
   .solutions-physical-security .rectangle-217 {
-    height: 540px;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+
+  .solutions-physical-security .frame-462 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    margin-top: 0 !important;
+    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .solutions-physical-security .frame-461 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .solutions-physical-security .frame-460 {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 25rem !important;
+    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
+    padding: 0 !important;
+    height: auto !important;
+    gap: 0.375rem !important;
+  }
+
+  .solutions-physical-security .n-e-t-w-o-r-k-i-n-g.desktop-label {
+    display: none !important;
+  }
+
+  .solutions-physical-security .n-e-t-w-o-r-k-i-n-g.mobile-label {
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.125rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .solutions-physical-security .unified-defense-for-the-modern-perimeter {
+    font-size: clamp(1.65rem, 6.2vw, 2.15rem) !important;
+    line-height: 1.22 !important;
+    text-align: center !important;
+    letter-spacing: -0.4px !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .solutions-physical-security .unified-defense-for-the-modern-perimeter span,
+  .solutions-physical-security .unified-defense-for-the-modern-perimeter-span,
+  .solutions-physical-security .unified-defense-for-the-modern-perimeter-span2 {
+    text-align: center !important;
+    display: inline !important;
+  }
+
+  .solutions-physical-security .hero-image-wrapper {
+    width: 100% !important;
+    max-width: 22rem !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    margin: auto auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .solutions-physical-security .rectangle-323 {
+    width: 100% !important;
+    height: auto !important;
+    max-height: clamp(13rem, 34vh, 17.5rem) !important;
+    object-fit: cover !important;
+    border-radius: 1.25rem !important;
+    display: block !important;
+    box-shadow: none !important;
   }
 
   .solutions-physical-security .ellipse-17,
   .solutions-physical-security .ellipse-18,
   .solutions-physical-security .ellipse-19,
   .solutions-physical-security .ellipse-20 {
-    display: none;
-  }
-
-  .solutions-physical-security .frame-462 {
-    margin-top: 100px;
-    margin-bottom: 32px;
-    padding: 0 16px;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .solutions-physical-security .frame-461 {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .solutions-physical-security .n-e-t-w-o-r-k {
-    font-size: 14px;
-    letter-spacing: 0.1em;
-  }
-
-  .solutions-physical-security .unified-defense-for-the-modern-perimeter {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .solutions-physical-security .hero-image-wrapper {
-    width: 80%;
-    max-width: 450px;
-    height: 220px;
-    border-radius: 0;
-    margin: 0 auto;
+    display: none !important;
   }
 
   .solutions-physical-security .frame-2-bars {
-    margin-top: 12px;
-    justify-content: center;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    z-index: 5 !important;
   }
 
-  .solutions-physical-security .bar {
-    width: 5px;
-    height: 24px;
+  .solutions-physical-security .frame-2-bars .bar {
+    background: #9d9dff !important;
+    border-radius: 1.875rem !important;
+    width: 0.375rem !important;
+    height: 1.75rem !important;
   }
 
-  .solutions-physical-security .bar.active {
-    height: 24px;
+  .solutions-physical-security .frame-2-bars .bar.active {
+    background: #0e10ff !important;
+    height: 2.125rem !important;
   }
 
   .solutions-physical-security .frame-465 {
-    margin-top: 20px;
-    padding: 0 16px;
-    margin-bottom: 40px;
-  }
-
-  .solutions-physical-security .frame-322 {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .solutions-physical-security .frame-289 {
-    display: none;
-  }
-
-  .solutions-physical-security .mobile-solutions-dropdown {
-    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
   }
 
   .solutions-physical-security .frame-561 {
-    gap: 32px;
-  }
-
-  .solutions-physical-security .physical-security-network-infrastructure {
-    font-size: 24px;
-    line-height: 34px;
-  }
-
-  .solutions-physical-security .intro-container {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .solutions-physical-security .intro-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .solutions-physical-security .group-319-svg {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  .solutions-physical-security .accordion-wrapper {
-    border-radius: 14px;
-  }
-
-  .solutions-physical-security .group-284,
-  .solutions-physical-security .group-285 {
-    padding: 16px 18px;
-  }
-
-  .solutions-physical-security .our-approach-title,
-  .solutions-physical-security .key-advantages-title {
-    font-size: 18px;
-  }
-
-  .solutions-physical-security .chevron-icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .solutions-physical-security .accordion-body-text,
-  .solutions-physical-security .accordion-body-content {
-    padding: 16px;
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .solutions-physical-security .frame-3 {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .solutions-physical-security .advantages-visual-wrapper {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .solutions-physical-security .physical-security-pillars-title {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-  }
-
-  .solutions-physical-security .pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .solutions-physical-security .pillar-card {
-    padding: 20px;
-    border-radius: 14px;
-  }
-
-  .solutions-physical-security .pillar-card:hover {
-    transform: none;
-  }
-
-  .solutions-physical-security .precision-network-foundations-title {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-  }
-
-  .solutions-physical-security .section-network-foundations {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .solutions-physical-security .foundations-visual {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .solutions-physical-security .core-products-title {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
+    gap: 3.5rem;
   }
 
   .solutions-physical-security .products-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 
-  .solutions-physical-security .product-card {
-    padding: 20px;
-    border-radius: 14px;
+  .solutions-physical-security .section-implementation-lifecycle {
+    padding: 3rem 1.5rem;
   }
 
-  .solutions-physical-security .product-card:hover {
-    transform: none;
-  }
-
-  .solutions-physical-security .implementation-lifecycle-title {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-  }
-
-  .solutions-physical-security .lifecycle-steps {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .solutions-physical-security .lifecycle-step-card {
-    padding: 20px;
-    border-radius: 14px;
-  }
-
-  .solutions-physical-security .lifecycle-step-card:hover {
-    transform: none;
-  }
-
-  .solutions-physical-security .connector-line {
-    display: none;
-  }
-
-  .solutions-physical-security .cyber-security-partners {
-    font-size: 22px;
-    line-height: 30px;
-    text-align: center;
-  }
-
-  .solutions-physical-security .partners-grid-cyber {
+  .solutions-physical-security .partners-grid-physical {
     grid-template-columns: 1fr;
-    gap: 12px;
+  }
+}
+
+/* Small Mobile Viewports (max-width: 30rem / 480px) */
+@media (max-width: 30rem) {
+
+  .solutions-physical-security .frame-462,
+  .solutions-physical-security .frame-465 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
-  .solutions-physical-security .footer-wrapper {
-    margin-top: 0;
+  .solutions-physical-security .group-284,
+  .solutions-physical-security .group-285 {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .solutions-physical-security .our-approach-title,
+  .solutions-physical-security .key-advantages-title {
+    font-size: 1.25rem;
+  }
+
+  .solutions-physical-security .section-network-foundations {
+    padding: 2.5rem 1.25rem;
   }
 }

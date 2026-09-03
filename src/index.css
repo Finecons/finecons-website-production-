@@ -1,81 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Merriweather+Sans:wght@400;700&family=Wix+Madefor+Text:wght@400;700&display=swap');
 
+/* ==========================================================================
+   ROOT FONT SIZE STRATEGY
+   - Mobile (< 768px):   font-size = 14px  (tight, readable on small screens)
+   - Laptop (768–1919px): font-size = 16px  (exact original design — nothing breaks)
+   - Monitor (1920px+):  font-size scales from 16px → 20px (layout grows for big screens)
+   - 4K (2560px+):       font-size = 20px  (fully scaled up)
+
+   WHY: All rem values in the page CSS files were converted from px ÷ 16.
+   So root must equal 16px on laptops to keep the original proportions.
+   Only above 1920px do we scale up so the site fills large monitors.
+   ========================================================================== */
+html {
+  /* Default: 16px for laptops and standard desktops (768px – 1919px) */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Mobile: slightly smaller base */
+@media (max-width: 48rem) {
+
+  /* 768px */
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Large Monitor (1920px+ & 2560px+): maintain standard 16px root font size so cards and layout margins remain exact */
+@media (min-width: 120rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 160rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
 :root {
   /* Colors */
-  /* Fonts */
+  /* Fonts — converted to REM (old px ÷ 16) */
   --display-mobile-font-family: 'Merriweather', sans-serif;
-  --display-mobile-font-size: 32px;
-  --display-mobile-line-height: 46px;
+  --display-mobile-font-size: 2rem;
+  /* old: 32px */
+  --display-mobile-line-height: 2.875rem;
+  /* old: 46px */
   --display-mobile-font-weight: 600;
   --display-mobile-font-style: normal;
   --display-desktop-font-family: 'Merriweather', sans-serif;
-  --display-desktop-font-size: 64px;
-  --display-desktop-line-height: 96px;
+  --display-desktop-font-size: 4rem;
+  /* old: 64px */
+  --display-desktop-line-height: 6rem;
+  /* old: 96px */
   --display-desktop-font-weight: 600;
   --display-desktop-font-style: normal;
   --display-tab-font-family: 'Merriweather', sans-serif;
-  --display-tab-font-size: 48px;
-  --display-tab-line-height: 64px;
+  --display-tab-font-size: 3rem;
+  /* old: 48px */
+  --display-tab-line-height: 4rem;
+  /* old: 64px */
   --display-tab-font-weight: 600;
   --display-tab-font-style: normal;
   --heading-serif-1-desktop-font-family: 'Merriweather', sans-serif;
-  --heading-serif-1-desktop-font-size: 48px;
-  --heading-serif-1-desktop-line-height: 60px;
+  --heading-serif-1-desktop-font-size: 3rem;
+  /* old: 48px */
+  --heading-serif-1-desktop-line-height: 3.75rem;
+  /* old: 60px */
   --heading-serif-1-desktop-font-weight: 600;
   --heading-serif-1-desktop-font-style: normal;
   --heading-serif-1-mobile-font-family: 'Merriweather', sans-serif;
-  --heading-serif-1-mobile-font-size: 32px;
-  --heading-serif-1-mobile-line-height: 40px;
+  --heading-serif-1-mobile-font-size: 2rem;
+  /* old: 32px */
+  --heading-serif-1-mobile-line-height: 2.5rem;
+  /* old: 40px */
   --heading-serif-1-mobile-font-weight: 600;
   --heading-serif-1-mobile-font-style: normal;
   --heading-sans-2-desktop-font-family: 'Merriweather Sans', sans-serif;
-  --heading-sans-2-desktop-font-size: 28px;
-  --heading-sans-2-desktop-line-height: 36px;
+  --heading-sans-2-desktop-font-size: 1.75rem;
+  /* old: 28px */
+  --heading-sans-2-desktop-line-height: 2.25rem;
+  /* old: 36px */
   --heading-sans-2-desktop-font-weight: 700;
   --heading-sans-2-desktop-font-style: normal;
   --heading-sans-2-mobile-font-family: 'Merriweather Sans', sans-serif;
-  --heading-sans-2-mobile-font-size: 18px;
-  --heading-sans-2-mobile-line-height: 28px;
+  --heading-sans-2-mobile-font-size: 1.125rem;
+  /* old: 18px */
+  --heading-sans-2-mobile-line-height: 1.75rem;
+  /* old: 28px */
   --heading-sans-2-mobile-font-weight: 700;
   --heading-sans-2-mobile-font-style: normal;
   --sub-heading-sans-1-desktop-font-family: 'Merriweather Sans', sans-serif;
-  --sub-heading-sans-1-desktop-font-size: 40px;
-  --sub-heading-sans-1-desktop-line-height: 48px;
+  --sub-heading-sans-1-desktop-font-size: 2.5rem;
+  /* old: 40px */
+  --sub-heading-sans-1-desktop-line-height: 3rem;
+  /* old: 48px */
   --sub-heading-sans-1-desktop-font-weight: 700;
   --sub-heading-sans-1-desktop-font-style: normal;
   --sub-heading-sans-1-mobile-font-family: 'Merriweather Sans', sans-serif;
-  --sub-heading-sans-1-mobile-font-size: 28px;
-  --sub-heading-sans-1-mobile-line-height: 36px;
+  --sub-heading-sans-1-mobile-font-size: 1.75rem;
+  /* old: 28px */
+  --sub-heading-sans-1-mobile-line-height: 2.25rem;
+  /* old: 36px */
   --sub-heading-sans-1-mobile-font-weight: 700;
   --sub-heading-sans-1-mobile-font-style: normal;
   --body-regular-desktop-font-family: 'Merriweather Sans', sans-serif;
-  --body-regular-desktop-font-size: 18px;
-  --body-regular-desktop-line-height: 26px;
+  --body-regular-desktop-font-size: 1.125rem;
+  /* old: 18px */
+  --body-regular-desktop-line-height: 1.625rem;
+  /* old: 26px */
   --body-regular-desktop-font-weight: 400;
   --body-regular-desktop-font-style: normal;
   --body-regular-mobile-font-family: 'Merriweather Sans', sans-serif;
-  --body-regular-mobile-font-size: 14px;
-  --body-regular-mobile-line-height: 26px;
+  --body-regular-mobile-font-size: 0.875rem;
+  /* old: 14px */
+  --body-regular-mobile-line-height: 1.625rem;
+  /* old: 26px */
   --body-regular-mobile-font-weight: 400;
   --body-regular-mobile-font-style: normal;
   --body-regular-2-desktop-font-family: 'Merriweather Sans', sans-serif;
-  --body-regular-2-desktop-font-size: 24px;
-  --body-regular-2-desktop-line-height: 32px;
+  --body-regular-2-desktop-font-size: 1.5rem;
+  /* old: 24px */
+  --body-regular-2-desktop-line-height: 2rem;
+  /* old: 32px */
   --body-regular-2-desktop-font-weight: 400;
   --body-regular-2-desktop-font-style: normal;
   --body-regular-2-mobile-font-family: 'Merriweather Sans', sans-serif;
-  --body-regular-2-mobile-font-size: 18px;
-  --body-regular-2-mobile-line-height: 28px;
+  --body-regular-2-mobile-font-size: 1.125rem;
+  /* old: 18px */
+  --body-regular-2-mobile-line-height: 1.75rem;
+  /* old: 28px */
   --body-regular-2-mobile-font-weight: 400;
   --body-regular-2-mobile-font-style: normal;
   --heading-sans-3-desktop-font-family: 'Merriweather Sans', sans-serif;
-  --heading-sans-3-desktop-font-size: 48px;
-  --heading-sans-3-desktop-line-height: 56px;
+  --heading-sans-3-desktop-font-size: 3rem;
+  /* old: 48px */
+  --heading-sans-3-desktop-line-height: 3.5rem;
+  /* old: 56px */
   --heading-sans-3-desktop-font-weight: 700;
   --heading-sans-3-desktop-font-style: normal;
   --sub-heading-sans-2-desktop-font-family: 'Merriweather Sans', sans-serif;
-  --sub-heading-sans-2-desktop-font-size: 18px;
-  --sub-heading-sans-2-desktop-line-height: 26px;
+  --sub-heading-sans-2-desktop-font-size: 1.125rem;
+  /* old: 18px */
+  --sub-heading-sans-2-desktop-line-height: 1.625rem;
+  /* old: 26px */
   --sub-heading-sans-2-desktop-font-weight: 700;
   --sub-heading-sans-2-desktop-font-style: normal;
 }
@@ -108,9 +177,11 @@ body {
 .footer-wrapper {
   position: relative;
   width: 100%;
-  height: 520px;
+  height: 32.5rem;
+  /* old: 520px */
   background-color: #534eeb;
-  margin-top: 40px;
+  margin-top: 2.5rem;
+  /* old: 40px */
   overflow: hidden;
 }
 
@@ -135,26 +206,33 @@ body {
 
 .footer-wrapper .image-3 {
   position: absolute !important;
-  top: 50px !important;
-  left: 127px !important;
+  top: 3.125rem !important;
+  /* old: 50px */
+  left: 7.9375rem !important;
+  /* old: 127px */
 }
 
 .footer-wrapper .frame-424 {
   position: absolute !important;
-  top: 220px !important;
+  top: 13.75rem !important;
+  /* old: 220px */
   left: auto !important;
-  right: 127px !important;
+  right: 7.9375rem !important;
+  /* old: 127px */
 }
 
 .footer-wrapper .frame-423 {
   position: absolute !important;
-  top: 220px !important;
-  left: 145px !important;
+  top: 13.75rem !important;
+  /* old: 220px */
+  left: 9.0625rem !important;
+  /* old: 145px */
 }
 
 .footer-wrapper .copyright-finecons-2026 {
   position: absolute !important;
-  top: 460px !important;
+  top: 28.75rem !important;
+  /* old: 460px */
   left: 50% !important;
   transform: translateX(-50%) !important;
 }
@@ -163,15 +241,20 @@ body {
 .frame-2 {
   display: flex;
   flex-direction: row;
-  gap: 6px;
+  gap: 0.375rem;
+  /* old: 6px */
   align-items: center;
-  margin-top: 70px;
+  margin-top: 4.375rem;
+  /* old: 70px */
 }
 
 .frame-2 div {
-  border-radius: 30px;
-  width: 6px;
-  height: 37px;
+  border-radius: 1.875rem;
+  /* old: 30px */
+  width: 0.375rem;
+  /* old: 6px */
+  height: 2.3125rem;
+  /* old: 37px */
 }
 
 .frame-2 .active-rect {
@@ -190,25 +273,31 @@ body {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(0.5rem);
+  /* old: 8px */
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 1.25rem;
+  /* old: 20px */
   animation: fadeIn 0.3s ease-out;
 }
 
 .use-case-modal-card {
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 1.5rem;
+  /* old: 24px */
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
+  /* old: 800px */
   max-height: 85vh;
   overflow-y: auto;
   position: relative;
-  padding: 48px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  padding: 3rem;
+  /* old: 48px */
+  box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.15);
+  /* old: 0 20px 50px */
   animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -220,11 +309,14 @@ body {
 
 .close-modal-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 1.5rem;
+  /* old: 24px */
+  right: 1.5rem;
+  /* old: 24px */
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 2rem;
+  /* old: 32px */
   color: #777777;
   cursor: pointer;
   z-index: 10;
@@ -239,10 +331,14 @@ body {
 /* Background concentric circles matching natural styling */
 .modal-decorative-circles {
   position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 220px;
-  height: 220px;
+  top: -2.5rem;
+  /* old: -40px */
+  right: -2.5rem;
+  /* old: -40px */
+  width: 13.75rem;
+  /* old: 220px */
+  height: 13.75rem;
+  /* old: 220px */
   pointer-events: none;
 }
 
@@ -256,35 +352,50 @@ body {
 }
 
 .modal-circle-1 {
-  width: 220px;
-  height: 220px;
-  border-width: 28px;
+  width: 13.75rem;
+  /* old: 220px */
+  height: 13.75rem;
+  /* old: 220px */
+  border-width: 1.75rem;
+  /* old: 28px */
   top: 0;
   left: 0;
 }
 
 .modal-circle-2 {
-  width: 150px;
-  height: 150px;
-  border-width: 24px;
-  top: 35px;
-  left: 35px;
+  width: 9.375rem;
+  /* old: 150px */
+  height: 9.375rem;
+  /* old: 150px */
+  border-width: 1.5rem;
+  /* old: 24px */
+  top: 2.1875rem;
+  /* old: 35px */
+  left: 2.1875rem;
+  /* old: 35px */
 }
 
 .modal-circle-3 {
-  width: 80px;
-  height: 80px;
-  border-width: 20px;
-  top: 70px;
-  left: 70px;
+  width: 5rem;
+  /* old: 80px */
+  height: 5rem;
+  /* old: 80px */
+  border-width: 1.25rem;
+  /* old: 20px */
+  top: 4.375rem;
+  /* old: 70px */
+  left: 4.375rem;
+  /* old: 70px */
 }
 
 /* Naturals Logo Styling */
 .naturals-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 36px;
-  padding-bottom: 20px;
+  margin-bottom: 2.25rem;
+  /* old: 36px */
+  padding-bottom: 1.25rem;
+  /* old: 20px */
   border-bottom: none;
 }
 
@@ -298,9 +409,11 @@ body {
 .modal-section {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0.875rem;
+  /* old: 14px */
   text-align: left;
-  padding: 28px 0;
+  padding: 1.75rem 0;
+  /* old: 28px 0 */
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -318,12 +431,15 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 0.625rem;
+  /* old: 10px */
 }
 
 .modal-section-header .section-icon {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  /* old: 24px */
+  height: 1.5rem;
+  /* old: 24px */
   flex-shrink: 0;
   stroke: #0e10ff;
 }
@@ -331,7 +447,8 @@ body {
 .modal-section-header h3 {
   color: #0e10ff;
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-  font-size: 22px;
+  font-size: 1.375rem;
+  /* old: 22px */
   font-weight: 700;
   margin: 0;
 }
@@ -339,14 +456,17 @@ body {
 .modal-section-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-left: 34px;
+  gap: 0.625rem;
+  /* old: 10px */
+  padding-left: 2.125rem;
+  /* old: 34px */
 }
 
 .modal-section-content .headline {
   color: #191c1e;
   font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 13px;
+  font-size: 0.8125rem;
+  /* old: 13px */
   font-weight: 400;
   line-height: 1.6;
 }
@@ -357,23 +477,27 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
+  /* old: 8px */
 }
 
 .modal-section-content ul li {
   color: #444444;
   font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 13px;
+  font-size: 0.8125rem;
+  /* old: 13px */
   line-height: 1.6;
   position: relative;
-  padding-left: 14px;
+  padding-left: 0.875rem;
+  /* old: 14px */
 }
 
 .modal-section-content ul li::before {
   content: "•";
   color: #0e10ff;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
+  /* old: 16px */
   position: absolute;
   left: 0;
   top: -1px;
@@ -382,10 +506,12 @@ body {
 .modal-section-content .footer-text {
   color: #555555;
   font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-  font-size: 13px;
+  font-size: 0.8125rem;
+  /* old: 13px */
   font-weight: 400;
   line-height: 1.6;
-  margin-top: 4px;
+  margin-top: 0.25rem;
+  /* old: 4px */
 }
 
 /* Animations */
@@ -401,7 +527,8 @@ body {
 
 @keyframes scaleIn {
   from {
-    transform: scale(0.9) translateY(20px);
+    transform: scale(0.9) translateY(1.25rem);
+    /* old: 20px */
     opacity: 0;
   }
 
@@ -411,16 +538,20 @@ body {
   }
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
+/* Mobile Responsive — 37.5rem = 600px */
+@media (max-width: 37.5rem) {
   .use-case-modal-overlay {
-    padding: 12px;
+    padding: 0.75rem;
+    /* old: 12px */
     align-items: center;
     justify-content: center;
   }
+
   .use-case-modal-card {
-    padding: 28px 20px;
-    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
+    /* old: 28px 20px */
+    border-radius: 1rem;
+    /* old: 16px */
     animation: none;
     position: relative;
     left: 0;
@@ -430,85 +561,147 @@ body {
   }
 
   .close-modal-btn {
-    top: 16px;
-    right: 16px;
-    font-size: 28px;
+    top: 1rem;
+    /* old: 16px */
+    right: 1rem;
+    /* old: 16px */
+    font-size: 1.75rem;
+    /* old: 28px */
   }
 
   .naturals-logo {
-    margin-bottom: 24px;
-    padding-bottom: 16px;
+    margin-bottom: 1.5rem;
+    /* old: 24px */
+    padding-bottom: 1rem;
+    /* old: 16px */
   }
+
   .naturals-logo svg {
-    width: 260px;
-    height: 64px;
+    width: 16.25rem;
+    /* old: 260px */
+    height: 4rem;
+    /* old: 64px */
   }
+
   .modal-sections {
     gap: 0;
   }
+
   .modal-section {
-    padding: 20px 0;
+    padding: 1.25rem 0;
+    /* old: 20px 0 */
   }
+
   .modal-section-header h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* old: 18px */
   }
+
   .modal-section-content {
-    padding-left: 34px;
+    padding-left: 2.125rem;
+    /* old: 34px */
   }
+
   .modal-decorative-circles {
-    width: 160px;
-    height: 160px;
-    top: -30px;
-    right: -30px;
+    width: 10rem;
+    /* old: 160px */
+    height: 10rem;
+    /* old: 160px */
+    top: -1.875rem;
+    /* old: -30px */
+    right: -1.875rem;
+    /* old: -30px */
   }
-  .modal-circle-1 { width: 160px; height: 160px; border-width: 22px; }
-  .modal-circle-2 { width: 110px; height: 110px; border-width: 18px; top: 25px; left: 25px; }
-  .modal-circle-3 { width: 60px; height: 60px; border-width: 14px; top: 50px; left: 50px; }
+
+  .modal-circle-1 {
+    width: 10rem;
+    /* old: 160px */
+    height: 10rem;
+    /* old: 160px */
+    border-width: 1.375rem;
+    /* old: 22px */
+  }
+
+  .modal-circle-2 {
+    width: 6.875rem;
+    /* old: 110px */
+    height: 6.875rem;
+    /* old: 110px */
+    border-width: 1.125rem;
+    /* old: 18px */
+    top: 1.5625rem;
+    /* old: 25px */
+    left: 1.5625rem;
+    /* old: 25px */
+  }
+
+  .modal-circle-3 {
+    width: 3.75rem;
+    /* old: 60px */
+    height: 3.75rem;
+    /* old: 60px */
+    border-width: 0.875rem;
+    /* old: 14px */
+    top: 3.125rem;
+    /* old: 50px */
+    left: 3.125rem;
+    /* old: 50px */
+  }
 }
 
-/* Global Footer Overrides to enforce a compact 300px height on all pages */
-:root [class*="footer-wrapper"] {
-  height: 300px !important;
-  min-height: 300px !important;
+/* Global Footer Overrides — enforce enlarged 420px height on all pages */
+:root:root:root [class*="footer-wrapper"] {
+  height: 26.25rem !important;
+  /* old: 420px */
+  min-height: 26.25rem !important;
 }
 
-:root [class*="footer-wrapper"] .rectangle-266,
-:root [class*="footer-wrapper"] .mask-group {
-  height: 300px !important;
+:root:root:root [class*="footer-wrapper"] .rectangle-266,
+:root:root:root [class*="footer-wrapper"] .mask-group {
+  height: 26.25rem !important;
+  /* old: 420px */
 }
 
 /* Logo scaling & positioning */
-:root [class*="footer-wrapper"] .image-3 {
-  width: 250px !important;
-  height: 65px !important;
-  max-width: 250px !important;
-  max-height: 65px !important;
-  top: 30px !important;
-  left: 80px !important;
+:root:root:root [class*="footer-wrapper"] .image-3 {
+  width: 20rem !important;
+  /* old: 320px */
+  height: 5.1875rem !important;
+  /* old: 83px */
+  max-width: 20rem !important;
+  max-height: 5.1875rem !important;
+  top: 2.5rem !important;
+  /* old: 40px */
+  left: 5rem !important;
+  /* old: 80px */
   position: absolute !important;
   object-fit: contain !important;
 }
 
 /* Contact Details Wrapper positioning */
-:root [class*="footer-wrapper"] .frame-423 {
+:root:root:root [class*="footer-wrapper"] .frame-423 {
   display: flex !important;
   flex-direction: column !important;
-  gap: 10px !important;
-  top: 115px !important;
-  left: 80px !important;
+  gap: 0.875rem !important;
+  /* old: 14px */
+  top: 9.375rem !important;
+  /* old: 150px */
+  left: 5rem !important;
+  /* old: 80px */
   width: auto !important;
   height: auto !important;
   position: absolute !important;
 }
 
 /* Contact rows: Address, Phone, Email alignment */
-:root [class*="footer-wrapper"] .group-246,
-:root [class*="footer-wrapper"] .group-245,
-:root [class*="footer-wrapper"] .frame-244 {
+:root:root:root [class*="footer-wrapper"] .group-246,
+:root:root:root [class*="footer-wrapper"] .group-245,
+:root:root:root [class*="footer-wrapper"] .frame-244 {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 12px !important;
+  gap: 0.75rem !important;
+  /* old: 12px */
   width: auto !important;
   height: auto !important;
   position: relative !important;
@@ -516,42 +709,48 @@ body {
   left: auto !important;
 }
 
-/* Scale down icon circles */
-:root [class*="footer-wrapper"] .group-363,
-:root [class*="footer-wrapper"] .group-364,
-:root [class*="footer-wrapper"] .group-365 {
-  width: 36px !important;
-  height: 36px !important;
+/* Scale icon circles */
+:root:root:root [class*="footer-wrapper"] .group-363,
+:root:root:root [class*="footer-wrapper"] .group-364,
+:root:root:root [class*="footer-wrapper"] .group-365 {
+  width: 2.75rem !important;
+  /* old: 44px */
+  height: 2.75rem !important;
   position: relative !important;
   flex-shrink: 0 !important;
 }
 
-:root [class*="footer-wrapper"] .ellipse-6,
-:root [class*="footer-wrapper"] .ellipse-7,
-:root [class*="footer-wrapper"] .ellipse-8 {
-  width: 36px !important;
-  height: 36px !important;
+:root:root:root [class*="footer-wrapper"] .ellipse-6,
+:root:root:root [class*="footer-wrapper"] .ellipse-7,
+:root:root:root [class*="footer-wrapper"] .ellipse-8 {
+  width: 2.75rem !important;
+  /* old: 44px */
+  height: 2.75rem !important;
   top: 0 !important;
   left: 0 !important;
 }
 
-/* Scale down SVGs inside icon circles */
-:root [class*="footer-wrapper"] .lucide-map-pin,
-:root [class*="footer-wrapper"] .lucide-phone,
-:root [class*="footer-wrapper"] .lucide-mail {
-  width: 18px !important;
-  height: 18px !important;
-  top: 9px !important;
-  left: 9px !important;
+/* Scale SVGs inside icon circles */
+:root:root:root [class*="footer-wrapper"] .lucide-map-pin,
+:root:root:root [class*="footer-wrapper"] .lucide-phone,
+:root:root:root [class*="footer-wrapper"] .lucide-mail {
+  width: 1.375rem !important;
+  /* old: 22px */
+  height: 1.375rem !important;
+  top: 0.6875rem !important;
+  /* old: 11px */
+  left: 0.6875rem !important;
   position: absolute !important;
 }
 
-/* Scale down contact text font sizes & remove offsets */
-:root [class*="footer-wrapper"] .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018,
-:root [class*="footer-wrapper"] ._91-44-43927600,
-:root [class*="footer-wrapper"] .info-finecons-com {
-  font-size: 16px !important;
-  line-height: 20px !important;
+/* Contact text font sizes */
+:root:root:root [class*="footer-wrapper"] .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018,
+:root:root:root [class*="footer-wrapper"] ._91-44-43927600,
+:root:root:root [class*="footer-wrapper"] .info-finecons-com {
+  font-size: 1.25rem !important;
+  /* old: 20px */
+  line-height: 1.625rem !important;
+  /* old: 26px */
   color: #ffffff !important;
   position: relative !important;
   top: auto !important;
@@ -562,23 +761,28 @@ body {
 }
 
 /* Grid of page links positioning & text styling */
-:root [class*="footer-wrapper"] .frame-424 {
+:root:root:root [class*="footer-wrapper"] .frame-424 {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 16px 28px !important;
-  top: 115px !important;
-  right: 80px !important;
+  gap: 1.375rem 2.25rem !important;
+  /* old: 22px 36px */
+  top: 9.375rem !important;
+  /* old: 150px */
+  right: 5rem !important;
+  /* old: 80px */
   left: auto !important;
   position: absolute !important;
   width: auto !important;
 }
 
-:root [class*="footer-wrapper"] .privacy-policy,
-:root [class*="footer-wrapper"] .terms-conditions,
-:root [class*="footer-wrapper"] .compliance-disclosure,
-:root [class*="footer-wrapper"] .case-studies {
-  font-size: 16px !important;
-  line-height: 22px !important;
+:root:root:root [class*="footer-wrapper"] .privacy-policy,
+:root:root:root [class*="footer-wrapper"] .terms-conditions,
+:root:root:root [class*="footer-wrapper"] .compliance-disclosure,
+:root:root:root [class*="footer-wrapper"] .case-studies {
+  font-size: 1.25rem !important;
+  /* old: 20px */
+  line-height: 1.625rem !important;
+  /* old: 26px */
   color: #ffffff !important;
   cursor: pointer !important;
   transition: opacity 0.2s ease !important;
@@ -586,18 +790,20 @@ body {
   font-weight: 400 !important;
 }
 
-:root [class*="footer-wrapper"] .privacy-policy:hover,
-:root [class*="footer-wrapper"] .terms-conditions:hover,
-:root [class*="footer-wrapper"] .compliance-disclosure:hover,
-:root [class*="footer-wrapper"] .case-studies:hover {
+:root:root:root [class*="footer-wrapper"] .privacy-policy:hover,
+:root:root:root [class*="footer-wrapper"] .terms-conditions:hover,
+:root:root:root [class*="footer-wrapper"] .compliance-disclosure:hover,
+:root:root:root [class*="footer-wrapper"] .case-studies:hover {
   opacity: 0.8 !important;
 }
 
 /* Copyright centering */
-:root [class*="footer-wrapper"] .copyright-finecons-2026 {
-  font-size: 12px !important;
+:root:root:root [class*="footer-wrapper"] .copyright-finecons-2026 {
+  font-size: 0.9375rem !important;
+  /* old: 15px */
   color: rgba(255, 255, 255, 0.7) !important;
-  bottom: 15px !important;
+  bottom: 1.5625rem !important;
+  /* old: 25px */
   top: auto !important;
   left: 0 !important;
   right: 0 !important;
@@ -611,9 +817,6 @@ body {
   translate: none !important;
 }
 
-
-
-
 /* Global Mobile Navbar responsive overrides and Hamburger Menu */
 .navbar-hamburger {
   display: none;
@@ -622,8 +825,10 @@ body {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 1.5rem;
+  /* old: 24px */
+  height: 1.125rem;
+  /* old: 18px */
   padding: 0;
   z-index: 1002;
 }
@@ -631,14 +836,17 @@ body {
 .hamburger-line {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
+  /* old: 2px */
   background-color: #333333;
-  border-radius: 2px;
+  border-radius: 0.125rem;
+  /* old: 2px */
   transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .hamburger-line.open:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
+  /* old: 8px */
   background-color: #0e10ff;
 }
 
@@ -647,7 +855,8 @@ body {
 }
 
 .hamburger-line.open:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
+  /* old: -8px */
   background-color: #0e10ff;
 }
 
@@ -659,7 +868,8 @@ body {
   display: flex !important;
 }
 
-@media (max-width: 768px) {
+/* 48rem = 768px */
+@media (max-width: 48rem) {
   .navbar-hamburger {
     display: flex !important;
   }
@@ -675,18 +885,24 @@ body {
   /* Force responsive width/padding on Navbar container */
   .frame-376 {
     width: 90% !important;
-    max-width: 440px !important;
-    height: 70px !important;
-    border-radius: 24px !important;
-    padding: 10px 20px !important;
-    top: 15px !important;
+    max-width: 27.5rem !important;
+    /* old: 440px */
+    height: 4.375rem !important;
+    /* old: 70px */
+    border-radius: 1.5rem !important;
+    /* old: 24px */
+    padding: 0.625rem 1.25rem !important;
+    /* old: 10px 20px */
+    top: 0.9375rem !important;
+    /* old: 15px */
     left: 50% !important;
     transform: translateX(-50%) !important;
     position: absolute !important;
   }
 
   .finecons-logo-3 {
-    height: 36px !important;
+    height: 2.25rem !important;
+    /* old: 36px */
     width: auto !important;
   }
 
@@ -699,14 +915,19 @@ body {
     display: flex !important;
     flex-direction: column !important;
     position: absolute !important;
-    top: 80px !important;
+    top: 5rem !important;
+    /* old: 80px */
     left: 0 !important;
     width: 100% !important;
     background: #ffffff !important;
-    border-radius: 20px !important;
-    box-shadow: 0 15px 35px rgba(14, 16, 255, 0.12) !important;
-    padding: 24px !important;
-    gap: 20px !important;
+    border-radius: 1.25rem !important;
+    /* old: 20px */
+    box-shadow: 0 0.9375rem 2.1875rem rgba(14, 16, 255, 0.12) !important;
+    /* old: 0 15px 35px */
+    padding: 1.5rem !important;
+    /* old: 24px */
+    gap: 1.25rem !important;
+    /* old: 20px */
     z-index: 1001 !important;
     align-items: center !important;
   }
@@ -714,52 +935,35 @@ body {
   .group-274.mobile-open .about,
   .group-274.mobile-open .partners,
   .group-274.mobile-open .solutions {
-    font-size: 18px !important;
-    padding: 10px 0 !important;
+    font-size: 1.125rem !important;
+    /* old: 18px */
+    padding: 0.625rem 0 !important;
+    /* old: 10px 0 */
     width: 100% !important;
     text-align: center !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
   }
 
   .group-274.mobile-open .group-353 {
-    margin-top: 10px !important;
+    margin-top: 0.625rem !important;
+    /* old: 10px */
     width: 100% !important;
-    max-width: 200px !important;
-  }
-
-  /* Proportional scaling for vector graphic headers on mobile */
-  .about-hero-visual {
-    width: 420px !important;
-    height: 380px !important;
-    transform: scale(0.8) !important;
-    transform-origin: center center !important;
-    margin: -30px auto !important;
-    position: relative !important;
-  }
-
-  .about-hero-visual .ellipse-4,
-  .about-hero-visual .ellipse-2,
-  .about-hero-visual .ellipse-3 {
-    max-width: 100% !important;
+    max-width: 12.5rem !important;
+    /* old: 200px */
   }
 }
 
-@media (max-width: 480px) {
-  .about-hero-visual {
-    transform: scale(0.65) !important;
-    margin: -50px auto !important;
-  }
-}
-
-/* Hide footer completely on mobile */
-@media (max-width: 768px) {
+/* Hide footer completely on mobile — 48rem = 768px */
+@media (max-width: 48rem) {
   html body .footer-wrapper {
     display: none !important;
   }
 }
 
 /* ==========================================================================
-   GLOBAL TYPOGRAPHY BALANCING SYSTEM (Desktop, Tablet & Mobile)
+   GLOBAL TYPOGRAPHY BALANCING SYSTEM
+   All font sizes use clamp() for fluid scaling across all viewports.
+   Formula: clamp(mobile_rem, preferred_vw, desktop_rem)
    ========================================================================== */
 
 /* 1. Main Hero Headings (All Page Titles) */
@@ -777,8 +981,10 @@ body {
 .powered-by-azure-built-for-scale,
 h1 {
   font-family: var(--display-desktop-font-family, "Merriweather", sans-serif) !important;
-  font-size: 52px !important;
-  line-height: 64px !important;
+  font-size: clamp(1.75rem, 5vw, 3.25rem) !important;
+  /* old: fixed 52px → fluid 28px–52px */
+  line-height: clamp(2.25rem, 6.5vw, 4rem) !important;
+  /* old: 64px */
   font-weight: 700 !important;
   letter-spacing: -0.5px !important;
   word-break: normal !important;
@@ -853,8 +1059,10 @@ h2,
 .compliance-title,
 .leadership-team {
   font-family: var(--heading-serif-1-desktop-font-family, "Merriweather", sans-serif) !important;
-  font-size: 36px !important;
-  line-height: 46px !important;
+  font-size: clamp(1.5rem, 4vw, 2.25rem) !important;
+  /* old: fixed 36px → fluid 24px–36px */
+  line-height: clamp(1.875rem, 5vw, 2.875rem) !important;
+  /* old: 46px */
   font-weight: 600 !important;
   word-break: keep-all !important;
   overflow-wrap: break-word !important;
@@ -872,15 +1080,18 @@ h2,
 }
 
 /* 3. Cards Titles, Subheadings and Labels (H3, H4 and equivalents) */
-h3, h4,
+h3,
+h4,
 .card-title,
 .offering-card-title,
 .service-card-title,
 .capability-title,
 .ecosystem-card-title {
   font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif) !important;
-  font-size: 22px !important;
-  line-height: 30px !important;
+  font-size: clamp(1rem, 2.5vw, 1.375rem) !important;
+  /* old: fixed 22px → fluid 16px–22px */
+  line-height: clamp(1.375rem, 3vw, 1.875rem) !important;
+  /* old: 30px */
   font-weight: 700 !important;
 }
 
@@ -894,8 +1105,10 @@ p,
 .description-text,
 .hero-description {
   font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif) !important;
-  font-size: 18px !important;
-  line-height: 28px !important;
+  font-size: clamp(0.875rem, 2vw, 1.125rem) !important;
+  /* old: fixed 18px → fluid 14px–18px */
+  line-height: clamp(1.375rem, 2.5vw, 1.75rem) !important;
+  /* old: 28px */
   color: #333333 !important;
   font-weight: 400 !important;
 }
@@ -906,12 +1119,15 @@ p,
 .label-text,
 .timeline-year,
 .timeline-title {
-  font-size: 13px !important;
+  font-size: 0.8125rem !important;
+  /* old: 13px */
   font-weight: 600 !important;
 }
 
-/* Responsive Scaling for Tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
+/* Large Desktop Enhancement — 90rem = 1440px */
+@media (min-width: 90rem) {
+
+  h1,
   .shaping-the-future-through-intelligent-solutions,
   .enabling-businesses-to-deliver-outstanding-customer-experiences,
   .solutions-that-deliver-results,
@@ -923,10 +1139,30 @@ p,
   .support-beyond-expectations,
   .scale-fast-spend-smart,
   .powered-by-aws-built-for-scale,
-  .powered-by-azure-built-for-scale,
-  h1 {
-    font-size: 42px !important;
-    line-height: 52px !important;
+  .powered-by-azure-built-for-scale {
+    font-size: clamp(3rem, 4vw, 4rem) !important;
+    line-height: clamp(3.75rem, 5vw, 5rem) !important;
+  }
+}
+
+/* Extra Large Desktop — 120rem = 1920px */
+@media (min-width: 120rem) {
+
+  h1,
+  .shaping-the-future-through-intelligent-solutions,
+  .enabling-businesses-to-deliver-outstanding-customer-experiences,
+  .solutions-that-deliver-results,
+  .building-success-through-partnerships,
+  .it-solutions-inquiry,
+  .advanced-threat-defense-digital-forensics,
+  .unified-defense-for-the-modern-perimeter,
+  .resilient-infrastructure-for-the-modern-enterprise,
+  .support-beyond-expectations,
+  .scale-fast-spend-smart,
+  .powered-by-aws-built-for-scale,
+  .powered-by-azure-built-for-scale {
+    font-size: clamp(3.5rem, 3.5vw, 5rem) !important;
+    line-height: 1.2 !important;
   }
 
   h2,
@@ -942,18 +1178,19 @@ p,
   .key-capabilities,
   .compliance-title,
   .leadership-team {
-    font-size: 28px !important;
-    line-height: 38px !important;
+    font-size: clamp(2.25rem, 3vw, 3rem) !important;
+    line-height: 1.3 !important;
   }
 
-  h3, h4,
+  h3,
+  h4,
   .card-title,
   .offering-card-title,
   .service-card-title,
   .capability-title,
   .ecosystem-card-title {
-    font-size: 20px !important;
-    line-height: 28px !important;
+    font-size: clamp(1.375rem, 1.8vw, 2rem) !important;
+    line-height: 1.4 !important;
   }
 
   p,
@@ -964,13 +1201,88 @@ p,
   .offering-desc,
   .description-text,
   .hero-description {
-    font-size: 16px !important;
-    line-height: 26px !important;
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem) !important;
+    line-height: 1.6 !important;
+  }
+
+  /* All page layout container overrides for large screens (1920px+) to halve margins and paddings */
+  .about-hero-inner,
+  .inside-section,
+  .what-we-do-section,
+  .team-section,
+  .map-container,
+  .social-section-inner,
+  .licensing-hero-inner,
+  .section-vendor-solutions-bento-grid,
+  .responsibilities-split-container,
+  .cta-inner-container,
+  .frame-535,
+  .frame-550,
+  .partners-hero-inner,
+  .partners-content-container,
+  .frame-437,
+  .frame-441,
+  .frame-438 {
+    max-width: 95rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .cloud-aws .frame-496,
+  .cloud-aws .frame-498,
+  .cloud-aws .frame-503,
+  .cloud-aws .frame-506,
+  .cloud-aws .frame-507,
+  .cloud-azure .frame-496,
+  .cloud-azure .frame-498,
+  .cloud-azure .frame-503,
+  .cloud-azure .frame-506,
+  .cloud-azure .frame-507,
+  .solutions-cloud-solutions .frame-462,
+  .solutions-cloud-solutions .frame-465,
+  .solutions-cyber-security .frame-462,
+  .solutions-cyber-security .frame-465,
+  .solutions-it-infrastructure .frame-462,
+  .solutions-it-infrastructure .frame-465,
+  .solutions-managed-services .frame-462,
+  .solutions-managed-services .frame-465,
+  .solutions-physical-security .frame-462,
+  .solutions-physical-security .frame-465 {
+    max-width: 100rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 }
 
-/* Responsive Scaling for Mobile (max-width: 768px) */
-@media (max-width: 768px) {
+/* ==========================================================================
+   BIG MONITOR TYPOGRAPHY (1920px+ & 2560px+)
+   - Reduces font sizes by 5px to 12px strictly for big screens
+   - Content and paragraphs are noticeably smaller than headings
+   - Margins, card dimensions, and layout structures remain unchanged
+   ========================================================================== */
+@media (min-width: 120rem) {
+  :root {
+    --display-desktop-font-size: 3.375rem; /* 54px (reduced by 10px from 64px) */
+    --display-desktop-line-height: 4.25rem;
+    --heading-serif-1-desktop-font-size: 2.5rem; /* 40px (reduced by 8px from 48px) */
+    --heading-serif-1-desktop-line-height: 3.25rem;
+    --heading-sans-2-desktop-font-size: 1.5rem; /* 24px (reduced by 4px from 28px) */
+    --heading-sans-2-desktop-line-height: 2rem;
+    --sub-heading-sans-1-desktop-font-size: 2rem; /* 32px (reduced by 8px from 40px) */
+    --sub-heading-sans-1-desktop-line-height: 2.625rem;
+    --sub-heading-sans-2-desktop-font-size: 1.125rem; /* 18px (reduced from 20px) */
+    --sub-heading-sans-2-desktop-line-height: 1.6rem;
+    --body-regular-desktop-font-size: 1rem; /* 16px (reduced by 2px from 18px) */
+    --body-regular-desktop-line-height: 1.6rem;
+    --body-regular-2-desktop-font-size: 1.25rem; /* 20px (reduced by 4px from 24px) */
+    --body-regular-2-desktop-line-height: 1.75rem;
+    --heading-sans-3-desktop-font-size: 2.5rem; /* 40px (reduced by 8px from 48px) */
+    --heading-sans-3-desktop-line-height: 3.25rem;
+  }
+
+  /* Hero & Display Headings (54px across all pages) */
+  h1,
+  .hero-title,
   .shaping-the-future-through-intelligent-solutions,
   .enabling-businesses-to-deliver-outstanding-customer-experiences,
   .solutions-that-deliver-results,
@@ -982,12 +1294,12 @@ p,
   .support-beyond-expectations,
   .scale-fast-spend-smart,
   .powered-by-aws-built-for-scale,
-  .powered-by-azure-built-for-scale,
-  h1 {
-    font-size: 32px !important;
-    line-height: 42px !important;
+  .powered-by-azure-built-for-scale {
+    font-size: 3.375rem !important; /* 54px */
+    line-height: 1.25 !important;
   }
 
+  /* Section Headings (40px across all sections and pages) */
   h2,
   .our-smart-solutions,
   .partner-ecosystem,
@@ -1000,61 +1312,74 @@ p,
   .key-offerings,
   .key-capabilities,
   .compliance-title,
-  .leadership-team {
-    font-size: 24px !important;
-    line-height: 32px !important;
+  .leadership-team,
+  .it-infrastructure-title,
+  .core-infrastructure-pillars,
+  .featured-enterprise-hardware,
+  .it-infrastructure-partners,
+  .cyber-security-title {
+    font-size: 2.5rem !important; /* 40px */
+    line-height: 1.3 !important;
   }
 
-  h3, h4,
+  /* Subheadings & Section Block Titles (28px across all pages) */
+  h3,
+  .our-approach-title,
+  .key-advantages-title,
+  .technical-expertise-title,
+  .secure-global-deployment,
+  .strategic-pillars-title,
+  .case-studies-heading {
+    font-size: 1.75rem !important; /* 28px */
+    line-height: 1.35 !important;
+  }
+
+  /* Card Titles & Sub-elements (19px) */
+  h4,
+  .pillar-card-title,
+  .hardware-title,
+  .expertise-item-title,
+  .logistics-feature-title,
   .card-title,
   .offering-card-title,
   .service-card-title,
   .capability-title,
   .ecosystem-card-title {
-    font-size: 18px !important;
-    line-height: 26px !important;
+    font-size: 1.1875rem !important; /* 19px */
+    line-height: 1.45 !important;
   }
 
+  /* Body & Paragraph Text (16px - clearly smaller than headings) */
   p,
+  .intro-text,
+  .accordion-body-text,
+  .accordion-body-content,
+  .pillar-card-desc,
+  .hardware-desc,
+  .expertise-item-text,
+  .logistics-feature-text,
   .card-desc,
   .powering-desc,
   .overview-desc,
   .service-desc,
   .offering-desc,
   .description-text,
-  .hero-description {
-    font-size: 14px !important;
-    line-height: 22px !important;
-  }
-}
-
-/* Responsive Scaling for Smaller Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-  .shaping-the-future-through-intelligent-solutions,
-  .enabling-businesses-to-deliver-outstanding-customer-experiences,
-  .solutions-that-deliver-results,
-  .building-success-through-partnerships,
-  .it-solutions-inquiry,
-  .advanced-threat-defense-digital-forensics,
-  .unified-defense-for-the-modern-perimeter,
-  .resilient-infrastructure-for-the-modern-enterprise,
-  .support-beyond-expectations,
-  .scale-fast-spend-smart,
-  .powered-by-aws-built-for-scale,
-  .powered-by-azure-built-for-scale,
-  h1 {
-    font-size: 28px !important;
-    line-height: 36px !important;
+  .hero-description,
+  .foundational-technical-services,
+  .precision-hardware-desc,
+  .precision-logistics-desc,
+  .technical-expertise-desc {
+    font-size: 1rem !important; /* 16px */
+    line-height: 1.65 !important;
   }
 
-  h2,
-  .our-smart-solutions,
-  .partner-ecosystem,
-  .powering-title,
-  .our-aws-solutions,
-  .our-azure-solutions {
-    font-size: 22px !important;
-    line-height: 30px !important;
+  /* Subtitle uppercase labels */
+  .i-t-i-n-f-r-a,
+  .c-y-b-e-r-s-e-c-u-r-i-t-y,
+  .n-e-t-w-o-r-k-i-n-g,
+  .logistics-subtitle {
+    font-size: 1.125rem !important; /* 18px */
+    letter-spacing: 0.125rem !important;
   }
 }
 
