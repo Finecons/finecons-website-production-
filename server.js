@@ -577,12 +577,34 @@ app.post('/api/contact', contactRateLimiter, (req, res, next) => {
 // Serve frontend build in production if available
 const distPath = path.join(__dirname, 'dist');
 if (fs.existsSync(distPath)) {
-  app.use(express.static(distPath));
+  // Redirect legacy WordPress routes to home
+  app.get(['/about-company', '/about-company/*', '/wp-*', '/about-company/feed'], (req, res) => {
+    return res.redirect(301, '/');
+  });
+
+  // Serve hashed assets with long cache and everything else with no-cache for index.html
+  app.use(
+    express.static(distPath, {
+      setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.html')) {
+          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+          res.setHeader('Pragma', 'no-cache');
+          res.setHeader('Expires', '0');
+        } else if (filePath.includes(path.sep + 'assets' + path.sep)) {
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+      }
+    })
+  );
+
   app.use((req, res) => {
     // Exclude API routes from SPA fallback
     if (req.path.startsWith('/api')) {
       return res.status(404).json({ error: 'Endpoint not found' });
     }
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
     res.sendFile(path.join(distPath, 'index.html'));
   });
 }
