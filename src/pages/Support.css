@@ -36,7 +36,7 @@
       rgba(233, 240, 250, 1) 38%,
       rgba(226, 235, 248, 1) 79%
     );
-  padding: clamp(140px, 16vh, 180px) clamp(24px, 6.5vw, 100px) clamp(60px, 8vh, 90px) clamp(24px, 6.5vw, 100px);
+  padding: clamp(120px, 15vh, 148px) clamp(24px, 6.5vw, 100px) clamp(48px, 8vh, 80px) clamp(24px, 6.5vw, 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +44,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 ._07-support-new .hero-copy {
