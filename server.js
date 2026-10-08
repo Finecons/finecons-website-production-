@@ -578,8 +578,15 @@ app.post('/api/contact', contactRateLimiter, (req, res, next) => {
 const distPath = path.join(__dirname, 'dist');
 if (fs.existsSync(distPath)) {
   // Redirect legacy WordPress routes to home
-  app.get(['/about-company', '/about-company/*', '/wp-*', '/about-company/feed'], (req, res) => {
-    return res.redirect(301, '/');
+  app.use((req, res, next) => {
+    if (
+      req.path === '/about-company' ||
+      req.path.startsWith('/about-company/') ||
+      req.path.startsWith('/wp-')
+    ) {
+      return res.redirect(301, '/');
+    }
+    next();
   });
 
   // Serve hashed assets with long cache and everything else with no-cache for index.html
