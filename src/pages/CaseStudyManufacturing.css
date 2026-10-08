@@ -1,0 +1,864 @@
+/* ==========================================================================
+   CASE STUDY: INDUSTRIAL MANUFACTURING ("DIGITAL TRANSFORMATION WITH AWS")
+   ========================================================================== */
+
+.case-study-mfg-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study-mfg-page * {
+  box-sizing: border-box;
+}
+
+/* Common Text Utilities */
+.case-study-mfg-page .text-electric-blue {
+  color: var(--fc-brand-primary, #1B4896) !important;
+}
+
+.case-study-mfg-page .text-dark-navy {
+  color: #091426 !important;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (100VH FIT ON DESKTOP & ZERO NAVBAR OVERLAP)
+   ========================================================================== */
+
+.mfg-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(116px, 14vh, 134px);
+  padding-bottom: clamp(20px, 3vh, 36px);
+  padding-left: clamp(28px, 4.5vw, 64px);
+  padding-right: clamp(28px, 4.5vw, 64px);
+  overflow: hidden;
+}
+
+.mfg-hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Decorative Geometric Ellipses */
+.mfg-hero-ellipse {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mfg-ellipse-17 {
+  border: 44px solid rgba(27, 72, 150, 0.05);
+  width: 300px;
+  height: 300px;
+  left: -70px;
+  top: -70px;
+}
+
+.mfg-ellipse-18 {
+  border: 36px solid rgba(27, 72, 150, 0.05);
+  width: 170px;
+  height: 170px;
+  left: -5px;
+  top: -5px;
+}
+
+.mfg-ellipse-19 {
+  border: 44px solid rgba(27, 72, 150, 0.04);
+  width: 300px;
+  height: 300px;
+  left: 200px;
+  bottom: 40px;
+}
+
+.mfg-ellipse-20 {
+  border: 36px solid rgba(27, 72, 150, 0.04);
+  width: 170px;
+  height: 170px;
+  left: 265px;
+  bottom: 105px;
+}
+
+.mfg-hero-container {
+  max-width: 88rem;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 3.5vw, 3.5rem);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.mfg-hero-content {
+  flex: 1.35;
+  max-width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.5rem, 1.2vh, 0.9rem);
+}
+
+.mfg-badge-wrap {
+  display: inline-flex;
+}
+
+.mfg-badge {
+  background: rgba(27, 72, 150, 0.1);
+  border: 1px solid rgba(27, 72, 150, 0.2);
+  border-radius: 4px;
+  padding: 6px 14px;
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(12px, 0.85vw, 13.5px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mfg-hero-title {
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(1.35rem, 1.95vw, 2.15rem);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.mfg-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.mfg-hero-subtitle {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(0.825rem, 0.92vw, 1rem);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #2b2e35;
+  margin: 0;
+  max-width: 42rem;
+}
+
+.mfg-hero-image-wrap {
+  flex: 0 1 480px;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mfg-hero-image {
+  width: 100%;
+  max-height: min(44vh, 320px);
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0px 14px 34px rgba(27, 72, 150, 0.1);
+}
+
+/* ==========================================================================
+   2. METRICS BENTO GRID (3 CARDS)
+   ========================================================================== */
+
+.mfg-metrics-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 56px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mfg-metrics-grid {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.mfg-metric-card {
+  background: var(--fc-bg-ice, #F5F7FC);
+  border-radius: 8px;
+  border-top: 4px solid var(--fc-brand-primary, #1B4896);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0px 4px 16px rgba(27, 72, 150, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mfg-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 28px rgba(27, 72, 150, 0.12);
+}
+
+.mfg-metric-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+.mfg-metric-icon {
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
+}
+
+.mfg-metric-value {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(28px, 2.4vw, 36px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #091426;
+  margin-bottom: 10px;
+}
+
+.mfg-metric-label {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #555865;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   3. CUSTOMER OVERVIEW & THE CHALLENGES (2-COLUMN BENTO)
+   ========================================================================== */
+
+.mfg-overview-challenges-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 64px 48px 80px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.mfg-overview-challenges-container {
+  max-width: 1440px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+/* Left: Overview Column */
+.mfg-overview-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mfg-section-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(32px, 2.8vw, 44px);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #091426;
+  margin: 0 0 20px 0;
+}
+
+.mfg-overview-desc {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #45474c;
+  margin: 0 0 32px 0;
+  max-width: 42rem;
+}
+
+.mfg-stat-badges-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mfg-stat-badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.mfg-stat-icon-box {
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mfg-stat-icon {
+  max-width: 26px;
+  max-height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) !important;
+}
+
+.mfg-stat-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.mfg-stat-value {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #091426;
+}
+
+.mfg-stat-name {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+  color: #555865;
+}
+
+/* Right: Challenges Royal Blue Card */
+.mfg-challenges-card {
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  border-radius: 12px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 16px 36px rgba(27, 72, 150, 0.25);
+}
+
+.mfg-challenges-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.mfg-challenges-alert-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) !important;
+}
+
+.mfg-challenges-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.mfg-challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 24px;
+}
+
+.mfg-challenge-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.mfg-challenge-item-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1) !important;
+}
+
+.mfg-challenge-item-text {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. SOLUTIONS IMPLEMENTED (4 CARDS)
+   ========================================================================== */
+
+.mfg-solutions-section {
+  width: 100%;
+  background: var(--fc-bg-ice, #F5F7FC);
+  padding: 80px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.mfg-solutions-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mfg-solutions-header-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.mfg-solutions-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(32px, 2.8vw, 44px);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #091426;
+  margin: 0 0 16px 0;
+}
+
+.mfg-title-accent-bar {
+  width: 64px;
+  height: 4px;
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 2px;
+}
+
+.mfg-solutions-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.mfg-solution-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  border-radius: 12px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.mfg-solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 14px 30px rgba(27, 72, 150, 0.12);
+  border-color: var(--fc-brand-primary, #1B4896);
+}
+
+.mfg-solution-icon-box {
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 12px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.mfg-solution-icon {
+  max-width: 34px;
+  max-height: 34px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) !important;
+}
+
+.mfg-solution-card-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #091426;
+  margin: 0 0 12px 0;
+}
+
+.mfg-solution-card-desc {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #45474c;
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. STRATEGIC OUTCOMES (5-ROW TABLE)
+   ========================================================================== */
+
+.mfg-outcomes-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.mfg-outcomes-container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mfg-outcomes-header-wrap {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mfg-outcomes-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(32px, 2.8vw, 44px);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #091426;
+  margin: 0 0 12px 0;
+}
+
+.mfg-outcomes-subtitle {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  color: #45474c;
+  margin: 0;
+}
+
+.mfg-table-wrapper {
+  width: 100%;
+  border: 1px solid #c5c6cd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.mfg-outcomes-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.mfg-outcomes-table th {
+  background: var(--fc-brand-primary, #1B4896);
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 28px;
+  letter-spacing: 0.02em;
+}
+
+.mfg-outcomes-table td {
+  padding: 20px 28px;
+  font-family: "Merriweather Sans", sans-serif;
+  vertical-align: middle;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mfg-tr-even {
+  background: #ffffff;
+}
+
+.mfg-tr-odd {
+  background: #f1f5f9;
+}
+
+.mfg-td-metric {
+  font-size: 18px;
+  font-weight: 700;
+  color: #091426;
+  width: 25%;
+}
+
+.mfg-td-legacy {
+  font-size: 15px;
+  color: #45474c;
+  width: 25%;
+}
+
+.mfg-td-aws {
+  font-size: 15px;
+  font-weight: 600;
+  color: #00a64a;
+  width: 25%;
+}
+
+.mfg-td-impact {
+  font-size: 15px;
+  font-weight: 600;
+  color: #00a64a;
+  width: 25%;
+}
+
+/* ==========================================================================
+   6. READY TO OPTIMIZE YOUR CLOUD? (CTA BANNER)
+   ========================================================================== */
+
+.mfg-cta-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 48px 90px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.mfg-cta-card {
+  max-width: 1440px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  border-radius: 16px;
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 16px 40px rgba(27, 72, 150, 0.25);
+}
+
+.mfg-cta-radial-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.mfg-cta-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.mfg-cta-subtitle,
+.mfg-cta-section p {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff !important;
+  margin: 0 0 32px 0;
+  max-width: 44rem;
+  position: relative;
+  z-index: 1;
+}
+
+.mfg-cta-btn {
+  background: var(--fc-accent-orange, #EB5A28);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 40px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0px 4px 14px rgba(235, 90, 40, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.mfg-cta-btn:hover {
+  transform: translateY(-2px);
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  box-shadow: 0px 8px 24px rgba(235, 90, 40, 0.4);
+}
+
+.mfg-cta-btn span {
+  color: #ffffff;
+}
+
+.mfg-cta-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================================================
+   7. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .mfg-hero-section {
+    padding: clamp(4rem, 6vh, 5rem) 2rem clamp(1rem, 2vh, 1.5rem) 2rem;
+  }
+
+  .mfg-overview-challenges-container {
+    gap: 36px;
+  }
+
+  .mfg-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .mfg-hero-section {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    padding: 110px 24px 60px 24px;
+  }
+
+  .mfg-hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .mfg-hero-content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .mfg-hero-image-wrap {
+    max-width: 28rem;
+    width: 100%;
+  }
+
+  .mfg-hero-image {
+    max-height: 280px;
+  }
+
+  .mfg-metrics-section,
+  .mfg-overview-challenges-section,
+  .mfg-solutions-section,
+  .mfg-outcomes-section,
+  .mfg-cta-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .mfg-overview-challenges-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mfg-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .mfg-outcomes-table {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mfg-hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 16px) 20px 30px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .mfg-hero-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+
+  .mfg-hero-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .mfg-hero-title,
+  .mfg-hero-subtitle {
+    text-align: center !important;
+  }
+
+  .mfg-hero-image-wrap {
+    margin: 0 auto !important;
+  }
+
+  .mfg-title-line {
+    white-space: normal;
+  }
+
+  .mfg-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mfg-solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mfg-challenges-card {
+    padding: 32px 24px;
+  }
+
+  .mfg-challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mfg-stat-badges-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .mfg-cta-card {
+    padding: 40px 24px;
+  }
+}

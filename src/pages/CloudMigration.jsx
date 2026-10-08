@@ -16,8 +16,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M17 16v-9" />
         </svg>
       ),
-      title: 'Cloud Readiness Assessment',
-      desc: 'Deep audit of existing infrastructure, technical debt, and workload suitability for cloud adoption.'
+      title: 'Data Centre to Cloud',
+      desc: 'Seamless lift-and-shift, replatforming or refactoring of on-premises workloads into AWS, Azure, Google Cloud or sovereign Indian cloud.'
     },
     {
       id: 2,
@@ -29,8 +29,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M8 15h8" />
         </svg>
       ),
-      title: 'Cloud Landing Zone Design',
-      desc: 'Blueprint and deployment of secure, multi-account base architectures using Infrastructure as Code (IaC).'
+      title: 'VMware to Cloud',
+      desc: 'Migrate VMware vSphere environments to native cloud architectures or dedicated VMware cloud solutions with minimal operational disruption.'
     },
     {
       id: 3,
@@ -41,8 +41,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M16 11v6" />
         </svg>
       ),
-      title: 'Multi-Cloud Migration',
-      desc: 'Native migration services optimized for AWS, Azure, and GCP ecosystems with unified oversight.'
+      title: 'Cloud to Cloud Migration',
+      desc: 'Strategic workload and data migration between cloud platforms for cost arbitrage, performance, or multi-cloud redundancy.'
     },
     {
       id: 4,
@@ -57,8 +57,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M16 17h2" />
         </svg>
       ),
-      title: 'On-Premises to Cloud',
-      desc: 'Full-scale lift-and-shift or refactoring from data centers to modern cloud environments.'
+      title: 'Enterprise Applications',
+      desc: 'Specialized migration for core ERP, CRM, SAP, Microsoft SQL Server, and mission-critical business applications.'
     },
     {
       id: 5,
@@ -68,8 +68,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M16 17H4l4 4" />
         </svg>
       ),
-      title: 'Cloud-to-Cloud Migration',
-      desc: 'Strategic workload repositioning between cloud providers for cost or performance optimization.'
+      title: 'Databases & Data Warehouses',
+      desc: 'Zero-downtime database cutovers for SQL Server, Oracle, MySQL, and PostgreSQL with data validation and continuous replication.'
     },
     {
       id: 6,
@@ -84,8 +84,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M12 18h5" />
         </svg>
       ),
-      title: 'Hybrid Cloud Architecture',
-      desc: 'Orchestrating seamless connectivity between private data centers and public cloud assets for maximum flexibility.'
+      title: 'File Servers & Storage',
+      desc: 'Seamless transition of enterprise file shares, unstructured data, and archival repositories to managed cloud storage tiers.'
     },
     {
       id: 7,
@@ -96,8 +96,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6" />
         </svg>
       ),
-      title: 'App & Database Migration',
-      desc: 'Zero-loss data replication and application modernization for cloud-native performance.'
+      title: 'Email & Collaboration',
+      desc: 'Tenant-to-tenant and on-premises migrations for Microsoft 365 and Google Workspace with complete identity and mail continuity.'
     },
     {
       id: 8,
@@ -110,8 +110,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M6 15v-3h12v3" />
         </svg>
       ),
-      title: 'Network & Identity Integration',
-      desc: 'Complex VPC peering, SD-WAN, and Active Directory federation across all cloud nodes.'
+      title: 'Hybrid Connectivity & SD-WAN',
+      desc: 'Secure VPN tunnels, direct cloud interconnects, SD-WAN, and Active Directory federation across all on-prem and cloud endpoints.'
     },
     {
       id: 9,
@@ -121,8 +121,8 @@ const CloudMigration = ({ navigateTo }) => {
           <path d="M3.34 19a10 10 0 1 1 17.32 0" />
         </svg>
       ),
-      title: 'Post-Migration Optimization',
-      desc: 'Rightsizing resources and implementing FinOps practices to ensure cloud ROI is maximized.'
+      title: 'Post-Migration Optimisation',
+      desc: 'Continuous rightsizing, performance benchmarking, security posture hardening, and handover to 24x7 managed cloud operations.'
     }
   ];
 
@@ -144,14 +144,14 @@ const CloudMigration = ({ navigateTo }) => {
         <div className="frame-490">
           <div className="frame-489">
             <div className="frame-488">
-              <div className="c-l-o-u-d-s-e-r-v-i-c-e-s">C L O U D &nbsp; S E R V I C E S</div>
+              <div className="c-l-o-u-d-s-e-r-v-i-c-e-s">M I G R A T I O N</div>
               <h1 className="effortless-cloud-maximum-uptime-future-ready-operations">
                 <span>
                   <span className="effortless-cloud-maximum-uptime-future-ready-operations-span">
-                    Effortless Cloud
+                    Move to Cloud. 
                   </span>
                   <span className="effortless-cloud-maximum-uptime-future-ready-operations-span2">
-                    -Maximum Uptime Future Ready Operations.
+                    Without Missing a Beat.
                   </span>
                 </span>
               </h1>
@@ -220,7 +220,7 @@ const CloudMigration = ({ navigateTo }) => {
                 </div>
                 <div className="container6">
                   <p className="feature-card-desc">
-                    Establish the right networking, identity, security, and governance across AWS, Azure, GCP, and hybrid environments. Our foundations are built for multi-region scale and rigid compliance requirements.
+                    Before the first workload moves, we build a secure, well-governed foundation: account and subscription structure, identity and SSO, network design, security guardrails, logging, tagging and cost controls deployed as Infrastructure as Code.
                   </p>
                 </div>
               </div>
@@ -234,11 +234,11 @@ const CloudMigration = ({ navigateTo }) => {
                   </svg>
                 </div>
                 <div className="heading-3">
-                  <h3 className="seamless-execution">Seamless Execution</h3>
+                  <h3 className="seamless-execution">Proven 5-Step Method</h3>
                 </div>
                 <div className="container6">
                   <p className="feature-card-desc">
-                    Certified architects executing migrations with minimal downtime and zero business disruption. We utilize automated cutover tooling and rigorous validation protocols to ensure data integrity.
+                    Assess → Plan (wave plan, runbooks, rollback) → Build (landing zone) → Migrate (pilot, waves, cutover) → Optimise and hand over to 24x7 managed cloud operations, ensuring zero data loss and business continuity.
                   </p>
                 </div>
               </div>
@@ -283,10 +283,10 @@ const CloudMigration = ({ navigateTo }) => {
           <div className="gradient-overlay"></div>
           <div className="cta-container">
             <h2 className="ready-to-optimize-your-cloud">
-              Ready to Optimize Your Cloud?
+              Move to Cloud. Without Missing a Beat.
             </h2>
             <p className="cta-subtext">
-              Book a technical consultation with our certified architects to review your existing environment or plan your migration roadmap.
+              Eligible migrations may qualify for cloud provider migration programmes and funding credits, and Finecons helps you apply.
             </p>
             <div className="cta-button-wrap">
               <button className="cta-contact-btn" onClick={() => navigateTo('get-in-touch')}>
@@ -294,7 +294,7 @@ const CloudMigration = ({ navigateTo }) => {
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
-                <span>Contact us</span>
+                <span>Plan My Migration</span>
               </button>
             </div>
           </div>

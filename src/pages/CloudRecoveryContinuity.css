@@ -27,12 +27,8 @@
   max-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45%,
-      rgba(38, 210, 222, 0.25) 90%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38%,
-      rgba(175, 175, 255, 1) 79%);
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
 }
 
 .cloud-recovery-continuity .rectangle-217 {
@@ -49,7 +45,7 @@
 /* Background decorative concentric rings */
 .cloud-recovery-continuity .ellipse-17 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.06);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -61,7 +57,7 @@
 
 .cloud-recovery-continuity .ellipse-18 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.06);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -73,7 +69,7 @@
 
 .cloud-recovery-continuity .ellipse-19 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -85,7 +81,7 @@
 
 .cloud-recovery-continuity .ellipse-20 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -132,7 +128,7 @@
 }
 
 .cloud-recovery-continuity .c-l-o-u-d-s-e-r-v-i-c-e-s {
-  color: #091426;
+  color: var(--fc-text-dark, #091426);
   text-align: left;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
@@ -156,7 +152,7 @@
 }
 
 .cloud-recovery-continuity .resilient-infrastructure-uninterrupted-business-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-recovery-continuity .hero-img-box {
@@ -165,7 +161,7 @@
   aspect-ratio: 4 / 3;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
+  box-shadow: 0 1rem 3rem rgba(27, 72, 150, 0.1);
 }
 
 .cloud-recovery-continuity .rectangle-323 {
@@ -195,12 +191,12 @@
   border-radius: 1.875rem;
   width: 0.375rem;
   height: 1.75rem;
-  background: #9d9dff;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   transition: all 0.3s ease;
 }
 
 .cloud-recovery-continuity .frame-2 .bar.active {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   height: 2.125rem;
 }
 
@@ -236,7 +232,7 @@
 }
 
 .cloud-blue {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .recovery-dark {
@@ -272,8 +268,8 @@
 
 .value-prop-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(14, 16, 255, 0.09);
-  border-left-color: #0e10ff;
+  box-shadow: 0 12px 28px rgba(27, 72, 150, 0.12);
+  border-left-color: var(--fc-brand-primary, #1B4896);
 }
 
 .value-prop-3 {
@@ -330,7 +326,7 @@
    SECTION 2: SERVICES ECOSYSTEM GRID (Light Blue Background)
    -------------------------------------------------------------------------- */
 .section-services-ecosystem {
-  background: #eff4ff;
+  background: var(--fc-bg-ice-alt, #eaf0fa);
   padding: 5.5rem 3rem 6rem 3rem;
   width: 100%;
 }
@@ -358,13 +354,13 @@
 }
 
 .heading-blue {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .heading-underline-bar {
   width: 4rem;
   height: 4px;
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   border-radius: 2px;
   margin: 0.75rem auto 1rem auto;
 }
@@ -387,7 +383,7 @@
 
 .ecosystem-card {
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.16);
+  border: 1px solid rgba(27, 72, 150, 0.16);
   border-radius: 0.75rem;
   padding: 2.25rem 1.25rem;
   display: flex;
@@ -402,8 +398,8 @@
 
 .ecosystem-card:hover {
   transform: translateY(-5px);
-  border-color: #0e10ff;
-  box-shadow: 0 12px 24px rgba(14, 16, 255, 0.12);
+  border-color: var(--fc-brand-primary, #1B4896);
+  box-shadow: 0 12px 24px rgba(27, 72, 150, 0.15);
 }
 
 .ecosystem-icon-box {
@@ -422,7 +418,7 @@
 
 .ecosystem-card-icon.blue-filter,
 .ecosystem-card-icon[src*="Icon-12"] {
-  filter: invert(15%) sepia(95%) saturate(6932%) hue-rotate(244deg) brightness(97%) contrast(143%);
+  filter: invert(24%) sepia(85%) saturate(1640%) hue-rotate(208deg) brightness(92%) contrast(96%);
 }
 
 .ecosystem-card-title {
@@ -438,7 +434,7 @@
    SECTION 3: WHAT WE DO (Vibrant Blue Banner with 3 White Cards)
    -------------------------------------------------------------------------- */
 .section-what-we-do-blue {
-  background: #0e10ff;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   padding: 5.5rem 3rem 6rem 3rem;
   width: 100%;
 }
@@ -466,7 +462,7 @@
   margin: 0.75rem auto 0 auto;
 }
 
-.pillars-container {
+.cloud-recovery-continuity .pillars-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -474,7 +470,7 @@
   margin: 0 auto;
 }
 
-.pillar-card {
+.cloud-recovery-continuity .pillar-card {
   background: #ffffff;
   border-radius: 0.875rem;
   padding: 2.25rem;
@@ -488,7 +484,7 @@
   transition: transform 0.3s ease;
 }
 
-.pillar-card:hover {
+.cloud-recovery-continuity .pillar-card:hover {
   transform: translateY(-5px);
 }
 
@@ -514,7 +510,7 @@
 }
 
 .pillar-title {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
@@ -532,7 +528,7 @@
 
 .horizontal-divider {
   height: 2px;
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  background: linear-gradient(90deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-orange, #EB5A28) 100%);
   width: 100%;
 }
 
@@ -547,12 +543,12 @@
 }
 
 .section-final-cta-card {
-  background: #396caa;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   border-radius: 1.25rem;
   padding: 3.5rem 2.5rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.1);
+  box-shadow: 0 1rem 3rem rgba(27, 72, 150, 0.2);
   text-align: center;
 }
 
@@ -560,7 +556,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(closest-side,
-      rgba(0, 106, 97, 0.25) 0%,
+      rgba(255, 255, 255, 0.15) 0%,
       transparent 100%);
   pointer-events: none;
 }
@@ -584,8 +580,9 @@
   margin: 0;
 }
 
-.cta-desc {
-  color: rgba(255, 255, 255, 0.9);
+.cta-desc,
+.section-final-cta-wrapper p {
+  color: #ffffff !important;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -597,8 +594,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
-  background: #ffffff;
-  color: #091426;
+  background: var(--fc-accent-orange, #EB5A28);
+  color: #ffffff;
   border: none;
   border-radius: 0.5rem;
   padding: 0.875rem 2rem;
@@ -607,14 +604,15 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
   margin-top: 0.5rem;
 }
 
 .cta-contact-btn:hover {
-  background: #f0f4ff;
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(235, 90, 40, 0.45);
 }
 
 .cta-mail-icon {
@@ -793,14 +791,14 @@
   }
 
   .cloud-recovery-continuity .frame-2 .bar {
-    background: #9d9dff !important;
+    background: var(--fc-bg-ice-alt, #e2ebf8) !important;
     border-radius: 1.875rem !important;
     width: 0.375rem !important;
     height: 1.75rem !important;
   }
 
   .cloud-recovery-continuity .frame-2 .bar.active {
-    background: #0e10ff !important;
+    background: var(--fc-brand-primary, #1B4896) !important;
     height: 2.125rem !important;
   }
 

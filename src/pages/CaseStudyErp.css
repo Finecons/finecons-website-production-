@@ -1,0 +1,984 @@
+/* ==========================================================================
+   CASE STUDY: ERP / SAAS ("OPTIMIZING PERFORMANCE FOR ERP WITH AWS")
+   ========================================================================== */
+
+.case-study-erp-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study-erp-page * {
+  box-sizing: border-box;
+}
+
+/* Common Text Utilities */
+.case-study-erp-page .text-electric-blue {
+  color: var(--fc-brand-primary, #1B4896) !important;
+}
+
+.case-study-erp-page .text-dark-navy {
+  color: #091426 !important;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+
+.erp-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(4.5rem, 7vh, 5.5rem) 3rem clamp(1rem, 2vh, 1.75rem) 3rem;
+  overflow: hidden;
+}
+
+.erp-hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Decorative Geometric Ellipses */
+.erp-hero-ellipse {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.erp-ellipse-17 {
+  border: 52px solid rgba(27, 72, 150, 0.05);
+  width: 340px;
+  height: 340px;
+  left: -80px;
+  top: -80px;
+}
+
+.erp-ellipse-18 {
+  border: 44px solid rgba(27, 72, 150, 0.05);
+  width: 200px;
+  height: 200px;
+  left: -10px;
+  top: -10px;
+}
+
+.erp-ellipse-19 {
+  border: 52px solid rgba(27, 72, 150, 0.04);
+  width: 360px;
+  height: 360px;
+  left: 20%;
+  bottom: -100px;
+}
+
+.erp-ellipse-20 {
+  border: 44px solid rgba(27, 72, 150, 0.04);
+  width: 220px;
+  height: 220px;
+  left: 24%;
+  bottom: -30px;
+}
+
+.erp-hero-container {
+  max-width: 80rem;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 3.5vw, 3.5rem);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.erp-hero-content {
+  flex: 1.2;
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.6rem, 1.4vh, 1rem);
+}
+
+.erp-badge-wrap {
+  display: inline-flex;
+}
+
+.erp-badge {
+  background: rgba(27, 72, 150, 0.1);
+  border: 1px solid rgba(27, 72, 150, 0.2);
+  border-radius: 4px;
+  padding: 6px 14px;
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(12px, 0.85vw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.erp-hero-title {
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(1.75rem, 2.7vw, 2.75rem);
+  line-height: 1.22;
+  font-weight: 600;
+  color: #1d1d1d;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.erp-hero-subtitle {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(0.875rem, 1.05vw, 1.05rem);
+  line-height: 1.55;
+  font-weight: 400;
+  color: #2b2e35;
+  margin: 0;
+  max-width: 38rem;
+}
+
+.erp-hero-image-wrap {
+  flex: 1;
+  max-width: 33rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-hero-image {
+  width: 100%;
+  max-height: min(44vh, 320px);
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0px 14px 34px rgba(27, 72, 150, 0.1);
+}
+
+/* ==========================================================================
+   2. METRICS BENTO GRID (4 CARDS)
+   ========================================================================== */
+
+.erp-metrics-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 56px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.erp-metrics-grid {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.erp-metric-card {
+  background: var(--fc-bg-ice, #F5F7FC);
+  border-radius: 8px;
+  border-top: 4px solid var(--fc-brand-primary, #1B4896);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0px 4px 16px rgba(27, 72, 150, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.erp-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 28px rgba(27, 72, 150, 0.12);
+}
+
+.erp-metric-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+.erp-metric-icon {
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
+}
+
+.erp-metric-value {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(28px, 2.4vw, 36px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #091426;
+  margin-bottom: 10px;
+}
+
+.erp-metric-label {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #555865;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   3. CUSTOMER OVERVIEW & THE CHALLENGES
+   ========================================================================== */
+
+.erp-overview-challenges-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 64px 48px 80px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.erp-overview-challenges-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* Left: Customer Overview */
+.erp-customer-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.erp-section-heading {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #091426;
+  margin: 0;
+}
+
+.erp-customer-description {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: #45474c;
+  margin: 0;
+  max-width: 660px;
+}
+
+.erp-stat-badges-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-top: 12px;
+}
+
+.erp-stat-badge-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.erp-stat-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  background: var(--fc-brand-primary, #1B4896);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(27, 72, 150, 0.25);
+}
+
+.erp-stat-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.erp-stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.erp-stat-number {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #091426;
+}
+
+.erp-stat-name {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555865;
+}
+
+/* Right: The Challenges Box */
+.erp-challenges-card {
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  border-radius: 16px;
+  padding: 44px 40px;
+  box-shadow: 0px 20px 40px rgba(27, 72, 150, 0.28);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.erp-challenges-card::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.erp-challenges-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.erp-challenges-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.erp-challenges-header-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.erp-challenges-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.erp-challenges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.erp-challenge-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.erp-challenge-bullet {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.erp-challenge-icon,
+.icon-pure-white {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) !important;
+  -webkit-filter: brightness(0) invert(1) !important;
+}
+
+.erp-challenge-text {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   4. SOLUTIONS IMPLEMENTED (3 CARDS)
+   ========================================================================== */
+
+.erp-solutions-section {
+  width: 100%;
+  background: var(--fc-bg-ice, #F5F7FC);
+  padding: 84px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.erp-solutions-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.erp-solutions-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.erp-heading-accent-line {
+  width: 64px;
+  height: 4px;
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 2px;
+}
+
+.erp-solutions-cards-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.erp-solution-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  border-radius: 14px;
+  padding: 40px 32px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 8px 24px rgba(27, 72, 150, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.erp-solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 16px 36px rgba(27, 72, 150, 0.12);
+  border-color: var(--fc-brand-primary, #1B4896);
+}
+
+.erp-solution-icon-box {
+  width: 68px;
+  height: 68px;
+  border-radius: 14px;
+  background: var(--fc-brand-primary, #1B4896);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 16px rgba(27, 72, 150, 0.25);
+}
+
+.erp-solution-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.erp-solution-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #091426;
+  margin: 0 0 14px 0;
+}
+
+.erp-solution-desc {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #45474c;
+  margin: 0;
+  max-width: 340px;
+}
+
+/* ==========================================================================
+   5. STRATEGIC OUTCOMES TABLE
+   ========================================================================== */
+
+.erp-outcomes-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 84px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.erp-outcomes-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.erp-outcomes-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.erp-outcomes-subtitle {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #45474c;
+  margin: 0;
+}
+
+.erp-table-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #c5c6cd;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.erp-outcomes-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+}
+
+.erp-th {
+  background: var(--fc-brand-primary, #1B4896);
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  padding: 18px 24px;
+}
+
+.erp-th.erp-th-impact {
+  text-align: right;
+}
+
+.erp-tr {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+.erp-tr-alt {
+  background: #f1f5f9;
+}
+
+.erp-tr:hover {
+  background-color: #f8fafc;
+}
+
+.erp-td {
+  padding: 22px 24px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.erp-td-metric {
+  color: #091426;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.erp-td-pre {
+  color: #45474c;
+  font-weight: 400;
+}
+
+.erp-td-post {
+  color: #00a64a;
+  font-weight: 600;
+}
+
+.erp-td-impact {
+  text-align: right;
+}
+
+.erp-impact-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #00a64a;
+  letter-spacing: 0.04em;
+}
+
+.erp-impact-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.erp-impact-check-icon {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. CALL TO ACTION (CTA) BANNER
+   ========================================================================== */
+
+.erp-cta-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px 48px 90px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.erp-cta-card {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  border-radius: 16px;
+  padding: 56px 48px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 36px rgba(27, 72, 150, 0.28);
+}
+
+.erp-cta-radial-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.erp-cta-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 760px;
+}
+
+.erp-cta-title {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(26px, 2.5vw, 34px);
+  line-height: 1.3;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.erp-cta-desc,
+.erp-cta-section p {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 0;
+}
+
+.erp-cta-btn-wrap {
+  margin-top: 12px;
+}
+
+.erp-cta-button {
+  background: var(--fc-accent-orange, #EB5A28);
+  border: none;
+  border-radius: 6px;
+  padding: 16px 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.erp-cta-button span {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.erp-cta-button:hover {
+  transform: translateY(-2px);
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  box-shadow: 0 8px 24px rgba(235, 90, 40, 0.4);
+}
+
+.erp-cta-button:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Laptops & Tablets Landscape (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .erp-hero-section {
+    height: 100vh;
+    max-height: 100vh;
+    padding: clamp(4.25rem, 6.5vh, 5.25rem) 2rem clamp(1rem, 2vh, 1.5rem) 2rem;
+  }
+
+  .erp-hero-container {
+    gap: 32px;
+  }
+
+  .erp-metrics-section,
+  .erp-overview-challenges-section,
+  .erp-solutions-section,
+  .erp-outcomes-section,
+  .erp-cta-section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .erp-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .erp-overview-challenges-container {
+    gap: 40px;
+  }
+
+  .erp-solutions-cards-grid {
+    gap: 20px;
+  }
+}
+
+/* Tablets Portrait (max-width: 992px) */
+@media (max-width: 992px) {
+  .erp-hero-section {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    padding: 110px 24px 48px 24px;
+  }
+
+  .erp-hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    margin: 0;
+  }
+
+  .erp-hero-content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .erp-hero-image-wrap {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .erp-overview-challenges-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .erp-customer-overview {
+    align-items: center;
+    text-align: center;
+  }
+
+  .erp-customer-description {
+    max-width: 100%;
+  }
+
+  .erp-solutions-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .erp-hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 16px) 20px 30px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .erp-metrics-section,
+  .erp-overview-challenges-section,
+  .erp-solutions-section,
+  .erp-outcomes-section,
+  .erp-cta-section {
+    padding: 44px 20px;
+  }
+
+  .erp-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .erp-stat-badges-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .erp-challenges-card {
+    padding: 32px 24px;
+  }
+
+  .erp-challenges-header {
+    gap: 12px;
+  }
+
+  .erp-challenges-title {
+    font-size: 22px;
+  }
+
+  .erp-cta-card {
+    padding: 40px 24px;
+  }
+
+  .erp-cta-button {
+    width: 100%;
+    padding: 16px 24px;
+  }
+}
+
+/* Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .erp-hero-title {
+    font-size: 30px;
+  }
+
+  .erp-section-heading {
+    font-size: 28px;
+  }
+
+  .erp-metric-value {
+    font-size: 28px;
+  }
+
+  .erp-solutions-section {
+    padding: 48px 16px;
+  }
+
+  .erp-solution-card {
+    padding: 32px 20px;
+  }
+}
+
+/* Mobile-only: Fix customer stat badges icon alignment */
+@media (max-width: 768px) {
+  .erp-overview-challenges-container {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .erp-stat-badges-row {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .erp-stat-badge-item {
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .erp-stat-icon-box {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .erp-stat-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .erp-customer-overview {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .erp-customer-description {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+}

@@ -1,0 +1,883 @@
+/* ==========================================================================
+   CaseStudyRetailNaturals.css
+   Modernizing India's Leading Beauty Brand with AWS
+   ========================================================================== */
+
+.case-study-retail-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #091426;
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Reusable Colors */
+.case-study-retail-page .text-electric-blue {
+  color: var(--fc-brand-primary, #1B4896);
+}
+
+.case-study-retail-page .text-dark-navy {
+  color: #091426;
+}
+
+.case-study-retail-page .text-center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.cs-hero-section {
+  position: relative;
+  padding-top: 170px;
+  padding-bottom: 90px;
+  overflow: hidden;
+  min-height: 740px;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient Background */
+.cs-hero-bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+/* Decorative Concentric Rings */
+.cs-hero-ellipse {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cs-ellipse-17 {
+  border: 52px solid rgba(27, 72, 150, 0.05);
+  width: 340px;
+  height: 340px;
+  left: -80px;
+  top: -100px;
+}
+
+.cs-ellipse-18 {
+  border: 44px solid rgba(27, 72, 150, 0.05);
+  width: 190px;
+  height: 190px;
+  left: -10px;
+  top: -30px;
+}
+
+.cs-ellipse-19 {
+  border: 48px solid rgba(27, 72, 150, 0.04);
+  width: 340px;
+  height: 340px;
+  left: 20%;
+  top: 360px;
+}
+
+.cs-ellipse-20 {
+  border: 40px solid rgba(27, 72, 150, 0.04);
+  width: 190px;
+  height: 190px;
+  left: 25%;
+  top: 435px;
+}
+
+.cs-hero-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+.cs-hero-content {
+  flex: 1;
+  max-width: 820px;
+}
+
+.cs-badge-wrap {
+  margin-bottom: 24px;
+}
+
+.cs-badge {
+  display: inline-block;
+  background: rgba(27, 72, 150, 0.1);
+  border: 1px solid rgba(27, 72, 150, 0.2);
+  color: var(--fc-brand-primary, #1B4896);
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-family: var(--sub-heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cs-hero-title {
+  font-family: var(--display-desktop-font-family, "Merriweather", serif);
+  font-size: 58px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+}
+
+.cs-hero-subtitle {
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 19px;
+  line-height: 1.55;
+  color: #191c1e;
+  margin: 0;
+  max-width: 680px;
+}
+
+.cs-hero-image-wrap {
+  flex: 0 0 auto;
+  width: 580px;
+  max-width: 100%;
+}
+
+.cs-hero-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(27, 72, 150, 0.08), 0 8px 16px rgba(0, 0, 0, 0.06);
+  display: block;
+}
+
+/* ==========================================================================
+   3. METRICS BENTO GRID
+   ========================================================================== */
+.cs-metrics-section {
+  padding: 50px 0 30px 0;
+  background-color: #ffffff;
+}
+
+.cs-metrics-grid {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.cs-metric-card {
+  background: var(--fc-bg-ice, #F5F7FC);
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-top: 4px solid var(--fc-bg-ice-alt, #e2ebf8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-top-color 0.25s ease;
+}
+
+.cs-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(27, 72, 150, 0.1);
+  border-top-color: var(--fc-brand-primary, #1B4896);
+}
+
+.cs-metric-icon-wrap {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.cs-metric-icon {
+  max-height: 32px;
+  max-width: 44px;
+  object-fit: contain;
+}
+
+.cs-metric-value {
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #091426;
+  margin-bottom: 8px;
+}
+
+.cs-metric-label {
+  font-family: var(--body-regular-mobile-font-family, "Merriweather Sans", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #45474c;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   4. CUSTOMER OVERVIEW & THE CHALLENGES
+   ========================================================================== */
+.cs-overview-challenges-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.cs-overview-challenges-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 56px;
+  align-items: stretch;
+}
+
+.cs-customer-overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cs-section-heading {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather", serif);
+  font-size: 46px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+.cs-customer-description {
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 18px;
+  line-height: 1.65;
+  color: #45474c;
+  margin: 0 0 36px 0;
+}
+
+.cs-stat-badges-row {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  align-items: center;
+}
+
+.cs-stat-badge-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.cs-stat-icon-box {
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+.cs-stat-icon {
+  max-width: 32px;
+  max-height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.cs-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-stat-number {
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #091426;
+  line-height: 1.2;
+}
+
+.cs-stat-name {
+  font-family: var(--body-regular-mobile-font-family, "Merriweather Sans", sans-serif);
+  font-size: 14px;
+  color: #45474c;
+  line-height: 1.4;
+}
+
+/* The Challenges Card */
+.cs-challenges-card {
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  border-radius: 10px;
+  padding: 40px 48px;
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(27, 72, 150, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cs-challenges-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.cs-challenges-icon-wrap {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-challenges-header-icon {
+  max-width: 32px;
+  max-height: 30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.cs-challenges-title {
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cs-challenges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cs-challenge-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cs-challenge-bullet {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cs-challenge-icon {
+  max-width: 24px;
+  max-height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.cs-challenge-text {
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+/* ==========================================================================
+   5. SOLUTIONS IMPLEMENTED
+   ========================================================================== */
+.cs-solutions-section {
+  padding: 70px 0;
+  background-color: var(--fc-bg-ice, #F5F7FC);
+}
+
+.cs-solutions-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.cs-solutions-header {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-heading-accent-line {
+  width: 64px;
+  height: 4px;
+  background-color: var(--fc-brand-primary, #1B4896);
+  margin-top: 14px;
+  border-radius: 2px;
+}
+
+.cs-solutions-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.cs-solution-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  border-radius: 6px;
+  padding: 36px 28px 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cs-solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(27, 72, 150, 0.1);
+  border-color: var(--fc-brand-primary, #1B4896);
+}
+
+.cs-solution-icon-box {
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 12px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.cs-solution-icon {
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.cs-solution-title {
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: #091426;
+  margin: 0 0 14px 0;
+}
+
+.cs-solution-desc {
+  font-family: var(--body-regular-mobile-font-family, "Merriweather Sans", sans-serif);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #45474c;
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. STRATEGIC OUTCOMES TABLE
+   ========================================================================== */
+.cs-outcomes-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.cs-outcomes-container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.cs-outcomes-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.cs-outcomes-subtitle {
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 18px;
+  color: #45474c;
+  margin-top: 10px;
+}
+
+.cs-table-wrapper {
+  background: #ffffff;
+  border: 1px solid #c5c6cd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.cs-outcomes-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.cs-th {
+  background-color: var(--fc-brand-primary, #1B4896);
+  color: #ffffff;
+  padding: 18px 28px;
+  font-family: var(--sub-heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.cs-tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.15s ease;
+}
+
+.cs-tr:last-child {
+  border-bottom: none;
+}
+
+.cs-tr:hover {
+  background-color: #f8faff;
+}
+
+.cs-tr-alt {
+  background-color: #f8fafc;
+}
+
+.cs-td {
+  padding: 22px 28px;
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 17px;
+  color: #0b1c30;
+  vertical-align: middle;
+}
+
+.cs-td-metric {
+  font-weight: 700;
+  color: #0b1c30;
+  width: 30%;
+}
+
+.cs-td-pre {
+  color: #0b1c30;
+  width: 24%;
+}
+
+.cs-td-post {
+  color: #00a64a;
+  font-weight: 700;
+  width: 24%;
+}
+
+.cs-td-impact {
+  width: 22%;
+}
+
+.cs-impact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00a64a;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.cs-impact-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   7. CALL TO ACTION (CTA)
+   ========================================================================== */
+.cs-cta-section {
+  padding: 40px 0 80px 0;
+  background-color: #ffffff;
+}
+
+.cs-cta-card {
+  max-width: 1540px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  padding: 56px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(27, 72, 150, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cs-cta-radial-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.cs-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.cs-cta-title {
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 14px 0;
+}
+
+.cs-cta-desc,
+.cs-cta-section p {
+  font-family: var(--body-regular-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 17px;
+  line-height: 1.6;
+  color: #ffffff !important;
+  margin: 0 0 32px 0;
+  opacity: 0.95;
+}
+
+.cs-cta-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.cs-cta-button {
+  background: var(--fc-accent-orange, #EB5A28);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 48px;
+  font-family: var(--heading-sans-2-desktop-font-family, "Merriweather Sans", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 6px 16px rgba(235, 90, 40, 0.3);
+}
+
+.cs-cta-button:hover {
+  transform: translateY(-2px);
+  background-color: var(--fc-accent-orange-hover, #d84e1f);
+  box-shadow: 0 10px 24px rgba(235, 90, 40, 0.4);
+}
+
+.cs-cta-btn-icon {
+  stroke: #ffffff;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (TABLETS & PHONES)
+   ========================================================================== */
+@media (max-width: 1280px) {
+  .cs-hero-title {
+    font-size: 48px;
+  }
+
+  .cs-hero-image-wrap {
+    width: 480px;
+  }
+
+  .cs-hero-image {
+    height: 360px;
+  }
+
+  .cs-solutions-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs-hero-section {
+    padding-top: 150px;
+    padding-bottom: 60px;
+  }
+
+  .cs-hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .cs-hero-content {
+    max-width: 100%;
+  }
+
+  .cs-hero-subtitle {
+    margin: 0 auto;
+  }
+
+  .cs-hero-image-wrap {
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .cs-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs-overview-challenges-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .cs-stat-badges-row {
+    justify-content: flex-start;
+  }
+@media (max-width: 768px) {
+  .cs-hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 16px) 20px 30px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .cs-hero-title {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  .cs-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .cs-hero-image {
+    height: 280px;
+  }
+
+  .cs-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-section-heading {
+    font-size: 32px;
+  }
+
+  .cs-solutions-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .cs-outcomes-table {
+    min-width: 650px;
+  }
+
+  .cs-th, .cs-td {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+
+  .cs-challenges-card {
+    padding: 32px 24px;
+  }
+
+  .cs-cta-card {
+    padding: 40px 24px;
+  }
+
+  .cs-cta-title {
+    font-size: 26px;
+  }
+}
+
+/* Mobile-only: Fix customer stat icons alignment (does NOT affect desktop/tablet) */
+@media (max-width: 768px) {
+  .cs-customer-overview {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .cs-customer-description {
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .cs-stat-badges-row {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .cs-stat-badge-item {
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .cs-stat-icon-box {
+    width: 48px !important;
+    height: 48px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cs-stat-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Metrics grid: 2-column on mobile */
+  .cs-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .cs-metric-card {
+    padding: 20px 12px !important;
+    align-items: center !important;
+  }
+
+  .cs-metric-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .cs-metric-value {
+    font-size: 24px !important;
+  }
+}

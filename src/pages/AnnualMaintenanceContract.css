@@ -1,0 +1,996 @@
+/* ==========================================================================
+   FINE CONS - ANNUAL MAINTENANCE CONTRACTS (AMC)
+   Matches Managed Services & Facility Management Services (FMS) Standards
+   ========================================================================== */
+
+._04-amc-new,
+._04-amc-new * {
+  box-sizing: border-box;
+}
+
+._04-amc-new {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Aligned with Managed Services & FMS Hero proportions)
+   ========================================================================== */
+._04-amc-new .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(110px, 14vh, 134px);
+  padding-bottom: clamp(24px, 4vh, 48px);
+  padding-left: clamp(28px, 6vw, 100px);
+  padding-right: clamp(28px, 6vw, 100px);
+  overflow: hidden;
+}
+
+._04-amc-new .hero-copy {
+  max-width: 1320px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(14px, 2vh, 24px);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+._04-amc-new .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: clamp(13px, 0.95vw, 16px);
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+._04-amc-new .keep-every-device-running-one-annual-contract {
+  text-align: left;
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  line-height: 1.22;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  max-width: 1100px;
+}
+
+._04-amc-new .keep-every-device-running-one-annual-contract-span {
+  color: #191c1e;
+  display: inline;
+}
+
+._04-amc-new .keep-every-device-running-one-annual-contract-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  display: inline;
+}
+
+._04-amc-new .finecons-annual-maintenance-contracts-cover-your-desktops-laptops-servers-networks-printers-ups-and-cctv-with-preventive-maintenance-fast-breakdown-support-and-predictable-costs {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 66rem;
+  margin: 0;
+}
+
+._04-amc-new .row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+._04-amc-new .button-request-an-amc-quote {
+  background: #eb5a28;
+  border-radius: 90px;
+  padding: 16px 40px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
+}
+
+._04-amc-new .button-request-an-amc-quote:hover {
+  background: #d64919;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(235, 90, 40, 0.4);
+}
+
+._04-amc-new .request-an-amc-quote {
+  color: #ffffff;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+._04-amc-new .button-raise-a-service-call {
+  background: #ffffff;
+  border-radius: 90px;
+  border: 2px solid #1b4896;
+  padding: 14px 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(27, 72, 150, 0.08);
+}
+
+._04-amc-new .button-raise-a-service-call:hover {
+  background: rgba(27, 72, 150, 0.05);
+  transform: translateY(-2px);
+  border-color: #2f6bd8;
+}
+
+._04-amc-new .raise-a-service-call {
+  color: #1b4896;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. BODY LAYOUT (STICKY SIDEBAR + MAIN CONTENT)
+   ========================================================================== */
+._04-amc-new .body-side-menu-content {
+  width: 100%;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 5.5rem clamp(1.5rem, 5vw, 6.25rem);
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* ----------------- SIDEBAR ----------------- */
+._04-amc-new .side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 20rem;
+  position: sticky;
+  top: 6.25rem;
+  align-self: flex-start;
+  background: #ffffff;
+}
+
+._04-amc-new .s-e-r-v-i-c-e-s {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  width: 100%;
+  text-transform: uppercase;
+  padding-bottom: 0.35rem;
+}
+
+._04-amc-new .row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+._04-amc-new .managed-services,
+._04-amc-new .facility-management-fms,
+._04-amc-new .annual-maintenance-amc {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif !important;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 400;
+  width: calc(100% - 1rem);
+  max-width: 18rem;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+._04-amc-new .row2:hover .managed-services,
+._04-amc-new .row2:hover .facility-management-fms,
+._04-amc-new .row2:hover .annual-maintenance-amc {
+  color: #1b4896;
+}
+
+._04-amc-new .row2.is-active .managed-services,
+._04-amc-new .row2.is-active .facility-management-fms,
+._04-amc-new .row2.is-active .annual-maintenance-amc,
+._04-amc-new .is-active-link {
+  color: #1b4896 !important;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif) !important;
+  font-weight: 700 !important;
+}
+
+._04-amc-new .rectangle {
+  background: #1b4896;
+  width: 0.28rem;
+  height: 2.125rem;
+  border-radius: 0.125rem;
+  flex-shrink: 0;
+}
+
+/* ----------------- CONTENT CONTAINER ----------------- */
+._04-amc-new .content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 76px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+._04-amc-new .column,
+._04-amc-new .column2,
+._04-amc-new .column3 {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Typography Headings */
+._04-amc-new .choose-the-right-amc,
+._04-amc-new .equipment-we-maintain,
+._04-amc-new .what-every-finecons-amc-includes,
+._04-amc-new .service-across-your-locations,
+._04-amc-new .pricing-models,
+._04-amc-new .how-it-works,
+._04-amc-new .frequently-asked-questions {
+  text-align: left;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+._04-amc-new .choose-the-right-amc-span,
+._04-amc-new .equipment-we-maintain-span,
+._04-amc-new .what-every-finecons-amc-includes-span,
+._04-amc-new .service-across-your-locations-span,
+._04-amc-new .pricing-models-span,
+._04-amc-new .how-it-works-span,
+._04-amc-new .frequently-asked-questions-span {
+  color: #191c1e;
+}
+
+._04-amc-new .choose-the-right-amc-span2,
+._04-amc-new .equipment-we-maintain-span2,
+._04-amc-new .what-every-finecons-amc-includes-span2,
+._04-amc-new .service-across-your-locations-span2,
+._04-amc-new .pricing-models-span2,
+._04-amc-new .how-it-works-span2,
+._04-amc-new .frequently-asked-questions-span2 {
+  color: #1b4896;
+}
+
+/* ==========================================================================
+   3. SECTION 1: CHOOSE THE RIGHT AMC (2 CARDS)
+   ========================================================================== */
+._04-amc-new .row3 {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+._04-amc-new .card-comprehensive-amc,
+._04-amc-new .card-non-comprehensive-amc {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: clamp(24px, 2.8vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 calc(50% - 14px);
+  min-width: 290px;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._04-amc-new .card-comprehensive-amc:hover,
+._04-amc-new .card-non-comprehensive-amc:hover,
+._04-amc-new .card-inclusion:hover,
+._04-amc-new .card-pricing:hover,
+._04-amc-new .flow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 24px rgba(27, 72, 150, 0.12);
+  border-color: rgba(27, 72, 150, 0.5);
+}
+
+._04-amc-new .icon {
+  background: #1b4896;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+}
+
+._04-amc-new .icon2,
+._04-amc-new .icon3,
+._04-amc-new .icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+._04-amc-new .comprehensive-amc,
+._04-amc-new .non-comprehensive-amc {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._04-amc-new .covers-labour-and-replacement-of-faulty-parts-excluding-consumables-and-physical-damage-best-for-predictable-budgeting-and-ageing-equipment,
+._04-amc-new .covers-labour-and-service-parts-are-quoted-and-charged-separately-with-your-approval-best-for-newer-equipment-and-cost-conscious-budgets {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+._04-amc-new .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._04-amc-new .list div {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   4. SECTION 2: EQUIPMENT WE MAINTAIN (8 CARDS)
+   ========================================================================== */
+._04-amc-new .equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+._04-amc-new .card-equipment {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  min-height: 140px;
+}
+
+._04-amc-new .card-equipment:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 22px rgba(27, 72, 150, 0.12);
+  border-color: rgba(27, 72, 150, 0.5);
+}
+
+._04-amc-new .equipment-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.1875rem;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+}
+
+._04-amc-new .multi-brand-support-hp-dell-lenovo-cisco-aruba-fortinet-sophos-vertiv-epson-canon-cp-plus-hikvision-and-more {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   5. SECTION 3: WHAT EVERY FINECONS AMC INCLUDES (6 CARDS)
+   ========================================================================== */
+._04-amc-new .inclusions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+._04-amc-new .card-inclusion {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: clamp(22px, 2.2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._04-amc-new .step-num {
+  color: #ffffff;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+._04-amc-new .inclusion-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._04-amc-new .inclusion-desc {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. SECTION 4: SERVICE ACROSS YOUR LOCATIONS
+   ========================================================================== */
+._04-amc-new .finecons-provides-on-site-amc-support-across-chennai-tamil-nadu-and-karnataka-with-response-times-defined-in-your-contract-for-each-location-multi-location-customers-get-a-single-contract-a-single-sla-and-consolidated-reporting {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. SECTION 5: PRICING MODELS (3 CARDS)
+   ========================================================================== */
+._04-amc-new .pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+._04-amc-new .card-pricing {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._04-amc-new .pricing-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._04-amc-new .pricing-desc {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   8. SECTION 6: HOW IT WORKS (4-STEP PIPELINE)
+   ========================================================================== */
+._04-amc-new .flow {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+._04-amc-new .flow-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 0;
+  min-width: 180px;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._04-amc-new .flow-step-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._04-amc-new .flow-step-desc {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+}
+
+._04-amc-new .flow-arrow {
+  color: #1b4896;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   9. SECTION 7: FREQUENTLY ASKED QUESTIONS
+   ========================================================================== */
+._04-amc-new .faq {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._04-amc-new .card2 {
+  background: #f7f9fd;
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  box-shadow: 0px 4px 10px 0px rgba(15, 16, 255, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+._04-amc-new .card2:hover {
+  transform: translateY(-2px);
+  border-color: rgba(27, 72, 150, 0.45);
+  box-shadow: 0px 8px 18px rgba(27, 72, 150, 0.08);
+}
+
+._04-amc-new .faq-question {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  font-weight: 700;
+  margin: 0;
+}
+
+._04-amc-new .faq-answer {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 0.975rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   10. CTA BANNER
+   ========================================================================== */
+._04-amc-new .cta-banner {
+  background: #1b4896 !important;
+  padding: clamp(60px, 8vw, 110px) clamp(24px, 6vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+._04-amc-new .protect-your-it-investment {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  max-width: 1100px;
+  margin: 0;
+}
+
+._04-amc-new .cta-banner p,
+._04-amc-new .send-us-your-asset-list-and-get-an-amc-proposal-with-coverage-options-and-sl-as {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 900px;
+  margin: 0;
+  opacity: 0.95;
+}
+
+._04-amc-new .button-request-an-amc-quote2 {
+  background: #ffffff;
+  border-radius: 90px;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+._04-amc-new .button-request-an-amc-quote2:hover {
+  background: #f0f4fc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+._04-amc-new .request-an-amc-quote2 {
+  color: #1b4896 !important;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   11. RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 1199px) {
+  ._04-amc-new .body-side-menu-content {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  ._04-amc-new .side-menu {
+    width: 240px;
+  }
+
+  ._04-amc-new .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  ._04-amc-new .inclusions-grid,
+  ._04-amc-new .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  ._04-amc-new .body-side-menu-content {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 40px;
+  }
+
+  ._04-amc-new .side-menu {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #f7f9fd;
+    padding: 18px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(27, 72, 150, 0.15);
+  }
+
+  ._04-amc-new .s-e-r-v-i-c-e-s {
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  ._04-amc-new .row2 {
+    width: auto;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(27, 72, 150, 0.2);
+    gap: 8px;
+  }
+
+  ._04-amc-new .row2.is-active {
+    background: #1b4896;
+    border-color: #1b4896;
+  }
+
+  ._04-amc-new .row2.is-active .managed-services,
+  ._04-amc-new .row2.is-active .facility-management-fms,
+  ._04-amc-new .row2.is-active .annual-maintenance-amc {
+    color: #ffffff !important;
+  }
+
+  ._04-amc-new .managed-services,
+  ._04-amc-new .facility-management-fms,
+  ._04-amc-new .annual-maintenance-amc {
+    width: auto;
+    max-width: none;
+    font-size: 0.95rem;
+  }
+
+  ._04-amc-new .rectangle {
+    display: none;
+  }
+
+  ._04-amc-new .flow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  ._04-amc-new .flow-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  ._04-amc-new .flow-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 767px) {
+  ._04-amc-new .hero {
+    padding: 24px 20px 48px;
+  }
+
+  ._04-amc-new .hero-copy {
+    gap: 18px;
+  }
+
+  ._04-amc-new .row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  ._04-amc-new .button-request-an-amc-quote,
+  ._04-amc-new .button-raise-a-service-call {
+    width: 100%;
+  }
+
+  ._04-amc-new .row3 {
+    flex-direction: column;
+  }
+
+  ._04-amc-new .card-comprehensive-amc,
+  ._04-amc-new .card-non-comprehensive-amc {
+    width: 100%;
+    min-width: 0;
+  }
+
+  ._04-amc-new .equipment-grid,
+  ._04-amc-new .inclusions-grid,
+  ._04-amc-new .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  ._04-amc-new .cta-banner {
+    padding: 50px 20px;
+  }
+
+  ._04-amc-new .button-request-an-amc-quote2 {
+    width: 100%;
+  }
+}
+
+/* Hide mobile-only dropdown on desktop/tablet */
+._04-amc-new .managed-services-mobile-dropdown-wrap {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE-ONLY FIXES (max-width: 768px) — Does NOT affect desktop or tablet
+   ========================================================================== */
+@media (max-width: 768px) {
+  ._04-amc-new .hero {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding-top: calc(70px + 16px) !important;
+    padding-bottom: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  ._04-amc-new .hero-copy {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  ._04-amc-new .hero-title,
+  ._04-amc-new .hero-description {
+    text-align: center !important;
+  }
+
+  ._04-amc-new .side-menu {
+    display: none !important;
+  }
+
+  ._04-amc-new .managed-services-mobile-dropdown-wrap {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  ._04-amc-new .managed-services-mobile-nav-select {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border: 2px solid #1b4896 !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1b4896 !important;
+    background: #fff !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231b4896' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    padding-right: 38px !important;
+  }
+
+  ._04-amc-new .body-side-menu-content {
+    flex-direction: column !important;
+  }
+}
+

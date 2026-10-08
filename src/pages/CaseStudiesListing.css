@@ -1,0 +1,417 @@
+/* ==========================================================================
+   _21-CASE-STUDIES-LISTING-NEW PAGE STYLES
+   Figma Specification + Responsive Design
+   ========================================================================== */
+
+._21-case-studies-listing-new,
+._21-case-studies-listing-new * {
+  box-sizing: border-box;
+}
+
+._21-case-studies-listing-new {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (100vh Screen Fit with Floating Navbar Clearance)
+   ========================================================================== */
+._21-case-studies-listing-new .frame,
+._21-case-studies-listing-new .hero-section {
+  background: linear-gradient(
+      123.26deg,
+      rgba(233, 240, 250, 0) 45%,
+      rgba(27, 72, 150, 0.3) 91%
+    ),
+    linear-gradient(
+      223.79deg,
+      rgba(233, 240, 250, 1) 38%,
+      rgba(226, 235, 248, 1) 79%
+    );
+  padding: clamp(120px, 15vh, 148px) clamp(24px, 6.5vw, 100px) clamp(48px, 8vh, 80px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+._21-case-studies-listing-new .frame3,
+._21-case-studies-listing-new .hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.5vw, 28px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1150px;
+  position: relative;
+  z-index: 2;
+}
+
+._21-case-studies-listing-new .c-a-s-e-s-t-u-d-i-e-s {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+._21-case-studies-listing-new .real-results-for-real-businesses {
+  text-align: left;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  line-height: 1.25;
+  font-weight: 600;
+  width: 100%;
+  margin: 0;
+}
+
+._21-case-studies-listing-new .real-results-for-real-businesses-span {
+  color: #191c1e;
+}
+
+._21-case-studies-listing-new .real-results-for-real-businesses-span2 {
+  color: #1b4896;
+}
+
+._21-case-studies-listing-new .how-finecons-has-helped-organisations-across-retail-manufacturing-travel-erp-and-bfsi-modernise-secure-and-scale-their-it {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+  line-height: 1.6;
+  font-weight: 400;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   2. FILTER CHIPS & CARDS SECTION
+   ========================================================================== */
+._21-case-studies-listing-new .frame4,
+._21-case-studies-listing-new .content-section {
+  padding: clamp(56px, 7vw, 100px) clamp(24px, 6.5vw, 100px) clamp(80px, 9vw, 120px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 3.5vw, 48px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  background: #ffffff;
+}
+
+/* Filter Chips Bar */
+._21-case-studies-listing-new .frame5,
+._21-case-studies-listing-new .filter-chips-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+._21-case-studies-listing-new .filter-chip {
+  border-radius: 40px;
+  padding: 10px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+._21-case-studies-listing-new .filter-chip.is-active {
+  background: #1b4896;
+  color: #ffffff;
+  border: 1px solid #1b4896;
+  box-shadow: 0 4px 12px rgba(27, 72, 150, 0.25);
+}
+
+._21-case-studies-listing-new .filter-chip:not(.is-active) {
+  background: #ffffff;
+  color: #191c1e;
+  border: 1px solid rgba(27, 72, 150, 0.3);
+}
+
+._21-case-studies-listing-new .filter-chip:not(.is-active):hover {
+  background: #f0f4fc;
+  border-color: #1b4896;
+  color: #1b4896;
+  transform: translateY(-1px);
+}
+
+/* Cards Grid */
+._21-case-studies-listing-new .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+._21-case-studies-listing-new .case-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.06);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  height: 100%;
+}
+
+._21-case-studies-listing-new .case-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(27, 72, 150, 0.55);
+  box-shadow: 0px 14px 30px 0px rgba(15, 16, 255, 0.12);
+}
+
+._21-case-studies-listing-new .case-card-image-wrap {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  background: #f4f6fa;
+}
+
+._21-case-studies-listing-new .case-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+._21-case-studies-listing-new .case-card:hover .case-card-image {
+  transform: scale(1.04);
+}
+
+._21-case-studies-listing-new .frame9,
+._21-case-studies-listing-new .case-card-body {
+  padding: 24px 26px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
+}
+
+._21-case-studies-listing-new .case-tag {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+._21-case-studies-listing-new .case-title {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.35rem;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+}
+
+._21-case-studies-listing-new .read-more {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+._21-case-studies-listing-new .case-card:hover .read-more {
+  color: #1b4896;
+  transform: translateX(4px);
+}
+
+/* Empty State if filter yields zero matches */
+._21-case-studies-listing-new .empty-filter-state {
+  width: 100%;
+  padding: 60px 24px;
+  text-align: center;
+  color: #434655;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.15rem;
+}
+
+/* ==========================================================================
+   3. CTA BANNER ("Want Results Like These?")
+   ========================================================================== */
+._21-case-studies-listing-new .frame10,
+._21-case-studies-listing-new .cta-banner {
+  background: #1b4896 !important;
+  padding: clamp(70px, 8vw, 110px) clamp(24px, 6vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+._21-case-studies-listing-new .want-results-like-these {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0;
+}
+
+._21-case-studies-listing-new .frame11,
+._21-case-studies-listing-new .button-talk-to-our-experts {
+  background: #ffffff;
+  border-radius: 90px;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+._21-case-studies-listing-new .frame11:hover,
+._21-case-studies-listing-new .button-talk-to-our-experts:hover {
+  background: #f0f4fc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+._21-case-studies-listing-new .talk-to-our-experts {
+  color: #1b4896 !important;
+  text-align: center;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1199px) {
+  ._21-case-studies-listing-new .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  ._21-case-studies-listing-new .frame,
+  ._21-case-studies-listing-new .hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    padding: calc(70px + 24px) 20px 32px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  ._21-case-studies-listing-new .frame3,
+  ._21-case-studies-listing-new .hero-copy {
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  ._21-case-studies-listing-new .c-a-s-e-s-t-u-d-i-e-s {
+    font-size: 13px !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  ._21-case-studies-listing-new .real-results-for-real-businesses {
+    font-size: clamp(2rem, 7.5vw, 2.5rem) !important;
+    line-height: 1.22 !important;
+  }
+
+  ._21-case-studies-listing-new .how-finecons-has-helped-organisations-across-retail-manufacturing-travel-erp-and-bfsi-modernise-secure-and-scale-their-it {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  ._21-case-studies-listing-new .frame4,
+  ._21-case-studies-listing-new .content-section {
+    padding: 40px 16px 60px 16px !important;
+    gap: 24px !important;
+  }
+
+  ._21-case-studies-listing-new .filter-chips-bar {
+    gap: 8px !important;
+  }
+
+  ._21-case-studies-listing-new .filter-chip {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+
+  ._21-case-studies-listing-new .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  ._21-case-studies-listing-new .case-card-image-wrap {
+    height: 210px;
+  }
+
+  ._21-case-studies-listing-new .case-title {
+    font-size: 1.2rem;
+  }
+}

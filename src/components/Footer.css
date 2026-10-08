@@ -1,154 +1,431 @@
-﻿/* ============================================================
-   Footer.css — loaded on every page via Footer.jsx import
-   ============================================================ */
+/* ==========================================================================
+   FINECONS NEW UNIVERSAL FOOTER STYLING
+   Centered Container with Symmetrical Margins & Full Responsiveness
+   ========================================================================== */
 
-/* ── .rectangle-267: mobile footer — hidden on desktop ── */
-.rectangle-267,
-.rectangle-267 * {
+.footer,
+.footer * {
   box-sizing: border-box;
 }
 
-/* Desktop: hide mobile footer */
-.rectangle-267 {
-  display: none;
+.footer {
+  background: var(--fc-dark-navy, #0f2a5c);
+  padding: 80px 48px 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* On mobile: hide the desktop wrapper */
-@media (max-width: 48rem) {
-  .footer-desktop-only {
-    display: none !important;
+/* Centered Max-Width Content Wrapper */
+.footer .footer-inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Top Columns Row */
+.footer .row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  gap: clamp(16px, 2.5vw, 40px);
+}
+
+/* Brand & Address Column */
+.footer .column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1.35;
+  min-width: 250px;
+  max-width: 340px;
+  position: relative;
+}
+
+.footer .frame {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px 20px 12px 20px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.footer .finecons-logo-correct {
+  flex-shrink: 0;
+  width: 190px;
+  height: 52px;
+  position: relative;
+  object-fit: contain;
+  display: block;
+}
+
+.footer .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018-tamil-nadu-india {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.footer ._91-44-4392-7600 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.footer ._91-44-4392-7600 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer ._91-44-4392-7600 a:hover {
+  opacity: 0.85;
+}
+
+.footer .info-finecons-com {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.footer .info-finecons-com a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer .info-finecons-com a:hover {
+  opacity: 0.85;
+}
+
+/* Link Columns */
+.footer .column2 {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 140px;
+  max-width: 200px;
+  position: relative;
+}
+
+/* Category Headers */
+.footer .cloud,
+.footer .solutions-services,
+.footer .software,
+.footer .company {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 19px;
+  line-height: 160%;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  margin-bottom: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Links */
+.footer .cloud-partners,
+.footer .buy-cloud-billing,
+.footer .cloud-migration,
+.footer .cloud-managed-services,
+.footer .cloud-security,
+.footer .backup-dr,
+.footer .cyber-security,
+.footer .managed-services,
+.footer .fms,
+.footer .amc,
+.footer .it-infrastructure,
+.footer .networking-physical-security,
+.footer .software-licensing,
+.footer .microsoft,
+.footer .zoho,
+.footer .ibm,
+.footer .about-us,
+.footer .partners,
+.footer .case-studies,
+.footer .contact,
+.footer .support {
+  color: #e6e8ff;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease, transform 0.15s ease;
+  display: block;
+  text-decoration: none;
+}
+
+.footer .cloud-partners:hover,
+.footer .buy-cloud-billing:hover,
+.footer .cloud-migration:hover,
+.footer .cloud-managed-services:hover,
+.footer .cloud-security:hover,
+.footer .backup-dr:hover,
+.footer .cyber-security:hover,
+.footer .managed-services:hover,
+.footer .fms:hover,
+.footer .amc:hover,
+.footer .it-infrastructure:hover,
+.footer .networking-physical-security:hover,
+.footer .software-licensing:hover,
+.footer .microsoft:hover,
+.footer .zoho:hover,
+.footer .ibm:hover,
+.footer .about-us:hover,
+.footer .partners:hover,
+.footer .case-studies:hover,
+.footer .contact:hover,
+.footer .support:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Decorative Divider */
+.footer .rectangle {
+  background: rgba(255, 255, 255, 0.3);
+  align-self: stretch;
+  width: 100%;
+  flex-shrink: 0;
+  height: 1px;
+  position: relative;
+}
+
+/* Bottom Row (Copyright & Legal) */
+.footer .row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  gap: 20px;
+}
+
+.footer ._2026-finecons-limited-all-rights-reserved {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 15px;
+  line-height: 160%;
+  font-weight: 400;
+  position: relative;
+}
+
+.footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in {
+  color: #ffffff;
+  text-align: right;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 15px;
+  line-height: 160%;
+  font-weight: 400;
+  position: relative;
+}
+
+.footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in span,
+.footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in a:hover,
+.footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in span:hover {
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Laptop & Desktop (1025px – 1366px) */
+@media (max-width: 1366px) {
+  .footer {
+    padding: 70px 40px 50px 40px;
+  }
+  .footer .footer-inner {
+    max-width: 1160px;
+    gap: 40px;
+  }
+  .footer .column {
+    flex: 1.25;
+    min-width: 240px;
+  }
+  .footer .column2 {
+    min-width: 130px;
+  }
+  .footer .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018-tamil-nadu-india,
+  .footer ._91-44-4392-7600,
+  .footer .info-finecons-com {
+    font-size: 15px;
+  }
+  .footer .cloud,
+  .footer .solutions-services,
+  .footer .software,
+  .footer .company {
+    font-size: 18px;
+  }
+  .footer .cloud-partners,
+  .footer .buy-cloud-billing,
+  .footer .cloud-migration,
+  .footer .cloud-managed-services,
+  .footer .cloud-security,
+  .footer .backup-dr,
+  .footer .cyber-security,
+  .footer .managed-services,
+  .footer .fms,
+  .footer .amc,
+  .footer .it-infrastructure,
+  .footer .networking-physical-security,
+  .footer .software-licensing,
+  .footer .microsoft,
+  .footer .zoho,
+  .footer .ibm,
+  .footer .about-us,
+  .footer .partners,
+  .footer .case-studies,
+  .footer .contact,
+  .footer .support {
+    font-size: 15px;
   }
 }
 
-/* ================================================================
-   MOBILE ONLY (max-width: 48rem)
-   ================================================================ */
-@media (max-width: 48rem) {
-
-  .rectangle-267,
-  .rectangle-267 * {
-    box-sizing: border-box !important;
+/* Tablet Landscape (820px – 1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 32px 40px 32px;
   }
-
-  /* ── Show mobile footer on mobile ── */
-  .rectangle-267 {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-    background: #534eeb !important;
-    padding: 3rem 1.75rem 2.25rem 1.75rem !important;
-    position: relative !important;
-    overflow: hidden !important;
+  .footer .row {
+    flex-wrap: wrap;
+    gap: 36px 24px;
   }
-
-  /* Decorative subtle circle in background */
-  .rectangle-267::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: -3.75rem !important;
-    right: -3.75rem !important;
-    width: 13.75rem !important;
-    height: 13.75rem !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.07) !important;
-    pointer-events: none !important;
+  .footer .column {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 8px;
   }
-
-  /* ── Logo: left-aligned, white ── */
-  .r267-logo {
-    display: block !important;
-    margin: 0 0 3rem 0 !important;
-    height: 4rem !important;
-    width: auto !important;
-    object-fit: contain !important;
-    filter: brightness(0) invert(1) !important;
-    align-self: flex-start !important;
+  .footer .column2 {
+    flex: 1 1 calc(50% - 20px);
+    max-width: none;
+    min-width: 160px;
   }
+}
 
-  /* ── Contact block ── */
-  .r267-contacts {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.75rem !important;
-    width: 100% !important;
-    margin-bottom: 2.75rem !important;
+/* Tablet Portrait & Large Mobile (576px – 819px) */
+@media (max-width: 819px) {
+  .footer {
+    padding: 50px 24px 36px 24px;
   }
-
-  /* Each row: white circle icon on left + text on right */
-  .r267-row {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 1.25rem !important;
-    width: 100% !important;
+  .footer .footer-inner {
+    gap: 32px;
   }
-
-  /* White circle icon container */
-  .r267-icon {
-    width: 3rem !important;
-    height: 3rem !important;
-    min-width: 3rem !important;
-    border-radius: 50% !important;
-    background: #ffffff !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.18) !important;
+  .footer .row {
+    flex-wrap: wrap;
+    gap: 32px 20px;
   }
-
-  .r267-icon svg {
-    width: 1.375rem !important;
-    height: 1.375rem !important;
-    stroke: #0e10ff !important;
-    fill: none !important;
-    flex-shrink: 0 !important;
-    display: block !important;
+  .footer .column {
+    width: 100%;
+    flex: 1 1 100%;
   }
-
-  /* Contact text */
-  .r267-text {
-    color: #ffffff !important;
-    font-size: 0.875rem !important;
-    line-height: 1.375rem !important;
-    font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+  .footer .column2 {
+    flex: 1 1 calc(50% - 16px);
   }
-
-  /* ── Divider line before links ── */
-  .r267-divider {
-    width: 100% !important;
-    height: 1px !important;
-    background: rgba(255, 255, 255, 0.2) !important;
-    margin-bottom: 2rem !important;
+  .footer .row2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
-
-  /* ── Links 2-column grid ── */
-  .r267-links {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 1.5rem 1.25rem !important;
-    width: 100% !important;
-    margin-bottom: 2.75rem !important;
+  .footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in {
+    text-align: left;
   }
+}
 
-  .r267-link {
-    color: #ffffff !important;
-    font-size: 0.875rem !important;
-    line-height: 1.25rem !important;
-    font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
-    cursor: pointer !important;
-    font-weight: 500 !important;
+/* Mobile Small (< 576px) */
+@media (max-width: 575px) {
+  .footer {
+    padding: 40px 18px 28px 18px;
   }
-
-  /* ── Copyright ── */
-  .r267-copy {
-    color: rgba(255, 255, 255, 0.80) !important;
-    font-size: 0.8125rem !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: 'Wix Madefor Text', 'Merriweather Sans', sans-serif !important;
+  .footer .footer-inner {
+    gap: 28px;
+  }
+  .footer .row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .footer .column {
+    width: 100%;
+  }
+  .footer .frame {
+    padding: 10px 16px;
+  }
+  .footer .finecons-logo-correct {
+    width: 160px;
+    height: 44px;
+  }
+  .footer .column2 {
+    width: 100%;
+    gap: 10px;
+  }
+  .footer .no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018-tamil-nadu-india,
+  .footer ._91-44-4392-7600,
+  .footer .info-finecons-com {
+    font-size: 14.5px;
+  }
+  .footer ._2026-finecons-limited-all-rights-reserved,
+  .footer .privacy-policy-terms-conditions-compliance-disclosure-linked-in {
+    font-size: 13.5px;
+    line-height: 150%;
   }
 }

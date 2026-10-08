@@ -1,731 +1,852 @@
-.get-in-touch-page {
+/* ==========================================================================
+   _05-contact-updated STYLES - FINE-TUNED FOR FIGMA SPEC & RESPONSIVENESS
+   ========================================================================== */
+
+._05-contact-updated,
+._05-contact-updated * {
+  box-sizing: border-box;
+}
+
+._05-contact-updated {
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
   position: relative;
   overflow-x: hidden;
   width: 100%;
+}
+
+/* ==========================================================================
+   1. HERO SECTION - SCREEN FIT & BRAND GRADIENT
+   ========================================================================== */
+._05-contact-updated .hero {
+  background: linear-gradient(
+      123.26deg,
+      rgba(233, 240, 250, 0) 45%,
+      rgba(27, 72, 150, 0.3) 91%
+    ),
+    linear-gradient(
+      223.79deg,
+      rgba(233, 240, 250, 1) 38%,
+      rgba(226, 235, 248, 1) 79%
+    );
+  padding: clamp(120px, 15vh, 148px) clamp(24px, 6.5vw, 100px) clamp(48px, 8vh, 80px) clamp(24px, 6.5vw, 100px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
 
-  /* Background elements */
-  .rectangle-217 {
-    background: linear-gradient(123.26deg,
-        rgba(228, 234, 255, 0) 45.13%,
-        rgba(38, 210, 222, 0.3) 90.88%),
-      linear-gradient(223.8deg,
-        rgba(228, 234, 255, 1) 38.34%,
-        rgba(175, 175, 255, 1) 79.08%);
-    width: 100%;
-    height: 100vh;
-    min-height: 51.25rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
+._05-contact-updated .hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.5vw, 28px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1150px;
+  position: relative;
+  z-index: 2;
+}
 
-  .ellipse-17 {
-    border-radius: 50%;
-    border: 3.25rem solid rgba(34, 35, 147, 0.09);
-    width: 20.25rem;
-    height: 20.25rem;
-    position: absolute;
-    left: -5rem;
-    top: -7.75rem;
-    z-index: 2;
-  }
+._05-contact-updated .g-e-t-i-n-t-o-u-c-h {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+}
 
-  .ellipse-18 {
-    border-radius: 50%;
-    border: 3.25rem solid rgba(34, 35, 147, 0.09);
-    width: 11.5rem;
-    height: 11.5rem;
-    position: absolute;
-    left: -0.625rem;
-    top: -3.375rem;
-    z-index: 2;
-  }
+._05-contact-updated .let-s-talk-about-your-it {
+  text-align: left;
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  line-height: 1.25;
+  font-weight: 600;
+  width: 100%;
+  margin: 0;
+}
 
-  .ellipse-19 {
-    border-radius: 50%;
-    border: 3.25rem solid rgba(34, 35, 147, 0.05);
-    width: 20.25rem;
-    height: 20.25rem;
-    position: absolute;
-    left: 15.25rem;
-    top: 19.125rem;
-    z-index: 2;
-  }
+._05-contact-updated .let-s-talk-about-your-it-span {
+  color: #191c1e;
+}
 
-  .ellipse-20 {
-    border-radius: 50%;
-    border: 3.25rem solid rgba(34, 35, 147, 0.05);
-    width: 11.5rem;
-    height: 11.5rem;
-    position: absolute;
-    left: 19.625rem;
-    top: 23.5rem;
-    z-index: 2;
-  }
+._05-contact-updated .let-s-talk-about-your-it-span2 {
+  color: #1b4896;
+}
 
-  .ellipse-192 {
-    border-radius: 50%;
-    border: 3.25rem solid rgba(34, 35, 147, 0.05);
-    width: 20.25rem;
-    height: 20.25rem;
-    position: absolute;
-    left: 24rem;
-    top: 27.125rem;
-    z-index: 2;
-  }
+._05-contact-updated .whether-it-s-a-new-project-a-cloud-bill-review-or-a-support-contract-our-experts-will-get-back-to-you-within-one-business-day {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+  line-height: 1.6;
+  font-weight: 400;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0;
+}
 
-  .ellipse-202 {
-    border-radius: 50%;
-    border: 3.25rem solid rgba(34, 35, 147, 0.05);
-    width: 11.5rem;
-    height: 11.5rem;
-    position: absolute;
-    left: 28.375rem;
-    top: 31.5rem;
-    z-index: 2;
-  }
+/* ==========================================================================
+   2. FORM & REACH US DIRECTLY (60/40 SPLIT)
+   ========================================================================== */
+._05-contact-updated .form-details {
+  padding: 80px 6vw;
+  display: flex;
+  flex-direction: row;
+  gap: 56px;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
 
-  /* Hero Banner */
-  .frame-535 {
-    display: flex;
+/* --- Left Column: Form 60% --- */
+._05-contact-updated .form-60 {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1.25;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 8px 24px rgba(15, 16, 255, 0.05);
+}
+
+._05-contact-updated .send-us-a-message {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  line-height: 1.3;
+  font-weight: 600;
+  position: relative;
+  align-self: stretch;
+  margin: 0 0 8px 0;
+}
+
+._05-contact-updated .send-us-a-message-span {
+  color: #191c1e;
+}
+
+._05-contact-updated .send-us-a-message-span2 {
+  color: #1b4896;
+}
+
+._05-contact-updated .row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+._05-contact-updated .column {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+._05-contact-updated .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+._05-contact-updated .form-label {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+._05-contact-updated .required-star {
+  color: #eb5a28;
+}
+
+/* Styled Form Input Controls */
+._05-contact-updated .input-control {
+  width: 100%;
+  background: #f9fbfd;
+  border-radius: 10px;
+  border: 1px solid rgba(27, 72, 150, 0.22);
+  padding: 14px 18px;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 15.5px;
+  color: #191c1e;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+._05-contact-updated .input-control::placeholder {
+  color: #8a8fa8;
+}
+
+._05-contact-updated .input-control:focus {
+  background: #ffffff;
+  border-color: #1b4896;
+  box-shadow: 0 0 0 3px rgba(27, 72, 150, 0.12);
+}
+
+._05-contact-updated .input-control.has-error {
+  border-color: #d93025;
+  background: #fff8f8;
+}
+
+._05-contact-updated .field-error {
+  color: #d93025;
+  font-size: 12.5px;
+  font-family: var(--body-regular-desktop-font-family, sans-serif);
+  margin-top: 4px;
+}
+
+/* Select Dropdown */
+._05-contact-updated .select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+._05-contact-updated select.input-control {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+._05-contact-updated .select-chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  color: #191c1e;
+  font-weight: 700;
+}
+
+/* Interest field info note */
+._05-contact-updated .options-helper-text {
+  color: #8a6d00;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  align-self: stretch;
+  background: #fffdf5;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px dashed rgba(202, 138, 4, 0.4);
+}
+
+/* Message Textarea */
+._05-contact-updated textarea.input-control {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Attachment Dropzone / Box */
+._05-contact-updated .attachment-box {
+  background: #f9fbfd;
+  border-radius: 10px;
+  border: 1px dashed rgba(27, 72, 150, 0.35);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+._05-contact-updated .attachment-box:hover {
+  background: #f0f5fc;
+  border-color: #1b4896;
+}
+
+._05-contact-updated .attachment-label-text {
+  color: #434655;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+._05-contact-updated .attachment-icon {
+  font-size: 16px;
+  color: #1b4896;
+  font-weight: 700;
+}
+
+._05-contact-updated .file-hidden-input {
+  display: none;
+}
+
+._05-contact-updated .file-chosen-tag {
+  background: #e2ebf8;
+  color: #1b4896;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+._05-contact-updated .file-remove-btn {
+  background: none;
+  border: none;
+  color: #d93025;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Checkbox Row */
+._05-contact-updated .consent-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  margin-top: 4px;
+}
+
+._05-contact-updated .consent-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  accent-color: #1b4896;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+._05-contact-updated .consent-text {
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 14px;
+  line-height: 1.55;
+  color: #191c1e;
+  flex: 1;
+}
+
+._05-contact-updated .consent-text-link {
+  color: #1b4896;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Recaptcha notice */
+._05-contact-updated .protected-by-re-captcha-v-3-invisible {
+  color: #8a8fa8;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 12.5px;
+  line-height: 1.5;
+  font-weight: 400;
+  align-self: stretch;
+  margin-top: -8px;
+}
+
+/* Submit Button */
+._05-contact-updated .button-send-message {
+  background: #eb5a28;
+  border-radius: 90px;
+  padding: 16px 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(235, 90, 40, 0.28);
+}
+
+._05-contact-updated .button-send-message:hover {
+  background: #d44d1e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(235, 90, 40, 0.36);
+}
+
+._05-contact-updated .button-send-message:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+._05-contact-updated .send-message-text {
+  color: #ffffff;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 17px;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+/* Success State Box */
+._05-contact-updated .success-state {
+  background: #e9f9ef;
+  border-radius: 12px;
+  border: 1px solid #b7ebc7;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in;
+}
+
+._05-contact-updated .success-message-shown-after-submit {
+  color: #1b7f3b;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+._05-contact-updated .success-desc-text {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+._05-contact-updated .success-support-link {
+  color: #1b4896;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Error State Box */
+._05-contact-updated .error-state {
+  background: #fdecec;
+  border-radius: 12px;
+  border: 1px solid #fecdd3;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
+}
+
+._05-contact-updated .error-message-title {
+  color: #b42318;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+._05-contact-updated .error-desc-text {
+  color: #191c1e;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- Right Column: Reach Us Directly 40% --- */
+._05-contact-updated .contact-details-40 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 0.85;
+  width: 100%;
+  position: relative;
+}
+
+._05-contact-updated .reach-us-directly {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  line-height: 1.3;
+  font-weight: 600;
+  position: relative;
+  align-self: stretch;
+  margin: 0 0 6px 0;
+}
+
+._05-contact-updated .reach-us-directly-span {
+  color: #191c1e;
+}
+
+._05-contact-updated .reach-us-directly-span2 {
+  color: #1b4896;
+}
+
+/* Contact Cards */
+._05-contact-updated .contact-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.08) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  box-shadow: 0px 4px 12px rgba(15, 16, 255, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+._05-contact-updated .contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(27, 72, 150, 0.08);
+}
+
+._05-contact-updated .card-heading {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+._05-contact-updated .card-body-text {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+._05-contact-updated a.card-body-text:hover {
+  color: #1b4896;
+  text-decoration: underline;
+}
+
+/* Card 5: Existing Customer Needing Support */
+._05-contact-updated .support-callout-card {
+  background: #f1f5fc;
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  box-shadow: 0px 4px 12px rgba(15, 16, 255, 0.04);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+._05-contact-updated .support-callout-card:hover {
+  transform: translateY(-3px);
+  border-color: #1b4896;
+  box-shadow: 0px 8px 24px rgba(27, 72, 150, 0.12);
+}
+
+._05-contact-updated .existing-customer-needing-support {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 16.5px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+._05-contact-updated .visit-our-support-page {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15.5px;
+  line-height: 1.4;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
+}
+
+._05-contact-updated .support-callout-card:hover .visit-our-support-page {
+  transform: translateX(4px);
+}
+
+/* LinkedIn link */
+._05-contact-updated .linked-in-link {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15.5px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+._05-contact-updated .linked-in-link:hover {
+  color: #1b4896;
+  text-decoration: underline;
+}
+
+/* Serving Customers Across the Region */
+._05-contact-updated .regional-presence-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  margin-top: 10px;
+}
+
+._05-contact-updated .serving-customers-across-the-region {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+._05-contact-updated .serving-customers-across-the-region-span {
+  color: #191c1e;
+}
+
+._05-contact-updated .serving-customers-across-the-region-span2 {
+  color: #1b4896;
+}
+
+._05-contact-updated .regional-presence-desc {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. EMBEDDED GOOGLE MAP SECTION
+   ========================================================================== */
+._05-contact-updated .map-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+._05-contact-updated .map-frame-container {
+  background: #e2ebf8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: 100%;
+  height: 480px;
+  position: relative;
+  border-top: 1px solid rgba(27, 72, 150, 0.15);
+  border-bottom: 1px solid rgba(27, 72, 150, 0.15);
+}
+
+._05-contact-updated .google-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ==========================================================================
+   4. QUICK LINKS SECTION (3 CARDS)
+   ========================================================================== */
+._05-contact-updated .quick-links-section {
+  padding: 80px 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+._05-contact-updated .quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+._05-contact-updated .quick-link-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.08) 100%
+  );
+  border-radius: 14px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 5px 14px rgba(15, 16, 255, 0.05);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._05-contact-updated .quick-link-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(27, 72, 150, 0.6);
+  box-shadow: 0px 12px 28px rgba(27, 72, 150, 0.12);
+}
+
+._05-contact-updated .quick-link-icon-box {
+  background: #1b4896;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+._05-contact-updated .quick-link-card:hover .quick-link-icon-box {
+  transform: scale(1.05);
+  background: #143570;
+}
+
+._05-contact-updated .quick-link-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+._05-contact-updated .quick-link-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+}
+
+._05-contact-updated .quick-link-cta {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+._05-contact-updated .quick-link-card:hover .quick-link-cta {
+  color: #1b4896;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   5. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1199px) {
+  ._05-contact-updated .form-details {
     flex-direction: column;
-    justify-content: space-between;
+    gap: 48px;
+    padding: 60px 5vw;
+  }
+
+  ._05-contact-updated .form-60,
+  ._05-contact-updated .contact-details-40 {
     width: 100%;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
-    position: relative;
-    z-index: 10;
-    height: 100vh;
-    max-height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
+    flex: none;
   }
 
-  .get-in-touch-hero-row {
-    width: 100%;
-    margin: auto 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(1.5rem, 3.5vw, 4rem);
-  }
-
-  .get-in-touch-hero-content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .frame-535 .frame-2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.375rem;
-    width: 100%;
-    margin: 0;
-  }
-
-  .frame-535 .frame-2>div {
-    background: #9d9dff;
-    border-radius: 1.875rem;
-    width: 0.375rem;
-    height: 1.75rem;
-    transition: all 0.3s ease;
-  }
-
-  .frame-535 .frame-2 .active-rect,
-  .frame-535 .frame-2 .rectangle-324 {
-    background: #0e10ff;
-    height: 2.125rem;
-  }
-
-  .start-your-transformation-journey {
-    font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
-    font-size: clamp(1.625rem, 2.8vw, 2.75rem);
-    line-height: 1.25;
-    font-weight: 600;
-    width: 100%;
-    text-align: left;
-  }
-
-  .start-your-transformation-journey-span {
-    color: #000000;
-  }
-
-  .start-your-transformation-journey-span2 {
-    color: #0e10ff;
-  }
-
-  .about-hero-visual {
-    flex-shrink: 0;
-    width: min(24rem, 30vw);
-    height: min(21.5rem, 32vh);
-    position: relative;
-    transition: transform 0.5s ease;
-    overflow: visible;
-  }
-
-  .about-hero-visual:hover {
-    transform: scale(1.03);
-  }
-
-  .ellipse-4,
-  .ellipse-4 * {
-    box-sizing: border-box;
-  }
-
-  .ellipse-4 {
-    position: absolute;
-    width: 16.8125rem;
-    height: 15.625rem;
-    left: 0.625rem;
-    top: 4.6875rem;
-    z-index: 1;
-    overflow: visible;
-  }
-
-  .ellipse-2,
-  .ellipse-2 * {
-    box-sizing: border-box;
-  }
-
-  .ellipse-2 {
-    position: absolute;
-    width: 14.625rem;
-    height: 20.1875rem;
-    left: 2.8125rem;
-    top: 1.5625rem;
-    z-index: 2;
-    overflow: visible;
-  }
-
-  .ellipse-3,
-  .ellipse-3 * {
-    box-sizing: border-box;
-  }
-
-  .ellipse-3 {
-    position: absolute;
-    width: 19.75rem;
-    height: 21.875rem;
-    left: 6.25rem;
-    top: 0.9375rem;
-    z-index: 3;
-    overflow: visible;
-    object-fit: cover;
-  }
-
-
-  /* Main Form Card Section */
-  .frame-550 {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-    width: 100%;
-    max-width: 80rem;
-    margin: 7.5rem auto 7.5rem auto;
-    padding: 0 3rem;
-    position: relative;
-    z-index: 10;
-  }
-
-  .get-in-touch-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-
-  .get-in-touch-content-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .g-e-t-i-n-t-o-u-c-h {
-    color: #000000;
-    text-align: center;
-    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-    font-size: 1.25rem;
-    letter-spacing: 0.25rem;
-    font-weight: 700;
-  }
-
-  .hero-header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .it-solutions-inquiry {
-    font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  .it-solutions-inquiry-span {
-    color: #0e10ff;
-  }
-
-  .it-solutions-inquiry-span2 {
-    color: #000f22;
-  }
-
-  .tell-us-about-your-project-and-our-experts-will-get-in-touch {
-    color: #43474d;
-    font-family: var(--body-regular-2-mobile-font-family, "MerriweatherSans-Regular", sans-serif);
-    font-size: 1.125rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .main-form-card {
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid #c4c6ce;
-    border-radius: 1.5rem;
-    padding: 3rem;
-    box-shadow: 0 0.625rem 2.5rem rgba(14, 16, 255, 0.04);
-    backdrop-filter: blur(0.75rem);
-    flex: 1;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .success-banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 3.75rem 1.25rem;
-    color: #0e10ff;
-
-    .success-check {
-      width: 5rem;
-      height: 5rem;
-      color: #00ca62;
-      margin-bottom: 1.5rem;
-      filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 202, 98, 0.2));
-    }
-
-    h2 {
-      font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
-      font-size: 1.75rem;
-      color: #000f22;
-      margin: 0 0 0.75rem 0;
-    }
-
-    p {
-      font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-      font-size: 1rem;
-      color: #43474d;
-      margin: 0;
-    }
-  }
-
-  .section-1-contact-information,
-  .section-2-service-selection,
-  .section-3-project-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-    width: 100%;
-  }
-
-  .container3 {
-    display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-    align-items: center;
-  }
-
-  .section-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #0e10ff;
-  }
-
-  .contact-information,
-  .service-selection,
-  .project-details {
-    color: #000f22;
-    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-    font-size: 1.375rem;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  .container5 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    position: relative;
-  }
-
-  .full-name,
-  .company-name,
-  .work-email,
-  .phone-number,
-  .budget-range,
-  .estimated-start-date,
-  .how-can-we-help {
-    color: #191c1e;
-    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-    font-size: 0.9375rem;
-    font-weight: 600;
-  }
-
-  .input-field,
-  .select-field,
-  .date-field,
-  .textarea-field {
-    background: #ffffff;
-    border: 1px solid #c4c6ce;
-    border-radius: 0.5rem;
-    padding: 0.875rem 1rem;
-    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-    font-size: 0.9375rem;
-    color: #000f22;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .input-field::placeholder,
-  .textarea-field::placeholder {
-    color: #9aa1a6;
-  }
-
-  .input-field:focus,
-  .select-field:focus,
-  .date-field:focus,
-  .textarea-field:focus {
-    border-color: #0e10ff;
-    box-shadow: 0 0 0 0.1875rem rgba(14, 16, 255, 0.08);
-  }
-
-  .error-border {
-    border-color: #ba1a1a !important;
-  }
-
-  .error-text {
-    color: #ba1a1a;
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .separator {
-    border-top: 1px solid #e1e2ec;
-    width: 100%;
-    margin: 0.75rem 0;
-  }
-
-  /* Service Selection Cards Grid */
-  .container12 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .service-card {
-    background: #ffffff;
-    border: 1px solid #c4c6ce;
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem;
-    cursor: pointer;
-    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    min-height: 7.5rem;
-  }
-
-  .service-card:hover {
-    transform: translateY(-0.125rem);
-    border-color: #0e10ff;
-    box-shadow: 0 0.375rem 1rem rgba(14, 16, 255, 0.04);
-  }
-
-  .service-icon-wrapper {
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0e10ff;
-    transition: color 0.3s ease;
-  }
-
-  .service-card-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    stroke-width: 0.1375rem;
-  }
-
-  .service-label {
-    color: #000f22;
-    font-family: var(--body-regular-mobile-font-family, "MerriweatherSans-Regular", sans-serif);
-    font-size: 0.875rem;
-    line-height: 1.4;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  /* Active Service Card States */
-  .active-service {
-    background-color: #0e10ff;
-    border-color: transparent;
-    box-shadow: 0 0.625rem 1.5rem rgba(14, 16, 255, 0.15);
-
-    .service-icon-wrapper {
-      color: #ffffff;
-    }
-
-    .service-label {
-      color: #ffffff;
-      font-weight: 600;
-    }
-  }
-
-  /* Project Details Section */
-  .container21 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-  }
-
-  .select-field {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2343474d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1.125rem;
-    padding-right: 3rem;
-  }
-
-  .textarea-field {
-    min-height: 8.75rem;
-    resize: vertical;
-    line-height: 1.5;
-  }
-
-  /* Section 4 Action */
-  .section-4-final-action {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    width: 100%;
-    margin-top: 0.75rem;
-  }
-
-  .submit-btn {
-    background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
-    border: none;
-    border-radius: 5.625rem;
-    padding: 1rem 2.5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    cursor: pointer;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .submit-btn:hover {
-    opacity: 0.95;
-    transform: translateY(-0.125rem);
-  }
-
-  .submit-request {
-    color: #ffffff;
-    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-
-  .submit-arrow {
-    width: 1.125rem;
-    height: 1.125rem;
-    color: #ffffff;
-    transition: transform 0.3s ease;
-  }
-
-  .submit-btn:hover .submit-arrow {
-    transform: translateX(0.25rem);
-  }
-
-  .paragraph2 {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .lock-icon {
-    width: 0.875rem;
-    height: 0.875rem;
-    color: #00ca62;
-  }
-
-  .security-text {
-    color: #6b7280;
-    font-family: 'Wix Madefor Text', sans-serif;
-    font-size: 0.8125rem;
-  }
-
-  /* Office Details Map Card (Right Column) */
-  .frame-549 {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 22.5rem;
-    flex-shrink: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-  }
-
-  .map-wrapper {
-    position: relative;
-    width: 100%;
-    height: 23.75rem;
-    background: transparent;
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-
-  .rectangle-344 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1;
-  }
-
-  .frame-548 {
-    padding: 1.5rem;
-    background-color: #f3f9ff;
-    border-radius: 1rem;
-    box-shadow: 0 0.625rem 2.5rem rgba(14, 16, 255, 0.03);
-  }
-
-  .group-401 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .group-400 {
-    display: none;
-  }
-
-  .rectangle-345 {
-    display: none;
-  }
-
-  .heading-12 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-align: left;
-  }
-
-  .finecons-limited {
-    color: #0e10ff;
-    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 0;
-  }
-
-  .no-22-35-ground-floor-first-floor-maharaja-surya-road-alwarpet-chennai-600018 {
-    color: #0e10ff !important;
-    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .ph-no-044-43927600,
-  .email-info-finecons-com {
-    color: #0e10ff;
-    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
-    font-size: 0.875rem;
-    font-weight: 600;
+  ._05-contact-updated .quick-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@keyframes floatIllustration {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-0.75rem);
+@media (min-width: 1920px) {
+  ._05-contact-updated .hero-copy {
+    max-width: 1400px;
   }
 }
 
-/* Get in Touch Page Mobile Responsiveness Override */
-@media (max-width: 48rem) {
-  .get-in-touch-page {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .get-in-touch-page .rectangle-267 {
-    margin-bottom: 0 !important;
-  }
-
-  .get-in-touch-page .rectangle-217 {
-    height: 100vh !important;
-    height: 100dvh !important;
-    min-height: 100vh !important;
-    min-height: 100dvh !important;
-    max-height: 100vh !important;
-    max-height: 100dvh !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-  }
-
-  /* Screen fit hero container (100dvh) */
-  .get-in-touch-page .frame-535 {
+@media (max-width: 767px) {
+  ._05-contact-updated .hero {
     height: 100vh !important;
     height: 100dvh !important;
     min-height: 100vh !important;
@@ -733,245 +854,53 @@
     max-height: 100vh !important;
     max-height: 100dvh !important;
     overflow: hidden !important;
-    position: relative !important;
-    margin: 0 auto !important;
-    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
     box-sizing: border-box !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 0 !important;
-  }
-
-  .get-in-touch-page .get-in-touch-hero-row {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    flex: 1 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    min-height: 0 !important;
-  }
-
-  .get-in-touch-page .get-in-touch-hero-content {
-    flex: 0 0 auto !important;
+    padding-top: calc(70px + 16px) !important;
+    padding-bottom: 30px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    width: 100% !important;
-    max-width: 25rem !important;
-    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
-    padding: 0 !important;
-    height: auto !important;
-    gap: 0.375rem !important;
   }
 
-  .get-in-touch-page .start-your-transformation-journey {
-    font-size: clamp(1.75rem, 6.8vw, 2.35rem) !important;
-    line-height: 1.22 !important;
-    text-align: center !important;
-    letter-spacing: -0.4px !important;
-    width: 100% !important;
-    display: block !important;
-    margin: 0 !important;
-  }
-
-  .get-in-touch-page .start-your-transformation-journey span {
-    text-align: center !important;
-    display: inline !important;
-  }
-
-  .get-in-touch-page .about-hero-visual {
-    width: 100% !important;
-    max-width: 24rem !important;
-    flex: 1 !important;
-    min-height: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
+  ._05-contact-updated .hero-copy {
     align-items: center !important;
-    position: relative !important;
-    margin: auto auto !important;
-    overflow: visible !important;
-    transform: none !important;
-  }
-
-  .get-in-touch-page .ellipse-4 {
-    width: clamp(13rem, 60vw, 16.5rem) !important;
-    height: clamp(12rem, 34vh, 17rem) !important;
-    position: absolute !important;
-    top: 54% !important;
-    left: 36% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 1 !important;
-    max-width: none !important;
-    margin: 0 !important;
-  }
-
-  .get-in-touch-page .ellipse-2 {
-    width: clamp(13.5rem, 64vw, 17rem) !important;
-    height: clamp(16rem, 42vh, 21rem) !important;
-    position: absolute !important;
-    top: 48% !important;
-    left: 44% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 2 !important;
-    max-width: none !important;
-  }
-
-  .get-in-touch-page .ellipse-3 {
-    width: clamp(16.5rem, 82vw, 21rem) !important;
-    height: clamp(19rem, 48vh, 24.5rem) !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: 54% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 3 !important;
-    max-width: none !important;
-  }
-
-  .get-in-touch-page .frame-535 .frame-2 {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.375rem !important;
-    width: 100% !important;
-    margin-top: auto !important;
-    margin-bottom: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    z-index: 5 !important;
-  }
-
-  .get-in-touch-page .frame-535 .frame-2 > div {
-    background: #9d9dff !important;
-    border-radius: 1.875rem !important;
-    width: 0.375rem !important;
-    height: 1.75rem !important;
-  }
-
-  .get-in-touch-page .frame-535 .frame-2 .active-rect,
-  .get-in-touch-page .frame-535 .frame-2 .rectangle-324 {
-    background: #0e10ff !important;
-    height: 2.125rem !important;
-  }
-
-  /* Hide background decorative ellipses on mobile */
-  .get-in-touch-page .ellipse-17,
-  .get-in-touch-page .ellipse-18,
-  .get-in-touch-page .ellipse-19,
-  .get-in-touch-page .ellipse-20,
-  .get-in-touch-page .ellipse-192,
-  .get-in-touch-page .ellipse-202 {
-    display: none !important;
-  }
-
-  /* Force Form Section out of absolute positioning with clean gap from hero */
-  .get-in-touch-page .frame-550 {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    flex-direction: column !important;
-    gap: 2.5rem !important;
-    width: 90% !important;
-    margin: clamp(3.5rem, 8vh, 5rem) auto 3.5rem auto !important;
-    padding: 0 !important;
-  }
-
-  .get-in-touch-page .get-in-touch-header {
-    width: 100% !important;
-  }
-
-  .get-in-touch-page .get-in-touch-content-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 2rem !important;
-    width: 100% !important;
-  }
-
-  .get-in-touch-page .g-e-t-i-n-t-o-u-c-h {
     text-align: center !important;
   }
 
-  .get-in-touch-page .hero-header {
+  ._05-contact-updated .contact-us,
+  ._05-contact-updated .we-re-here-to-help-you-build-secure-and-scale-your-it {
     text-align: center !important;
   }
 
-  .get-in-touch-page .it-solutions-inquiry {
-    font-size: 2rem !important;
-    line-height: 2.5rem !important;
+  ._05-contact-updated .form-details {
+    padding: 40px 4vw;
   }
 
-  .get-in-touch-page .main-form-card {
-    padding: 1.5rem 1rem !important;
-    border-radius: 1.5rem !important;
+  ._05-contact-updated .form-60 {
+    padding: 28px 20px;
   }
 
-  .get-in-touch-page .container5,
-  .get-in-touch-page .container21 {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
+  ._05-contact-updated .row {
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .get-in-touch-page .container12 {
-    grid-template-columns: 1fr !important;
-    gap: 0.75rem !important;
+  ._05-contact-updated .quick-links-section {
+    padding: 50px 4vw;
   }
 
-  .get-in-touch-page .service-card {
-    padding: 0.75rem 0.875rem !important;
+  ._05-contact-updated .quick-links-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .get-in-touch-page .section-4-final-action {
-    flex-direction: column !important;
-    gap: 1rem !important;
-    align-items: center !important;
+  ._05-contact-updated .map-frame-container {
+    height: 360px;
   }
 
-  .get-in-touch-page .submit-btn {
-    width: 100% !important;
-    justify-content: center !important;
-  }
-
-  .get-in-touch-page .paragraph2 {
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  /* Office Details Column stack underneath form */
-  .get-in-touch-page .frame-549 {
-    width: 100% !important;
-    margin-top: 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-  }
-
-  .get-in-touch-page .map-wrapper {
-    height: 15rem !important;
-    border-radius: 1.5rem !important;
-  }
-
-  .get-in-touch-page .frame-548 {
-    padding: 1.5rem 1rem !important;
-    border-radius: 1.5rem !important;
-    width: 100% !important;
-  }
-
-  .get-in-touch-page .heading-12 {
-    text-align: center !important;
-    align-items: center !important;
-  }
-
-  .get-in-touch-page .heading-12 p {
-    text-align: center !important;
+  ._05-contact-updated .button-send-message {
+    width: 100%;
   }
 }

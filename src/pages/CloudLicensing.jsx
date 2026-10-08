@@ -25,65 +25,65 @@ const CloudLicensing = ({ navigateTo }) => {
 
   return (
     <div className="licensing">
-      {/* Background Decorative Elements */}
-      <div className="ellipse-17"></div>
-      <div className="ellipse-18"></div>
-      <div className="ellipse-19"></div>
-      <div className="ellipse-20"></div>
-      <div className="ellipse-192"></div>
-      <div className="ellipse-202"></div>
-
       {/* Navigation Bar */}
       <Navbar navigateTo={navigateTo} activeLink="solutions" />
 
       {/* Hero Section */}
       <div className="licensing-hero-section">
+        {/* Background Decorative Rings */}
+        <div className="ellipse-17"></div>
+        <div className="ellipse-18"></div>
+        <div className="ellipse-19"></div>
+        <div className="ellipse-20"></div>
+
         <div className="licensing-hero-inner">
-          {/* Left: Title */}
-          <div className="licensing-hero-content">
-            <h1 className="licensing-technical-support-services">
-              <span className="licensing-technical-support-services-span" style={{whiteSpace: 'nowrap', display: 'block'}}>
-                Licensing &amp; Technical
-              </span>
-              <span className="licensing-technical-support-services-span2" style={{whiteSpace: 'nowrap', display: 'block'}}>
-                Support Services
-              </span>
-            </h1>
+          <div className="licensing-hero-row">
+            {/* Left: Title */}
+            <div className="licensing-hero-content">
+              <h1 className="licensing-technical-support-services">
+                <span className="licensing-technical-support-services-span">
+                  Licensing &amp; Technical
+                </span>
+                <span className="licensing-technical-support-services-span2">
+                  Support Services
+                </span>
+              </h1>
+            </div>
+
+            {/* Right: Hero Visual - exact same structure as Partners page */}
+            <div className="about-hero-visual">
+              <div className="ellipse-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
+                  <path d="M178.593 87.0578C232.128 136.141 303.315 140.715 249.935 198.937C195.559 287.681 82.5975 242 29.0624 192.917C-24.4727 143.834 2.68641 79.4156 56.0668 21.1931C109.447 -37.0295 125.057 37.975 178.593 87.0578Z" fill="#B6A755" fillOpacity="0.8" />
+                </svg>
+              </div>
+              <div className="ellipse-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 234 323" fill="none">
+                  <path d="M217.884 163.856C217.884 252.125 272.314 319.653 176.208 319.653C51.9119 343.828 0 205.117 0 116.848C0 28.5782 80.1025 0 176.208 0C272.314 0 217.884 75.5859 217.884 163.856Z" fill="#525299" fillOpacity="0.8" />
+                </svg>
+              </div>
+              <div className="ellipse-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 316 350" fill="none">
+                  <defs>
+                    <clipPath id="licensingLeafClip">
+                      <path d="M251.226 154.679C285.477 242.327 367.709 287.484 268.777 326.143C150.208 400.148 42.9472 283.296 8.69687 195.649C-25.5534 108.001 45.8151 47.4019 144.746 8.74241C243.677 -29.9171 216.976 67.0313 251.226 154.679Z" />
+                    </clipPath>
+                  </defs>
+                  <image
+                    href="/assets/cloud_licensing_hero.png"
+                    x="0"
+                    y="0"
+                    width="316"
+                    height="350"
+                    preserveAspectRatio="xMidYMid slice"
+                    clipPath="url(#licensingLeafClip)"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          {/* Right: Hero Visual - exact same structure as Partners page */}
-          <div className="about-hero-visual">
-            <div className="ellipse-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 269 250" fill="none">
-                <path d="M178.593 87.0578C232.128 136.141 303.315 140.715 249.935 198.937C195.559 287.681 82.5975 242 29.0624 192.917C-24.4727 143.834 2.68641 79.4156 56.0668 21.1931C109.447 -37.0295 125.057 37.975 178.593 87.0578Z" fill="#B6A755" fillOpacity="0.8" />
-              </svg>
-            </div>
-            <div className="ellipse-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 234 323" fill="none">
-                <path d="M217.884 163.856C217.884 252.125 272.314 319.653 176.208 319.653C51.9119 343.828 0 205.117 0 116.848C0 28.5782 80.1025 0 176.208 0C272.314 0 217.884 75.5859 217.884 163.856Z" fill="#525299" fillOpacity="0.8" />
-              </svg>
-            </div>
-            <div className="ellipse-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 316 350" fill="none">
-                <defs>
-                  <clipPath id="licensingLeafClip">
-                    <path d="M251.226 154.679C285.477 242.327 367.709 287.484 268.777 326.143C150.208 400.148 42.9472 283.296 8.69687 195.649C-25.5534 108.001 45.8151 47.4019 144.746 8.74241C243.677 -29.9171 216.976 67.0313 251.226 154.679Z" />
-                  </clipPath>
-                </defs>
-                <image
-                  href="/assets/cloud_licensing_hero.png"
-                  x="0"
-                  y="0"
-                  width="316"
-                  height="350"
-                  preserveAspectRatio="xMidYMid slice"
-                  clipPath="url(#licensingLeafClip)"
-                />
-              </svg>
-            </div>
-          </div>
-
-          {/* 9-bar indicator */}
+          {/* 9-bar indicator positioned at bottom-left */}
           <div className="frame-2">
             <div className="inactive-rect"></div>
             <div className="inactive-rect"></div>
@@ -126,28 +126,28 @@ const CloudLicensing = ({ navigateTo }) => {
             <div className="bento-list">
               <div className="bento-list-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="check-icon">
-                  <circle cx="12" cy="12" r="10" fill="#0e10ff" stroke="#0e10ff" />
+                  <circle cx="12" cy="12" r="10" fill="#1B4896" stroke="#1B4896" />
                   <polyline points="16 9 11 14 8 11" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>Microsoft 365</span>
               </div>
               <div className="bento-list-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="check-icon">
-                  <circle cx="12" cy="12" r="10" fill="#0e10ff" stroke="#0e10ff" />
+                  <circle cx="12" cy="12" r="10" fill="#1B4896" stroke="#1B4896" />
                   <polyline points="16 9 11 14 8 11" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>Windows Server</span>
               </div>
               <div className="bento-list-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="check-icon">
-                  <circle cx="12" cy="12" r="10" fill="#0e10ff" stroke="#0e10ff" />
+                  <circle cx="12" cy="12" r="10" fill="#1B4896" stroke="#1B4896" />
                   <polyline points="16 9 11 14 8 11" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>Procurement</span>
               </div>
               <div className="bento-list-item">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="check-icon">
-                  <circle cx="12" cy="12" r="10" fill="#0e10ff" stroke="#0e10ff" />
+                  <circle cx="12" cy="12" r="10" fill="#1B4896" stroke="#1B4896" />
                   <polyline points="16 9 11 14 8 11" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span>SAM Compliance</span>
@@ -291,7 +291,7 @@ const CloudLicensing = ({ navigateTo }) => {
               {/* Card 1 */}
               <div className="background-border-shadow">
                 <div className="resp-card-icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
                     <circle cx="9" cy="21" r="1" />
                     <circle cx="20" cy="21" r="1" />
                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
@@ -308,7 +308,7 @@ const CloudLicensing = ({ navigateTo }) => {
               {/* Card 2 */}
               <div className="background-border-shadow">
                 <div className="resp-card-icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -326,7 +326,7 @@ const CloudLicensing = ({ navigateTo }) => {
               {/* Card 3 */}
               <div className="background-border-shadow">
                 <div className="resp-card-icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
                     <rect x="3" y="3" width="18" height="18" rx="2" />
                     <path d="m9 11 2 2 4-4" />
                   </svg>
@@ -342,7 +342,7 @@ const CloudLicensing = ({ navigateTo }) => {
               {/* Card 4 */}
               <div className="background-border-shadow">
                 <div className="resp-card-icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="resp-icon">
                     <path d="M21 10V8a9 9 0 0 0-18 0v2" />
                     <circle cx="4" cy="12" r="2" />
                     <circle cx="20" cy="12" r="2" />

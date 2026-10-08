@@ -297,7 +297,7 @@ const CloudAWS = ({ navigateTo }) => {
               {/* Section 1: Business Challenges */}
               <div className="modal-section">
                 <div className="modal-section-header">
-                  <svg className="section-icon challenges-icon" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="section-icon challenges-icon" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
                     <line x1="13" y1="19" x2="19" y2="13" />
                     <line x1="16" y1="16" x2="20" y2="20" />
@@ -323,7 +323,7 @@ const CloudAWS = ({ navigateTo }) => {
               {/* Section 2: Solution Implemented */}
               <div className="modal-section">
                 <div className="modal-section-header">
-                  <svg className="section-icon solution-icon" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="section-icon solution-icon" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M16 3h5v5" />
                     <path d="M8 3H3v5" />
                     <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" />
@@ -347,7 +347,7 @@ const CloudAWS = ({ navigateTo }) => {
               {/* Section 3: Business Impact */}
               <div className="modal-section">
                 <div className="modal-section-header">
-                  <svg className="section-icon impact-icon" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg className="section-icon impact-icon" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
                     <polyline points="17 6 23 6 23 12" />
                   </svg>

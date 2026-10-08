@@ -112,7 +112,7 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
     switch (id) {
       case 1: // Infrastructure Assessment (Cloud gauge)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
             <circle cx="12" cy="14" r="2" />
             <path d="M12 12v-2" />
@@ -120,14 +120,14 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
         );
       case 2: // Resource Rightsizing (Layered cards)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <rect width="13" height="13" x="8" y="8" rx="2" />
             <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
           </svg>
         );
       case 3: // Auto Scaling Configuration (Meter/Console)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <rect width="20" height="15" x="2" y="4.5" rx="2" />
             <line x1="6" y1="12" x2="6.01" y2="12" />
             <line x1="10" y1="12" x2="10.01" y2="12" />
@@ -137,7 +137,7 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
         );
       case 4: // Compute Optimisation (Balance scales)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
             <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
             <path d="M7 21h10" />
@@ -147,18 +147,18 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
         );
       case 5: // Storage Optimisation (Storage server list)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="9" x2="20" y1="6" y2="6" />
             <line x1="9" x2="20" y1="12" y2="12" />
             <line x1="9" x2="20" y1="18" y2="18" />
-            <circle cx="4" cy="6" r="1.5" fill="#0e10ff" />
-            <circle cx="4" cy="12" r="1.5" fill="#0e10ff" />
-            <circle cx="4" cy="18" r="1.5" fill="#0e10ff" />
+            <circle cx="4" cy="6" r="1.5" fill="#1B4896" />
+            <circle cx="4" cy="12" r="1.5" fill="#1B4896" />
+            <circle cx="4" cy="18" r="1.5" fill="#1B4896" />
           </svg>
         );
       case 6: // Database Performance Tuning (Database cylinder)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <ellipse cx="12" cy="5" rx="9" ry="3" />
             <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
             <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
@@ -166,7 +166,7 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
         );
       case 7: // Load Balancer Optimisation (Split branching node)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="5" r="3" />
             <circle cx="6" cy="19" r="3" />
             <circle cx="18" cy="19" r="3" />
@@ -177,14 +177,14 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
         );
       case 8: // Performance Monitoring (Analytics trend line)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 3v18h18" />
             <path d="m19 9-5 5-4-4-3 3" />
           </svg>
         );
       case 9: // Capacity Optimisation (Vertical capacity bar chart)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" x2="18" y1="20" y2="4" />
             <line x1="12" x2="12" y1="20" y2="9" />
             <line x1="6" x2="6" y1="20" y2="14" />
@@ -193,7 +193,7 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
         );
       case 10: // Continuous Health Checks (Health check shield)
         return (
-          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#0e10ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#1B4896" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             <path d="m9 12 2 2 4-4" />
           </svg>
@@ -224,11 +224,11 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
           <div className="hero-grid-2col">
             {/* Left Headline */}
             <div className="hero-text-block">
-              <span className="hero-badge">CLOUD SERVICES</span>
+              <span className="hero-badge">FINOPS &amp; PERFORMANCE</span>
               <h1 className="hero-main-title">
-                Maximize <span className="highlight-blue">Performance.</span>
+                Maximise <span className="highlight-blue">Performance.</span>
                 <br />
-                Minimize <span className="highlight-blue">Operational Costs</span>
+                Minimise <span className="highlight-blue">Waste.</span>
               </h1>
             </div>
 
@@ -347,11 +347,9 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
           <div className="final-cta-card">
             <div className="cta-radial-glow"></div>
             <div className="cta-inner-content">
-              <h2 className="cta-heading">Ready to Optimize Your Cloud?</h2>
+              <h2 className="cta-heading">Request a Free Cloud Bill Analysis</h2>
               <p className="cta-description">
-                Book a technical consultation with our certified architects to review your
-                <br />
-                existing environment or plan your migration roadmap.
+                Send us your recent cloud invoices under NDA for an independent cost and performance review.
               </p>
               <button
                 type="button"
@@ -370,7 +368,7 @@ const CloudPerformanceOptimization = ({ navigateTo }) => {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span>Contact us</span>
+                <span>Request a Free Bill Analysis</span>
               </button>
             </div>
           </div>

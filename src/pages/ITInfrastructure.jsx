@@ -91,10 +91,10 @@ const ITInfrastructure = ({ navigateTo }) => {
 
                     {/* Central Server Rack Triangle Image */}
                     <div className="infra-triangle-wrapper">
-                      <img 
-                        className="infra-triangle-image" 
-                        src="/assets/it_infra_triangle.png" 
-                        alt="IT Infrastructure Server Racks" 
+                      <img
+                        className="infra-triangle-image"
+                        src="/assets/it_infra_triangle.png"
+                        alt="IT Infrastructure Server Racks"
                       />
                     </div>
                   </div>
@@ -185,22 +185,22 @@ const ITInfrastructure = ({ navigateTo }) => {
                   <ul className="pillar-card-features">
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Hybrid Cloud Integration</span>
                     </li>
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Scalable Tiered Storage</span>
                     </li>
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Performance Monitoring</span>
                     </li>
@@ -219,22 +219,22 @@ const ITInfrastructure = ({ navigateTo }) => {
                   <ul className="pillar-card-features">
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Rack Migration Services</span>
                     </li>
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Redundant Power &amp; Cooling</span>
                     </li>
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>24/7 Monitoring &amp; NOC</span>
                     </li>
@@ -253,22 +253,22 @@ const ITInfrastructure = ({ navigateTo }) => {
                   <ul className="pillar-card-features">
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Automated Provisioning</span>
                     </li>
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>VDI &amp; Remote Work</span>
                     </li>
                     <li>
                       <svg className="pillar-item-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="10" cy="10" r="8" stroke="#0e10ff" strokeWidth="1.75" />
-                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#0e10ff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                        <circle cx="10" cy="10" r="8" stroke="#1B4896" strokeWidth="1.75" />
+                        <path d="M7 10.2L9 12.2L13.5 7.8" stroke="#1B4896" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                       <span>Fleet Lifecycle Management</span>
                     </li>
@@ -357,7 +357,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                 {/* 1. Server Virtualization */}
                 <div className="expertise-item-card">
                   <div className="expertise-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="2" y="3" width="20" height="7" rx="2" />
                       <rect x="2" y="14" width="20" height="7" rx="2" />
                       <line x1="6" y1="6.5" x2="6.01" y2="6.5" />
@@ -375,7 +375,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                 {/* 2. Disaster Recovery */}
                 <div className="expertise-item-card">
                   <div className="expertise-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                       <polyline points="12 8 12 12 14 14" />
                     </svg>
@@ -391,7 +391,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                 {/* 3. Storage Tiering */}
                 <div className="expertise-item-card">
                   <div className="expertise-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <ellipse cx="12" cy="5" rx="9" ry="3" />
                       <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
                       <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
@@ -408,7 +408,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                 {/* 4. Virtual Desktop (VDI) */}
                 <div className="expertise-item-card">
                   <div className="expertise-icon-box">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="2" y="3" width="20" height="14" rx="2" />
                       <line x1="8" y1="21" x2="16" y2="21" />
                       <line x1="12" y1="17" x2="12" y2="21" />
@@ -441,7 +441,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                   {/* Feature 1 */}
                   <div className="logistics-feature-item">
                     <div className="logistics-icon-box">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                         <path d="M9 12l2 2 4-4" />
                       </svg>
@@ -457,7 +457,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                   {/* Feature 2 */}
                   <div className="logistics-feature-item">
                     <div className="logistics-icon-box">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10zM2 12h20" />
                       </svg>
@@ -473,7 +473,7 @@ const ITInfrastructure = ({ navigateTo }) => {
                   {/* Feature 3 */}
                   <div className="logistics-feature-item">
                     <div className="logistics-icon-box">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="1" y="3" width="15" height="13" />
                         <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
                         <circle cx="5.5" cy="18.5" r="2.5" />

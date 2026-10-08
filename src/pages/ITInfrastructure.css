@@ -15,13 +15,9 @@
 
 /* Background gradient overlay & decorative shapes */
 .solutions-it-infrastructure .rectangle-217 {
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45.13%,
-      rgba(38, 210, 222, 0.3) 90.88%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38.34%,
-      rgba(175, 175, 255, 1) 79.08%);
-  opacity: 0.85;
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  opacity: 0.95;
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -34,7 +30,7 @@
 .solutions-it-infrastructure .ellipse-17 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
+  border-color: rgba(27, 72, 150, 0.08);
   border-width: 3.25rem;
   width: 20.25rem;
   height: 20.25rem;
@@ -48,7 +44,7 @@
 .solutions-it-infrastructure .ellipse-18 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
+  border-color: rgba(27, 72, 150, 0.08);
   border-width: 3.25rem;
   width: 11.5rem;
   height: 11.5rem;
@@ -62,7 +58,7 @@
 .solutions-it-infrastructure .ellipse-19 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
+  border-color: rgba(27, 72, 150, 0.05);
   border-width: 3.25rem;
   width: 20.25rem;
   height: 20.25rem;
@@ -76,7 +72,7 @@
 .solutions-it-infrastructure .ellipse-20 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
+  border-color: rgba(27, 72, 150, 0.05);
   border-width: 3.25rem;
   width: 11.5rem;
   height: 11.5rem;
@@ -155,7 +151,7 @@
 }
 
 .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
 }
 
 .solutions-it-infrastructure .hero-image-wrapper {
@@ -191,7 +187,7 @@
 }
 
 .solutions-it-infrastructure .frame-2-bars .bar {
-  background: #9d9dff;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   border-radius: 1.875rem;
   width: 0.375rem;
   height: 1.75rem;
@@ -199,7 +195,7 @@
 }
 
 .solutions-it-infrastructure .frame-2-bars .bar.active {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1b4896);
   height: 2.125rem;
 }
 
@@ -262,7 +258,7 @@
 }
 
 .solutions-it-infrastructure .it-infrastructure-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
 }
 
 .solutions-it-infrastructure .it-infrastructure-span2 {
@@ -425,7 +421,7 @@
 .solutions-it-infrastructure .chevron-icon {
   width: 2rem;
   height: 2rem;
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -491,7 +487,7 @@
 }
 
 .solutions-it-infrastructure .advantages-list li::marker {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   font-size: 1.25rem;
 }
 
@@ -523,7 +519,7 @@
 }
 
 .solutions-it-infrastructure .core-infrastructure-pillars-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
 }
 
 .solutions-it-infrastructure .foundational-technical-services {
@@ -558,8 +554,8 @@
 
 .solutions-it-infrastructure .pillar-card-infra:hover {
   transform: translateY(-0.35rem);
-  border-color: #0e10ff;
-  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.08);
+  border-color: var(--fc-brand-primary, #1b4896);
+  box-shadow: 0 1rem 2.5rem rgba(27, 72, 150, 0.1);
 }
 
 .solutions-it-infrastructure .pillar-img-wrapper {
@@ -657,7 +653,7 @@
 }
 
 .solutions-it-infrastructure .featured-enterprise-hardware-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .solutions-it-infrastructure .precision-hardware-desc {
@@ -692,8 +688,8 @@
 
 .solutions-it-infrastructure .hardware-card:hover {
   transform: translateY(-0.35rem);
-  border-color: #0e10ff;
-  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.1);
+  border-color: var(--fc-brand-primary, #1B4896);
+  box-shadow: 0 1rem 2.5rem rgba(27, 72, 150, 0.1);
 }
 
 .solutions-it-infrastructure .hardware-img-container {
@@ -767,7 +763,7 @@
 }
 
 .solutions-it-infrastructure .technical-expertise-title {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   font-family: "MerriweatherSans-Bold", sans-serif;
   font-size: 2.5rem;
   line-height: 3rem;
@@ -805,8 +801,8 @@
 
 .solutions-it-infrastructure .expertise-item-card:hover {
   transform: translateY(-0.25rem);
-  border-color: #0e10ff;
-  box-shadow: 0 0.75rem 2rem rgba(14, 16, 255, 0.08);
+  border-color: var(--fc-brand-primary, #1b4896);
+  box-shadow: 0 0.75rem 2rem rgba(27, 72, 150, 0.1);
 }
 
 .solutions-it-infrastructure .expertise-icon-box {
@@ -817,7 +813,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0.25rem 0.75rem rgba(14, 16, 255, 0.06);
+  box-shadow: 0 0.25rem 0.75rem rgba(27, 72, 150, 0.08);
   flex-shrink: 0;
 }
 
@@ -828,7 +824,7 @@
 }
 
 .solutions-it-infrastructure .expertise-item-title {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
   font-family: "MerriweatherSans-Bold", sans-serif;
   font-size: 1.25rem;
   line-height: 1.625rem;
@@ -900,7 +896,7 @@
 }
 
 .solutions-it-infrastructure .secure-global-deployment {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
   font-family: "MerriweatherSans-Bold", sans-serif;
   font-size: 2.5rem;
   line-height: 3rem;
@@ -1013,7 +1009,7 @@
 }
 
 .solutions-it-infrastructure .it-infrastructure-partners-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
 }
 
 .solutions-it-infrastructure .it-infrastructure-partners-span2 {
@@ -1029,21 +1025,21 @@
 
 .solutions-it-infrastructure .partner-logo-box {
   background: #ffffff;
-  border: 1px solid #7ea8db;
+  border: 1px solid var(--fc-bg-ice-alt, #e2ebf8);
   border-radius: 0.75rem;
   height: 8.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.25rem;
-  box-shadow: 0 4px 14px rgba(87, 147, 206, 0.08);
+  box-shadow: 0 4px 14px rgba(27, 72, 150, 0.06);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solutions-it-infrastructure .partner-logo-box:hover {
   transform: translateY(-4px);
-  border-color: #0e10ff;
-  box-shadow: 0 10px 24px rgba(14, 16, 255, 0.12);
+  border-color: var(--fc-brand-primary, #1b4896);
+  box-shadow: 0 10px 24px rgba(27, 72, 150, 0.12);
 }
 
 .solutions-it-infrastructure .partner-brand {
@@ -1350,14 +1346,14 @@
   }
 
   .solutions-it-infrastructure .frame-2-bars .bar {
-    background: #9d9dff !important;
+    background: var(--fc-bg-ice-alt, #e2ebf8) !important;
     border-radius: 1.875rem !important;
     width: 0.375rem !important;
     height: 1.75rem !important;
   }
 
   .solutions-it-infrastructure .frame-2-bars .bar.active {
-    background: #0e10ff !important;
+    background: var(--fc-brand-primary, #1b4896) !important;
     height: 2.125rem !important;
   }
 
@@ -1401,5 +1397,90 @@
   .solutions-it-infrastructure .section-featured-hardware,
   .solutions-it-infrastructure .section-global-logistics {
     padding: 2.5rem 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   MOBILE-ONLY FIXES (max-width: 768px) — Does NOT affect desktop or tablet
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  /* Hero: strictly fit to screen height (100vh), centered content, no overflow */
+  .solutions-it-infrastructure .frame-462 {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 16px) 20px 40px 20px !important;
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  .solutions-it-infrastructure .frame-461 {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 0 !important;
+  }
+
+  .solutions-it-infrastructure .frame-460 {
+    align-items: center !important;
+    max-width: 100% !important;
+  }
+
+  .solutions-it-infrastructure .resilient-infrastructure-for-the-modern-enterprise {
+    font-size: clamp(1.7rem, 7vw, 2.4rem) !important;
+    text-align: center !important;
+  }
+
+  .solutions-it-infrastructure .i-t-i-n-f-r-a {
+    text-align: center !important;
+  }
+
+  /* Rect indicator bars — pinned to bottom-left */
+  .solutions-it-infrastructure .frame-2-bars {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    margin: 0 !important;
+    align-self: flex-start !important;
+  }
+
+  /* Body & Sidebar: column layout with solutions mobile dropdown */
+  .solutions-it-infrastructure .frame-465,
+  .solutions-it-infrastructure .frame-322 {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .solutions-it-infrastructure .solutions-sidebar-container {
+    display: none !important;
+  }
+
+  .solutions-it-infrastructure .solutions-mobile-dropdown {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .solutions-it-infrastructure .frame-561 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Hero image col: center on mobile */
+  .solutions-it-infrastructure .hero-image-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 }

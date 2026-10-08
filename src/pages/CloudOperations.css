@@ -27,12 +27,8 @@
   max-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45%,
-      rgba(38, 210, 222, 0.3) 90%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38%,
-      rgba(175, 175, 255, 1) 79%);
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
 }
 
 .cloud-operations-page .rectangle-217 {
@@ -49,7 +45,7 @@
 /* Background decorative concentric donut rings */
 .cloud-operations-page .ellipse-17 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -61,7 +57,7 @@
 
 .cloud-operations-page .ellipse-18 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -73,7 +69,7 @@
 
 .cloud-operations-page .ellipse-19 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -85,7 +81,7 @@
 
 .cloud-operations-page .ellipse-20 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -132,7 +128,7 @@
 }
 
 .cloud-operations-page .c-l-o-u-d-s-e-r-v-i-c-e-s {
-  color: #091426;
+  color: var(--fc-text-dark, #091426);
   text-align: left;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
@@ -152,11 +148,11 @@
 }
 
 .cloud-operations-page .reliable-cloud-operations-proactive-governance-span {
-  color: #091426;
+  color: var(--fc-text-dark, #091426);
 }
 
 .cloud-operations-page .reliable-cloud-operations-proactive-governance-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-operations-page .hero-img-box {
@@ -165,7 +161,7 @@
   aspect-ratio: 4 / 3;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
+  box-shadow: 0 1rem 3rem rgba(27, 72, 150, 0.1);
 }
 
 .cloud-operations-page .rectangle-323 {
@@ -195,12 +191,12 @@
   border-radius: 1.875rem;
   width: 0.375rem;
   height: 1.75rem;
-  background: #9d9dff;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   transition: all 0.3s ease;
 }
 
 .cloud-operations-page .frame-2 .bar.active {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   height: 2.125rem;
 }
 
@@ -233,7 +229,7 @@
 }
 
 .cloud-operations-page .cloud-operations-governance-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-operations-page .cloud-operations-governance-span2 {
@@ -244,7 +240,7 @@
    SECTION 1: CORE VALUE PROPOSITION
    -------------------------------------------------------------------------- */
 .cloud-operations-page .section-core-value-proposition {
-  background: #f8f9ff;
+  background: var(--fc-bg-ice, #f4f8fd);
   padding: 4.5rem 0;
   width: 100%;
   margin-bottom: 5.5rem;
@@ -295,31 +291,31 @@
 .cloud-operations-page .background-border {
   background: #ffffff;
   border-radius: 0.75rem;
-  border: 1px solid #c5c6cd;
+  border: 1px solid rgba(27, 72, 150, 0.16);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 6px 18px rgba(14, 16, 255, 0.04);
+  box-shadow: 0 6px 18px rgba(27, 72, 150, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cloud-operations-page .background-border:hover {
   transform: translateY(-4px);
-  border-color: #0e10ff;
-  box-shadow: 0 12px 28px rgba(14, 16, 255, 0.12);
+  border-color: var(--fc-brand-primary, #1B4896);
+  box-shadow: 0 12px 28px rgba(27, 72, 150, 0.12);
 }
 
 .cloud-operations-page .icon-blue-badge {
   width: 3rem;
   height: 3rem;
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   border-radius: 0.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(14, 16, 255, 0.25);
+  box-shadow: 0 4px 12px rgba(27, 72, 150, 0.25);
 }
 
 .cloud-operations-page .badge-svg {
@@ -352,7 +348,7 @@
    SECTION 2: SERVICES ECOSYSTEM
    -------------------------------------------------------------------------- */
 .cloud-operations-page .section-services-grid {
-  background: #eff4ff;
+  background: var(--fc-bg-ice-alt, #eaf0fa);
   padding: 5.5rem 0;
   width: 100%;
   margin-bottom: 6rem;
@@ -384,13 +380,13 @@
 }
 
 .cloud-operations-page .services-ecosystem-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-operations-page .background2-title-bar {
   width: 4rem;
   height: 4px;
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   border-radius: 2px;
 }
 
@@ -415,7 +411,7 @@
 
 .cloud-operations-page .ecosystem-grid-item {
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.16);
+  border: 1px solid rgba(27, 72, 150, 0.16);
   border-radius: 0.75rem;
   padding: 2.25rem 1.25rem;
   display: flex;
@@ -426,15 +422,15 @@
   gap: 1.25rem;
   min-height: 13.5rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(14, 16, 255, 0.04);
+  box-shadow: 0 4px 14px rgba(27, 72, 150, 0.05);
   cursor: default;
 }
 
 .cloud-operations-page .ecosystem-grid-item:hover {
-  background: #0e10ff !important;
-  border-color: #0e10ff !important;
+  background: var(--fc-brand-primary, #1B4896) !important;
+  border-color: var(--fc-brand-primary, #1B4896) !important;
   transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(14, 16, 255, 0.32);
+  box-shadow: 0 14px 32px rgba(27, 72, 150, 0.28);
 }
 
 .cloud-operations-page .margin-icon-wrap {
@@ -443,7 +439,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   transition: color 0.3s ease;
 }
 
@@ -476,7 +472,7 @@
    SECTION 3: CENTRALIZED GOVERNANCE HUB
    -------------------------------------------------------------------------- */
 .cloud-operations-page .governance-compliance-section {
-  background: #0e10ff;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   padding: 5.5rem 0;
   width: 100%;
   margin-bottom: 6rem;
@@ -638,7 +634,7 @@
 }
 
 .cloud-operations-page .cta-container {
-  background: #396caa;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   border-radius: 1.25rem;
   padding: 3.5rem 3rem;
   display: flex;
@@ -649,13 +645,13 @@
   position: relative;
   overflow: hidden;
   color: #ffffff;
-  box-shadow: 0 1rem 3rem rgba(57, 108, 170, 0.2);
+  box-shadow: 0 1rem 3rem rgba(27, 72, 150, 0.2);
 }
 
 .cloud-operations-page .gradient-overlay {
   background: radial-gradient(closest-side,
-      rgba(0, 106, 97, 0.2) 0%,
-      rgba(0, 106, 97, 0) 100%);
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%);
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -672,8 +668,9 @@
   z-index: 1;
 }
 
-.cloud-operations-page .cta-subtext {
-  color: #ffffff;
+.cloud-operations-page .cta-subtext,
+.cloud-operations-page .section-final-cta p {
+  color: #ffffff !important;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -690,8 +687,8 @@
 }
 
 .cloud-operations-page .cta-contact-btn {
-  background: #ffffff;
-  color: #091426;
+  background: var(--fc-accent-orange, #EB5A28);
+  color: #ffffff;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
@@ -703,14 +700,14 @@
   align-items: center;
   gap: 0.625rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
 }
 
 .cloud-operations-page .cta-contact-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background: #f0f4ff;
-  color: #0e10ff;
+  box-shadow: 0 8px 24px rgba(235, 90, 40, 0.45);
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  color: #ffffff;
 }
 
 .cloud-operations-page .cta-arrow-icon {
@@ -902,7 +899,7 @@
   }
 
   .cloud-operations-page .frame-2 .bar {
-    background: #9d9dff !important;
+    background: var(--fc-bg-ice-alt, #e2ebf8) !important;
     border-radius: 1.875rem !important;
     width: 0.375rem !important;
     height: 1.75rem !important;
@@ -910,7 +907,7 @@
 
   .cloud-operations-page .frame-2 .bar.active,
   .cloud-operations-page .frame-2 .rectangle-324 {
-    background: #0e10ff !important;
+    background: var(--fc-brand-primary, #1B4896) !important;
     height: 2.125rem !important;
   }
 

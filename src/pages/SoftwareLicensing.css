@@ -1,0 +1,859 @@
+/* ==========================================================================
+   SOFTWARE & LICENSING HUB (ZERO 6 SOFTWARE LICENSING HUB UPDATED)
+   ========================================================================== */
+
+.sw-licensing-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sw-licensing-page * {
+  box-sizing: border-box;
+}
+
+/* Common Text Utilities */
+.sw-licensing-page .text-electric-blue {
+  color: var(--fc-brand-primary, #1B4896) !important;
+}
+
+.sw-licensing-page .text-dark {
+  color: #191c1e !important;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (100VH FIT ON DESKTOP & ZERO NAVBAR OVERLAP)
+   ========================================================================== */
+
+.sw-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(116px, 14vh, 134px);
+  padding-bottom: clamp(24px, 4vh, 48px);
+  padding-left: clamp(28px, 6vw, 100px);
+  padding-right: clamp(28px, 6vw, 100px);
+  overflow: hidden;
+}
+
+.sw-hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sw-hero-container {
+  max-width: 1320px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(16px, 2.5vh, 28px);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.sw-hero-eyebrow {
+  color: #191c1e;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sw-hero-title {
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.85rem);
+  line-height: 1.25;
+  font-weight: 600;
+  color: #191c1e;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.sw-title-line {
+  display: block;
+}
+
+.sw-hero-desc {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.45rem);
+  line-height: 1.6;
+  font-weight: 400;
+  color: #191c1e;
+  margin: 0;
+  max-width: 66rem;
+}
+
+.sw-hero-btn-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.sw-btn-primary {
+  background: var(--fc-accent-orange, #EB5A28);
+  border-radius: 90px;
+  padding: 18px 40px;
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 14px rgba(235, 90, 40, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.sw-btn-primary:hover {
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 22px rgba(235, 90, 40, 0.35);
+}
+
+.sw-btn-secondary {
+  background: #ffffff;
+  border-radius: 90px;
+  border: 2px solid var(--fc-brand-primary, #1B4896);
+  padding: 18px 40px;
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.sw-btn-secondary:hover {
+  background-color: var(--fc-brand-primary, #1B4896);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. COMMON SECTION LAYOUT & HEADINGS
+   ========================================================================== */
+
+.sw-section-inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.sw-section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  max-width: 1240px;
+}
+
+.sw-section-eyebrow {
+  color: #191c1e;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sw-heading-title {
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 1.3;
+  font-weight: 600;
+  color: #191c1e;
+  margin: 0;
+}
+
+.sw-heading-subtitle {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.6;
+  color: #434655;
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. ECOSYSTEM PARTNERSHIPS SECTION
+   ========================================================================== */
+
+.sw-ecosystem-section {
+  padding: 100px 48px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sw-ecosystem-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(234, 240, 250, 0.4) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0px 5px 14px rgba(27, 72, 150, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sw-ecosystem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 14px 28px rgba(27, 72, 150, 0.12);
+  border-color: var(--fc-brand-primary, #1B4896);
+}
+
+.sw-card-logo-wrap {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.sw-card-logo {
+  max-height: 48px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.sw-card-icon-box {
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.sw-card-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1) !important;
+}
+
+.sw-card-title {
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.sw-card-desc {
+  color: #434655;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+.sw-card-tagline {
+  color: #191c1e;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   4. OUR DISTRIBUTION NETWORK
+   ========================================================================== */
+
+.sw-distribution-section {
+  background: var(--fc-bg-ice, #F5F7FC);
+  padding: 100px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-dist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sw-dist-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(234, 240, 250, 0.4) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: 0px 5px 12px rgba(27, 72, 150, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sw-dist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 24px rgba(27, 72, 150, 0.12);
+}
+
+.sw-dist-title {
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sw-dist-network-bar {
+  color: #8a8fa8;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* ==========================================================================
+   5. SOFTWARE WE SUPPLY AND SUPPORT (TABLE)
+   ========================================================================== */
+
+.sw-categories-section {
+  padding: 100px 48px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-table-wrapper {
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.2);
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.sw-categories-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.sw-categories-table th {
+  background: var(--fc-brand-primary, #1B4896);
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 24px;
+}
+
+.sw-th-cat {
+  width: 32%;
+}
+
+.sw-th-brands {
+  width: 68%;
+}
+
+.sw-categories-table td {
+  padding: 18px 24px;
+  font-family: "Merriweather Sans", sans-serif;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(27, 72, 150, 0.08);
+}
+
+.sw-tr-even {
+  background: #ffffff;
+}
+
+.sw-tr-odd {
+  background: #f4f7fc;
+}
+
+.sw-td-cat {
+  font-weight: 700;
+  font-size: 17px;
+  color: #191c1e;
+}
+
+.sw-td-brands {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191c1e;
+}
+
+.sw-table-footer-callout {
+  color: #191c1e;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   6. LICENSING MODELS WE HANDLE
+   ========================================================================== */
+
+.sw-models-section {
+  background: var(--fc-bg-ice, #F5F7FC);
+  padding: 100px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-models-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sw-model-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(234, 240, 250, 0.4) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0px 5px 12px rgba(27, 72, 150, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sw-model-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 24px rgba(27, 72, 150, 0.12);
+}
+
+.sw-num-badge {
+  background: var(--fc-brand-primary, #1B4896);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.sw-model-title {
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sw-model-desc {
+  color: #434655;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. MORE THAN SELLING LICENCES
+   ========================================================================== */
+
+.sw-services-section {
+  padding: 100px 48px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sw-service-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(234, 240, 250, 0.4) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0px 5px 12px rgba(27, 72, 150, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sw-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 24px rgba(27, 72, 150, 0.12);
+}
+
+.sw-service-title {
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sw-service-desc {
+  color: #434655;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   8. OUR RESPONSIBILITIES VS WHY PARTNER WITH FINECONS
+   ========================================================================== */
+
+.sw-responsibilities-section {
+  background: var(--fc-bg-ice, #F5F7FC);
+  padding: 100px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-resp-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.sw-resp-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sw-resp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sw-resp-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(234, 240, 250, 0.4) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0px 5px 12px rgba(27, 72, 150, 0.06);
+}
+
+.sw-resp-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sw-resp-card-title {
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sw-resp-card-desc {
+  color: #434655;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.sw-why-partner-card {
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  border-radius: 12px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0px 12px 32px rgba(27, 72, 150, 0.25);
+}
+
+.sw-why-partner-title {
+  font-family: "Merriweather-SemiBold", serif;
+  font-size: clamp(28px, 2.5vw, 36px);
+  line-height: 1.3;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 32px 0;
+}
+
+.sw-why-partner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sw-why-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sw-why-num {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fc-brand-primary, #1B4896);
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sw-why-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sw-why-item-title {
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sw-why-item-desc {
+  color: #eaf0fa !important;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ==========================================================================
+   9. CTA BANNER
+   ========================================================================== */
+
+.sw-cta-section {
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
+  padding: 100px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.sw-cta-inner {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.sw-cta-title {
+  color: #ffffff;
+  font-family: "Merriweather-SemiBold", serif;
+  font-size: clamp(32px, 3.2vw, 48px);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sw-cta-subtitle,
+.sw-cta-section p {
+  color: #ffffff !important;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: clamp(18px, 1.4vw, 22px);
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+  max-width: 900px;
+}
+
+.sw-cta-btn {
+  background: var(--fc-accent-orange, #EB5A28);
+  border-radius: 90px;
+  padding: 18px 48px;
+  color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 6px 18px rgba(235, 90, 40, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.sw-cta-btn:hover {
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 26px rgba(235, 90, 40, 0.4);
+}
+
+/* ==========================================================================
+   10. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+
+  .sw-ecosystem-grid,
+  .sw-models-grid,
+  .sw-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sw-dist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sw-resp-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sw-hero-section {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    padding: 120px 24px 70px 24px;
+  }
+
+  .sw-ecosystem-section,
+  .sw-distribution-section,
+  .sw-categories-section,
+  .sw-models-section,
+  .sw-services-section,
+  .sw-responsibilities-section,
+  .sw-cta-section {
+    padding: 70px 24px;
+  }
+
+  .sw-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .sw-categories-table {
+    min-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sw-hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 16px) 20px 30px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .sw-hero-container {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .sw-hero-title,
+  .sw-hero-desc {
+    text-align: center !important;
+  }
+
+  .sw-ecosystem-grid,
+  .sw-dist-grid,
+  .sw-models-grid,
+  .sw-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sw-hero-btn-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sw-btn-primary,
+  .sw-btn-secondary {
+    width: 100%;
+  }
+
+  .sw-why-partner-card {
+    padding: 32px 24px;
+  }
+
+  .sw-cta-section {
+    padding: 60px 20px;
+  }
+}

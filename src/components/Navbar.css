@@ -1,0 +1,651 @@
+/* ==========================================================================
+   FINECONS MODERN FLOATING PILL NAVBAR & MEGA DROPDOWNS
+   ========================================================================== */
+
+.finecons-navbar.frame-376 {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1160px;
+  height: 78px;
+  background: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.07), 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px 0 28px;
+  box-sizing: border-box;
+  z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+.finecons-navbar-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ---------------- Logo ---------------- */
+.navbar-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo-img {
+  display: block;
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-logo-wrap:hover .navbar-logo-img {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+/* ---------------- Desktop Nav Links ---------------- */
+.navbar-desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.nav-item-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Wix Madefor Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  color: #1e293b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 4px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  user-select: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav-link-btn:hover {
+  color: var(--fc-brand-primary, #1b4896);
+}
+
+.nav-link-btn.is-active,
+.nav-link-btn.is-open {
+  color: var(--fc-brand-primary, #1b4896);
+  font-weight: 650;
+}
+
+.dropdown-chevron-icon {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.2s ease;
+}
+
+.dropdown-chevron-icon.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.dropdown-chevron-clickable {
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-chevron-clickable:hover {
+  background-color: rgba(27, 72, 150, 0.08);
+}
+
+/* ---------------- Mega Dropdown Menu Floating Panels ---------------- */
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12), 0 4px 14px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 24px 28px;
+  z-index: 1200;
+  animation: navDropdownFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Invisible bridge between trigger and menu to prevent cursor dropout */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
+@keyframes navDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category Headings inside dropdowns - Light Grey, Bold Uppercase */
+.dropdown-category-title {
+  font-family: 'Wix Madefor Text', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Standard Dropdown Link Item - Uniform Medium Bold Size across all menus */
+.dropdown-sublink,
+.finecons-navbar .dropdown-sublink {
+  display: block;
+  font-family: 'Wix Madefor Text', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #191c1e !important;
+  line-height: 1.35 !important;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  user-select: none;
+  white-space: normal;
+}
+
+.dropdown-sublink:hover,
+.finecons-navbar .dropdown-sublink:hover {
+  background: #f0f5fc;
+  color: var(--fc-brand-primary, #1b4896) !important;
+  transform: translateX(3px);
+}
+
+/* Specific Panel 1: Cloud Dropdown (2 Columns) */
+.dropdown-cloud {
+  left: -20px;
+  width: 510px;
+}
+
+.dropdown-cloud-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+}
+
+.dropdown-cloud-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Specific Panel 2: Solutions Dropdown (2 Columns with distinct headings) */
+.dropdown-solutions {
+  left: -60px;
+  width: 490px;
+}
+
+.dropdown-solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr;
+  column-gap: 32px;
+}
+
+.dropdown-solutions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Specific Panel 3: Services Dropdown (1 Column with generous right whitespace) */
+.dropdown-services {
+  left: -40px;
+  width: 390px;
+  min-width: 390px;
+  padding: 24px 38px 24px 22px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-card-sublink,
+.nav-service-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.service-card-sublink:hover,
+.nav-service-item:hover {
+  background: #f8fafc;
+  transform: translateX(4px);
+}
+
+/* Consistent font-size, weight and colors across all menus */
+.finecons-navbar .service-card-title,
+.finecons-navbar .nav-service-title {
+  font-family: 'Wix Madefor Text', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #191c1e !important;
+  margin-bottom: 3px;
+  line-height: 1.35 !important;
+  transition: color 0.16s ease;
+}
+
+.finecons-navbar .service-card-sublink:hover .service-card-title,
+.finecons-navbar .service-card-sublink:hover .nav-service-title,
+.finecons-navbar .nav-service-item:hover .service-card-title,
+.finecons-navbar .nav-service-item:hover .nav-service-title {
+  color: var(--fc-brand-primary, #1b4896) !important;
+}
+
+.finecons-navbar .service-card-subtitle,
+.finecons-navbar .nav-service-subtitle {
+  font-family: 'Wix Madefor Text', sans-serif !important;
+  font-size: 11.5px !important;
+  font-weight: 400 !important;
+  color: #64748b !important;
+  line-height: 1.4 !important;
+}
+
+/* Specific Panel 4: About Dropdown (1 Column compact) */
+.dropdown-about {
+  left: -20px;
+  width: 200px;
+  padding: 18px 20px;
+}
+
+.dropdown-about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ---------------- Desktop Right Actions: Divider, Support & CTA ---------------- */
+.navbar-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.navbar-divider {
+  width: 1px;
+  height: 26px;
+  background-color: #e2e8f0;
+  flex-shrink: 0;
+}
+
+.navbar-support-btn {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Wix Madefor Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  color: #1e293b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 4px;
+  transition: color 0.2s ease;
+  user-select: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar-support-icon {
+  width: 19px;
+  height: 19px;
+  color: #1e293b;
+  transition: color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  display: block;
+}
+
+.navbar-support-text {
+  line-height: 1;
+}
+
+.navbar-support-btn:hover {
+  color: var(--fc-brand-primary, #1b4896);
+}
+
+.navbar-support-btn:hover .navbar-support-icon {
+  color: var(--fc-brand-primary, #1b4896);
+  transform: scale(1.08);
+}
+
+.navbar-support-btn.is-active {
+  color: var(--fc-brand-primary, #1b4896);
+  font-weight: 650;
+}
+
+.navbar-support-btn.is-active .navbar-support-icon {
+  color: var(--fc-brand-primary, #1b4896);
+}
+
+.navbar-cta-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-cta-btn {
+  background: var(--fc-accent-orange, #eb5a28);
+  border: none;
+  outline: none;
+  border-radius: 9999px;
+  padding: 13px 28px;
+  color: #ffffff;
+  font-family: 'Wix Madefor Text', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-cta-btn:hover {
+  transform: translateY(-1.5px);
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  box-shadow: 0 8px 22px rgba(235, 90, 40, 0.35);
+}
+
+.navbar-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* ---------------- Mobile Hamburger Toggle ---------------- */
+.navbar-hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  padding: 0;
+  z-index: 1250;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: #1e293b;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.hamburger-bar.bar-top-open {
+  transform: translateY(8.5px) rotate(45deg);
+  background-color: #1b1cfc;
+}
+
+.hamburger-bar.bar-mid-open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-bar.bar-bot-open {
+  transform: translateY(-8.5px) rotate(-45deg);
+  background-color: #1b1cfc;
+}
+
+/* ---------------- Mobile Drawer ---------------- */
+.navbar-mobile-drawer {
+  display: none;
+}
+
+/* ---------------- Responsive Media Queries ---------------- */
+@media (min-width: 992px) and (max-width: 1180px) {
+  .finecons-navbar.frame-376 {
+    padding: 0 18px;
+    width: 95%;
+  }
+
+  .navbar-desktop-nav {
+    gap: 18px;
+  }
+
+  .navbar-right-actions {
+    gap: 14px;
+  }
+
+  .navbar-cta-btn {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .finecons-navbar.frame-376 {
+    height: 70px;
+    padding: 0 20px;
+    top: 16px;
+    width: 92%;
+  }
+
+  .navbar-desktop-nav,
+  .navbar-cta-wrap.desktop-only-cta,
+  .navbar-right-actions.desktop-only-cta {
+    display: none !important;
+  }
+
+  .navbar-hamburger-btn {
+    display: flex !important;
+  }
+
+  .navbar-mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1200;
+    animation: mobileDrawerSlideDown 0.25s ease-out;
+  }
+
+  @keyframes mobileDrawerSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobile-nav-item {
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .mobile-nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 8px;
+    background: none;
+    border: none;
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .mobile-nav-header.is-active,
+  .mobile-nav-header.is-open {
+    color: var(--fc-brand-primary, #1b4896);
+  }
+
+  .mobile-chevron {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+    transition: transform 0.25s ease;
+  }
+
+  .mobile-chevron.rotate-180 {
+    transform: rotate(180deg);
+  }
+
+  .mobile-accordion-body {
+    padding: 8px 12px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8fafc;
+    border-radius: 14px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-col-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 8px 0 4px 4px;
+  }
+
+  .mobile-subitem {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .mobile-subitem:active {
+    background: #f0f5fc;
+    color: var(--fc-brand-primary, #1b4896);
+  }
+
+  .mobile-subitem-title {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 14px;
+  }
+
+  .mobile-subitem-desc {
+    font-size: 11.5px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  .mobile-support-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-support-icon {
+    width: 20px;
+    height: 20px;
+    color: #1e293b;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-nav-header:hover .mobile-support-icon,
+  .mobile-nav-header.is-active .mobile-support-icon {
+    color: var(--fc-brand-primary, #1b4896);
+  }
+
+  .mobile-cta-btn-wrap {
+    margin-top: 16px;
+    padding-top: 12px;
+    width: 100%;
+  }
+
+  .mobile-cta-btn-wrap .navbar-cta-btn {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .finecons-navbar.frame-376 {
+    width: 94%;
+    padding: 0 16px;
+    height: 64px;
+    top: 12px;
+  }
+
+  .navbar-logo-img {
+    height: 36px;
+  }
+}

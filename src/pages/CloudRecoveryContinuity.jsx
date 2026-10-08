@@ -13,22 +13,22 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
       id: 1,
       icon: '/assets/recovery/Icon.png',
       fallbackIcon: '/assets/recovery/Icon-1.png',
-      title: 'Minimized Downtime',
-      desc: 'Automated failover and failback mechanisms to ensure business as usual, even during catastrophic localized outages.'
+      title: 'Immutable Backup Copies',
+      desc: 'Encrypted, write-once-read-many (WORM) storage safeguarding all backups against ransomware and accidental deletion.'
     },
     {
       id: 2,
       icon: '/assets/recovery/Icon-2.png',
       fallbackIcon: '/assets/recovery/Icon-2.png',
-      title: 'Operational Resilience',
-      desc: 'Robust recovery plans tested and validated for absolute reliability across your entire hybrid cloud environment.'
+      title: 'Rapid Automated Failover',
+      desc: 'Documented, automated failover and failback workflows to keep critical business systems running without data loss.'
     },
     {
       id: 3,
       icon: '/assets/recovery/Icon-3.png',
       fallbackIcon: '/assets/recovery/Icon-3.png',
-      title: 'RTO & RPO Optimization',
-      desc: 'Precise engineering to meet your most demanding recovery time and point objectives with surgical accuracy.'
+      title: 'RTO & RPO Design',
+      desc: 'Architected to meet stringent recovery time and recovery point objectives with predictable, tested performance.'
     }
   ];
 
@@ -36,17 +36,17 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
     {
       id: 1,
       icon: '/assets/recovery/Icon-4.png',
-      title: 'Disaster Recovery Planning'
+      title: 'Backup-as-a-Service (BaaS)'
     },
     {
       id: 2,
       icon: '/assets/recovery/Icon-5.png',
-      title: 'Business Continuity Strategy'
+      title: 'DR-as-a-Service (DRaaS)'
     },
     {
       id: 3,
       icon: '/assets/recovery/Icon-6.png',
-      title: 'Backup & Recovery Solutions'
+      title: 'M365 & Workspace Backup'
     },
     {
       id: 4,
@@ -56,7 +56,7 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
     {
       id: 5,
       icon: '/assets/recovery/Icon-8.png',
-      title: 'High Availability Design'
+      title: 'High-Availability Design'
     },
     {
       id: 6,
@@ -66,22 +66,22 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
     {
       id: 7,
       icon: '/assets/recovery/Icon-10.png',
-      title: 'Recovery Testing'
+      title: 'Scheduled DR Drills'
     },
     {
       id: 8,
       icon: '/assets/recovery/Icon-11.png',
-      title: 'RPO & RTO Optimisation'
+      title: 'RTO / RPO Optimization'
     },
     {
       id: 9,
       icon: '/assets/recovery/Icon-12.png',
-      title: 'Disaster Recovery Monitoring'
+      title: 'Immutable Ransomware Backup'
     },
     {
       id: 10,
       icon: '/assets/recovery/Icon-13.png',
-      title: 'Business Continuity Consulting'
+      title: 'Business Continuity Planning'
     }
   ];
 
@@ -90,19 +90,19 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
       id: 1,
       icon: '/assets/recovery/Icon-14.png',
       title: 'Data Protection',
-      desc: 'Multi-layer encryption at rest and in transit. Immutable backups ensure your historical data remains untouchable by ransomware or accidental deletion.'
+      desc: 'Encrypted, immutable copies that ensure historical data remains untouchable by ransomware or accidental deletion.'
     },
     {
       id: 2,
       icon: '/assets/recovery/Icon-15.png',
       title: 'Rapid Recovery',
-      desc: 'AI-driven failover orchestration for zero-touch restoration. Our systems predict potential failures and initiate recovery workflows before service impacts occur.'
+      desc: 'Documented, automated failover and failback to keep critical systems running without downtime.'
     },
     {
       id: 3,
       icon: '/assets/recovery/Icon-16.png',
-      title: 'Continuous Testing',
-      desc: 'Non-disruptive recovery drills to ensure compliance and readiness. We validate your recovery environment daily to guarantee 100% success rates.'
+      title: 'Regular Testing',
+      desc: 'Scheduled DR drills with documented results to guarantee readiness, audit compliance, and SLA attainment.'
     }
   ];
 
@@ -278,10 +278,9 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
           <div className="section-final-cta-card">
             <div className="cta-gradient-overlay"></div>
             <div className="cta-content">
-              <h2 className="cta-heading">Ready to Optimize Your Cloud?</h2>
+              <h2 className="cta-heading">Protect Your Business Continuity</h2>
               <p className="cta-desc">
-                Book a technical consultation with our certified architects to review your
-                existing environment or plan your migration roadmap.
+                Review your backup resilience, immutable protection and disaster recovery readiness with our certified continuity architects.
               </p>
               <button
                 className="cta-contact-btn"
@@ -303,7 +302,7 @@ const CloudRecoveryContinuity = ({ navigateTo }) => {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span>Contact us</span>
+                <span>Talk to a Cloud Expert</span>
               </button>
             </div>
           </div>

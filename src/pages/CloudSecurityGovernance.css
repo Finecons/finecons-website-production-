@@ -20,12 +20,8 @@
   max-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45%,
-      rgba(38, 210, 222, 0.3) 90%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38%,
-      rgba(175, 175, 255, 1) 79%);
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
 }
 
 /* Decorative Circles */
@@ -36,7 +32,7 @@
 }
 
 .ellipse-17 {
-  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 20.25rem;
   height: 20.25rem;
   left: -5rem;
@@ -45,7 +41,7 @@
 }
 
 .ellipse-18 {
-  border: 3.25rem solid rgba(34, 35, 147, 0.09);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 11.5rem;
   height: 11.5rem;
   left: -0.625rem;
@@ -54,7 +50,7 @@
 }
 
 .ellipse-19 {
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 20.25rem;
   height: 20.25rem;
   left: 15.25rem;
@@ -63,7 +59,7 @@
 }
 
 .ellipse-20 {
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 11.5rem;
   height: 11.5rem;
   left: 19.625rem;
@@ -114,21 +110,23 @@
   margin: 0;
 }
 
-.cloud-security-page .frame-2 .bar {
+.cloud-security-page .frame-2 .bar,
+.cloud-security-page .frame-2 .inactive-rect {
   border-radius: 1.875rem;
   width: 0.375rem;
   height: 1.75rem;
-  background: #9d9dff;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   transition: all 0.3s ease;
 }
 
-.cloud-security-page .frame-2 .bar.active {
-  background: #0e10ff;
+.cloud-security-page .frame-2 .bar.active,
+.cloud-security-page .frame-2 .active-rect {
+  background: var(--fc-brand-primary, #1B4896);
   height: 2.125rem;
 }
 
 .hero-badge-cloud-services {
-  color: #091426;
+  color: var(--fc-text-dark, #091426);
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   line-height: 1.5rem;
@@ -151,7 +149,7 @@
 }
 
 .title-blue {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .hero-image-block {
@@ -160,7 +158,7 @@
   aspect-ratio: 4 / 3;
   border-radius: 1.25rem;
   overflow: hidden;
-  box-shadow: 0 1rem 3rem rgba(14, 16, 255, 0.08);
+  box-shadow: 0 1rem 3rem rgba(27, 72, 150, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,14 +174,14 @@
 
 .hero-servers-image:hover {
   transform: scale(1.03);
-  box-shadow: 0 1.5rem 3rem rgba(14, 16, 255, 0.15);
+  box-shadow: 0 1.5rem 3rem rgba(27, 72, 150, 0.15);
 }
 
 /* ==========================================================================
    Section 1: Core Value Proposition
    ========================================================================== */
 .section-value-proposition-wrapper {
-  background-color: #f4f6fd;
+  background-color: var(--fc-bg-ice, #f4f8fd);
   width: 100%;
   padding: 5rem 2rem;
   box-sizing: border-box;
@@ -222,18 +220,18 @@
   gap: 1.25rem;
   align-items: flex-start;
   box-sizing: border-box;
-  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.04);
-  border-left: 3px solid #0e10ff;
+  box-shadow: 0 0.5rem 1.5rem rgba(27, 72, 150, 0.05);
+  border-left: 3px solid var(--fc-brand-primary, #1B4896);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-prop-card:hover {
   transform: translateY(-0.375rem);
-  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.1);
+  box-shadow: 0 1rem 2.5rem rgba(27, 72, 150, 0.12);
 }
 
 .value-prop-icon-box {
-  background-color: #0e10ff;
+  background-color: var(--fc-brand-primary, #1B4896);
   border-radius: 0.375rem;
   width: 3rem;
   height: 3rem;
@@ -279,7 +277,7 @@
    Section 2: Security & Governance Ecosystem Services
    ========================================================================== */
 .section-services-ecosystem-wrapper {
-  background-color: #eff4ff;
+  background-color: var(--fc-bg-ice-alt, #eaf0fa);
   width: 100%;
   padding: 5rem 2rem;
   box-sizing: border-box;
@@ -313,7 +311,7 @@
 }
 
 .services-title-accent-bar {
-  background-color: #0e10ff;
+  background-color: var(--fc-brand-primary, #1B4896);
   width: 4rem;
   height: 4px;
   border-radius: 2px;
@@ -336,7 +334,7 @@
 
 .ecosystem-service-card {
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.16);
+  border: 1px solid rgba(27, 72, 150, 0.16);
   border-radius: 0.75rem;
   padding: 2.5rem 1.25rem;
   display: flex;
@@ -347,7 +345,7 @@
   gap: 1.25rem;
   min-height: 13.5rem;
   box-sizing: border-box;
-  box-shadow: 0 0.25rem 0.75rem rgba(14, 16, 255, 0.03);
+  box-shadow: 0 0.25rem 0.75rem rgba(27, 72, 150, 0.04);
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1),
     border-color 0.3s ease;
@@ -355,8 +353,8 @@
 
 .ecosystem-service-card:hover {
   transform: translateY(-0.375rem);
-  box-shadow: 0 1rem 2rem rgba(14, 16, 255, 0.12);
-  border-color: #0e10ff;
+  box-shadow: 0 1rem 2rem rgba(27, 72, 150, 0.15);
+  border-color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-security-page .ecosystem-icon-wrapper {
@@ -415,21 +413,21 @@
 .cta-container-card {
   max-width: 82rem;
   width: 100%;
-  background-color: #396caa;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
   padding: 3.5rem 3rem;
   box-sizing: border-box;
-  box-shadow: 0 1.25rem 3rem rgba(57, 108, 170, 0.25);
+  box-shadow: 0 1.25rem 3rem rgba(27, 72, 150, 0.25);
 }
 
 .cta-bg-gradient-overlay {
   position: absolute;
   inset: 0;
   background: radial-gradient(closest-side,
-      rgba(0, 106, 97, 0.2) 0%,
-      rgba(0, 106, 97, 0) 100%);
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
 }
 
@@ -454,8 +452,9 @@
   margin: 0;
 }
 
-.cta-paragraph-desc {
-  color: #ffffff;
+.cta-paragraph-desc,
+.cloud-security-cta-section p {
+  color: #ffffff !important;
   font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -468,7 +467,7 @@
 }
 
 .cta-contact-btn {
-  background: #ffffff;
+  background: var(--fc-accent-orange, #EB5A28);
   border: none;
   border-radius: 0.375rem;
   padding: 0.875rem 2rem;
@@ -476,20 +475,20 @@
   align-items: center;
   justify-content: center;
   gap: 0.625rem;
-  color: #091426;
+  color: #ffffff;
   font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
   transition: all 0.3s ease;
 }
 
 .cta-contact-btn:hover {
-  background-color: #f0f4ff;
-  color: #0e10ff;
+  background-color: var(--fc-accent-orange-hover, #d84e1f);
+  color: #ffffff;
   transform: translateY(-0.1875rem);
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(235, 90, 40, 0.45);
 }
 
 .cta-mail-svg {
@@ -504,7 +503,7 @@
   position: relative;
   width: 100%;
   height: 32.5rem;
-  background-color: #534eeb;
+  background-color: var(--fc-dark-navy, #0f2a5c);
 }
 
 .cloud-security-page .footer-wrapper .rectangle-266 {
@@ -749,14 +748,14 @@
   }
 
   .cloud-security-hero-content-container .frame-2 > div {
-    background: #9d9dff !important;
+    background: var(--fc-bg-ice-alt, #e2ebf8) !important;
     border-radius: 1.875rem !important;
     width: 0.375rem !important;
     height: 1.75rem !important;
   }
 
   .cloud-security-hero-content-container .frame-2 .active-rect {
-    background: #0e10ff !important;
+    background: var(--fc-brand-primary, #1B4896) !important;
     height: 2.125rem !important;
   }
 

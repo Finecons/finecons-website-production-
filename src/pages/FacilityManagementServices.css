@@ -1,0 +1,1078 @@
+/* ==========================================================================
+   03 FACILITY MANAGEMENT SERVICES (FMS) — STYLESHEET
+   Exact Figma Design Implementation with Screen-Fitting Hero & Full Responsiveness
+   ========================================================================== */
+
+._03-fms-new,
+._03-fms-new * {
+  box-sizing: border-box;
+}
+
+._03-fms-new {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (FITS DESKTOP SCREEN VIEWPORT 100VH)
+   ========================================================================== */
+._03-fms-new .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(
+      123.26deg,
+      rgba(233, 240, 250, 0) 44.999998807907104%,
+      rgba(27, 72, 150, 0.3) 91.00000262260437%
+    ),
+    linear-gradient(
+      223.79deg,
+      rgba(233, 240, 250, 1) 37.99999952316284%,
+      rgba(226, 235, 248, 1) 79.00000214576721%
+    );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(110px, 14vh, 134px);
+  padding-bottom: clamp(24px, 4vh, 48px);
+  padding-left: clamp(24px, 6vw, 100px);
+  padding-right: clamp(24px, 6vw, 100px);
+  overflow: hidden;
+}
+
+._03-fms-new .hero-copy {
+  max-width: 1320px;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(14px, 2.2vh, 28px);
+  position: relative;
+  z-index: 2;
+}
+
+._03-fms-new .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+._03-fms-new .your-own-it-team-on-site-without-the-overheads {
+  text-align: left;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2.5rem, 5vw, 4.375rem);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 1100px;
+}
+
+._03-fms-new .your-own-it-team-on-site-without-the-overheads-span {
+  color: #191c1e;
+  display: inline;
+}
+
+._03-fms-new .your-own-it-team-on-site-without-the-overheads-span2 {
+  color: #1b4896;
+  display: inline;
+}
+
+._03-fms-new .finecons-facility-management-services-place-skilled-background-verified-engineers-at-your-premises-to-run-day-to-day-it-backed-by-our-service-desk-noc-and-oem-specialists {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 950px;
+  margin: 0;
+}
+
+._03-fms-new .row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+._03-fms-new .button-get-an-fms-proposal {
+  background: #eb5a28;
+  border-radius: 90px;
+  padding: 16px 40px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
+}
+
+._03-fms-new .button-get-an-fms-proposal:hover {
+  background: #d64919;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(235, 90, 40, 0.4);
+}
+
+._03-fms-new .get-an-fms-proposal {
+  color: #ffffff;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   2. BODY LAYOUT (STICKY SIDEBAR + MAIN CONTENT)
+   ========================================================================== */
+._03-fms-new .body-side-menu-content {
+  width: 100%;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 5.5rem clamp(1.5rem, 5vw, 6.25rem);
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* ----------------- SIDEBAR ----------------- */
+._03-fms-new .side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 20rem;
+  position: sticky;
+  top: 6.25rem;
+  align-self: flex-start;
+  background: #ffffff;
+}
+
+._03-fms-new .s-e-r-v-i-c-e-s {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  width: 100%;
+  text-transform: uppercase;
+  padding-bottom: 0.35rem;
+}
+
+._03-fms-new .row2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+._03-fms-new .managed-services,
+._03-fms-new .facility-management-fms,
+._03-fms-new .annual-maintenance-amc {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif !important;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 400;
+  width: calc(100% - 1rem);
+  max-width: 18rem;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+._03-fms-new .row2:hover .managed-services,
+._03-fms-new .row2:hover .facility-management-fms,
+._03-fms-new .row2:hover .annual-maintenance-amc {
+  color: #1b4896;
+}
+
+._03-fms-new .row2.is-active .managed-services,
+._03-fms-new .row2.is-active .facility-management-fms,
+._03-fms-new .row2.is-active .annual-maintenance-amc,
+._03-fms-new .is-active-link {
+  color: #1b4896 !important;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif) !important;
+  font-weight: 700 !important;
+}
+
+._03-fms-new .rectangle {
+  background: #1b4896;
+  width: 0.28rem;
+  height: 2.125rem;
+  border-radius: 0.125rem;
+  flex-shrink: 0;
+}
+
+/* ----------------- CONTENT CONTAINER ----------------- */
+._03-fms-new .content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(48px, 6vw, 76px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+._03-fms-new .column,
+._03-fms-new .column2,
+._03-fms-new .column3 {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Typography Headings */
+._03-fms-new .what-is-it-facility-management,
+._03-fms-new .what-our-fms-engineers-take-care-of,
+._03-fms-new .flexible-engagement-models,
+._03-fms-new .resource-levels,
+._03-fms-new .why-finecons-fms,
+._03-fms-new .how-we-start,
+._03-fms-new .frequently-asked-questions {
+  text-align: left;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+._03-fms-new .what-is-it-facility-management-span,
+._03-fms-new .what-our-fms-engineers-take-care-of-span,
+._03-fms-new .flexible-engagement-models-span,
+._03-fms-new .resource-levels-span,
+._03-fms-new .why-finecons-fms-span,
+._03-fms-new .how-we-start-span,
+._03-fms-new .frequently-asked-questions-span {
+  color: #191c1e;
+}
+
+._03-fms-new .what-is-it-facility-management-span2,
+._03-fms-new .what-our-fms-engineers-take-care-of-span2,
+._03-fms-new .flexible-engagement-models-span2,
+._03-fms-new .resource-levels-span2,
+._03-fms-new .why-finecons-fms-span2,
+._03-fms-new .how-we-start-span2,
+._03-fms-new .frequently-asked-questions-span2 {
+  color: #1b4896;
+}
+
+._03-fms-new .with-fms-finecons-provides-dedicated-it-engineers-who-work-from-your-office-during-your-business-hours-as-an-extension-of-your-team-they-handle-everything-from-user-support-to-server-administration-behind-them-is-the-full-finecons-organisation-remote-specialists-spares-oem-escalation-and-a-service-delivery-manager-who-owns-the-sla-you-get-the-control-of-an-in-house-team-without-the-hiring-training-leave-cover-and-attrition-headaches {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. SECTION 2: WHAT OUR FMS ENGINEERS TAKE CARE OF (2x2 CARDS)
+   ========================================================================== */
+._03-fms-new .grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._03-fms-new .row3 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* 2-Column Cards */
+._03-fms-new .card-end-user-support,
+._03-fms-new .card-infrastructure-administration,
+._03-fms-new .card-asset-vendor-management,
+._03-fms-new .card-governance-reporting {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: clamp(22px, 2.5vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 calc(50% - 12px);
+  min-width: 290px;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._03-fms-new .card-end-user-support:hover,
+._03-fms-new .card-infrastructure-administration:hover,
+._03-fms-new .card-asset-vendor-management:hover,
+._03-fms-new .card-governance-reporting:hover,
+._03-fms-new .card-dedicated-resident-engineer:hover,
+._03-fms-new .card-shared-part-time-engineer:hover,
+._03-fms-new .card-extended-24-x-7-coverage:hover,
+._03-fms-new .card-background-verified-engineers:hover,
+._03-fms-new .card-leave-cover:hover,
+._03-fms-new .card-knowledge-continuity:hover,
+._03-fms-new .card-backed-by-a-full-team:hover,
+._03-fms-new .card-measured-by-sla:hover,
+._03-fms-new .card-local-presence:hover,
+._03-fms-new .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 24px rgba(27, 72, 150, 0.12);
+  border-color: rgba(27, 72, 150, 0.5);
+}
+
+._03-fms-new .icon {
+  background: #1b4896;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+}
+
+._03-fms-new .icon2,
+._03-fms-new .icon3,
+._03-fms-new .icon4,
+._03-fms-new .icon5,
+._03-fms-new .icon6,
+._03-fms-new .icon7,
+._03-fms-new .icon8 {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+._03-fms-new .end-user-support,
+._03-fms-new .infrastructure-administration,
+._03-fms-new .asset-vendor-management,
+._03-fms-new .governance-reporting {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._03-fms-new .list div {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   4. SECTION 3: FLEXIBLE ENGAGEMENT MODELS (3 CARDS)
+   ========================================================================== */
+._03-fms-new .card-dedicated-resident-engineer,
+._03-fms-new .card-shared-part-time-engineer,
+._03-fms-new .card-extended-24-x-7-coverage {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: clamp(22px, 2.2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 260px;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._03-fms-new .dedicated-resident-engineer,
+._03-fms-new .shared-part-time-engineer,
+._03-fms-new .extended-24-x-7-coverage {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .one-or-more-full-time-engineers-at-your-site-during-your-business-hours,
+._03-fms-new .scheduled-visits-on-fixed-days-each-week-ideal-for-smaller-offices-and-branches,
+._03-fms-new .shift-based-on-site-teams-for-plants-hospitals-data-centres-and-operations-that-never-stop {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+._03-fms-new .all-models-include-remote-l-2-l-3-back-up-from-the-finecons-noc-and-escalation-to-oe-ms {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   5. SECTION 4: RESOURCE LEVELS (COMPARISON TABLE)
+   ========================================================================== */
+._03-fms-new .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(27, 72, 150, 0.08);
+}
+
+._03-fms-new .table {
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 780px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+._03-fms-new .table .header {
+  background: #1b4896;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._03-fms-new .frame {
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 0 32%;
+  width: 32%;
+}
+
+._03-fms-new .frame2 {
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 0 30%;
+  width: 30%;
+}
+
+._03-fms-new .frame3 {
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 38%;
+}
+
+._03-fms-new .level,
+._03-fms-new .typical-role,
+._03-fms-new .typical-skills {
+  color: #ffffff;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 150%;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .row4 {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 1px solid rgba(27, 72, 150, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+._03-fms-new .row5 {
+  background: #f7f9fd;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 1px solid rgba(27, 72, 150, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+._03-fms-new .row4:hover,
+._03-fms-new .row5:hover {
+  background: rgba(226, 235, 248, 0.6);
+}
+
+._03-fms-new .row4:last-child,
+._03-fms-new .row5:last-child {
+  border-bottom: none;
+}
+
+._03-fms-new .l-1-desktop-support-engineer,
+._03-fms-new .l-2-system-network-administrator,
+._03-fms-new .l-3-specialist-on-call-remote,
+._03-fms-new .service-delivery-manager {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 17px;
+  line-height: 150%;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .user-and-device-support,
+._03-fms-new .windows-mac-os-m-365-printers-basic-networking,
+._03-fms-new .servers-network-and-security-devices,
+._03-fms-new .active-directory-virtualisation-backups-firewalls-switching,
+._03-fms-new .complex-issues-and-projects,
+._03-fms-new .oem-certified-in-microsoft-cisco-fortinet-v-mware-and-cloud-platforms,
+._03-fms-new .sla-reporting-and-reviews,
+._03-fms-new .itil-aligned-service-management {
+  color: #191c1e;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 16.5px;
+  line-height: 150%;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. SECTION 5: WHY FINECONS FMS (6 NUMBERED CARDS)
+   ========================================================================== */
+._03-fms-new .card-background-verified-engineers,
+._03-fms-new .card-leave-cover,
+._03-fms-new .card-knowledge-continuity,
+._03-fms-new .card-backed-by-a-full-team,
+._03-fms-new .card-measured-by-sla,
+._03-fms-new .card-local-presence {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: clamp(22px, 2.2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 260px;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._03-fms-new ._1,
+._03-fms-new ._2,
+._03-fms-new ._3,
+._03-fms-new ._4,
+._03-fms-new ._5,
+._03-fms-new ._6 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+._03-fms-new .background-verified-engineers,
+._03-fms-new .leave-cover,
+._03-fms-new .knowledge-continuity,
+._03-fms-new .backed-by-a-full-team,
+._03-fms-new .measured-by-sla,
+._03-fms-new .local-presence {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .working-under-an-nda-with-your-organisation,
+._03-fms-new .a-trained-back-up-engineer-covers-absences-so-there-s-no-gap-in-support,
+._03-fms-new .documented-processes-and-handover-notes-mean-knowledge-is-never-lost,
+._03-fms-new .remote-specialists-spares-and-oem-escalation-behind-every-on-site-engineer,
+._03-fms-new .response-and-resolution-times-tracked-for-every-ticket-and-reported-monthly,
+._03-fms-new .engineers-across-chennai-tamil-nadu-and-karnataka {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. SECTION 6: HOW WE START (4-STEP PIPELINE WITH ARROWS)
+   ========================================================================== */
+._03-fms-new .flow {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+._03-fms-new .card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.25) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 calc(25% - 20px);
+  min-width: 210px;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+._03-fms-new .site-assessment,
+._03-fms-new .proposal-sla,
+._03-fms-new .deployment,
+._03-fms-new .steady-state {
+  color: #1b4896;
+  text-align: left;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .users-assets-systems-and-current-pain-points,
+._03-fms-new .resource-plan-scope-and-sla-matrix,
+._03-fms-new .onboarding-knowledge-transfer-asset-baseline,
+._03-fms-new .daily-operations-monthly-mis-quarterly-reviews {
+  color: #434655;
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+._03-fms-new .div {
+  color: #1b4896;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 26px;
+  line-height: 100%;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   8. SECTION 7: FREQUENTLY ASKED QUESTIONS (5 CARDS)
+   ========================================================================== */
+._03-fms-new .faq {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._03-fms-new .card2 {
+  background: #f7f9fd;
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  box-shadow: 0px 4px 10px 0px rgba(15, 16, 255, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+._03-fms-new .card2:hover {
+  transform: translateY(-2px);
+  border-color: rgba(27, 72, 150, 0.45);
+  box-shadow: 0px 8px 18px rgba(27, 72, 150, 0.08);
+}
+
+._03-fms-new .faq-question {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  font-weight: 700;
+  margin: 0;
+}
+
+._03-fms-new .faq-answer {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 0.975rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   9. CTA BANNER
+   ========================================================================== */
+._03-fms-new .cta-banner {
+  background: #1b4896;
+  padding: clamp(60px, 8vw, 110px) clamp(24px, 6vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+._03-fms-new .get-reliable-it-support-on-site {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  max-width: 1100px;
+  margin: 0;
+}
+
+._03-fms-new .cta-banner p,
+._03-fms-new .tell-us-your-number-of-users-sites-and-support-hours-and-we-ll-send-you-a-tailored-fms-proposal {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 900px;
+  margin: 0;
+  opacity: 0.95;
+}
+
+._03-fms-new .button-get-an-fms-proposal2 {
+  background: #ffffff;
+  border-radius: 90px;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+._03-fms-new .button-get-an-fms-proposal2:hover {
+  background: #f0f4fc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+._03-fms-new .get-an-fms-proposal2 {
+  color: #1b4896;
+  text-align: center;
+  font-family: "MerriweatherSans-Bold", "Merriweather Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 1199px) {
+  ._03-fms-new .body-side-menu-content {
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  ._03-fms-new .side-menu {
+    width: 240px;
+  }
+
+  ._03-fms-new .card-dedicated-resident-engineer,
+  ._03-fms-new .card-shared-part-time-engineer,
+  ._03-fms-new .card-extended-24-x-7-coverage,
+  ._03-fms-new .card-background-verified-engineers,
+  ._03-fms-new .card-leave-cover,
+  ._03-fms-new .card-knowledge-continuity,
+  ._03-fms-new .card-backed-by-a-full-team,
+  ._03-fms-new .card-measured-by-sla,
+  ._03-fms-new .card-local-presence {
+    flex: 1 1 calc(50% - 12px);
+  }
+
+  ._03-fms-new .card {
+    flex: 1 1 calc(50% - 16px);
+  }
+
+  ._03-fms-new .div {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  /* On tablet / mobile, release fixed 100vh hero height for proper breathing room */
+  ._03-fms-new .hero {
+    height: auto;
+    min-height: 85vh;
+    max-height: none;
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+
+  ._03-fms-new .body-side-menu-content {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 36px;
+  }
+
+  ._03-fms-new .side-menu {
+    width: 100%;
+    position: static;
+    border-bottom: 1px solid rgba(27, 72, 150, 0.15);
+    padding-bottom: 20px;
+    gap: 16px;
+  }
+
+  ._03-fms-new .row2 {
+    width: auto;
+    display: inline-flex;
+    gap: 16px;
+    margin-right: 24px;
+  }
+
+  ._03-fms-new .side-menu .row2-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+  }
+
+  ._03-fms-new .card-end-user-support,
+  ._03-fms-new .card-infrastructure-administration,
+  ._03-fms-new .card-asset-vendor-management,
+  ._03-fms-new .card-governance-reporting {
+    flex: 1 1 100%;
+  }
+
+  ._03-fms-new .card-dedicated-resident-engineer,
+  ._03-fms-new .card-shared-part-time-engineer,
+  ._03-fms-new .card-extended-24-x-7-coverage,
+  ._03-fms-new .card-background-verified-engineers,
+  ._03-fms-new .card-leave-cover,
+  ._03-fms-new .card-knowledge-continuity,
+  ._03-fms-new .card-backed-by-a-full-team,
+  ._03-fms-new .card-measured-by-sla,
+  ._03-fms-new .card-local-presence {
+    flex: 1 1 100%;
+  }
+
+  ._03-fms-new .card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  ._03-fms-new .hero {
+    padding-top: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  ._03-fms-new .button-get-an-fms-proposal,
+  ._03-fms-new .button-get-an-fms-proposal2 {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  ._03-fms-new .get-an-fms-proposal,
+  ._03-fms-new .get-an-fms-proposal2 {
+    font-size: 17px;
+  }
+
+  ._03-fms-new .body-side-menu-content {
+    padding: 30px 16px;
+  }
+}
+
+/* Hide mobile-only dropdown on desktop/tablet */
+._03-fms-new .managed-services-mobile-dropdown-wrap {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE-ONLY FIXES (max-width: 768px) — Does NOT affect desktop or tablet
+   ========================================================================== */
+@media (max-width: 768px) {
+  ._03-fms-new .hero {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding-top: calc(70px + 16px) !important;
+    padding-bottom: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  ._03-fms-new .hero-copy {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  ._03-fms-new .hero-title,
+  ._03-fms-new .hero-description {
+    text-align: center !important;
+  }
+
+  ._03-fms-new .side-menu {
+    display: none !important;
+  }
+
+  ._03-fms-new .managed-services-mobile-dropdown-wrap {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  ._03-fms-new .managed-services-mobile-nav-select {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border: 2px solid #1b4896 !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1b4896 !important;
+    background: #fff !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231b4896' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    padding-right: 38px !important;
+  }
+
+  ._03-fms-new .body-side-menu-content {
+    flex-direction: column !important;
+  }
+}
+

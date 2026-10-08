@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70" fill="none">
+  <!-- HPE Green Rectangle -->
+  <rect x="10" y="8" width="60" height="24" stroke="#01A982" stroke-width="4.5" fill="none"/>
+  <text x="10" y="48" font-family="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="14" fill="#01A982" letter-spacing="1">Hewlett Packard</text>
+  <text x="10" y="63" font-family="'Merriweather Sans', 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="12" fill="#2E3440" letter-spacing="0.5">Enterprise</text>
+</svg>

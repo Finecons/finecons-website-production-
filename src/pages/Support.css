@@ -1,0 +1,710 @@
+/* ==========================================================================
+   _07-SUPPORT-NEW PAGE STYLES
+   Figma Specification + Responsive Design
+   ========================================================================== */
+
+._07-support-new,
+._07-support-new * {
+  box-sizing: border-box;
+}
+
+._07-support-new {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (100vh Screen Fit with Floating Navbar Clearance)
+   ========================================================================== */
+._07-support-new .hero {
+  background: linear-gradient(
+      123.26deg,
+      rgba(233, 240, 250, 0) 45%,
+      rgba(27, 72, 150, 0.3) 91%
+    ),
+    linear-gradient(
+      223.79deg,
+      rgba(233, 240, 250, 1) 38%,
+      rgba(226, 235, 248, 1) 79%
+    );
+  padding: clamp(120px, 15vh, 148px) clamp(24px, 6.5vw, 100px) clamp(48px, 8vh, 80px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+._07-support-new .hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.5vw, 28px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1150px;
+  position: relative;
+  z-index: 2;
+}
+
+._07-support-new .c-u-s-t-o-m-e-r-s-u-p-p-o-r-t {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.6;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+._07-support-new .we-re-here-to-help-whenever-you-need-us {
+  text-align: left;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  line-height: 1.25;
+  font-weight: 600;
+  width: 100%;
+  margin: 0;
+}
+
+._07-support-new .we-re-here-to-help-whenever-you-need-us-span {
+  color: #191c1e;
+}
+
+._07-support-new .we-re-here-to-help-whenever-you-need-us-span2 {
+  color: #1b4896;
+}
+
+._07-support-new .existing-finecons-customers-can-reach-our-service-desk-by-phone-email-or-the-support-portal-every-request-gets-a-ticket-number-and-is-tracked-to-closure {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+  line-height: 1.6;
+  font-weight: 400;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   2. CONTACT OPTIONS SECTION
+   ========================================================================== */
+._07-support-new .contact-options {
+  padding: clamp(56px, 7vw, 100px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background: #ffffff;
+}
+
+._07-support-new .contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+/* When support portal is hidden, the 2 cards share 50/50 */
+._07-support-new .contact-cards-grid.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+._07-support-new .contact-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.08) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: clamp(24px, 2.5vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  height: 100%;
+}
+
+._07-support-new .contact-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(27, 72, 150, 0.5);
+  box-shadow: 0px 12px 28px rgba(27, 72, 150, 0.12);
+}
+
+._07-support-new .card-icon {
+  background: #1b4896;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+._07-support-new .card-icon img,
+._07-support-new .card-icon svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+._07-support-new .card-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._07-support-new .card-highlight-link {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1.4rem, 2vw, 1.875rem);
+  line-height: 1.4;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+._07-support-new .card-highlight-link:hover {
+  color: #1b4896;
+}
+
+._07-support-new .card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._07-support-new .card-list-item {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+._07-support-new .tap-to-call-on-mobile {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Support Portal Card (When Shown or Hidden) */
+._07-support-new .status-pill {
+  background: #ffe58a;
+  border-radius: 40px;
+  border: 1.5px solid #e0b000;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a5a00;
+  margin-bottom: 4px;
+}
+
+._07-support-new .card-support-portal-hidden-at-launch {
+  opacity: 0.65;
+}
+
+._07-support-new .button-log-in-to-portal {
+  background: #eb5a28;
+  border-radius: 90px;
+  padding: 14px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   3. BEFORE YOU CONTACT US ("Help Us Help You Faster")
+   ========================================================================== */
+._07-support-new .before-you-contact-us {
+  background: #f9fbfd;
+  padding: clamp(56px, 7vw, 100px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._07-support-new .section-heading-serif {
+  text-align: left;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+._07-support-new .heading-span-dark {
+  color: #191c1e;
+}
+
+._07-support-new .heading-span-blue {
+  color: #1b4896;
+}
+
+._07-support-new .please-keep-these-details-handy {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+._07-support-new .checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 28px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+._07-support-new .checklist-item {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-weight: 400;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+._07-support-new .checklist-item::before {
+  content: "•";
+  color: #1b4896;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   4. PRIORITY LEVELS & ESCALATION PATH TABLES
+   ========================================================================== */
+._07-support-new .priority-levels,
+._07-support-new .escalation-path {
+  padding: clamp(56px, 7vw, 100px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+._07-support-new .escalation-path {
+  background: #f9fbfd;
+}
+
+._07-support-new .section-desc-lead {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 1050px;
+  margin: 0;
+}
+
+/* Tables */
+._07-support-new .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(27, 72, 150, 0.2);
+  box-shadow: 0px 4px 12px rgba(15, 16, 255, 0.04);
+}
+
+._07-support-new .support-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 680px;
+}
+
+._07-support-new .support-table thead th {
+  background: #1b4896;
+  color: #ffffff;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 16px 24px;
+}
+
+._07-support-new .support-table tbody tr {
+  border-bottom: 1px solid rgba(27, 72, 150, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+._07-support-new .support-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+._07-support-new .support-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+._07-support-new .support-table tbody tr:nth-child(even) {
+  background: #f7f9fd;
+}
+
+._07-support-new .support-table tbody tr:hover {
+  background: rgba(226, 235, 248, 0.65);
+}
+
+._07-support-new .support-table td {
+  padding: 16px 24px;
+  color: #191c1e;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+._07-support-new .support-table td.col-bold {
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-weight: 700;
+}
+
+._07-support-new .table-footer-advisory {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   5. SERVICE-SPECIFIC SUPPORT (5 CARDS + SECURITY NOTICE)
+   ========================================================================== */
+._07-support-new .service-specific-support {
+  padding: clamp(56px, 7vw, 100px) clamp(24px, 6.5vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background: #ffffff;
+}
+
+._07-support-new .support-service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+._07-support-new .support-service-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 235, 248, 0.08) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  height: 100%;
+}
+
+._07-support-new .support-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(27, 72, 150, 0.5);
+  box-shadow: 0px 12px 28px rgba(27, 72, 150, 0.12);
+}
+
+._07-support-new .support-service-card-title {
+  color: #1b4896;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+._07-support-new .support-service-card-desc {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Security Notice Alert */
+._07-support-new .security-notice {
+  background: #fff7e6;
+  border-radius: 12px;
+  border: 1px solid #ffd591;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  box-shadow: 0px 5px 12px 0px rgba(15, 16, 255, 0.04);
+}
+
+._07-support-new .security-notice-title {
+  color: #d46b08;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0;
+}
+
+._07-support-new .security-notice-text {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. CTA BANNER ("Not a Customer Yet?")
+   ========================================================================== */
+._07-support-new .cta-banner {
+  background: #1b4896 !important;
+  padding: clamp(70px, 8vw, 110px) clamp(24px, 6vw, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+._07-support-new .not-a-customer-yet {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "Merriweather-SemiBold", Merriweather, serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0;
+}
+
+._07-support-new .cta-banner p,
+._07-support-new .cta-banner-desc {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  font-weight: 400;
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+  opacity: 0.95;
+}
+
+._07-support-new .cta-buttons-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+._07-support-new .button-managed-services {
+  background: #ffffff;
+  border-radius: 90px;
+  padding: 16px 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+._07-support-new .button-managed-services:hover {
+  background: #f0f4fc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+._07-support-new .managed-services-text {
+  color: #1b4896 !important;
+  text-align: center;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+._07-support-new .button-contact-sales {
+  border-radius: 90px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  padding: 14px 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+._07-support-new .button-contact-sales:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+._07-support-new .contact-sales-text {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1199px) {
+  ._07-support-new .support-service-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  ._07-support-new .contact-cards-grid.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  ._07-support-new .hero {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding-top: calc(70px + 16px) !important;
+    padding-bottom: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  ._07-support-new .hero-copy {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  ._07-support-new .hero-title,
+  ._07-support-new .hero-description {
+    text-align: center !important;
+  }
+
+  ._07-support-new .contact-cards-grid,
+  ._07-support-new .contact-cards-grid.two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  ._07-support-new .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  ._07-support-new .support-service-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  ._07-support-new .cta-buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  ._07-support-new .button-managed-services,
+  ._07-support-new .button-contact-sales {
+    width: 100%;
+  }
+}

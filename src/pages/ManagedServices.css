@@ -1,865 +1,1381 @@
 /* ==========================================================================
-   SOLUTIONS MANAGED SERVICES PAGE STYLING (Template Matched)
+   02 MANAGED SERVICES NEW — STYLESHEET
+   Clean Figma Implementation with Exact Brand Tokens & Full Responsiveness
    ========================================================================== */
 
-.solutions-managed-services {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
+.managed-services-new-page,
+.managed-services-new-page * {
+  box-sizing: border-box;
+}
+
+.managed-services-new-page {
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  position: relative;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  width: 100%;
 }
 
-.solutions-managed-services * {
-  box-sizing: border-box;
-}
-
-/* --------------------------------------------------------------------------
-   HERO SECTION - EXACT 100VH VIEWPORT
-   -------------------------------------------------------------------------- */
-.solutions-managed-services .managed-hero-wrapper {
+/* ==========================================================================
+   1. HERO SECTION (ALIGNED WITH SOFTWARE LICENSING & IT INFRASTRUCTURE)
+   ========================================================================== */
+.managed-services-new-page .hero {
   position: relative;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45%,
-      rgba(38, 210, 222, 0.25) 90%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38%,
-      rgba(175, 175, 255, 1) 79%);
-}
-
-.solutions-managed-services .rectangle-217 {
-  opacity: 0.85;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Background decorative concentric rings */
-.solutions-managed-services .ellipse-17 {
-  border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.06);
-  width: 20.25rem;
-  height: 20.25rem;
-  position: absolute;
-  left: -5rem;
-  top: -7.75rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.solutions-managed-services .ellipse-18 {
-  border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.06);
-  width: 11.5rem;
-  height: 11.5rem;
-  position: absolute;
-  left: -0.625rem;
-  top: -3.375rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.solutions-managed-services .ellipse-19 {
-  border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
-  width: 20.25rem;
-  height: 20.25rem;
-  position: absolute;
-  left: 15.25rem;
-  top: 23.5rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.solutions-managed-services .ellipse-20 {
-  border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
-  width: 11.5rem;
-  height: 11.5rem;
-  position: absolute;
-  left: 19.625rem;
-  top: 27.875rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Hero Content Container */
-.solutions-managed-services .frame-462 {
-  max-width: 80rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 2;
-  height: 100vh;
-  max-height: 100vh;
-  justify-content: space-between;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.solutions-managed-services .frame-461 {
-  display: flex;
-  flex-direction: row;
-  gap: clamp(1.5rem, 3.5vw, 4.5rem);
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  padding-top: clamp(110px, 14vh, 134px);
+  padding-bottom: clamp(24px, 4vh, 48px);
+  padding-left: clamp(28px, 6vw, 100px);
+  padding-right: clamp(28px, 6vw, 100px);
+  overflow: hidden;
+}
+
+.managed-services-new-page .hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.managed-services-new-page .hero-container,
+.managed-services-new-page .hero-copy {
+  max-width: 1320px;
   width: 100%;
   margin: auto 0;
-}
-
-.solutions-managed-services .frame-460 {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
-  flex: 1;
+  align-items: flex-start;
+  gap: clamp(14px, 2vh, 24px);
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
 }
 
-.solutions-managed-services .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s {
-  color: #000000;
-  text-align: left;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-  letter-spacing: 0.125rem;
+.managed-services-new-page .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s,
+.managed-services-new-page .hero-eyebrow {
+  color: #191c1e;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: clamp(13px, 0.95vw, 16px);
+  line-height: 1.6;
+  letter-spacing: 0.14em;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
 }
 
-.solutions-managed-services .support-beyond-expectations {
-  text-align: left;
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
-  line-height: 1.25;
+.managed-services-new-page .it-that-just-works-every-day-every-site,
+.managed-services-new-page .hero-title {
+  font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  line-height: 1.22;
   font-weight: 600;
   margin: 0;
+  letter-spacing: -0.01em;
 }
 
-.solutions-managed-services .support-beyond-expectations-span {
-  color: #0e10ff;
+
+.managed-services-new-page .it-that-just-works-every-day-every-site-span {
+  color: #191c1e;
+  display: block;
 }
 
-.solutions-managed-services .support-beyond-expectations-span2 {
-  color: #000000;
+.managed-services-new-page .it-that-just-works-every-day-every-site-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  display: block;
 }
 
-.solutions-managed-services .hero-image-wrapper {
-  flex-shrink: 0;
-  width: 42%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.solutions-managed-services .rectangle-323 {
-  width: 100%;
-  max-width: 32rem;
-  max-height: 22rem;
-  object-fit: cover;
-  border-radius: 1.25rem;
-  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.15);
-}
-
-/* 9-Segment Visual Indicator */
-.solutions-managed-services .frame-2 {
-  display: flex;
-  flex-direction: row;
-  gap: 0.375rem;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: auto;
-  padding-bottom: clamp(0.25rem, 0.8vh, 0.5rem);
-  width: 100%;
-  max-width: 80rem;
-}
-
-.solutions-managed-services .frame-2 .bar {
-  border-radius: 1.875rem;
-  width: 0.375rem;
-  height: 1.75rem;
-  background: #9d9dff;
-  transition: all 0.3s ease;
-}
-
-.solutions-managed-services .frame-2 .bar.active {
-  background: #0e10ff;
-  height: 2.125rem;
-}
-
-/* --------------------------------------------------------------------------
-   MAIN 2-COLUMN SOLUTIONS SECTION (Below 100vh Hero)
-   -------------------------------------------------------------------------- */
-.solutions-managed-services .content-white-section {
-  width: 100%;
-  background: #ffffff;
-  position: relative;
-  z-index: 2;
-  padding-top: 5rem;
-  padding-bottom: 6rem;
-}
-
-.solutions-managed-services .frame-465 {
-  max-width: 90rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 3rem;
-  position: relative;
-}
-
-.solutions-managed-services .frame-322 {
-  display: flex;
-  flex-direction: row;
-  gap: clamp(2rem, 4vw, 4.5rem);
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-.solutions-managed-services .frame-321 {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  align-items: flex-start;
-  flex: 1;
-  min-width: 0;
-}
-
-/* Section Title */
-.solutions-managed-services .managed-services2 {
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  line-height: 1.25;
-  font-weight: 700;
-  margin: 0;
+.managed-services-new-page .hero-description,
+.managed-services-new-page .from-on-site-engineers-to-24-x-7-remote-monitoring-finecons-limited-keeps-your-desktops-servers-networks-and-cloud-running-smoothly-under-one-contract-and-one-sla {
+  color: #191c1e;
   text-align: left;
-}
-
-.solutions-managed-services .managed-services-2-span {
-  color: #0e10ff;
-}
-
-.solutions-managed-services .managed-services-2-span2 {
-  color: #000000;
-}
-
-/* Intro Row (Text + Triangular Visual) */
-.solutions-managed-services .frame-362 {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2.5rem;
-  align-items: center;
-  width: 100%;
-}
-
-.solutions-managed-services .intro-text-box {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.solutions-managed-services .intro-paragraph {
-  color: #000000;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 58rem;
   margin: 0;
 }
 
-.solutions-managed-services .security-graphic-badge {
-  flex: 0 0 18rem;
-  width: 18rem;
-  height: 18rem;
+/* Action Buttons Row */
+.managed-services-new-page .hero-cta-row,
+.managed-services-new-page .hero-copy .row {
   display: flex;
+  flex-direction: row;
+  gap: 1.125rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.managed-services-new-page .button-talk-to-a-service-expert {
+  background: var(--fc-accent-orange, #eb5a28);
+  border-radius: 5.625rem;
+  padding: 0.875rem 2.25rem;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-/* Top-Right Concentric Donut Ellipses */
-.solutions-managed-services .security-ellipse-tr-outer {
-  position: absolute;
-  top: -1.25rem;
-  right: -1.25rem;
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 50%;
-  border: 1.85rem solid rgba(228, 234, 255, 0.95);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.solutions-managed-services .security-ellipse-tr-inner {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 50%;
-  border: 2.15rem solid rgba(228, 234, 255, 0.95);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Bottom-Left Concentric Donut Ellipses */
-.solutions-managed-services .security-ellipse-bl-outer {
-  position: absolute;
-  bottom: -1.25rem;
-  left: -1.25rem;
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 50%;
-  border: 1.85rem solid rgba(228, 234, 255, 0.95);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.solutions-managed-services .security-ellipse-bl-inner {
-  position: absolute;
-  bottom: 1.25rem;
-  left: 1.25rem;
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 50%;
-  border: 2.15rem solid rgba(228, 234, 255, 0.95);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Central Triangle Wrapper & Image */
-.solutions-managed-services .security-triangle-wrapper {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 13rem;
-  height: 13rem;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.solutions-managed-services .security-triangle-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 0 1.5px #0084ff) drop-shadow(0 0 3px #0084ff) drop-shadow(0 0 6px rgba(0, 132, 255, 0.6)) drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.2));
-}
-
-.solutions-managed-services .security-graphic-badge:hover .security-triangle-wrapper {
-  transform: translateY(-0.35rem) scale(1.05);
-}
-
-/* --------------------------------------------------------------------------
-   ACCORDIONS
-   -------------------------------------------------------------------------- */
-.solutions-managed-services .frame-367 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-}
-
-.solutions-managed-services .accordion-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.solutions-managed-services .accordion-header-btn {
-  background: linear-gradient(180deg, #f0f8ff 0%, #add7ff 100%);
+  cursor: pointer;
   border: none;
-  border-radius: 1.25rem;
-  padding: 1.5rem 2.5rem;
+  outline: none;
+  box-shadow: 0 0.375rem 1.125rem rgba(235, 90, 40, 0.28);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.managed-services-new-page .button-talk-to-a-service-expert:hover {
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  transform: translateY(-0.15rem);
+  box-shadow: 0 0.625rem 1.5rem rgba(235, 90, 40, 0.36);
+}
+
+.managed-services-new-page .talk-to-a-service-expert {
+  color: #ffffff;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+}
+
+.managed-services-new-page .button-existing-customer-get-support {
+  background: #ffffff;
+  border-radius: 5.625rem;
+  border: 2px solid var(--fc-brand-primary, #1b4896);
+  padding: calc(0.875rem - 2px) 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0.25rem 0.75rem rgba(27, 72, 150, 0.08);
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  text-decoration: none;
+}
+
+.managed-services-new-page .button-existing-customer-get-support:hover {
+  background: rgba(27, 72, 150, 0.04);
+  transform: translateY(-0.15rem);
+  border-color: var(--fc-brand-cobalt, #2f6bd8);
+}
+
+.managed-services-new-page .existing-customer-get-support {
+  color: var(--fc-brand-primary, #1b4896);
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ==========================================================================
+   2. MAIN CONTENT LAYOUT (SIDEBAR + CONTENT BODY)
+   ========================================================================== */
+.managed-services-new-page .body-side-menu-content {
+  width: 100%;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 5.5rem clamp(1.5rem, 5vw, 6.25rem);
   display: flex;
+  flex-direction: row;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Left Sticky Sidebar */
+.managed-services-new-page .side-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: clamp(16.5rem, 18vw, 19rem);
+  position: sticky;
+  top: 6.25rem;
+  align-self: flex-start;
+  background: #ffffff;
+}
+
+.managed-services-new-page .s-e-r-v-i-c-e-s {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  padding-bottom: 0.35rem;
+}
+
+.managed-services-new-page .row2,
+.managed-services-new-page .side-menu-row {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.35rem 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-.solutions-managed-services .accordion-header-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(14, 16, 255, 0.08);
+.managed-services-new-page .managed-services,
+.managed-services-new-page .facility-management-fms,
+.managed-services-new-page .annual-maintenance-amc,
+.managed-services-new-page .side-menu-link {
+  text-align: left;
+  font-family: "MerriweatherSans-Regular", "Merriweather Sans", sans-serif !important;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: 400;
+  width: calc(100% - 1rem);
+  max-width: 18rem;
+  transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
-.solutions-managed-services .accordion-title {
-  color: #000000;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.375rem;
-  line-height: 1.35;
+.managed-services-new-page .row2:hover .managed-services,
+.managed-services-new-page .row2:hover .facility-management-fms,
+.managed-services-new-page .row2:hover .annual-maintenance-amc,
+.managed-services-new-page .side-menu-row:hover .side-menu-link {
+  color: var(--fc-brand-primary, #1b4896);
+}
+
+.managed-services-new-page .row2.is-active .managed-services,
+.managed-services-new-page .row2.is-active .facility-management-fms,
+.managed-services-new-page .row2.is-active .annual-maintenance-amc,
+.managed-services-new-page .is-active-link,
+.managed-services-new-page .side-menu-row.is-active .side-menu-link {
+  color: var(--fc-brand-primary, #1b4896);
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-weight: 700;
 }
 
-.solutions-managed-services .chevron-icon {
-  width: 2rem;
-  height: 2rem;
-  color: #000000;
+.managed-services-new-page .rectangle,
+.managed-services-new-page .sidebar-active-indicator {
+  background: var(--fc-brand-primary, #1b4896);
+  width: 0.28rem;
+  height: 2.125rem;
+  border-radius: 0.125rem;
+  flex-shrink: 0;
+}
+
+/* Right Content Area */
+.managed-services-new-page .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==========================================================================
+   3. INTRO SECTION (NARRATIVE + BADGES)
+   ========================================================================== */
+.managed-services-new-page .intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.managed-services-new-page .managed-services2 {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+
+.managed-services-new-page .managed-services-2-span {
+  color: #191c1e;
+}
+
+.managed-services-new-page .managed-services-2-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  margin-left: 0.35rem;
+}
+
+.managed-services-new-page .intro-narrative {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0;
+}
+
+.managed-services-new-page .tags {
+  display: flex;
+  flex-direction: row;
+  gap: 0.875rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.managed-services-new-page .tag-item {
+  background: var(--fc-bg-ice, #f1f5fc);
+  border-radius: 2.5rem;
+  border: 1px solid rgba(27, 72, 150, 0.25);
+  padding: 0.75rem 1.375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.managed-services-new-page .tag-item:hover {
+  background: #e5edf9;
+  border-color: var(--fc-brand-primary, #1b4896);
+  transform: translateY(-0.1rem);
+}
+
+.managed-services-new-page .tag-text {
+  color: var(--fc-brand-primary, #1b4896);
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   4. ACCORDIONS SECTION (OUR APPROACH & KEY ADVANTAGES)
+   ========================================================================== */
+.managed-services-new-page .accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.managed-services-new-page .accordion-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.managed-services-new-page .accordion-header {
+  background: linear-gradient(90deg,
+      rgba(228, 236, 248, 1) 0%,
+      rgba(226, 235, 248, 1) 100%);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.managed-services-new-page .accordion-header:hover {
+  background: linear-gradient(90deg,
+      rgba(220, 231, 246, 1) 0%,
+      rgba(215, 227, 245, 1) 100%);
+  box-shadow: 0 0.25rem 0.75rem rgba(27, 72, 150, 0.06);
+}
+
+.managed-services-new-page .accordion-title {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.375rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin: 0;
+}
+
+.managed-services-new-page .accordion-chevron {
+  color: #191c1e;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
   transition: transform 0.3s ease;
 }
 
-.solutions-managed-services .chevron-down {
+.managed-services-new-page .accordion-chevron.is-open {
   transform: rotate(180deg);
 }
 
-.solutions-managed-services .accordion-content-body {
-  padding: 0 1rem;
+.managed-services-new-page .accordion-body {
+  padding: 1.25rem 1.75rem 0.5rem 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0.75rem;
+  width: 100%;
 }
 
-.solutions-managed-services .accordion-text {
-  color: #000000;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.65;
+.managed-services-new-page .accordion-text {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  font-weight: 400;
   margin: 0;
 }
 
-/* Key Benefits 2-Col */
-.solutions-managed-services .benefits-2col-layout {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.solutions-managed-services .benefits-photo {
-  width: 100%;
-  border-radius: 0.75rem;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.solutions-managed-services .benefits-bullet-list,
-.solutions-managed-services .usecases-bullet-list {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin: 0;
+.managed-services-new-page .accordion-bullet-list {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
-}
-
-.solutions-managed-services .benefits-bullet-list li,
-.solutions-managed-services .usecases-bullet-list li {
-  color: #000000;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.0625rem;
-  line-height: 1.5;
-}
-
-/* Use Cases 2-Col */
-.solutions-managed-services .usecases-2col-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.solutions-managed-services .usecases-photo {
+  gap: 0.75rem;
   width: 100%;
-  border-radius: 0.75rem;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
 }
 
-/* --------------------------------------------------------------------------
-   MANAGED SERVICES WE OFFER
-   -------------------------------------------------------------------------- */
-.solutions-managed-services .section-services-offered {
-  width: 100%;
-  padding: 5.5rem 0 3rem 0;
+.managed-services-new-page .accordion-bullet-item {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.625rem;
 }
 
-.solutions-managed-services .services-offered-inner {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 3rem;
+.managed-services-new-page .accordion-bullet-dot {
+  color: var(--fc-brand-primary, #1b4896);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   5. MANAGED SERVICES PORTFOLIO (8 CARDS)
+   ========================================================================== */
+.managed-services-new-page .portfolio {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.solutions-managed-services .offered-heading {
-  font-family: 'Merriweather', serif;
-  font-size: clamp(2.25rem, 2.75vw, 3rem);
-  line-height: 1.25;
-  font-weight: 600;
-  color: #000000;
-  margin: 0;
-  text-align: center;
-}
-
-.solutions-managed-services .offered-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
 }
 
-.solutions-managed-services .offered-card {
-  background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.2);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.solutions-managed-services .offered-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(14, 16, 255, 0.12);
-}
-
-.solutions-managed-services .offered-img-box {
-  width: 100%;
-  height: 18rem;
-  overflow: hidden;
-}
-
-.solutions-managed-services .offered-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.solutions-managed-services .offered-title-box {
-  padding: 2rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.solutions-managed-services .offered-card-title {
-  color: #0e10ff;
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: clamp(1.5rem, 2vw, 2.125rem);
-  line-height: 1.25;
-  font-weight: 700;
-  margin: 0;
-}
-
-/* --------------------------------------------------------------------------
-   MANAGED SERVICES PARTNERS
-   -------------------------------------------------------------------------- */
-.solutions-managed-services .section-managed-partners {
-  width: 100%;
-  padding: 4.5rem 0 6rem 0;
-}
-
-.solutions-managed-services .managed-partners-inner {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.solutions-managed-services .partners-heading {
-  font-family: 'Merriweather', serif;
-  font-size: clamp(2.25rem, 2.75vw, 3rem);
+.managed-services-new-page .managed-services-portfolio {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
   line-height: 1.25;
   font-weight: 600;
-  color: #000000;
   margin: 0;
-  text-align: center;
 }
 
-.solutions-managed-services .partners-logo-grid {
+.managed-services-new-page .managed-services-portfolio-span {
+  color: #191c1e;
+}
+
+.managed-services-new-page .managed-services-portfolio-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  margin-left: 0.35rem;
+}
+
+.managed-services-new-page .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   width: 100%;
 }
 
-.solutions-managed-services .partner-card {
-  background: #ffffff;
-  border: 1px solid #5793ce;
+.managed-services-new-page .portfolio-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(226, 235, 248, 0.08) 100%);
   border-radius: 0.75rem;
-  padding: 1.5rem 1rem;
-  height: 8.5rem;
+  border: 1px solid rgba(47, 107, 216, 0.28);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 0px 0.3125rem 0.75rem 0px rgba(27, 72, 150, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  min-height: 16.5rem;
+}
+
+.managed-services-new-page .portfolio-card:hover {
+  transform: translateY(-0.375rem);
+  box-shadow: 0px 0.875rem 1.875rem 0px rgba(27, 72, 150, 0.12);
+  border-color: var(--fc-brand-primary, #1b4896);
+}
+
+.managed-services-new-page .portfolio-icon-box {
+  background: var(--fc-brand-primary, #1b4896);
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  transition: background-color 0.25s ease;
 }
 
-.solutions-managed-services .partner-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(87, 147, 206, 0.2);
+.managed-services-new-page .portfolio-card:hover .portfolio-icon-box {
+  background: var(--fc-brand-cobalt, #2f6bd8);
 }
 
-.solutions-managed-services .partner-logo-img {
-  max-width: 85%;
-  max-height: 4.5rem;
+.managed-services-new-page .portfolio-icon-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.managed-services-new-page .portfolio-card-title {
+  color: var(--fc-brand-primary, #1b4896);
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+
+.managed-services-new-page .portfolio-card-desc {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+  flex: 1;
+}
+
+.managed-services-new-page .portfolio-read-more {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.managed-services-new-page .portfolio-read-more:hover {
+  color: var(--fc-brand-primary, #1b4896);
+  transform: translateX(0.25rem);
+}
+
+/* ==========================================================================
+   6. HOW SERVICE IS DELIVERED (5-STEP PROCESS FLOW)
+   ========================================================================== */
+.managed-services-new-page .how-service-is-delivered {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.managed-services-new-page .one-team-clear-escalation-every-time {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(1.875rem, 3vw, 2.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+.managed-services-new-page .one-team-span {
+  color: #191c1e;
+}
+
+.managed-services-new-page .one-team-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  margin: 0 0.35rem;
+}
+
+.managed-services-new-page .flow-container,
+.managed-services-new-page .flow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: visible;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.managed-services-new-page .flow-card,
+.managed-services-new-page .flow .card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(238, 244, 253, 0.5) 100%);
+  border-radius: 14px;
+  border: 1.5px solid rgba(47, 107, 216, 0.22);
+  padding: 18px 18px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 200px;
+  box-shadow: 0px 4px 12px 0px rgba(15, 16, 255, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.managed-services-new-page .flow-card:hover,
+.managed-services-new-page .flow .card:hover {
+  transform: translateY(-0.25rem);
+  border-color: var(--fc-brand-primary, #1b4896);
+  box-shadow: 0px 8px 22px 0px rgba(27, 72, 150, 0.12);
+}
+
+.managed-services-new-page .flow-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.managed-services-new-page .flow-step-badge,
+.managed-services-new-page .flow .card .icon {
+  background: var(--fc-brand-primary, #1b4896);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: #ffffff;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(27, 72, 150, 0.22);
+}
+
+.managed-services-new-page .flow-step-tag {
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5d6679;
+  font-weight: 700;
+  margin-left: 8px;
+  margin-right: auto;
+}
+
+.managed-services-new-page .flow-step-next-arrow {
+  color: var(--fc-brand-primary, #1b4896);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.65;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.managed-services-new-page .flow-card:hover .flow-step-next-arrow {
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+.managed-services-new-page .flow-step-title,
+.managed-services-new-page .flow .card h3 {
+  color: var(--fc-brand-primary, #1b4896);
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+.managed-services-new-page .flow-step-desc,
+.managed-services-new-page .flow .card p {
+  color: #434655;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  line-height: 1.55;
+  font-weight: 400;
+  margin: 0;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.managed-services-new-page .flow-arrow,
+.managed-services-new-page .flow .div2 {
+  display: none;
+}
+
+.managed-services-new-page .flow-footer-note,
+.managed-services-new-page .every-ticket-is-logged-tracked-and-reported-you-see-what-was-raised-what-was-done-and-how-fast {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0.75rem 0 0 0;
+  background: #f1f6fd;
+  border-left: 4px solid var(--fc-brand-primary, #1b4896);
+  padding: 14px 18px;
+  border-radius: 0 10px 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   7. WHAT'S INCLUDED IN EVERY CONTRACT
+   ========================================================================== */
+.managed-services-new-page .what-s-included {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.managed-services-new-page .what-s-included-in-every-contract {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+.managed-services-new-page .what-s-included-span {
+  color: #191c1e;
+}
+
+.managed-services-new-page .what-s-included-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  margin-left: 0.35rem;
+}
+
+.managed-services-new-page .included-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.managed-services-new-page .included-item {
+  color: #191c1e;
+  text-align: left;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.managed-services-new-page .included-bullet-dot {
+  color: var(--fc-brand-primary, #1b4896);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   8. INDUSTRIES WE SUPPORT
+   ========================================================================== */
+.managed-services-new-page .industries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.managed-services-new-page .industries-we-support {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+.managed-services-new-page .industries-we-support-span {
+  color: #191c1e;
+}
+
+.managed-services-new-page .industries-we-support-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  margin-left: 0.35rem;
+}
+
+.managed-services-new-page .industries-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 0.875rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.managed-services-new-page .industry-tag-item {
+  background: var(--fc-bg-ice, #f1f5fc);
+  border-radius: 2.5rem;
+  border: 1px solid rgba(27, 72, 150, 0.25);
+  padding: 0.75rem 1.375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.managed-services-new-page .industry-tag-item:hover {
+  background: #e5edf9;
+  border-color: var(--fc-brand-primary, #1b4896);
+  transform: translateY(-0.1rem);
+}
+
+.managed-services-new-page .industry-tag-text {
+  color: var(--fc-brand-primary, #1b4896);
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   9. TECHNOLOGY PARTNERS (8 LOGOS)
+   ========================================================================== */
+.managed-services-new-page .technology-partners {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.managed-services-new-page .technology-partners2 {
+  text-align: left;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+}
+
+.managed-services-new-page .technology-partners-2-span {
+  color: #191c1e;
+}
+
+.managed-services-new-page .technology-partners-2-span2 {
+  color: var(--fc-brand-primary, #1b4896);
+  margin-left: 0.35rem;
+}
+
+.managed-services-new-page .partners-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 0.875rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.managed-services-new-page .partner-box {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 16, 255, 0.25);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 60px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(15, 16, 255, 0.04);
+}
+
+.managed-services-new-page .partner-box:hover {
+  transform: translateY(-0.15rem);
+  border-color: var(--fc-brand-primary, #1b4896);
+  box-shadow: 0 6px 14px rgba(15, 16, 255, 0.1);
+}
+
+.managed-services-new-page .partner-logo-img {
+  max-width: 90%;
+  max-height: 36px;
   object-fit: contain;
 }
 
-/* --------------------------------------------------------------------------
-   RESPONSIVE MEDIA QUERIES
-   -------------------------------------------------------------------------- */
-@media (max-width: 68rem) {
-  .solutions-managed-services .frame-322 {
-    flex-direction: column;
-    gap: 2.5rem;
+.managed-services-new-page .partner-note,
+.managed-services-new-page .design-note-partner-logos-placed-from-the-existing-designs-and-the-logo-assets-frame {
+  color: #8a6d00;
+  text-align: left;
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+}
+
+/* ==========================================================================
+   10. BOTTOM CTA BANNER (LET'S TAKE IT OFF YOUR PLATE)
+   ========================================================================== */
+.managed-services-new-page .cta-banner {
+  background: var(--fc-brand-primary, #1b4896);
+  padding: clamp(3.5rem, 7vh, 6.875rem) clamp(1.5rem, 5vw, 6.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.managed-services-new-page .let-s-take-it-off-your-plate {
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--heading-serif-1-desktop-font-family, "Merriweather-SemiBold", serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+  max-width: 68rem;
+}
+
+.managed-services-new-page .cta-banner p,
+.managed-services-new-page .cta-banner-desc,
+.managed-services-new-page .tell-us-about-your-users-sites-and-systems-and-we-ll-recommend-the-right-mix-of-fms-amc-and-remote-services {
+  color: #ffffff !important;
+  text-align: center;
+  font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif);
+  font-size: clamp(1.0625rem, 1.4vw, 1.375rem);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 62rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.managed-services-new-page .button-talk-to-a-service-expert2 {
+  background: #ffffff;
+  border-radius: 5.625rem;
+  padding: 1.125rem 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.managed-services-new-page .button-talk-to-a-service-expert2:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.875rem 2rem rgba(0, 0, 0, 0.22);
+}
+
+.managed-services-new-page .talk-to-a-service-expert2 {
+  color: var(--fc-brand-primary, #1b4896);
+  font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ==========================================================================
+   11. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* Laptop / Desktop adjustments (992px to 1280px) */
+@media (max-width: 1280px) {
+  .managed-services-new-page .body-side-menu-content {
+    gap: 3rem;
   }
 
-  .solutions-managed-services .offered-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .solutions-managed-services .partners-logo-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .managed-services-new-page .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 48rem) {
-  .solutions-managed-services .content-white-section {
-    padding-top: 3.5rem;
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+  .managed-services-new-page .hero {
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
     padding-bottom: 4rem;
   }
 
-  .solutions-managed-services .frame-465 {
-    padding: 0 1.5rem;
+  .managed-services-new-page .body-side-menu-content {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3.5rem 1.5rem;
   }
 
-  .solutions-managed-services .managed-hero-wrapper {
+  .managed-services-new-page .side-menu {
+    width: 100%;
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid rgba(27, 72, 150, 0.15);
+  }
+
+  .managed-services-new-page .s-e-r-v-i-c-e-s {
+    display: none;
+  }
+
+  .managed-services-new-page .side-menu-row {
+    width: auto;
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    background: #f1f5fc;
+    border-radius: 2rem;
+  }
+
+  .managed-services-new-page .side-menu-row.is-active {
+    background: var(--fc-brand-primary, #1b4896);
+  }
+
+  .managed-services-new-page .side-menu-row.is-active .side-menu-link {
+    color: #ffffff;
+  }
+
+  .managed-services-new-page .sidebar-active-indicator {
+    display: none;
+  }
+
+  .managed-services-new-page .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .managed-services-new-page .flow-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .managed-services-new-page .flow-card {
+    min-width: 13rem;
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .managed-services-new-page .flow-arrow {
+    display: none;
+  }
+}
+
+/* Mobile Screens (< 768px) */
+@media (max-width: 767px) {
+  .managed-services-new-page .hero {
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    padding: 1.25rem 1rem 3.5rem 1rem;
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+
+  .managed-services-new-page .hero-copy {
+    margin: 0;
+    gap: 1.25rem;
+  }
+
+  .managed-services-new-page .it-that-just-works-every-day-every-site {
+    font-size: 2.25rem;
+  }
+
+  .managed-services-new-page .it-that-just-works-every-day-every-site-span2 {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+
+  .managed-services-new-page .hero-description {
+    font-size: 1.0625rem;
+  }
+
+  .managed-services-new-page .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .managed-services-new-page .button-talk-to-a-service-expert,
+  .managed-services-new-page .button-existing-customer-get-support {
+    width: 100%;
+  }
+
+  .managed-services-new-page .body-side-menu-content {
+    padding: 2.5rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .managed-services-new-page .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .managed-services-new-page .flow-card {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .managed-services-new-page .partner-box {
+    width: calc(50% - 0.5rem);
+    height: 3.75rem;
+  }
+
+  .managed-services-new-page .tag-item,
+  .managed-services-new-page .industry-tag-item {
+    padding: 0.625rem 1rem;
+  }
+
+  .managed-services-new-page .tag-text,
+  .managed-services-new-page .industry-tag-text {
+    font-size: 0.9375rem;
+  }
+}
+
+.tell-us-about-your-users-sites-and-systems-and-we-ll-recommend-the-right-mix-of-fms-amc-and-remote-services {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Hide mobile-only dropdown on desktop/tablet */
+.managed-services-mobile-dropdown-wrap {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE-ONLY FIXES (max-width: 768px) — Does NOT affect desktop or tablet
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Hero: strictly fit to screen height (100vh), centered content, no overflow */
+  .managed-services-new-page .hero {
     height: 100vh !important;
     height: 100dvh !important;
     min-height: 100vh !important;
     min-height: 100dvh !important;
     max-height: 100vh !important;
     max-height: 100dvh !important;
-    position: relative !important;
     overflow: hidden !important;
-    margin-top: 0 !important;
-    padding: 0 !important;
-  }
-
-  .solutions-managed-services .frame-462 {
-    height: 100vh !important;
-    height: 100dvh !important;
-    min-height: 100vh !important;
-    min-height: 100dvh !important;
-    max-height: 100vh !important;
-    max-height: 100dvh !important;
-    margin-top: 0 !important;
-    padding: calc(4.375rem + 1rem) 1.25rem clamp(0.75rem, 2vh, 1.25rem) 1.25rem !important;
-    overflow: hidden !important;
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: center !important;
     box-sizing: border-box !important;
-    width: 100% !important;
-    gap: 0 !important;
-  }
-
-  .solutions-managed-services .frame-461 {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    flex: 1 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    min-height: 0 !important;
-  }
-
-  .solutions-managed-services .frame-460 {
-    flex: 0 0 auto !important;
-    display: flex !important;
-    flex-direction: column !important;
+    padding-top: calc(70px + 16px) !important;
+    padding-bottom: 30px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     align-items: center !important;
     justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    max-width: 25rem !important;
-    margin: clamp(1.5rem, 4vh, 2.5rem) auto 0 auto !important;
-    padding: 0 !important;
-    height: auto !important;
-    gap: 0.375rem !important;
-  }
-
-  .solutions-managed-services .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s {
-    text-align: center !important;
-    font-size: 0.8125rem !important;
-    letter-spacing: 0.125rem !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-
-  .solutions-managed-services .support-beyond-expectations {
-    font-size: clamp(1.75rem, 6.8vw, 2.35rem) !important;
-    line-height: 1.22 !important;
-    text-align: center !important;
-    letter-spacing: -0.4px !important;
-    width: 100% !important;
-    display: block !important;
-    margin: 0 !important;
-  }
-
-  .solutions-managed-services .support-beyond-expectations span,
-  .solutions-managed-services .support-beyond-expectations-span,
-  .solutions-managed-services .support-beyond-expectations-span2 {
-    text-align: center !important;
-    display: inline !important;
-  }
-
-  .solutions-managed-services .hero-image-wrapper {
-    width: 100% !important;
-    max-width: 22rem !important;
-    flex: 1 !important;
-    min-height: 0 !important;
-    max-height: none !important;
     display: flex !important;
-    justify-content: center !important;
+  }
+
+  .managed-services-new-page .hero-container,
+  .managed-services-new-page .hero-copy {
     align-items: center !important;
-    position: relative !important;
-    margin: auto auto !important;
-    overflow: visible !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    gap: 14px !important;
   }
 
-  .solutions-managed-services .hero-image-wrapper .rectangle-323 {
+  .managed-services-new-page .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s,
+  .managed-services-new-page .hero-eyebrow {
+    text-align: center !important;
+  }
+
+  .managed-services-new-page .it-that-just-works-every-day-every-site,
+  .managed-services-new-page .hero-title {
+    font-size: clamp(1.7rem, 7vw, 2.4rem) !important;
+    text-align: center !important;
+  }
+
+  .managed-services-new-page .hero-description,
+  .managed-services-new-page .from-on-site-engineers-to-24-x-7-remote-monitoring-finecons-limited-keeps-your-desktops-servers-networks-and-cloud-running-smoothly-under-one-contract-and-one-sla {
+    text-align: center !important;
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
+
+  .managed-services-new-page .hero-cta-row,
+  .managed-services-new-page .hero-copy .row {
+    flex-direction: column !important;
     width: 100% !important;
-    height: auto !important;
-    max-height: clamp(13rem, 34vh, 17.5rem) !important;
-    object-fit: cover !important;
-    border-radius: 1.25rem !important;
-    display: block !important;
-    box-shadow: none !important;
+    align-items: center !important;
   }
 
-  .solutions-managed-services .ellipse-17,
-  .solutions-managed-services .ellipse-18,
-  .solutions-managed-services .ellipse-19,
-  .solutions-managed-services .ellipse-20 {
+  .managed-services-new-page .button-talk-to-a-service-expert,
+  .managed-services-new-page .button-existing-customer-get-support {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Body: switch from row to column layout */
+  .managed-services-new-page .body-side-menu-content {
+    flex-direction: column !important;
+    padding: 24px 16px !important;
+    gap: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Sidebar: Hide desktop sidebar, show mobile dropdown */
+  .managed-services-new-page .side-menu {
     display: none !important;
   }
 
-  .solutions-managed-services .frame-2 {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.375rem !important;
+  .managed-services-mobile-dropdown-wrap {
+    display: block !important;
     width: 100% !important;
-    margin-top: auto !important;
-    margin-bottom: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    z-index: 5 !important;
+    margin-bottom: 20px !important;
   }
 
-  .solutions-managed-services .frame-2 .bar {
-    background: #9d9dff !important;
-    border-radius: 1.875rem !important;
-    width: 0.375rem !important;
-    height: 1.75rem !important;
+  .managed-services-mobile-nav-select {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border: 2px solid #1b4896 !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #1b4896 !important;
+    background: #fff !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231b4896' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    padding-right: 38px !important;
   }
 
-  .solutions-managed-services .frame-2 .bar.active {
-    background: #0e10ff !important;
-    height: 2.125rem !important;
-  }
-
-  .solutions-managed-services .frame-362 {
-    grid-template-columns: 1fr !important;
+  /* Content: full width */
+  .managed-services-new-page .content {
+    width: 100% !important;
+    min-width: 0 !important;
     gap: 2.5rem !important;
-    justify-items: center !important;
-    width: 100% !important;
   }
 
-  .solutions-managed-services .intro-text-box {
-    width: 100% !important;
+  /* Portfolio cards: center-aligned, full width */
+  .managed-services-new-page .portfolio-grid,
+  .managed-services-new-page .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 
-  .solutions-managed-services .security-graphic-badge {
-    margin: 1.5rem auto !important;
-    justify-self: center !important;
+  .managed-services-new-page .portfolio-card,
+  .managed-services-new-page .service-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 24px 20px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    min-height: auto !important;
+  }
+
+  .managed-services-new-page .portfolio-icon-box {
+    margin: 0 auto 12px auto !important;
     align-self: center !important;
-    width: 15rem !important;
-    height: 15rem !important;
-    display: flex !important;
+  }
+
+  .managed-services-new-page .portfolio-card-title,
+  .managed-services-new-page .portfolio-card-desc {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .managed-services-new-page .portfolio-read-more {
+    margin: 10px auto 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* Flow cards: center-aligned */
+  .managed-services-new-page .flow-card {
+    width: 100% !important;
+    max-width: 100% !important;
     align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-  }
-
-  .solutions-managed-services .security-ellipse-tr-outer {
-    top: -1rem !important;
-    right: -1rem !important;
-    width: 10.5rem !important;
-    height: 10.5rem !important;
-    border-width: 1.5rem !important;
-  }
-
-  .solutions-managed-services .security-ellipse-tr-inner {
-    top: 1.125rem !important;
-    right: 1.125rem !important;
-    width: 6.25rem !important;
-    height: 6.25rem !important;
-    border-width: 1.75rem !important;
-  }
-
-  .solutions-managed-services .security-ellipse-bl-outer {
-    bottom: -1rem !important;
-    left: -1rem !important;
-    width: 10.5rem !important;
-    height: 10.5rem !important;
-    border-width: 1.5rem !important;
-  }
-
-  .solutions-managed-services .security-ellipse-bl-inner {
-    bottom: 1.125rem !important;
-    left: 1.125rem !important;
-    width: 6.25rem !important;
-    height: 6.25rem !important;
-    border-width: 1.75rem !important;
-  }
-
-  .solutions-managed-services .security-triangle-wrapper {
-    width: 11rem !important;
-    height: 11rem !important;
+    text-align: center !important;
     display: flex !important;
-    align-items: center !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+
+  .managed-services-new-page .flow-card-header {
     justify-content: center !important;
+    width: 100% !important;
   }
 
-  .solutions-managed-services .benefits-2col-layout,
-  .solutions-managed-services .usecases-2col-layout {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .solutions-managed-services .partners-logo-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .managed-services-new-page .flow-step-title,
+  .managed-services-new-page .flow-step-desc {
+    text-align: center !important;
+    width: 100% !important;
   }
 }

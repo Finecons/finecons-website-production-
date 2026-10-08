@@ -1,0 +1,977 @@
+/* ==========================================================================
+   CASE STUDY: TRAVEL TECH STYLING (MATCHES FIGMA SPECIFICATION)
+   ========================================================================== */
+
+._18-case-study-travel-tech-carried-over,
+._18-case-study-travel-tech-carried-over * {
+  box-sizing: border-box;
+}
+
+.travel-page-root {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  color: #191c1e;
+}
+
+.travel-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+
+.text-electric-blue {
+  color: #1b4896 !important;
+}
+
+.text-green {
+  color: #00a64a !important;
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION (FIT TO SCREEN ON DESKTOP)
+   -------------------------------------------------------------------------- */
+.travel-hero-section {
+  position: relative;
+  width: 100%;
+  padding: 40px clamp(20px, 4vw, 60px) clamp(50px, 6vh, 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .travel-hero-section {
+    min-height: 100vh;
+  }
+}
+
+/* Decorative Background Rings */
+.travel-decor-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.travel-rect-gradient {
+  background: linear-gradient(
+      123.26deg,
+      rgba(233, 240, 250, 0) 45%,
+      rgba(27, 72, 150, 0.3) 91%
+    ),
+    linear-gradient(
+      223.8deg,
+      rgba(234, 240, 250, 1) 38%,
+      rgba(226, 235, 248, 1) 79%
+    );
+  opacity: 0.9;
+  position: absolute;
+  inset: 0;
+}
+
+.travel-decor-bg .ellipse-17 {
+  border-radius: 50%;
+  border: 52px solid rgba(27, 72, 150, 0.08);
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: -80px;
+  top: -124px;
+}
+
+.travel-decor-bg .ellipse-18 {
+  border-radius: 50%;
+  border: 52px solid rgba(27, 72, 150, 0.08);
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: -10px;
+  top: -54px;
+}
+
+.travel-decor-bg .ellipse-19 {
+  border-radius: 50%;
+  border: 52px solid rgba(27, 72, 150, 0.05);
+  width: 324px;
+  height: 324px;
+  position: absolute;
+  left: 244px;
+  top: 376px;
+}
+
+.travel-decor-bg .ellipse-20 {
+  border-radius: 50%;
+  border: 52px solid rgba(27, 72, 150, 0.05);
+  width: 184px;
+  height: 184px;
+  position: absolute;
+  left: 314px;
+  top: 446px;
+}
+
+.travel-nav-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.travel-hero-content-wrap {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: clamp(24px, 4vh, 60px) 0 0 0;
+}
+
+.travel-hero-inner-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(32px, 4vw, 70px);
+}
+
+.travel-hero-text-col {
+  flex: 1 1 55%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.2vh, 24px);
+  align-items: flex-start;
+}
+
+.travel-badge-wrap {
+  background: rgba(27, 72, 150, 0.12);
+  border-radius: 4px;
+  border: 1px solid rgba(27, 72, 150, 0.15);
+  padding: 6px 16px;
+  display: inline-flex;
+}
+
+.travel-badge-text {
+  color: #1b4896;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: clamp(14px, 1.1vw, 17px);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.travel-hero-title {
+  font-family: 'Merriweather', 'Merriweather-SemiBold', serif;
+  font-size: clamp(32px, 3.8vw, 56px);
+  line-height: 125%;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+}
+
+.travel-hero-subtitle {
+  color: #45474c;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 160%;
+  margin: 0;
+  max-width: 680px;
+}
+
+.travel-hero-back-link {
+  margin-top: 4px;
+}
+
+.travel-back-btn {
+  color: #1b4896;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.travel-back-btn:hover {
+  color: #0d2f66;
+  transform: translateX(-4px);
+}
+
+.travel-hero-img-col {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.travel-hero-img-frame {
+  width: 100%;
+  max-width: 580px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(15, 20, 50, 0.15);
+  background: #f0f4fa;
+}
+
+.travel-hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.travel-hero-img-frame:hover .travel-hero-img {
+  transform: scale(1.03);
+}
+
+/* --------------------------------------------------------------------------
+   2. METRICS BENTO GRID (3 KEY METRICS)
+   -------------------------------------------------------------------------- */
+.travel-metrics-section {
+  padding: clamp(40px, 5vw, 70px) 0;
+  width: 100%;
+}
+
+.travel-metrics-grid-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.5vw, 32px);
+  width: 100%;
+}
+
+.travel-metric-card {
+  background: #f2f6fc;
+  border-radius: 12px;
+  padding: clamp(20px, 2.2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid #1b4896;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.travel-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(27, 72, 150, 0.08);
+}
+
+.travel-metric-icon-wrap {
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+
+.travel-metric-icon {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(1836%) hue-rotate(207deg) brightness(91%) contrast(92%) !important;
+}
+
+.travel-metric-value {
+  color: #191c1e;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.travel-metric-label {
+  color: #45474c;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   3. CUSTOMER OVERVIEW & THE CHALLENGES
+   -------------------------------------------------------------------------- */
+.travel-overview-challenges-section {
+  padding: clamp(40px, 6vw, 80px) 0;
+  width: 100%;
+}
+
+.travel-overview-challenges-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 4vw, 56px);
+  align-items: stretch;
+}
+
+.travel-overview-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.travel-section-heading {
+  color: #1b4896;
+  font-family: 'Merriweather', 'Merriweather-SemiBold', serif;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 125%;
+  font-weight: 600;
+  margin: 0;
+}
+
+.travel-body-text {
+  color: #45474c;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 165%;
+  margin: 0;
+}
+
+.travel-info-badges-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.travel-info-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f7f9fd;
+  border: 1px solid rgba(27, 72, 150, 0.12);
+  padding: 10px 18px;
+  border-radius: 12px;
+}
+
+.travel-badge-icon-box {
+  background: #1b4896;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.travel-info-icon {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+}
+
+.travel-badge-val {
+  color: #1b4896;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.travel-badge-sub {
+  color: #45474c;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: 13px;
+}
+
+/* Challenges Card (Deep Blue) */
+.travel-challenges-card {
+  background: #1b4896;
+  border-radius: 16px;
+  padding: clamp(28px, 3.5vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #ffffff !important;
+  box-shadow: 0px 12px 30px rgba(27, 72, 150, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-challenges-card,
+.travel-challenges-card *,
+.travel-challenges-card p,
+.travel-challenges-card strong,
+.travel-challenges-card span,
+.travel-challenges-card .travel-challenges-title,
+.travel-challenges-card .travel-challenge-text {
+  color: #ffffff !important;
+}
+
+.travel-challenges-card strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.travel-challenges-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.travel-challenge-head-icon {
+  height: 28px;
+  width: auto;
+}
+
+.travel-challenges-title {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: clamp(22px, 2vw, 28px);
+  margin: 0;
+  font-weight: 700;
+}
+
+.travel-challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.travel-challenge-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.travel-item-bullet-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  object-fit: contain;
+}
+
+.travel-challenge-text {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 155%;
+  margin: 0;
+  opacity: 0.95 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. SOLUTIONS IMPLEMENTED (4-CARD ARCHITECTURE)
+   -------------------------------------------------------------------------- */
+.travel-solutions-section {
+  background: #f2f6fc;
+  padding: clamp(50px, 7vw, 90px) 0;
+  width: 100%;
+}
+
+.travel-solutions-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.travel-heading-line {
+  background: #1b4896;
+  width: 64px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.travel-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 28px);
+  width: 100%;
+}
+
+.travel-sol-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(47, 107, 216, 0.24);
+  padding: clamp(24px, 2.5vw, 32px) clamp(16px, 1.8vw, 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 4px 14px rgba(15, 16, 255, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.travel-sol-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 24px rgba(27, 72, 150, 0.1);
+  border-color: #1b4896;
+}
+
+.travel-sol-icon-box {
+  background: #2f6bd8;
+  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.travel-sol-icon {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.travel-sol-title {
+  color: #1b4896;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: clamp(18px, 1.4vw, 22px);
+  line-height: 130%;
+  font-weight: 700;
+  margin: 0;
+}
+
+.travel-sol-desc {
+  color: #45474c;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: 14px;
+  line-height: 155%;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. QUANTIFIABLE BUSINESS IMPACT
+   -------------------------------------------------------------------------- */
+.travel-impact-section {
+  padding: clamp(50px, 7vw, 90px) 0;
+  width: 100%;
+}
+
+.travel-impact-header {
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.travel-impact-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: center;
+}
+
+.travel-impact-left-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.travel-conversion-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.travel-pill-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.travel-status-dot {
+  background: #4ae176;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(74, 225, 118, 0.6);
+}
+
+.travel-conversion-title {
+  color: #1b4896;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: clamp(20px, 1.8vw, 24px);
+  margin: 0;
+}
+
+.travel-growth-callout {
+  background: #f2f6fc;
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 4px solid #1b4896;
+  margin-top: 8px;
+}
+
+.travel-growth-icon {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.travel-growth-val {
+  color: #1b4896;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.travel-growth-sub {
+  color: #45474c;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: 14px;
+}
+
+/* Strategic Comparison Card */
+.travel-audit-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2ebf8;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.travel-audit-header {
+  background: #1b4896;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.travel-audit-title {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.travel-audit-badge {
+  color: #ebf1fa !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  opacity: 0.9 !important;
+}
+
+.travel-audit-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.travel-audit-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #e3ebf8;
+}
+
+.travel-audit-row:last-child {
+  border-bottom: none;
+}
+
+.travel-audit-row.head {
+  background: #eaf0fa;
+  border-bottom: 2px solid #c5c6cd;
+  font-weight: 700;
+}
+
+.travel-cell {
+  padding: 14px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.travel-cell.metric-col {
+  width: 55%;
+  color: #191c1e;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+}
+
+.travel-cell.val-col {
+  width: 45%;
+  justify-content: flex-end;
+  text-align: right;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   6. FINAL CTA BANNER
+   -------------------------------------------------------------------------- */
+.travel-cta-section {
+  background: #1b4896;
+  border-radius: 16px;
+  padding: clamp(40px, 6vw, 64px) clamp(24px, 4vw, 48px);
+  margin: clamp(40px, 6vw, 80px) auto;
+  max-width: 1360px;
+  width: calc(100% - 48px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(27, 72, 150, 0.25);
+}
+
+.travel-cta-radial-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    closest-side,
+    rgba(0, 106, 97, 0.25) 0%,
+    rgba(0, 106, 97, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.travel-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.travel-cta-title {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 130%;
+  font-weight: 700;
+  margin: 0;
+}
+
+.travel-cta-section p,
+.travel-cta-desc {
+  color: #ffffff !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Regular', sans-serif;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 160%;
+  margin: 0;
+  opacity: 0.95 !important;
+}
+
+.travel-cta-btn-wrap {
+  margin-top: 8px;
+}
+
+.travel-cta-btn {
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.travel-cta-btn:hover {
+  background: #f0f4fa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.travel-btn-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.travel-btn-text {
+  color: #1b4896 !important;
+  font-family: 'Merriweather Sans', 'MerriweatherSans-Bold', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .travel-hero-inner-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 36px;
+  }
+
+  .travel-hero-text-col {
+    align-items: center;
+  }
+
+  .travel-hero-img-col {
+    width: 100%;
+  }
+
+  .travel-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .travel-overview-challenges-row {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-impact-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .travel-hero-section {
+    padding: 24px 16px 40px 16px;
+    min-height: auto;
+  }
+
+  .travel-metrics-grid-row {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-info-badges-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .travel-info-badge {
+    width: 100%;
+  }
+
+  .travel-cta-section {
+    width: calc(100% - 32px);
+    padding: 36px 20px;
+  }
+
+  .travel-cta-btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   MOBILE-ONLY FIXES (max-width: 768px) — Does NOT affect desktop or tablet
+   ========================================================================== */
+@media (max-width: 768px) {
+  .travel-hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 16px) 20px 30px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .travel-nav-container {
+    justify-content: center !important;
+  }
+
+  .travel-hero-content-wrap {
+    padding: 20px 0 0 0 !important;
+    text-align: center !important;
+  }
+
+  .travel-hero-inner-row {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 24px !important;
+  }
+
+  .travel-hero-text-col {
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .travel-hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+    text-align: center !important;
+  }
+
+  .travel-hero-subtitle {
+    font-size: 15px !important;
+    text-align: center !important;
+  }
+
+  .travel-hero-img-col {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+
+  .travel-hero-back-link {
+    justify-content: center !important;
+  }
+
+  /* Audit / strategic comparison table: make horizontally scrollable */
+  .travel-audit-card {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .travel-audit-table {
+    min-width: 480px !important;
+    width: 100% !important;
+  }
+
+  .travel-audit-row {
+    flex-wrap: nowrap !important;
+  }
+
+  .travel-cell {
+    font-size: 13px !important;
+    padding: 8px 10px !important;
+  }
+
+  .travel-cell.metric-col {
+    min-width: 140px !important;
+  }
+
+  .travel-cell.val-col {
+    min-width: 100px !important;
+  }
+
+  /* Content stacking */
+  .travel-overview-challenges-row,
+  .travel-impact-row {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .travel-solutions-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .travel-metrics-grid-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}

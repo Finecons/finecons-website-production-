@@ -18,11 +18,9 @@
 /* ===========================
    BACKGROUND DECORATIVE CIRCLES
    =========================== */
-.licensing .ellipse-17 {
+.licensing-hero-section .ellipse-17 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
-  border-width: 3.25rem;
+  border: 3.25rem solid rgba(27, 72, 150, 0.06);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -32,11 +30,9 @@
   pointer-events: none;
 }
 
-.licensing .ellipse-18 {
+.licensing-hero-section .ellipse-18 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
-  border-width: 3.25rem;
+  border: 3.25rem solid rgba(27, 72, 150, 0.06);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -46,58 +42,26 @@
   pointer-events: none;
 }
 
-.licensing .ellipse-19 {
+.licensing-hero-section .ellipse-19 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
-  border-width: 3.25rem;
+  border: 3.25rem solid rgba(27, 72, 150, 0.03);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
   left: 15.25rem;
-  top: 19.125rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.licensing .ellipse-20 {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
-  border-width: 3.25rem;
-  width: 11.5rem;
-  height: 11.5rem;
-  position: absolute;
-  left: 19.625rem;
   top: 23.5rem;
   z-index: 1;
   pointer-events: none;
 }
 
-.licensing .ellipse-192 {
+.licensing-hero-section .ellipse-20 {
   border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
-  border-width: 3.25rem;
-  width: 20.25rem;
-  height: 20.25rem;
-  position: absolute;
-  left: 24rem;
-  top: 27.125rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.licensing .ellipse-202 {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
-  border-width: 3.25rem;
+  border: 3.25rem solid rgba(27, 72, 150, 0.03);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
-  left: 28.375rem;
-  top: 31.5rem;
+  left: 19.625rem;
+  top: 27.875rem;
   z-index: 1;
   pointer-events: none;
 }
@@ -106,18 +70,10 @@
    HERO SECTION
    =========================== */
 .licensing-hero-section {
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45%,
-      rgba(38, 210, 222, 0.3) 90%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38%,
-      rgba(175, 175, 255, 1) 79%);
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
   width: 100%;
   height: 100vh;
-  min-height: 31.25rem;
-  max-height: 57.5rem;
-  display: flex;
-  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -125,38 +81,54 @@
 .licensing-hero-inner {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 3.75rem;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  padding: clamp(4.25rem, 6.5vh, 5.25rem) 3rem clamp(0.75rem, 1.5vh, 1.25rem) 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.licensing-hero-row {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 3.75rem;
-  position: relative;
-  z-index: 10;
-  width: 100%;
+  gap: clamp(1.5rem, 3.5vw, 4rem);
+  margin: auto 0;
 }
 
 .licensing-hero-content {
-  flex: 1;
+  flex: 1.2;
+  max-width: 43.75rem;
   position: relative;
-  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .licensing-technical-support-services {
   font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", sans-serif);
-  font-size: 2.875rem;
+  font-size: clamp(1.625rem, 2.8vw, 2.75rem);
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
-  white-space: nowrap;
 }
 
 .licensing-technical-support-services-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
+  display: block;
 }
 
 .licensing-technical-support-services-span2 {
   color: #111111;
+  display: block;
 }
 
 .licensing-hero-inner .frame-2 {
@@ -170,7 +142,7 @@
 }
 
 .licensing-hero-inner .frame-2 > div {
-  background: #9d9dff;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   border-radius: 1.875rem;
   width: 0.375rem;
   height: 1.75rem;
@@ -179,15 +151,15 @@
 
 .licensing-hero-inner .frame-2 .active-rect,
 .licensing-hero-inner .frame-2 .rectangle-324 {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   height: 2.125rem;
 }
 
 /* Hero Visual - exact Partners page structure */
 .licensing .about-hero-visual {
   flex-shrink: 0;
-  width: 26.25rem;
-  height: 23.75rem;
+  width: min(24rem, 30vw);
+  height: min(21.5rem, 32vh);
   position: relative;
   transition: transform 0.5s ease;
   overflow: visible;
@@ -264,7 +236,7 @@
 }
 
 .ecosystem-partnerships-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .strategic-alliances-desc {
@@ -290,8 +262,8 @@
 }
 
 .bento-card {
-  background: #f5f6ff;
-  border: 0.0938rem solid #adaefa;
+  background: #f8faff;
+  border: 0.0938rem solid rgba(27, 72, 150, 0.2);
   border-radius: 1rem;
   padding: 1.5rem;
   display: flex;
@@ -306,9 +278,9 @@
 
 .bento-card:hover {
   transform: translateY(-0.375rem);
-  box-shadow: 0 0.9375rem 2.1875rem rgba(14, 16, 255, 0.08);
-  border-color: #0e10ff;
-  background: #ecedff;
+  box-shadow: 0 0.9375rem 2.1875rem rgba(27, 72, 150, 0.08);
+  border-color: var(--fc-brand-primary, #1B4896);
+  background: #f0f4fa;
 }
 
 .bento-icon-wrapper {
@@ -318,7 +290,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0e10ff;
+  background: linear-gradient(135deg, var(--fc-accent-blue, #2F6BD8) 0%, var(--fc-brand-primary, #1B4896) 100%);
   color: #ffffff;
   flex-shrink: 0;
 }
@@ -404,8 +376,8 @@
 }
 
 .security-partner-badge {
-  background: #e8e9ff;
-  border: 1px solid #adaefa;
+  background: #eef3fb;
+  border: 1px solid rgba(27, 72, 150, 0.2);
   border-radius: 0.375rem;
   padding: 0.625rem;
   text-align: center;
@@ -417,7 +389,7 @@
 }
 
 .security-partner-badge:hover {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   color: #ffffff;
 }
 
@@ -450,8 +422,8 @@
 }
 
 .bento-tag {
-  background: #e8e9ff;
-  color: #0e10ff;
+  background: #eef3fb;
+  color: var(--fc-brand-primary, #1B4896);
   border-radius: 0.375rem;
   padding: 0.3125rem 0.625rem;
   font-family: "MerriweatherSans-Bold", sans-serif;
@@ -493,7 +465,7 @@
   font-size: 2.75rem;
   font-weight: 600;
   margin: 0;
-  border-left: 0.25rem solid #0e10ff;
+  border-left: 0.25rem solid var(--fc-brand-primary, #1B4896);
   padding-left: 1rem;
   line-height: 1.1;
   display: flex;
@@ -505,7 +477,7 @@
 }
 
 .our-responsibilities-2-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .responsibilities-list-container {
@@ -565,10 +537,10 @@
 /* Why Choose Us (right panel) */
 .why-choose-us {
   flex: 0.9;
-  background: #0e10ff;
+  background: linear-gradient(135deg, var(--fc-accent-blue, #2F6BD8) 0%, var(--fc-brand-primary, #1B4896) 100%);
   border-radius: 1.25rem;
   padding: 3rem;
-  box-shadow: 0 1.25rem 2.5rem rgba(14, 16, 255, 0.15);
+  box-shadow: 0 1.25rem 2.5rem rgba(27, 72, 150, 0.2);
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
@@ -599,7 +571,7 @@
 
 .why-num-badge {
   background: #ffffff;
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   width: 2.75rem;
   height: 2.75rem;
   min-width: 2.75rem;
@@ -686,7 +658,7 @@
 }
 
 .cta-button {
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  background: var(--fc-accent-orange, #EB5A28);
   color: #ffffff;
   border: none;
   border-radius: 0.625rem;
@@ -697,13 +669,14 @@
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0.25rem 1rem rgba(14, 16, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 0.25rem 1rem rgba(235, 90, 40, 0.2);
 }
 
 .cta-button:hover {
+  background: var(--fc-accent-orange-hover, #d84e1f);
   transform: translateY(-0.125rem);
-  box-shadow: 0 0.75rem 1.5rem rgba(14, 16, 255, 0.25);
+  box-shadow: 0 0.75rem 1.5rem rgba(235, 90, 40, 0.3);
 }
 
 .cta-button:active {
@@ -737,7 +710,7 @@
 .dropdown-cloud-icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   flex-shrink: 0;
 }
 
@@ -745,14 +718,14 @@
   font-family: "MerriweatherSans-Bold", sans-serif;
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   flex: 1;
 }
 
 .dropdown-chevron {
   width: 1.25rem;
   height: 1.25rem;
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -767,9 +740,9 @@
   left: 0;
   right: 0;
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.1);
+  border: 1px solid rgba(27, 72, 150, 0.15);
   border-radius: 0.75rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(14, 16, 255, 0.08);
+  box-shadow: 0 0.5rem 1.5rem rgba(27, 72, 150, 0.08);
   overflow: hidden;
   animation: dropdownFadeIn 0.2s ease;
   z-index: 20;
@@ -795,7 +768,7 @@
   color: #555555;
   cursor: pointer;
   transition: all 0.2s ease;
-  border-bottom: 1px solid rgba(14, 16, 255, 0.04);
+  border-bottom: 1px solid rgba(27, 72, 150, 0.06);
 }
 
 .dropdown-item:last-child {
@@ -803,12 +776,12 @@
 }
 
 .dropdown-item:hover {
-  background: rgba(14, 16, 255, 0.04);
+  background: rgba(27, 72, 150, 0.04);
 }
 
 .dropdown-item.active {
-  background: rgba(14, 16, 255, 0.06);
-  color: #0e10ff;
+  background: rgba(27, 72, 150, 0.06);
+  color: var(--fc-brand-primary, #1B4896);
   font-weight: 700;
 }
 
@@ -869,6 +842,19 @@
     gap: 2.25rem;
     padding: 0 2rem;
     padding-top: 0;
+  }
+
+  .licensing-hero-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2.25rem;
+  }
+
+  .licensing-hero-inner .frame-2 {
+    justify-content: center;
+    margin-top: 1.5rem;
   }
 
   .licensing-hero-content {
@@ -946,6 +932,15 @@
     overflow: hidden !important;
   }
 
+  .licensing-hero-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: auto 0 !important;
+    gap: 0 !important;
+  }
+
   .licensing-hero-content {
     flex: 0 0 auto !important;
     display: flex !important;
@@ -993,7 +988,7 @@
   }
 
   .licensing-hero-inner .frame-2 > div {
-    background: #9d9dff !important;
+    background: var(--fc-bg-ice-alt, #e2ebf8) !important;
     border-radius: 1.875rem !important;
     width: 0.375rem !important;
     height: 1.75rem !important;
@@ -1001,7 +996,7 @@
 
   .licensing-hero-inner .frame-2 .active-rect,
   .licensing-hero-inner .frame-2 .rectangle-324 {
-    background: #0e10ff !important;
+    background: var(--fc-brand-primary, #1B4896) !important;
     height: 2.125rem !important;
   }
 
@@ -1054,6 +1049,10 @@
   }
 
   /* Hide background decorative ellipses on mobile */
+  .licensing-hero-section .ellipse-17,
+  .licensing-hero-section .ellipse-18,
+  .licensing-hero-section .ellipse-19,
+  .licensing-hero-section .ellipse-20,
   .licensing .ellipse-17,
   .licensing .ellipse-18,
   .licensing .ellipse-19,

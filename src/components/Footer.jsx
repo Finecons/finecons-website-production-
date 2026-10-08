@@ -1,105 +1,191 @@
 import React from 'react';
 import './Footer.css';
 
-/* Desktop-only content — rendered inside .footer-wrapper */
-export const FooterDesktop = () => (
-  <>
-    <div className="rectangle-266">
-      <div className="ellipse-13"></div>
-      <div className="ellipse-14"></div>
-      <div className="ellipse-15"></div>
-      <div className="ellipse-16"></div>
+export const Footer = ({ className = '', navigateTo, ...props }) => {
+  const handleNav = (page, sectionId) => {
+    if (page === 'cloud-solutions' && sectionId) {
+      const currentHash = window.location.hash.replace('#/', '');
+      const isCloudPage =
+        currentHash === 'cloud-solutions' ||
+        currentHash === 'cloud' ||
+        currentHash === 'cloud-overview';
+
+      if (isCloudPage) {
+        window.dispatchEvent(new CustomEvent('cloudScrollToSection', { detail: sectionId }));
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const yOffset = -90;
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        return;
+      } else {
+        sessionStorage.setItem('pendingScrollSection', sectionId);
+      }
+    }
+
+    if (navigateTo) {
+      navigateTo(page);
+    } else {
+      window.location.hash = `#/${page}`;
+    }
+  };
+
+  return (
+    <footer className={`footer ${className}`.trim()} {...props}>
+      <div className="footer-inner">
+        <div className="row">
+        {/* Brand & Address Column */}
+        <div className="column">
+          <div className="frame" onClick={() => handleNav('home')} style={{ cursor: 'pointer' }}>
+            <img
+              className="finecons-logo-correct"
+              src="/finecons-logo-correct0.png"
+              alt="Finecons Logo"
+              onError={(e) => {
+                e.currentTarget.src = '/assets/finecons-logo-correct0.png';
+              }}
+            />
+          </div>
+          <div className="no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018-tamil-nadu-india">
+            No. 22/35, 1st Floor, Maharaja Surya Road, Alwarpet, Chennai – 600 018, Tamil Nadu, India
+          </div>
+          <div className="_91-44-4392-7600">
+            <a href="tel:+914443927600">+91 44 4392 7600</a>
+          </div>
+          <div className="info-finecons-com">
+            <a href="mailto:info@finecons.com">info@finecons.com</a>
+          </div>
+        </div>
+
+        {/* Column 2: Cloud */}
+        <div className="column2">
+          <div className="cloud" onClick={() => handleNav('cloud-solutions', 'top')}>
+            Cloud
+          </div>
+          <div className="cloud-partners" onClick={() => handleNav('cloud-solutions', 'partners')}>
+            Cloud Partners
+          </div>
+          <div className="buy-cloud-billing" onClick={() => handleNav('cloud-solutions', 'buy-cloud')}>
+            Buy Cloud &amp; Billing
+          </div>
+          <div className="cloud-migration" onClick={() => handleNav('cloud-solutions', 'migration')}>
+            Cloud Migration
+          </div>
+          <div className="cloud-managed-services" onClick={() => handleNav('cloud-solutions', 'managed-services')}>
+            Cloud Managed Services
+          </div>
+          <div className="cloud-security" onClick={() => handleNav('cloud-solutions', 'security')}>
+            Cloud Security
+          </div>
+          <div className="backup-dr" onClick={() => handleNav('cloud-recovery-continuity')}>
+            Backup &amp; DR
+          </div>
+        </div>
+
+        {/* Column 3: Solutions & Services */}
+        <div className="column2">
+          <div className="solutions-services" onClick={() => handleNav('solutions')}>
+            Solutions &amp; Services
+          </div>
+          <div className="cyber-security" onClick={() => handleNav('cyber-security')}>
+            Cyber Security
+          </div>
+          <div className="managed-services" onClick={() => handleNav('managed-services')}>
+            Managed Services
+          </div>
+          <div className="fms" onClick={() => handleNav('facility-management-services')}>
+            FMS
+          </div>
+          <div className="amc" onClick={() => handleNav('annual-maintenance-contract')}>
+            AMC
+          </div>
+          <div className="it-infrastructure" onClick={() => handleNav('it-infrastructure')}>
+            IT Infrastructure
+          </div>
+          <div
+            className="networking-physical-security"
+            onClick={() => handleNav('physical-security-network')}
+          >
+            Networking &amp; Physical Security
+          </div>
+          <div
+            className="networking-physical-security"
+            onClick={() => handleNav('case-study-bfsi')}
+          >
+            Application &amp; Network Security
+          </div>
+        </div>
+
+        {/* Column 4: Software */}
+        <div className="column2">
+          <div className="software" onClick={() => handleNav('software-licensing')}>
+            Software
+          </div>
+          <div className="software-licensing" onClick={() => handleNav('software-licensing')}>
+            Software &amp; Licensing
+          </div>
+          <div className="microsoft" onClick={() => handleNav('microsoft')}>
+            Microsoft
+          </div>
+          <div className="zoho" onClick={() => handleNav('zoho')}>
+            Zoho
+          </div>
+          <div className="ibm" onClick={() => handleNav('ibm')}>
+            IBM
+          </div>
+        </div>
+
+        {/* Column 5: Company */}
+        <div className="column2">
+          <div className="company" onClick={() => handleNav('about')}>
+            Company
+          </div>
+          <div className="about-us" onClick={() => handleNav('about')}>
+            About Us
+          </div>
+          <div className="partners" onClick={() => handleNav('partners')}>
+            Partners
+          </div>
+          <div className="case-studies" onClick={() => handleNav('case-studies')}>
+            Case Studies
+          </div>
+          <div className="contact" onClick={() => handleNav('get-in-touch')}>
+            Contact
+          </div>
+          <div className="support" onClick={() => handleNav('support')}>
+            Support
+          </div>
+        </div>
+      </div>
+
+      {/* Decorative Divider */}
+      <div className="rectangle"></div>
+
+      {/* Row 2: Copyright & Legal */}
+      <div className="row2">
+        <div className="_2026-finecons-limited-all-rights-reserved">
+          © 2026 Finecons Limited. All rights reserved.
+        </div>
+        <div className="privacy-policy-terms-conditions-compliance-disclosure-linked-in">
+          <span onClick={() => handleNav('get-in-touch')}>Privacy Policy</span> ·{' '}
+          <span onClick={() => handleNav('get-in-touch')}>Terms &amp; Conditions</span> ·{' '}
+          <span onClick={() => handleNav('get-in-touch')}>Compliance Disclosure</span> ·{' '}
+          <a
+            href="https://www.linkedin.com/company/finecons"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
-    <img className="image-3" src="/assets/Finecons-logo.png" alt="finecons logo" />
-    <div className="frame-423">
-      <div className="group-246">
-        <div className="group-363">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-map-pin">
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-        </div>
-        <div className="no-22-35-1st-floor-maharaja-surya-road-alwarpet-chennai-600-018">
-          No.22/35, 1st Floor, Maharaja Surya Road,
-          <br />
-          Alwarpet, Chennai - 600 018
-        </div>
-      </div>
-      <div className="group-245">
-        <div className="group-364">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-        </div>
-        <div className="_91-44-43927600">+91 - 44 - 43927600</div>
-      </div>
-      <div className="frame-244">
-        <div className="group-365">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail">
-            <rect width="20" height="16" x="2" y="4" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-        </div>
-        <div className="info-finecons-com">Info@finecons.com</div>
-      </div>
-    </div>
-    <div className="frame-424">
-      <div className="terms-conditions">Terms &amp; Conditions</div>
-      <div className="privacy-policy">Privacy Policy</div>
-      <div className="compliance-disclosure">Compliance Disclosure</div>
-      <div className="case-studies">Case Studies</div>
-    </div>
-    <div className="copyright-finecons-2026">Copyright@finecons2026</div>
-  </>
-);
+  </footer>
+  );
+};
 
-/* Mobile-only content — .rectangle-267 rendered at page level, outside .footer-wrapper */
-export const FooterMobile = () => (
-  <div className="rectangle-267">
-    <img className="r267-logo" src="/assets/Finecons-logo.png" alt="finecons logo" />
+export const FooterDesktop = Footer;
+export const FooterMobile = () => null;
 
-    <div className="r267-contacts">
-      <div className="r267-row">
-        <div className="r267-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-        </div>
-        <span className="r267-text">No.22/35, 1st Floor, Maharaja Surya Road,<br />Alwarpet, Chennai – 600 018</span>
-      </div>
-      <div className="r267-row">
-        <div className="r267-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-        </div>
-        <span className="r267-text">+91 – 44 – 43927600</span>
-      </div>
-      <div className="r267-row">
-        <div className="r267-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect width="20" height="16" x="2" y="4" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-        </div>
-        <span className="r267-text">Info@finecons.com</span>
-      </div>
-    </div>
-
-    <div className="r267-divider"></div>
-
-    <div className="r267-links">
-      <span className="r267-link">Terms &amp; Conditions</span>
-      <span className="r267-link">Privacy Policy</span>
-      <span className="r267-link">Compliance Disclosure</span>
-      <span className="r267-link">Case Studies</span>
-    </div>
-
-    <p className="r267-copy">Copyright@finecons2026</p>
-  </div>
-);
-
-/* Default export for backward compat on other pages */
-const Footer = FooterDesktop;
 export default Footer;

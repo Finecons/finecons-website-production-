@@ -1,116 +1,94 @@
 /* ==========================================================================
-   SOLUTIONS SIDEBAR & MOBILE SELECTOR COMPONENT STYLES
+   SOLUTIONS SIDEBAR COMPONENT (MATCHES CYBER SECURITY FIGMA SPECIFICATION)
    ========================================================================== */
 
 .solutions-sidebar-container {
-  flex: 0 0 20rem;
-  width: 20rem;
+  flex: 0 0 250px;
+  width: 250px;
   position: sticky;
-  top: 8rem;
-  align-self: start;
+  top: 100px;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
+  gap: 20px;
   z-index: 5;
 }
 
-.solutions-sidebar-heading {
-  color: #091426;
-  font-family: "MerriweatherSans-Bold", sans-serif;
-  font-size: 1.25rem;
+.solutions-sidebar-heading,
+.solutions-sidebar-heading.s-o-l-u-t-i-o-n-s {
+  color: #191c1e;
+  font-family: "Merriweather Sans", "MerriweatherSans-Bold", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.16em;
   font-weight: 700;
-  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
   user-select: none;
 }
 
 .solutions-sidebar-heading:hover {
-  color: #0e10ff;
+  color: #1b4896;
 }
 
 .solutions-sidebar-list {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 12px;
   width: 100%;
 }
 
-.solutions-sidebar-item {
+.solutions-sidebar-item,
+.solutions-sidebar-item.row2 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.25rem;
-  padding: 0.875rem 1rem;
-  border-radius: 0.625rem;
-  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 14px 10px 0;
   cursor: pointer;
-  color: #091426;
+  border-radius: 6px;
+  transition: all 0.2s ease;
   background: transparent;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+  box-sizing: border-box;
 }
 
 .solutions-sidebar-item:hover {
-  background: rgba(14, 16, 255, 0.04);
-  color: #0e10ff;
-  transform: translateX(0.25rem);
-}
-
-.solutions-item-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  flex-shrink: 0;
-  color: currentColor;
-  transition: color 0.25s ease;
-}
-
-.sidebar-service-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  stroke-width: 2;
+  background: rgba(27, 72, 150, 0.04);
 }
 
 .solutions-item-text {
-  font-family: "MerriweatherSans-Regular", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.35;
-  color: inherit;
+  font-family: "Merriweather Sans", "MerriweatherSans-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  color: #191c1e;
+  transition: color 0.2s ease;
   flex: 1;
-  text-align: left;
-  transition: color 0.25s ease;
+}
+
+.solutions-sidebar-item:hover .solutions-item-text {
+  color: #1b4896;
 }
 
 /* Active State */
-.solutions-sidebar-item.active {
-  color: #0e10ff;
-}
-
 .solutions-sidebar-item.active .solutions-item-text {
-  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-family: "Merriweather Sans", "MerriweatherSans-Bold", sans-serif;
   font-weight: 700;
-  color: #0e10ff;
+  color: #1b4896;
 }
 
-.solutions-sidebar-item.active .solutions-item-icon {
-  color: #0e10ff;
-}
-
-/* Vertical active capsule line on the outer right edge */
-.solutions-active-edge-bar {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0.375rem;
-  height: 2.85rem;
-  background: #0e10ff;
-  border-radius: 2rem;
-  box-shadow: 0 0 10px rgba(14, 16, 255, 0.35);
+/* Right-edge blue vertical rectangle indicator */
+.solutions-active-edge-bar,
+.solutions-active-edge-bar.rectangle {
+  background: #1b4896;
+  width: 4px;
+  height: 28px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-left: 8px;
 }
 
 /* ==========================================================================
@@ -129,40 +107,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 1.25rem;
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.25);
+  border: 1px solid rgba(27, 72, 150, 0.25);
   border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 1.25rem rgba(14, 16, 255, 0.06);
+  box-shadow: 0 0.25rem 1.25rem rgba(27, 72, 150, 0.06);
   cursor: pointer;
 }
 
-.solutions-dropdown-left {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-  color: #0e10ff;
-}
-
-.solutions-dropdown-icon {
-  display: flex;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #0e10ff;
-}
-
 .solutions-dropdown-label {
-  font-family: "MerriweatherSans-Bold", sans-serif;
+  font-family: "Merriweather Sans", "MerriweatherSans-Bold", sans-serif;
   font-size: 1.0625rem;
-  color: #0e10ff;
+  color: #1b4896;
   font-weight: 700;
 }
 
 .solutions-dropdown-chevron {
   width: 1.25rem;
   height: 1.25rem;
-  color: #0e10ff;
+  color: #1b4896;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -173,7 +136,7 @@
 .solutions-dropdown-menu {
   margin-top: 0.5rem;
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.15);
+  border: 1px solid rgba(27, 72, 150, 0.15);
   border-radius: 0.75rem;
   box-shadow: 0 0.75rem 2.5rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -194,11 +157,11 @@
 .solutions-dropdown-item {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  justify-content: space-between;
   padding: 0.875rem 1.25rem;
-  font-family: "MerriweatherSans-Regular", sans-serif;
+  font-family: "Merriweather Sans", "MerriweatherSans-Regular", sans-serif;
   font-size: 0.9375rem;
-  color: #091426;
+  color: #191c1e;
   border-bottom: 1px solid #f0f0f5;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -209,28 +172,21 @@
 }
 
 .solutions-dropdown-item:hover {
-  background: rgba(14, 16, 255, 0.04);
-  color: #0e10ff;
+  background: rgba(27, 72, 150, 0.04);
+  color: #1b4896;
 }
 
 .solutions-dropdown-item.active {
-  background: rgba(14, 16, 255, 0.08);
-  color: #0e10ff;
+  background: rgba(27, 72, 150, 0.08);
+  color: #1b4896;
   font-weight: 700;
-}
-
-.solutions-dropdown-item-icon {
-  display: flex;
-  align-items: center;
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 /* ==========================================================================
    RESPONSIVE SWITCHING
    ========================================================================== */
 
-@media (max-width: 64rem) {
+@media (max-width: 1023px) {
   .solutions-sidebar-container {
     display: none !important;
   }

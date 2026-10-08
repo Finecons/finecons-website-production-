@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Merriweather+Sans:wght@400;700&family=Wix+Madefor+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
 /* ==========================================================================
    ROOT FONT SIZE STRATEGY
@@ -40,7 +40,36 @@ html {
 }
 
 :root {
-  /* Colors */
+  /* ==========================================================================
+     FINECONS NEW BRAND COLOR TOKENS (FIGMA SPEC)
+     ========================================================================== */
+  --fc-brand-primary: rgba(27, 72, 150, 1);
+  /* #1B4896 */
+  --fc-brand-primary-light: rgba(47, 107, 216, 1);
+  /* #2F6BD8 */
+  --fc-brand-gradient: linear-gradient(135deg, rgba(47, 107, 216, 1) 0%, rgba(27, 72, 150, 1) 100%);
+  --fc-accent-orange: rgba(235, 90, 40, 1);
+  /* #EB5A28 */
+  --fc-accent-orange-hover: #d84e1f;
+  --fc-dark-navy: rgba(15, 42, 92, 1);
+  /* #0F2A5C */
+  --fc-accent-gold: rgba(138, 109, 0, 1);
+  /* #8A6D00 */
+  --fc-text-heading: rgba(25, 28, 30, 1);
+  /* #191C1E */
+  --fc-text-body: rgba(67, 70, 85, 1);
+  /* #434655 */
+  --fc-text-muted: rgba(140, 145, 173, 1);
+  /* #8C91AD */
+  --fc-bg-ice: rgba(235, 241, 250, 1);
+  /* #EBF1FA */
+  --fc-bg-ice-alt: rgba(226, 235, 248, 1);
+  /* #E2EBF8 */
+  --fc-border-light: rgba(217, 217, 217, 1);
+  /* #D9D9D9 */
+  --fc-hero-gradient: linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
+  --fc-hero-glow: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%);
+
   /* Fonts — converted to REM (old px ÷ 16) */
   --display-mobile-font-family: 'Merriweather', sans-serif;
   --display-mobile-font-size: 2rem;
@@ -169,72 +198,35 @@ body {
 
 /* Global Navbar Active Link Styling */
 .group-274 .active-link {
-  color: #0e10ff !important;
+  color: var(--fc-brand-primary, #1b4896) !important;
   font-weight: 600 !important;
 }
 
-/* Global Footer Wrapper to isolate absolute elements in document flow */
-.footer-wrapper {
-  position: relative;
-  width: 100%;
-  height: 32.5rem;
-  /* old: 520px */
-  background-color: #534eeb;
-  margin-top: 2.5rem;
-  /* old: 40px */
-  overflow: hidden;
-}
-
-.footer-wrapper .rectangle-266 {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
+/* Global Footer Wrapper — fluid passthrough container for new universal Footer */
+.footer-wrapper,
+[class*="footer-wrapper"],
+.footer-desktop-only {
+  position: relative !important;
   width: 100% !important;
-  height: 100% !important;
-  transform: none !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  background: transparent !important;
   margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  display: block !important;
 }
 
-.footer-wrapper .mask-group {
-  position: absolute !important;
-  top: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.footer-wrapper .image-3 {
-  position: absolute !important;
-  top: 3.125rem !important;
-  /* old: 50px */
-  left: 7.9375rem !important;
-  /* old: 127px */
-}
-
-.footer-wrapper .frame-424 {
-  position: absolute !important;
-  top: 13.75rem !important;
-  /* old: 220px */
-  left: auto !important;
-  right: 7.9375rem !important;
-  /* old: 127px */
-}
-
-.footer-wrapper .frame-423 {
-  position: absolute !important;
-  top: 13.75rem !important;
-  /* old: 220px */
-  left: 9.0625rem !important;
-  /* old: 145px */
-}
-
-.footer-wrapper .copyright-finecons-2026 {
-  position: absolute !important;
-  top: 28.75rem !important;
-  /* old: 460px */
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+/* Hide legacy absolute background / mobile elements */
+.rectangle-266,
+.rectangle-267,
+.mask-group,
+.footer-wrapper>.image-3,
+.footer-wrapper>.frame-423,
+.footer-wrapper>.frame-424,
+.footer-wrapper>.copyright-finecons-2026 {
+  display: none !important;
 }
 
 /* Reusable Page Hero Progress Indicator (frame-2) */
@@ -258,11 +250,11 @@ body {
 }
 
 .frame-2 .active-rect {
-  background: #0e10ff !important;
+  background: var(--fc-brand-primary, #1b4896) !important;
 }
 
 .frame-2 .inactive-rect {
-  background: #9d9dff !important;
+  background: var(--fc-bg-ice-alt, #e2ebf8) !important;
 }
 
 /* Use Case Modal Styles */
@@ -325,7 +317,7 @@ body {
 }
 
 .close-modal-btn:hover {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
 }
 
 /* Background concentric circles matching natural styling */
@@ -346,7 +338,7 @@ body {
 .modal-circle-2,
 .modal-circle-3 {
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.08);
+  border-color: rgba(27, 72, 150, 0.08);
   border-radius: 50%;
   position: absolute;
 }
@@ -441,11 +433,11 @@ body {
   height: 1.5rem;
   /* old: 24px */
   flex-shrink: 0;
-  stroke: #0e10ff;
+  stroke: var(--fc-brand-primary, #1b4896);
 }
 
 .modal-section-header h3 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: 1.375rem;
   /* old: 22px */
@@ -494,7 +486,7 @@ body {
 
 .modal-section-content ul li::before {
   content: "•";
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1b4896);
   font-weight: bold;
   font-size: 1rem;
   /* old: 16px */
@@ -649,17 +641,12 @@ body {
   }
 }
 
-/* Global Footer Overrides — enforce enlarged 420px height on all pages */
+/* Global Footer Overrides — allow new universal Footer to size naturally */
 :root:root:root [class*="footer-wrapper"] {
-  height: 26.25rem !important;
-  /* old: 420px */
-  min-height: 26.25rem !important;
-}
-
-:root:root:root [class*="footer-wrapper"] .rectangle-266,
-:root:root:root [class*="footer-wrapper"] .mask-group {
-  height: 26.25rem !important;
-  /* old: 420px */
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 /* Logo scaling & positioning */
@@ -817,146 +804,13 @@ body {
   translate: none !important;
 }
 
-/* Global Mobile Navbar responsive overrides and Hamburger Menu */
-.navbar-hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 1.5rem;
-  /* old: 24px */
-  height: 1.125rem;
-  /* old: 18px */
-  padding: 0;
-  z-index: 1002;
-}
+/* Global Navbar styles are modularized in src/components/Navbar.css */
 
-.hamburger-line {
-  display: block;
-  width: 100%;
-  height: 0.125rem;
-  /* old: 2px */
-  background-color: #333333;
-  border-radius: 0.125rem;
-  /* old: 2px */
-  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
-}
-
-.hamburger-line.open:nth-child(1) {
-  transform: translateY(0.5rem) rotate(45deg);
-  /* old: 8px */
-  background-color: #0e10ff;
-}
-
-.hamburger-line.open:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-line.open:nth-child(3) {
-  transform: translateY(-0.5rem) rotate(-45deg);
-  /* old: -8px */
-  background-color: #0e10ff;
-}
-
-.mobile-only-nav-btn {
-  display: none !important;
-}
-
-.desktop-only-nav-btn {
-  display: flex !important;
-}
-
-/* 48rem = 768px */
-@media (max-width: 48rem) {
-  .navbar-hamburger {
-    display: flex !important;
-  }
-
-  .desktop-only-nav-btn {
-    display: none !important;
-  }
-
-  .mobile-only-nav-btn {
-    display: flex !important;
-  }
-
-  /* Force responsive width/padding on Navbar container */
-  .frame-376 {
-    width: 90% !important;
-    max-width: 27.5rem !important;
-    /* old: 440px */
-    height: 4.375rem !important;
-    /* old: 70px */
-    border-radius: 1.5rem !important;
-    /* old: 24px */
-    padding: 0.625rem 1.25rem !important;
-    /* old: 10px 20px */
-    top: 0.9375rem !important;
-    /* old: 15px */
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: absolute !important;
-  }
-
-  .finecons-logo-3 {
-    height: 2.25rem !important;
-    /* old: 36px */
-    width: auto !important;
-  }
-
-  /* Hamburger Dropdown Navigation */
-  .group-274 {
-    display: none !important;
-  }
-
-  .group-274.mobile-open {
-    display: flex !important;
-    flex-direction: column !important;
-    position: absolute !important;
-    top: 5rem !important;
-    /* old: 80px */
-    left: 0 !important;
-    width: 100% !important;
-    background: #ffffff !important;
-    border-radius: 1.25rem !important;
-    /* old: 20px */
-    box-shadow: 0 0.9375rem 2.1875rem rgba(14, 16, 255, 0.12) !important;
-    /* old: 0 15px 35px */
-    padding: 1.5rem !important;
-    /* old: 24px */
-    gap: 1.25rem !important;
-    /* old: 20px */
-    z-index: 1001 !important;
-    align-items: center !important;
-  }
-
-  .group-274.mobile-open .about,
-  .group-274.mobile-open .partners,
-  .group-274.mobile-open .solutions {
-    font-size: 1.125rem !important;
-    /* old: 18px */
-    padding: 0.625rem 0 !important;
-    /* old: 10px 0 */
-    width: 100% !important;
-    text-align: center !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-  }
-
-  .group-274.mobile-open .group-353 {
-    margin-top: 0.625rem !important;
-    /* old: 10px */
-    width: 100% !important;
-    max-width: 12.5rem !important;
-    /* old: 200px */
-  }
-}
-
-/* Hide footer completely on mobile — 48rem = 768px */
+/* Universal footer visibility on mobile — 48rem = 768px */
 @media (max-width: 48rem) {
   html body .footer-wrapper {
-    display: none !important;
+    display: block !important;
+    width: 100% !important;
   }
 }
 
@@ -1109,7 +963,7 @@ p,
   /* old: fixed 18px → fluid 14px–18px */
   line-height: clamp(1.375rem, 2.5vw, 1.75rem) !important;
   /* old: 28px */
-  color: #333333 !important;
+  color: #333333;
   font-weight: 400 !important;
 }
 
@@ -1262,21 +1116,29 @@ p,
    ========================================================================== */
 @media (min-width: 120rem) {
   :root {
-    --display-desktop-font-size: 3.375rem; /* 54px (reduced by 10px from 64px) */
+    --display-desktop-font-size: 3.375rem;
+    /* 54px (reduced by 10px from 64px) */
     --display-desktop-line-height: 4.25rem;
-    --heading-serif-1-desktop-font-size: 2.5rem; /* 40px (reduced by 8px from 48px) */
+    --heading-serif-1-desktop-font-size: 2.5rem;
+    /* 40px (reduced by 8px from 48px) */
     --heading-serif-1-desktop-line-height: 3.25rem;
-    --heading-sans-2-desktop-font-size: 1.5rem; /* 24px (reduced by 4px from 28px) */
+    --heading-sans-2-desktop-font-size: 1.5rem;
+    /* 24px (reduced by 4px from 28px) */
     --heading-sans-2-desktop-line-height: 2rem;
-    --sub-heading-sans-1-desktop-font-size: 2rem; /* 32px (reduced by 8px from 40px) */
+    --sub-heading-sans-1-desktop-font-size: 2rem;
+    /* 32px (reduced by 8px from 40px) */
     --sub-heading-sans-1-desktop-line-height: 2.625rem;
-    --sub-heading-sans-2-desktop-font-size: 1.125rem; /* 18px (reduced from 20px) */
+    --sub-heading-sans-2-desktop-font-size: 1.125rem;
+    /* 18px (reduced from 20px) */
     --sub-heading-sans-2-desktop-line-height: 1.6rem;
-    --body-regular-desktop-font-size: 1rem; /* 16px (reduced by 2px from 18px) */
+    --body-regular-desktop-font-size: 1rem;
+    /* 16px (reduced by 2px from 18px) */
     --body-regular-desktop-line-height: 1.6rem;
-    --body-regular-2-desktop-font-size: 1.25rem; /* 20px (reduced by 4px from 24px) */
+    --body-regular-2-desktop-font-size: 1.25rem;
+    /* 20px (reduced by 4px from 24px) */
     --body-regular-2-desktop-line-height: 1.75rem;
-    --heading-sans-3-desktop-font-size: 2.5rem; /* 40px (reduced by 8px from 48px) */
+    --heading-sans-3-desktop-font-size: 2.5rem;
+    /* 40px (reduced by 8px from 48px) */
     --heading-sans-3-desktop-line-height: 3.25rem;
   }
 
@@ -1295,7 +1157,8 @@ p,
   .scale-fast-spend-smart,
   .powered-by-aws-built-for-scale,
   .powered-by-azure-built-for-scale {
-    font-size: 3.375rem !important; /* 54px */
+    font-size: 3.375rem !important;
+    /* 54px */
     line-height: 1.25 !important;
   }
 
@@ -1318,7 +1181,8 @@ p,
   .featured-enterprise-hardware,
   .it-infrastructure-partners,
   .cyber-security-title {
-    font-size: 2.5rem !important; /* 40px */
+    font-size: 2.5rem !important;
+    /* 40px */
     line-height: 1.3 !important;
   }
 
@@ -1330,7 +1194,8 @@ p,
   .secure-global-deployment,
   .strategic-pillars-title,
   .case-studies-heading {
-    font-size: 1.75rem !important; /* 28px */
+    font-size: 1.75rem !important;
+    /* 28px */
     line-height: 1.35 !important;
   }
 
@@ -1345,7 +1210,8 @@ p,
   .service-card-title,
   .capability-title,
   .ecosystem-card-title {
-    font-size: 1.1875rem !important; /* 19px */
+    font-size: 1.1875rem !important;
+    /* 19px */
     line-height: 1.45 !important;
   }
 
@@ -1369,7 +1235,8 @@ p,
   .precision-hardware-desc,
   .precision-logistics-desc,
   .technical-expertise-desc {
-    font-size: 1rem !important; /* 16px */
+    font-size: 1rem !important;
+    /* 16px */
     line-height: 1.65 !important;
   }
 
@@ -1378,7 +1245,8 @@ p,
   .c-y-b-e-r-s-e-c-u-r-i-t-y,
   .n-e-t-w-o-r-k-i-n-g,
   .logistics-subtitle {
-    font-size: 1.125rem !important; /* 18px */
+    font-size: 1.125rem !important;
+    /* 18px */
     letter-spacing: 0.125rem !important;
   }
 }
@@ -1386,4 +1254,76 @@ p,
 * {
   word-break: normal !important;
   overflow-wrap: break-word !important;
+}
+
+/* ==========================================================================
+   UNIVERSAL DARK & BLUE THEME / CTA BANNER TEXT COLOR ENFORCEMENT
+   Ensures any content/paragraphs/subtitles/bullets inside blue background
+   sections render in pure white (#ffffff) across all pages.
+   ========================================================================== */
+.cta-banner p,
+.cta-banner .cta-banner-desc,
+.cta-banner .cta-desc,
+.cta-banner .cta-subtext,
+.cta-banner .cta-subtitle,
+.cyber-cta-section p,
+.cyber-cta-section .cyber-cta-subtitle,
+.managed-services-new-page .cta-banner p,
+.managed-services-new-page .cta-banner-desc,
+._03-fms-new .cta-banner p,
+._03-fms-new .cta-banner .tell-us-your-number-of-users-sites-and-support-hours-and-we-ll-send-you-a-tailored-fms-proposal,
+._04-amc-new .cta-banner p,
+._04-amc-new .cta-banner .send-us-your-asset-list-and-get-an-amc-proposal-with-coverage-options-and-sl-as,
+._07-support-new .cta-banner p,
+._07-support-new .cta-banner .cta-banner-desc,
+.cloud-cta-banner-section p,
+.cloud-cta-banner-section .cta-banner-desc,
+.cloud-new-page .cta-banner-desc,
+.cloud-operations-page .cta-subtext,
+.cloud-operations-page .section-final-cta p,
+.cloud-migration-page .cta-subtext,
+.cloud-migration-page .section-final-cta p,
+.cloud-security-cta-section p,
+.cloud-security-cta-section .cta-paragraph-desc,
+.section-final-cta-wrapper p,
+.section-final-cta-wrapper .cta-desc,
+.section-final-cta-wrapper .cta-description,
+.final-cta-card p,
+.final-cta-card .cta-description,
+.sw-cta-section p,
+.sw-cta-section .sw-cta-subtitle,
+.ms-cta-section p,
+.zoho-cta-section p,
+.ibm-cta-section p,
+.partners-cta-section p,
+.partners-cta-section .cta-subtext,
+.partners-cta-card p,
+.partners-cta-card .cta-subtext,
+.travel-cta-section p,
+.travel-cta-section .travel-cta-desc,
+.erp-cta-section p,
+.erp-cta-section .erp-cta-desc,
+.mfg-cta-section p,
+.mfg-cta-section .mfg-cta-subtitle,
+.cs-cta-section p,
+.cs-cta-section .cs-cta-desc,
+[class*="cta-section"] p,
+[class*="cta-banner"] p,
+[class*="cta-card"] p,
+[class*="cta-inner"] p,
+[class*="challenges-card"] p,
+[class*="challenges-card"] span,
+[class*="challenges-card"] strong,
+[class*="challenges-card"] div {
+  color: #ffffff !important;
+}
+
+/* Maintain proper brand blue text for white buttons inside CTA banners */
+.cyber-cta-btn .get-a-security-assessment2,
+.managed-services-new-page .talk-to-a-service-expert2,
+._03-fms-new .get-an-fms-proposal2,
+._04-amc-new .request-an-amc-quote2,
+._21-case-studies-listing-new .talk-to-our-experts,
+.cloud-new-page .btn-banner-white {
+  color: #1b4896 !important;
 }

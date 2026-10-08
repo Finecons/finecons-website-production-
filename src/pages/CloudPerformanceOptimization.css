@@ -27,12 +27,8 @@
   max-height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45%,
-      rgba(38, 210, 222, 0.25) 90%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38%,
-      rgba(175, 175, 255, 1) 79%);
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
 }
 
 .cloud-performance-page .rectangle-217 {
@@ -49,7 +45,7 @@
 /* Background decorative concentric rings */
 .cloud-performance-page .ellipse-17 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.06);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -61,7 +57,7 @@
 
 .cloud-performance-page .ellipse-18 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.06);
+  border: 3.25rem solid rgba(27, 72, 150, 0.07);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -73,7 +69,7 @@
 
 .cloud-performance-page .ellipse-19 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 20.25rem;
   height: 20.25rem;
   position: absolute;
@@ -85,7 +81,7 @@
 
 .cloud-performance-page .ellipse-20 {
   border-radius: 50%;
-  border: 3.25rem solid rgba(34, 35, 147, 0.05);
+  border: 3.25rem solid rgba(27, 72, 150, 0.05);
   width: 11.5rem;
   height: 11.5rem;
   position: absolute;
@@ -130,7 +126,7 @@
 }
 
 .cloud-performance-page .hero-badge {
-  color: #000000;
+  color: var(--fc-text-dark, #091426);
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.125rem;
   line-height: 1.35;
@@ -150,7 +146,7 @@
 }
 
 .cloud-performance-page .highlight-blue {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-performance-page .hero-visual-block {
@@ -166,7 +162,7 @@
   max-height: 22rem;
   object-fit: cover;
   border-radius: 1.25rem;
-  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.15);
+  box-shadow: 0 1rem 2.5rem rgba(27, 72, 150, 0.1);
 }
 
 /* 9-Bar Indicator Element */
@@ -183,14 +179,14 @@
 }
 
 .cloud-performance-page .active-rect {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   border-radius: 0.125rem;
   width: 0.3125rem;
   height: 1.875rem;
 }
 
 .cloud-performance-page .inactive-rect {
-  background: #adaefa;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   border-radius: 0.125rem;
   width: 0.3125rem;
   height: 1.875rem;
@@ -226,14 +222,14 @@
 }
 
 .cloud-performance-page .text-blue {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 /* --------------------------------------------------------------------------
    SECTION 1: CORE VALUE PROPOSITION
    -------------------------------------------------------------------------- */
 .cloud-performance-page .section-core-value-proposition {
-  background: #f4f6fd;
+  background: var(--fc-bg-ice, #f4f8fd);
   width: 100%;
   padding: 4.5rem 3rem;
 }
@@ -261,14 +257,14 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 4px 12px rgba(14, 16, 255, 0.04);
+  box-shadow: 0 4px 12px rgba(27, 72, 150, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .cloud-performance-page .value-prop-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(14, 16, 255, 0.1);
-  border-left-color: #0e10ff;
+  box-shadow: 0 10px 24px rgba(27, 72, 150, 0.12);
+  border-left-color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-performance-page .value-prop-card:nth-child(3) {
@@ -276,7 +272,7 @@
 }
 
 .cloud-performance-page .value-prop-icon-box {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   border-radius: 0.375rem;
   width: 3rem;
   height: 3rem;
@@ -321,14 +317,14 @@
   max-width: 34rem;
   border-radius: 1.25rem;
   object-fit: cover;
-  box-shadow: 0 1rem 2.5rem rgba(14, 16, 255, 0.12);
+  box-shadow: 0 1rem 2.5rem rgba(27, 72, 150, 0.12);
 }
 
 /* --------------------------------------------------------------------------
    SECTION 2: SERVICES ECOSYSTEM GRID
    -------------------------------------------------------------------------- */
 .cloud-performance-page .section-services-ecosystem {
-  background: #eff4ff;
+  background: var(--fc-bg-ice-alt, #eaf0fa);
   width: 100%;
   padding: 5rem 3rem 6rem 3rem;
 }
@@ -353,7 +349,7 @@
 }
 
 .cloud-performance-page .ecosystem-underline-bar {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   width: 4rem;
   height: 0.25rem;
   border-radius: 0.125rem;
@@ -378,7 +374,7 @@
 
 .cloud-performance-page .ecosystem-card {
   background: #ffffff;
-  border: 1px solid rgba(14, 16, 255, 0.16);
+  border: 1px solid rgba(27, 72, 150, 0.16);
   border-radius: 0.875rem;
   padding: 2.25rem 1.25rem;
   display: flex;
@@ -393,8 +389,8 @@
 
 .cloud-performance-page .ecosystem-card:hover {
   transform: translateY(-6px);
-  border-color: #0e10ff;
-  box-shadow: 0 12px 24px rgba(14, 16, 255, 0.12);
+  border-color: var(--fc-brand-primary, #1B4896);
+  box-shadow: 0 12px 24px rgba(27, 72, 150, 0.12);
 }
 
 .cloud-performance-page .ecosystem-icon-box {
@@ -424,7 +420,7 @@
    SECTION 3: METRICS BLUE RIBBON
    -------------------------------------------------------------------------- */
 .cloud-performance-page .section-metrics-ribbon {
-  background: #0e10ff;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   width: 100%;
   padding: 4.5rem 3rem;
 }
@@ -473,7 +469,7 @@
 }
 
 .cloud-performance-page .final-cta-card {
-  background: #396caa;
+  background: linear-gradient(135deg, var(--fc-brand-primary, #1B4896) 0%, var(--fc-accent-blue, #2F6BD8) 100%);
   border-radius: 1rem;
   padding: 4rem 3rem;
   position: relative;
@@ -482,14 +478,15 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 1rem 3rem rgba(27, 72, 150, 0.2);
 }
 
 .cloud-performance-page .cta-radial-glow {
   position: absolute;
   inset: 0;
   background: radial-gradient(closest-side,
-      rgba(0, 106, 97, 0.2) 0%,
-      rgba(0, 106, 97, 0) 100%);
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
 }
 
@@ -512,8 +509,9 @@
   margin: 0;
 }
 
-.cloud-performance-page .cta-description {
-  color: #ffffff;
+.cloud-performance-page .cta-description,
+.cloud-performance-page .section-final-cta-wrapper p {
+  color: #ffffff !important;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
@@ -522,8 +520,8 @@
 }
 
 .cloud-performance-page .cta-contact-button {
-  background: #ffffff;
-  color: #091426;
+  background: var(--fc-accent-orange, #EB5A28);
+  color: #ffffff;
   border: none;
   border-radius: 0.375rem;
   padding: 1rem 2.5rem;
@@ -536,12 +534,13 @@
   gap: 0.625rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   margin-top: 0.5rem;
+  box-shadow: 0 4px 14px rgba(235, 90, 40, 0.3);
 }
 
 .cloud-performance-page .cta-contact-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background-color: #f8fafc;
+  box-shadow: 0 8px 24px rgba(235, 90, 40, 0.45);
+  background-color: var(--fc-accent-orange-hover, #d84e1f);
 }
 
 .cloud-performance-page .cta-button-icon {
@@ -733,14 +732,14 @@
   }
 
   .cloud-performance-page .frame-2 > div {
-    background: #9d9dff !important;
+    background: var(--fc-bg-ice-alt, #e2ebf8) !important;
     border-radius: 1.875rem !important;
     width: 0.375rem !important;
     height: 1.75rem !important;
   }
 
   .cloud-performance-page .frame-2 .active-rect {
-    background: #0e10ff !important;
+    background: var(--fc-brand-primary, #1B4896) !important;
     height: 2.125rem !important;
   }
 

@@ -17,12 +17,8 @@
 
 /* Background Gradients & Circles */
 .cloud-azure .rectangle-217 {
-  background: linear-gradient(123.26deg,
-      rgba(228, 234, 255, 0) 45.126545429229736%,
-      rgba(38, 210, 222, 0.3) 90.87963700294495%),
-    linear-gradient(223.8deg,
-      rgba(228, 234, 255, 1) 38.33858370780945%,
-      rgba(175, 175, 255, 1) 79.08464074134827%);
+  background: radial-gradient(circle at 85% 15%, rgba(27, 72, 150, 0.12) 0%, rgba(255, 255, 255, 0) 65%),
+    linear-gradient(135deg, rgba(234, 240, 250, 1) 0%, rgba(226, 235, 248, 1) 100%);
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -34,7 +30,7 @@
 .cloud-azure .ellipse-17 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
+  border-color: rgba(27, 72, 150, 0.08);
   border-width: 3.25rem;
   width: 20.25rem;
   height: 20.25rem;
@@ -47,7 +43,7 @@
 .cloud-azure .ellipse-18 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.09);
+  border-color: rgba(27, 72, 150, 0.08);
   border-width: 3.25rem;
   width: 11.5rem;
   height: 11.5rem;
@@ -60,7 +56,7 @@
 .cloud-azure .ellipse-19 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
+  border-color: rgba(27, 72, 150, 0.05);
   border-width: 3.25rem;
   width: 20.25rem;
   height: 20.25rem;
@@ -73,7 +69,7 @@
 .cloud-azure .ellipse-20 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
+  border-color: rgba(27, 72, 150, 0.05);
   border-width: 3.25rem;
   width: 11.5rem;
   height: 11.5rem;
@@ -86,7 +82,7 @@
 .cloud-azure .ellipse-192 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
+  border-color: rgba(27, 72, 150, 0.05);
   border-width: 3.25rem;
   width: 20.25rem;
   height: 20.25rem;
@@ -99,7 +95,7 @@
 .cloud-azure .ellipse-202 {
   border-radius: 50%;
   border-style: solid;
-  border-color: rgba(34, 35, 147, 0.05);
+  border-color: rgba(27, 72, 150, 0.05);
   border-width: 3.25rem;
   width: 11.5rem;
   height: 11.5rem;
@@ -147,7 +143,7 @@
 }
 
 .cloud-azure .frame-2>div {
-  background: #9d9dff;
+  background: var(--fc-bg-ice-alt, #e2ebf8);
   border-radius: 1.875rem;
   width: 0.375rem;
   height: 1.75rem;
@@ -155,7 +151,7 @@
 }
 
 .cloud-azure .frame-2 .active-rect {
-  background: #0e10ff;
+  background: var(--fc-brand-primary, #1B4896);
   height: 2.125rem;
 }
 
@@ -173,8 +169,8 @@
 }
 
 .cloud-azure .powered-by-azure-built-for-scale-span2 {
-  color: #0e10ff;
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  color: var(--fc-brand-primary, #1B4896);
+  background: linear-gradient(135deg, var(--fc-accent-blue, #2F6BD8) 0%, var(--fc-brand-primary, #1B4896) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -220,7 +216,7 @@
 }
 
 .cloud-azure .f-i-n-e-c-o-n-s-a-z-u-r-e {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   text-align: left;
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: 1rem;
@@ -242,7 +238,7 @@
 }
 
 .cloud-azure .our-azure-solutions-span2 {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-azure .as-an-azure-advanced-partner-fine-cons-works-in-close-alignment-with-azure-best-practices-and-proven-frameworks-we-enable-organisations-to-confidently-adopt-cloud-technologies-with-structured-and-reliable-approaches-our-solutions-are-designed-to-optimize-performance-scalability-and-cost-efficiency-across-cloud-environments-security-and-compliance-are-embedded-at-every-stage-of-the-cloud-lifecycle-this-ensures-resilient-well-governed-and-future-ready-azure-workloads-for-our-customers {
@@ -303,7 +299,7 @@
 }
 
 .cloud-azure .a-z-u-r-e-c-e-r-t-i-f-i-c-a-t-e {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   text-align: left;
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: 1rem;
@@ -321,7 +317,7 @@
 }
 
 .cloud-azure .cloud-certifications-expertise-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-azure .cloud-certifications-expertise-span2 {
@@ -338,8 +334,8 @@
 }
 
 .cloud-azure .cert-container-outer {
-  background: rgba(14, 16, 255, 0.03);
-  border: 1px solid #adaefa;
+  background: rgba(27, 72, 150, 0.03);
+  border: 1px solid rgba(27, 72, 150, 0.2);
   border-radius: 1rem;
   padding: 1.5rem;
   display: flex;
@@ -353,8 +349,8 @@
 
 .cloud-azure .cert-container-outer:hover {
   transform: translateY(-0.3125rem);
-  box-shadow: 0 0.625rem 1.875rem rgba(14, 16, 255, 0.08);
-  border-color: #0e10ff;
+  box-shadow: 0 0.625rem 1.875rem rgba(27, 72, 150, 0.08);
+  border-color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-azure .cert-card-inner {
@@ -474,7 +470,7 @@
 }
 
 .cloud-azure .w-h-a-t-w-e-d-o {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: 1rem;
   line-height: 1.5rem;
@@ -490,7 +486,7 @@
 }
 
 .cloud-azure .azure-solutions-services-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-azure .azure-solutions-services-span2 {
@@ -533,8 +529,8 @@
 .cloud-azure .group-302:hover,
 .cloud-azure .group-303:hover {
   transform: translateY(-0.3125rem);
-  border-color: #0e10ff;
-  box-shadow: 0 0.9375rem 2.5rem rgba(14, 16, 255, 0.06);
+  border-color: var(--fc-brand-primary, #1B4896);
+  box-shadow: 0 0.9375rem 2.5rem rgba(27, 72, 150, 0.08);
 }
 
 .cloud-azure .rectangle-314,
@@ -602,7 +598,7 @@
 }
 
 .cloud-azure .a-z-u-r-e-u-s-e-c-a-s-e-s {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
   font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif);
   font-size: 1rem;
   line-height: 1.5rem;
@@ -618,7 +614,7 @@
 }
 
 .cloud-azure .cloud-success-stories-span {
-  color: #0e10ff;
+  color: var(--fc-brand-primary, #1B4896);
 }
 
 .cloud-azure .cloud-success-stories-span2 {
@@ -635,7 +631,7 @@
 .cloud-azure .use-case-card {
   background: #ffffff;
   border-radius: 1rem;
-  border: 1px solid rgba(14, 16, 255, 0.1);
+  border: 1px solid rgba(27, 72, 150, 0.1);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -647,8 +643,8 @@
 
 .cloud-azure .use-case-card:hover {
   transform: translateY(-0.3125rem);
-  border-color: #0e10ff;
-  box-shadow: 0 0.9375rem 2.5rem rgba(14, 16, 255, 0.06);
+  border-color: var(--fc-brand-primary, #1B4896);
+  box-shadow: 0 0.9375rem 2.5rem rgba(27, 72, 150, 0.06);
 }
 
 .cloud-azure .use-case-logo-container {
@@ -659,7 +655,7 @@
   background: #ffffff;
   border-radius: 0.5rem;
   padding: 1rem;
-  border: 1px dashed rgba(14, 16, 255, 0.15);
+  border: 1px dashed rgba(27, 72, 150, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -679,14 +675,14 @@
 }
 
 .cloud-azure .view-use-case-btn {
-  background: linear-gradient(90deg, #0e10ff 0%, #cb096d 100%);
+  background: var(--fc-accent-orange, #EB5A28);
   border-radius: 8.125rem;
   padding: 0.625rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 0.25rem 0.9375rem rgba(14, 16, 255, 0.15);
+  box-shadow: 0 0.25rem 0.9375rem rgba(235, 90, 40, 0.25);
   opacity: 0;
   transform: translateY(0.625rem);
   transition: all 0.3s ease;
@@ -698,7 +694,8 @@
 }
 
 .cloud-azure .use-case-card:hover .view-use-case-btn:hover {
-  box-shadow: 0 0.375rem 1.25rem rgba(14, 16, 255, 0.25);
+  background: var(--fc-accent-orange-hover, #d84e1f);
+  box-shadow: 0 0.375rem 1.25rem rgba(235, 90, 40, 0.35);
   transform: translateY(-0.125rem);
 }
 
@@ -713,7 +710,7 @@
 
 /* Footer Wrapper */
 .cloud-azure .footer-wrapper {
-  background: #534eeb;
+  background: var(--fc-dark-navy, #0f2a5c);
   position: relative;
   width: 100%;
   height: 32.5rem;

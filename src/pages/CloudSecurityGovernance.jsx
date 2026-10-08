@@ -19,7 +19,7 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
         </svg>
       ),
       title: 'Identity-First Security',
-      desc: 'Centralized IAM and RBAC to ensure zero-trust access across multi-cloud environments.'
+      desc: 'SSO, MFA, least privilege access, and privileged identity management across all cloud accounts.'
     },
     {
       id: 2,
@@ -29,8 +29,8 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
         </svg>
       ),
-      title: 'Threat Intelligence',
-      desc: '24/7 monitoring and detection to mitigate risks before they impact operations.'
+      title: 'Threat Detection & Response',
+      desc: '24x7 threat monitoring, SIEM integration, and rapid automated incident containment.'
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
         </svg>
       ),
       title: 'Continuous Compliance',
-      desc: 'Auditing and governance to maintain alignment with regulatory standards AWS, Microsoft Azure, Google Cloud, and hybrid environments'
+      desc: 'CIS benchmarks and alignment with ISO 27001, PCI-DSS, RBI guidelines, SEBI CSCRF and the DPDP Act.'
     }
   ];
 
@@ -53,7 +53,7 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
     {
       id: 1,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
         </svg>
       ),
@@ -64,7 +64,7 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
     {
       id: 2,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <rect x="3" y="6" width="18" height="12" rx="2" />
           <line x1="7" y1="6" x2="7" y2="10" />
           <line x1="11" y1="6" x2="11" y2="10" />
@@ -72,14 +72,14 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
           <line x1="19" y1="6" x2="19" y2="10" />
         </svg>
       ),
-      title: 'Security Architecture Design',
-      line1: 'Security',
-      line2: 'Architecture Design'
+      title: 'Secure Landing Zones',
+      line1: 'Secure Landing',
+      line2: 'Zones'
     },
     {
       id: 3,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
           <circle cx="19" cy="11" r="2" />
@@ -93,34 +93,34 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
     {
       id: 4,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <circle cx="7.5" cy="12" r="4.5" />
           <path d="M12 12h9" />
           <path d="M18 12v3" />
           <path d="M21 12v3" />
-          <circle cx="7.5" cy="12" r="1.5" fill="#0e10ff" />
+          <circle cx="7.5" cy="12" r="1.5" fill="#1B4896" />
         </svg>
       ),
-      title: 'Role-Based Access Control',
-      line1: 'Role-Based Access',
-      line2: 'Control'
+      title: 'Cloud Security Posture (CSPM)',
+      line1: 'Cloud Security',
+      line2: 'Posture (CSPM)'
     },
     {
       id: 5,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <rect x="6" y="2" width="12" height="20" rx="2" ry="2" />
           <polyline points="9.5 12 11.5 14 14.5 10" />
         </svg>
       ),
-      title: 'Multi-Factor Authentication',
-      line1: 'Multi-Factor',
-      line2: 'Authentication'
+      title: 'Workload & Container Protection',
+      line1: 'Workload &',
+      line2: 'Container Protection'
     },
     {
       id: 6,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <rect x="3" y="5" width="18" height="14" rx="1" />
           <line x1="3" y1="10" x2="21" y2="10" />
           <line x1="3" y1="15" x2="21" y2="15" />
@@ -133,27 +133,27 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
           <line x1="15" y1="15" x2="15" y2="19" />
         </svg>
       ),
-      title: 'Firewall Configuration',
-      line1: 'Firewall',
-      line2: 'Configuration'
+      title: 'Network Security, WAF & DDoS',
+      line1: 'Network Security,',
+      line2: 'WAF & DDoS'
     },
     {
       id: 7,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <path d="M3 3v18h18" />
           <path d="m19 9-5 5-4-4-3 3" />
           <path d="M14 9h5v5" />
         </svg>
       ),
-      title: 'Threat Detection & Monitoring',
-      line1: 'Threat Detection',
-      line2: '& Monitoring'
+      title: 'Encryption & Key Management',
+      line1: 'Encryption &',
+      line2: 'Key Management'
     },
     {
       id: 8,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <line x1="4" y1="8" x2="14" y2="8" />
           <polyline points="17 7 18.5 9 22 5.5" />
           <line x1="4" y1="16" x2="14" y2="16" />
@@ -161,35 +161,35 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
           <line x1="21.5" y1="14" x2="17.5" y2="18" />
         </svg>
       ),
-      title: 'Compliance Management',
-      line1: 'Compliance',
-      line2: 'Management'
+      title: 'Threat Detection & SIEM',
+      line1: 'Threat Detection',
+      line2: '& SIEM'
     },
     {
       id: 9,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <rect x="9" y="3" width="6" height="5" rx="1" />
           <rect x="3" y="16" width="6" height="5" rx="1" />
           <rect x="15" y="16" width="6" height="5" rx="1" />
           <path d="M12 8v4M6 16v-4h12v4" />
         </svg>
       ),
-      title: 'Network Security',
-      line1: 'Network',
-      line2: 'Security'
+      title: 'Cloud VAPT',
+      line1: 'Cloud',
+      line2: 'VAPT'
     },
     {
       id: 10,
       icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0e10ff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4896" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="ecosystem-icon-svg">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           <path d="M12 8v8M8 12h8" />
         </svg>
       ),
-      title: 'Security Auditing',
-      line1: 'Security',
-      line2: 'Auditing'
+      title: 'Compliance Reporting',
+      line1: 'Compliance',
+      line2: 'Reporting'
     }
   ];
 
@@ -303,9 +303,9 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
         <div className="cta-container-card">
           <div className="cta-bg-gradient-overlay"></div>
           <div className="cta-content-wrap">
-            <h2 className="cta-heading-title">Ready to Optimize Your Cloud?</h2>
+            <h2 className="cta-heading-title">How Secure Are You Today?</h2>
             <p className="cta-paragraph-desc">
-              Book a technical consultation with our certified architects to review your existing environment or plan your migration roadmap.
+              Get a security assessment from our experts and a clear, prioritised plan to close your gaps.
             </p>
             <div className="cta-button-container">
               <button
@@ -324,7 +324,7 @@ const CloudSecurityGovernance = ({ navigateTo }) => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <span>Contact us</span>
+                <span>Get a Security Assessment</span>
               </button>
             </div>
           </div>
