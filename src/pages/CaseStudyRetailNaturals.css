@@ -755,6 +755,8 @@
   .cs-stat-badges-row {
     justify-content: flex-start;
   }
+}
+
 @media (max-width: 768px) {
   .cs-hero-section {
     height: 100vh !important;
