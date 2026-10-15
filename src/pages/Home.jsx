@@ -627,10 +627,10 @@ const Home = ({ navigateTo }) => {
                   </div>
                   <div
                     className="link-backup-dr pillar-link-item"
-                    onClick={() => handleNav('cloud-recovery-continuity')}
+                    onClick={() => handleNav('cloud-solutions', 'backup-dr')}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={(e) => e.key === 'Enter' && handleNav('cloud-recovery-continuity')}
+                    onKeyDown={(e) => e.key === 'Enter' && handleNav('cloud-solutions', 'backup-dr')}
                   >
                     <span className="pillar-sublink-text">Backup &amp; DR</span>
                     <img className="pillar-arrow arrow-normal" src="/assets/pillars_icons/arrow-blue.png" alt="arrow" />
@@ -638,10 +638,10 @@ const Home = ({ navigateTo }) => {
                   </div>
                   <div
                     className="link-cost-optimisation pillar-link-item"
-                    onClick={() => handleNav('cloud-cost-optimisation')}
+                    onClick={() => handleNav('cloud-solutions', 'cost-optimisation')}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={(e) => e.key === 'Enter' && handleNav('cloud-cost-optimisation')}
+                    onKeyDown={(e) => e.key === 'Enter' && handleNav('cloud-solutions', 'cost-optimisation')}
                   >
                     <span className="pillar-sublink-text">Cost Optimisation</span>
                     <img className="pillar-arrow arrow-normal" src="/assets/pillars_icons/arrow-blue.png" alt="arrow" />

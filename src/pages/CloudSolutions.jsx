@@ -36,9 +36,11 @@ const CloudSolutions = ({ navigateTo }) => {
     const pending = sessionStorage.getItem('pendingScrollSection');
     if (pending) {
       sessionStorage.removeItem('pendingScrollSection');
-      setTimeout(() => {
-        scrollToSection(pending);
-      }, 150);
+      [100, 300, 600].forEach((delay) => {
+        setTimeout(() => {
+          scrollToSection(pending);
+        }, delay);
+      });
     }
 
     // 2. Listen for scroll events triggered by Navbar while already on the Cloud page
