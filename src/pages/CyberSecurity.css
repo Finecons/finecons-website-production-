@@ -28,15 +28,15 @@
     linear-gradient(223.79deg,
       rgba(233, 240, 250, 1) 38%,
       rgba(226, 235, 248, 1) 79%);
-  padding: 40px clamp(24px, 5.5vw, 100px) clamp(60px, 8vh, 120px);
+  padding: clamp(110px, 14vh, 134px) clamp(28px, 6vw, 100px) clamp(24px, 4vh, 48px) clamp(28px, 6vw, 100px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-self: stretch;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 @media (min-width: 1024px) {
@@ -45,32 +45,24 @@
   }
 }
 
-.cyber-hero-nav-wrapper {
-  width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-  z-index: 50;
-  display: flex;
-  justify-content: center;
-}
-
 .cyber-hero-body-container {
   width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-  padding: clamp(24px, 4vh, 60px) 0 0 0;
+  max-width: 1320px;
+  margin: auto 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: clamp(14px, 2vh, 24px);
 }
 
 .cyber-hero-copy {
   display: flex;
   flex-direction: column;
-  gap: clamp(18px, 2.5vh, 28px);
+  gap: clamp(14px, 2vh, 24px);
   align-items: flex-start;
-  max-width: 1150px;
+  max-width: 100%;
   width: 100%;
 }
 

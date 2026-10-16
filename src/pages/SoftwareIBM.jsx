@@ -28,7 +28,7 @@ export const SoftwareIBM = ({ navigateTo }) => {
           {/* Left Column: Hero Content */}
           <div className="ibm-hero-content">
             <div className="ibm-hero-eyebrow">
-              S O F T W A R E &nbsp;&amp;&nbsp; L I C E N S I N G &nbsp;·&nbsp; I B M
+              SOFTWARE &amp; LICENSING · <span className="hero-eyebrow-brand">IBM</span>
             </div>
 
             <h1 className="ibm-hero-title">

@@ -28,7 +28,7 @@ export const SoftwareZoho = ({ navigateTo }) => {
           {/* Left Column: Hero Content */}
           <div className="zoho-hero-content">
             <div className="zoho-hero-eyebrow">
-              S O F T W A R E &nbsp;&amp;&nbsp; L I C E N S I N G &nbsp;·&nbsp; Z O H O
+              SOFTWARE &amp; LICENSING · <span className="hero-eyebrow-brand">ZOHO</span>
             </div>
 
             <h1 className="zoho-hero-title">

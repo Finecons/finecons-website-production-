@@ -44,10 +44,11 @@
 .travel-hero-section {
   position: relative;
   width: 100%;
-  padding: 40px clamp(20px, 4vw, 60px) clamp(50px, 6vh, 90px);
+  padding: clamp(105px, 11vh, 125px) clamp(20px, 4vw, 60px) clamp(40px, 5vh, 60px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -884,51 +885,101 @@
     max-height: 100dvh !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
-    padding: calc(70px + 16px) 20px 30px 20px !important;
+    padding: calc(70px + 10px) 20px 24px 20px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
   }
 
-  .travel-nav-container {
-    justify-content: center !important;
-  }
-
   .travel-hero-content-wrap {
-    padding: 20px 0 0 0 !important;
+    padding: 0 !important;
     text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    transform: translateY(-8px) !important;
   }
 
   .travel-hero-inner-row {
     flex-direction: column !important;
     text-align: center !important;
     align-items: center !important;
-    gap: 24px !important;
+    gap: clamp(8px, 1.4vh, 14px) !important;
+    width: 100% !important;
   }
 
   .travel-hero-text-col {
     align-items: center !important;
+    text-align: center !important;
     width: 100% !important;
+    gap: clamp(6px, 1vh, 10px) !important;
+  }
+
+  .travel-badge-wrap {
+    display: inline-flex !important;
+    padding: 4px 14px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .travel-badge-text {
+    font-size: 12px !important;
+    letter-spacing: 0.05em !important;
   }
 
   .travel-hero-title {
-    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+    font-size: clamp(1.4rem, 5.2vw, 1.85rem) !important;
+    line-height: 1.25 !important;
     text-align: center !important;
+    margin: 0 !important;
   }
 
   .travel-hero-subtitle {
-    font-size: 15px !important;
+    font-size: clamp(12px, 3.2vw, 13.5px) !important;
+    line-height: 1.4 !important;
     text-align: center !important;
+    max-width: 95% !important;
+    margin: 0 !important;
+  }
+
+  .travel-hero-backlink-wrap {
+    margin-top: 2px !important;
+    text-align: center !important;
+  }
+
+  .travel-backlink,
+  .travel-back-btn {
+    font-size: 12px !important;
+    text-align: center !important;
+    justify-content: center !important;
   }
 
   .travel-hero-img-col {
     width: 100% !important;
     max-width: 320px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
-  .travel-hero-back-link {
-    justify-content: center !important;
+  .travel-hero-img-frame {
+    width: 100% !important;
+    max-width: 320px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(15, 20, 50, 0.14) !important;
+    overflow: hidden !important;
+  }
+
+  .travel-hero-img,
+  .travel-hero-main-img {
+    width: 100% !important;
+    height: clamp(135px, 20vh, 165px) !important;
+    max-height: 165px !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 
   /* Audit / strategic comparison table: make horizontally scrollable */

@@ -1,0 +1,585 @@
+/* ==========================================================================
+   UNIFIED 1920x1080 DESKTOP MONITOR DESIGN SYSTEM
+   Strictly scoped to: @media screen and (min-width: 1800px)
+   
+   LAPTOPS (1280px - 1536px) AND MOBILE/TABLETS (<1024px) ARE 100% UNTOUCHED.
+   
+   Reference Standard: Managed Services Hero Section
+   Guarantees:
+   1. Consistent, identical typography hierarchy across EVERY page:
+      - Hero Eyebrows: 16px (clamp 13px, 0.95vw, 16px), bold, uppercase, 0.14em letter-spacing
+      - Hero Headlines (H1): clamp(2rem, 3.4vw, 3.4rem) (~54.4px), line-height 1.22, weight 600
+      - Hero Subtitles / Descriptions: clamp(1rem, 1.2vw, 1.25rem) (20px), line-height 1.6, color #191c1e, max-width 58rem
+      - Hero Action Buttons: padding 0.875rem 2.25rem (14px 36px), border-radius 5.625rem (90px), font-size 16px
+   2. Pixel-perfect, identical hero vertical & horizontal placement matching Managed Services:
+      - Section: padding-top: clamp(110px, 14vh, 134px), padding-bottom: clamp(24px, 4vh, 48px), padding-left/right: clamp(28px, 6vw, 100px)
+      - Centered horizontally: align-items: center; justify-content: center; height: 100vh;
+      - Content Container: max-width: 1320px; width: 100%; margin: auto 0;
+   ========================================================================== */
+
+@media screen and (min-width: 1800px) {
+
+  /* --------------------------------------------------------------------------
+     1. UNIFIED HERO TYPOGRAPHY & LAYOUT MATCHING MANAGED SERVICES
+     -------------------------------------------------------------------------- */
+
+  /* All Hero Sections: Exact same height, padding & horizontal centering as Managed Services */
+  .cyber-hero-wrapper,
+  ._21-case-studies-listing-new .hero-section,
+  ._21-case-studies-listing-new .frame,
+  ._05-contact-updated .hero,
+  ._02-managed-services-new .hero,
+  .managed-services-new-page .hero,
+  .cloud-new-page .cloud-hero,
+  ._07-support-new .hero,
+  .solutions-hero-section,
+  .it-infra-hero-section,
+  .psn-hero-section,
+  .fms-hero,
+  .amc-hero,
+  .ms-hero-section,
+  .zoho-hero-section,
+  .ibm-hero-section,
+  .software-hero-section,
+  .bfsi-hero-wrapper,
+  .mfg-hero-section,
+  .erp-hero-section,
+  .travel-hero-section,
+  .cs-hero-section,
+  .partners-hero-section {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    height: 100vh !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important; /* Centers 1320px content block in 1920px screen */
+    padding-top: clamp(110px, 14vh, 134px) !important;
+    padding-bottom: clamp(24px, 4vh, 48px) !important;
+    padding-left: clamp(28px, 6vw, 100px) !important;
+    padding-right: clamp(28px, 6vw, 100px) !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* All Hero Content Containers: Exact same 1320px width & vertical center balance as Managed Services */
+  .cyber-hero-body-container,
+  ._21-case-studies-listing-new .frame3,
+  ._21-case-studies-listing-new .hero-copy,
+  ._05-contact-updated .hero-copy,
+  ._02-managed-services-new .hero-container,
+  .managed-services-new-page .hero-container,
+  .managed-services-new-page .hero-copy,
+  .cloud-new-page .cloud-hero .hero-copy,
+  ._07-support-new .hero-copy,
+  .solutions-hero-container,
+  .it-infra-hero-container,
+  .psn-hero-container,
+  .managed-services-hero-copy,
+  .fms-hero-copy,
+  .amc-hero-copy,
+  .ms-hero-container,
+  .zoho-hero-container,
+  .ibm-hero-container,
+  .software-hero-content,
+  .bfsi-hero-content,
+  .mfg-hero-content,
+  .erp-hero-content,
+  .travel-hero-content,
+  .cs-hero-content,
+  .partners-hero-content {
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin: auto 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: clamp(14px, 2vh, 24px) !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* Cyber Security specific inner wrapper */
+  .cyber-hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: clamp(14px, 2vh, 24px) !important;
+  }
+
+  /* Pages without buttons (Case Studies, Get In Touch):
+     Give 325px min-height with justify-content: flex-start so the top eyebrow lines up
+     at the EXACT same vertical position (~335px) as Managed Services */
+  ._21-case-studies-listing-new .hero-copy,
+  ._05-contact-updated .hero-copy {
+    min-height: 325px !important;
+    justify-content: flex-start !important;
+  }
+
+  /* All Hero Eyebrows: EXACT SAME FONT SIZE & STYLE AS MANAGED SERVICES */
+  .cyber-eyebrow,
+  .c-y-b-e-r-s-e-c-u-r-i-t-y,
+  ._21-case-studies-listing-new .c-a-s-e-s-t-u-d-i-e-s,
+  ._05-contact-updated .g-e-t-i-n-t-o-u-c-h,
+  ._02-managed-services-new .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s,
+  ._02-managed-services-new .hero-eyebrow,
+  .managed-services-new-page .m-a-n-a-g-e-d-s-e-r-v-i-c-e-s,
+  .managed-services-new-page .hero-eyebrow,
+  .cloud-new-page .c-l-o-u-d,
+  ._07-support-new .c-u-s-t-o-m-e-r-s-u-p-p-o-r-t,
+  .solutions-category-tag,
+  .it-infra-eyebrow,
+  .psn-eyebrow,
+  .managed-category-tag,
+  .fms-category-tag,
+  .amc-category-tag,
+  .software-badge,
+  .ms-pill-tag,
+  .zoho-pill-tag,
+  .ibm-pill-tag,
+  .bfsi-badge,
+  .mfg-badge,
+  .erp-badge,
+  .travel-badge,
+  .cs-badge,
+  .partners-category-tag {
+    font-family: var(--heading-sans-2-desktop-font-family, "MerriweatherSans-Bold", sans-serif) !important;
+    font-size: clamp(13px, 0.95vw, 16px) !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.14em !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    color: #191c1e !important;
+    margin: 0 !important;
+  }
+
+  /* All Hero Main Headlines (H1): EXACT SAME FONT SIZE & STYLE AS MANAGED SERVICES */
+  .cyber-hero-headline,
+  ._21-case-studies-listing-new .real-results-for-real-businesses,
+  ._05-contact-updated .let-s-talk-about-your-it,
+  ._02-managed-services-new .it-that-just-works-every-day-every-site,
+  ._02-managed-services-new .hero-title,
+  .managed-services-new-page .it-that-just-works-every-day-every-site,
+  .managed-services-new-page .hero-title,
+  .cloud-new-page .hero-title,
+  ._07-support-new .we-re-here-to-help-whenever-you-need-us,
+  .solutions-hero-title,
+  .it-infra-hero-title,
+  .psn-hero-title,
+  .managed-hero-title,
+  .fms-hero-title,
+  .amc-hero-title,
+  .ms-hero-title,
+  .zoho-hero-title,
+  .ibm-hero-title,
+  .software-hero-title,
+  .bfsi-hero-headline,
+  .mfg-hero-title,
+  .erp-hero-title,
+  .travel-hero-title,
+  .cs-hero-title,
+  .partners-hero-title,
+  .about-carousel-slide h1,
+  .about-hero-title-serif,
+  .shaping-the-future-through-intelligent-solutions {
+    font-family: var(--display-desktop-font-family, "Merriweather-SemiBold", serif) !important;
+    font-size: clamp(2rem, 3.4vw, 3.4rem) !important;
+    line-height: 1.22 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    color: #191c1e !important;
+    max-width: 1250px !important;
+    margin: 0 !important;
+  }
+
+  /* Block Spans for 2-Line Rhythm */
+  .protect-what-matters-detect-threats-respond-fast-span,
+  .it-that-just-works-every-day-every-site-span {
+    color: #191c1e !important;
+    display: block !important;
+  }
+
+  .protect-what-matters-detect-threats-respond-fast-span2,
+  .it-that-just-works-every-day-every-site-span2 {
+    color: var(--fc-brand-primary, #1b4896) !important;
+    display: block !important;
+  }
+
+  .let-s-talk-about-your-it-span2,
+  .real-results-for-real-businesses-span2,
+  .text-electric-blue {
+    color: var(--fc-brand-primary, #1b4896) !important;
+  }
+
+  /* All Hero Subtitle / Description Paragraphs: EXACT SAME FONT SIZE & STYLE AS MANAGED SERVICES */
+  .cyber-hero-desc,
+  ._21-case-studies-listing-new .how-finecons-has-helped-organisations-across-retail-manufacturing-travel-erp-and-bfsi-modernise-secure-and-scale-their-it,
+  ._05-contact-updated .whether-it-s-a-new-project-a-cloud-bill-review-or-a-support-contract-our-experts-will-get-back-to-you-within-one-business-day,
+  ._02-managed-services-new .hero-description,
+  .managed-services-new-page .hero-description,
+  .cloud-new-page .hero-desc,
+  ._07-support-new .existing-finecons-customers-can-reach-our-service-desk-by-phone-email-or-the-support-portal-every-request-gets-a-ticket-number-and-is-tracked-to-closure,
+  .solutions-hero-desc,
+  .it-infra-hero-desc,
+  .psn-hero-desc,
+  .managed-hero-desc,
+  .fms-hero-desc,
+  .amc-hero-desc,
+  .ms-hero-desc,
+  .zoho-hero-desc,
+  .ibm-hero-desc,
+  .software-hero-desc,
+  .bfsi-hero-description,
+  .mfg-hero-subtitle,
+  .erp-hero-subtitle,
+  .travel-hero-desc,
+  .cs-hero-subtitle,
+  .partners-hero-desc,
+  .about-hero-description,
+  .home-hero-desc {
+    color: #191c1e !important;
+    text-align: left !important;
+    font-family: var(--body-regular-desktop-font-family, "MerriweatherSans-Regular", sans-serif) !important;
+    font-size: clamp(1rem, 1.2vw, 1.25rem) !important;
+    line-height: 1.6 !important;
+    font-weight: 400 !important;
+    max-width: 58rem !important;
+    margin: 0 !important;
+  }
+
+  /* All Hero Action Buttons: EXACT SAME PADDING, GAP & FONT SIZE AS MANAGED SERVICES */
+  .cyber-hero-actions,
+  ._02-managed-services-new .hero-cta-row,
+  .managed-services-new-page .hero-cta-row,
+  .managed-services-new-page .hero-copy .row,
+  .cloud-new-page .hero-btn-row,
+  .solutions-hero-actions,
+  .partners-hero-btn-row,
+  .ms-hero-btn-row,
+  .zoho-hero-btn-row,
+  .ibm-hero-btn-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.125rem !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .cyber-btn-primary,
+  .button-get-a-security-assessment,
+  .button-talk-to-a-service-expert,
+  .managed-services-new-page .button-talk-to-a-service-expert,
+  .btn-primary-gradient,
+  .button-primary-orange {
+    background: var(--fc-accent-orange, #eb5a28) !important;
+    border-radius: 5.625rem !important;
+    padding: 0.875rem 2.25rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 0.375rem 1.125rem rgba(235, 90, 40, 0.28) !important;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease !important;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  .cyber-btn-secondary,
+  .button-talk-to-a-security-expert,
+  .button-existing-customer-get-support,
+  .managed-services-new-page .button-existing-customer-get-support,
+  .btn-outline-blue,
+  .button-outline-blue {
+    background: #ffffff !important;
+    border: 2px solid var(--fc-brand-primary, #1b4896) !important;
+    border-radius: 5.625rem !important;
+    padding: 0.875rem 2.25rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    outline: none !important;
+    color: var(--fc-brand-primary, #1b4896) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     2. UNIFIED SECTION HEADINGS (H2) ACROSS ALL PAGES (46px)
+     -------------------------------------------------------------------------- */
+  .section-heading,
+  .heading-serif-1,
+  .inside-finecons2,
+  .what-we-do,
+  .our-core-leadership-expertise,
+  .everything-your-it-needs-under-one-roof,
+  .why-choose-finecons-title,
+  .solutions-section-heading,
+  .partners-section-heading {
+    font-family: var(--heading-serif-1-desktop-font-family, 'Merriweather', serif) !important;
+    font-size: 46px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     3. UNIFIED CARD TITLES (H3) ACROSS ALL PAGES (24px)
+     -------------------------------------------------------------------------- */
+  .pillar-card-title,
+  .contact-card .card-title,
+  .support-service-card-title,
+  .ms-product-card h3,
+  .zoho-product-card h3,
+  .ibm-product-card h3,
+  .service-card-title,
+  .feature-card-title,
+  .case-title {
+    font-family: var(--heading-sans-2-desktop-font-family, 'Merriweather Sans', sans-serif) !important;
+    font-size: 24px !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     4. UNIFIED BODY PARAGRAPHS ACROSS ALL PAGES (18px)
+     -------------------------------------------------------------------------- */
+  .inside-finecons-desc,
+  .what-we-do-desc,
+  .pillar-card-desc,
+  .service-card-desc,
+  .feature-card-desc,
+  .card-body-text,
+  .section-desc-lead {
+    font-family: var(--body-regular-desktop-font-family, 'Merriweather Sans', sans-serif) !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: #434655 !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     5. UNIFIED SECTION CONTAINERS (1320px standard)
+     Centers content with equal margins on both sides across all pages on 1920px monitors
+     -------------------------------------------------------------------------- */
+  .capabilities-container,
+  .products-section .products-container,
+  .testimonials-container,
+  .inside-container,
+  .what-we-do-container,
+  .new-timeline-container,
+  .team-group-container,
+  .social-container,
+  .cyber-main-content-wrapper,
+  ._21-case-studies-listing-new .cases-grid,
+  .cloud-new-page .sticky-menu-inner,
+  .cloud-new-page .intro-container,
+  .cloud-new-page .credentials-container,
+  .cloud-new-page .glance-container,
+  .cloud-new-page .cloud-billing-container,
+  .cloud-new-page .advisory-container,
+  .cloud-new-page .migration-container,
+  .cloud-new-page .modernisation-container,
+  .cloud-new-page .managed-container,
+  .cloud-new-page .security-container,
+  .cloud-new-page .backup-dr-container,
+  .cloud-new-page .cost-container,
+  .cloud-new-page .workplace-container,
+  .cloud-new-page .hybrid-container,
+  .cloud-new-page .why-finecons-container,
+  .cloud-new-page .who-its-for-container,
+  .cloud-new-page .case-studies-container,
+  .cloud-new-page .faq-container,
+  ._07-support-new .contact-cards-grid,
+  ._07-support-new .checklist-grid,
+  ._07-support-new .table-wrapper,
+  ._07-support-new .support-service-cards-grid,
+  .solutions-content-wrapper,
+  .it-infra-hero-container,
+  .infra-main-content,
+  .psn-hero-container,
+  .psn-main-content,
+  .managed-services-content-container,
+  .fms-content-container,
+  .amc-content-container,
+  .software-licensing-container,
+  .ms-cards-grid,
+  .zoho-cards-grid,
+  .ibm-cards-grid,
+  .cs-outcomes-table-wrap,
+  .cs-solutions-cards-grid,
+  .partners-content-container,
+  .why-partner-container,
+  .contact-container {
+    max-width: 1320px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     6. ABOUT US PAGE SPECIFIC CENTERING & MARGIN BALANCING (1920px MONITORS)
+     Ensures full-width backgrounds with perfectly centered content containers
+     -------------------------------------------------------------------------- */
+  .inside-section,
+  .what-we-do-section,
+  .team-section,
+  .history-section,
+  .social-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding-left: clamp(28px, 6vw, 100px) !important;
+    padding-right: clamp(28px, 6vw, 100px) !important;
+  }
+
+  .inside-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 60px !important;
+    max-width: 1320px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .what-we-do-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 60px !important;
+    max-width: 1320px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .inside-section-visual,
+  .what-we-do-visual {
+    width: 100% !important;
+    max-width: 540px !important;
+    height: 460px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .team-header {
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin: 0 auto 50px auto !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .team-group-container {
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin: 0 auto 60px auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .team-group-title {
+    text-align: center !important;
+    margin: 0 auto 32px auto !important;
+    width: 100% !important;
+  }
+
+  .heads-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .heads-grid .new-team-card {
+    max-width: 440px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+
+  .heads-grid .new-team-image-container {
+    height: 380px !important;
+    width: 100% !important;
+  }
+
+  .management-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    justify-content: center !important;
+    gap: 36px !important;
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .management-grid .new-team-card {
+    max-width: 400px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 18px !important;
+  }
+
+  .management-grid .new-team-image-container {
+    height: 360px !important;
+    width: 100% !important;
+  }
+
+  .social-container {
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .social-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}

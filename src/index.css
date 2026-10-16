@@ -1061,9 +1061,6 @@ p,
 
   /* All page layout container overrides for large screens (1920px+) to halve margins and paddings */
   .about-hero-inner,
-  .inside-section,
-  .what-we-do-section,
-  .team-section,
   .map-container,
   .social-section-inner,
   .licensing-hero-inner,
@@ -1078,6 +1075,8 @@ p,
   .frame-441,
   .frame-438 {
     max-width: 95rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }

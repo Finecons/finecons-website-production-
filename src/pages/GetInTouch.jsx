@@ -228,12 +228,13 @@ const GetInTouch = ({ navigateTo }) => {
 
   return (
     <div className="_05-contact-updated">
+      {/* Universal Floating Navbar */}
+      <Navbar activeLink="get-in-touch" navigateTo={navigateTo} />
+
       {/* ====================================================================
-          1. HERO SECTION WITH EMBEDDED FLOATING NAVBAR
+          1. HERO SECTION (100VH FIT-TO-SCREEN)
           ==================================================================== */}
       <section className="hero" aria-label="Get In Touch Hero">
-        <Navbar activeLink="get-in-touch" navigateTo={navigateTo} />
-
         <div className="hero-copy">
           <div className="g-e-t-i-n-t-o-u-c-h">G E T &nbsp; I N &nbsp; T O U C H</div>
           <h1 className="let-s-talk-about-your-it">

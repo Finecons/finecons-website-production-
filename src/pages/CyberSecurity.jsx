@@ -192,15 +192,13 @@ const CyberSecurity = ({ navigateTo = () => {} }) => {
 
   return (
     <div className="_11-cybersecurity-updated cyber-page-root">
+      {/* Global Pill Navbar */}
+      <Navbar activeLink="solutions" navigateTo={navigateTo} />
+
       {/* ====================================================================
           1. HERO SECTION (FIT TO SCREEN ON DESKTOP: MIN-HEIGHT 100VH)
           ==================================================================== */}
       <section className="hero cyber-hero-wrapper" aria-label="Cyber Security Hero">
-        {/* Global Pill Navbar */}
-        <div className="cyber-hero-nav-wrapper">
-          <Navbar activeLink="solutions" navigateTo={navigateTo} />
-        </div>
-
         {/* Hero Content Body */}
         <div className="cyber-hero-body-container">
           <div className="hero-copy cyber-hero-copy">

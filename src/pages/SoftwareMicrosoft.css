@@ -85,6 +85,12 @@
   letter-spacing: 0.12em;
   font-weight: 700;
   text-transform: uppercase;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.ms-hero-eyebrow .hero-eyebrow-brand {
+  white-space: nowrap;
 }
 
 .ms-hero-title {
@@ -407,6 +413,99 @@
 }
 
 @media (max-width: 768px) {
+  .ms-hero-section {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: calc(70px + 10px) 20px 24px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .ms-hero-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: clamp(10px, 2vh, 18px) !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    transform: translateY(-10px) !important;
+  }
+
+  .ms-hero-content {
+    align-items: center !important;
+    text-align: center !important;
+    gap: clamp(8px, 1.4vh, 12px) !important;
+    max-width: 100% !important;
+  }
+
+  .ms-hero-eyebrow {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.08em !important;
+    text-align: center !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+    margin: 0 !important;
+  }
+
+  .ms-hero-title {
+    font-size: clamp(1.6rem, 5.8vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .ms-hero-desc {
+    font-size: clamp(12.5px, 3.4vw, 14px) !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    max-width: 95% !important;
+    margin: 0 !important;
+  }
+
+  .ms-hero-btn-row {
+    margin-top: 2px !important;
+    width: auto !important;
+    justify-content: center !important;
+  }
+
+  .ms-btn-primary {
+    width: auto !important;
+    padding: 11px 32px !important;
+    font-size: 15px !important;
+    border-radius: 90px !important;
+  }
+
+  .ms-hero-logo-card {
+    width: 90% !important;
+    max-width: 290px !important;
+    height: auto !important;
+    min-height: 85px !important;
+    padding: 16px 28px !important;
+    border-radius: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 6px 20px rgba(27, 72, 150, 0.1) !important;
+  }
+
+  .ms-brand-logo-img {
+    width: auto !important;
+    max-width: 190px !important;
+    height: auto !important;
+    max-height: 48px !important;
+    object-fit: contain !important;
+  }
+
   .ms-products-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -419,11 +518,6 @@
     text-align: center;
   }
 
-  .ms-hero-btn-row {
-    width: 100%;
-  }
-
-  .ms-btn-primary,
   .ms-cta-btn {
     width: 100%;
   }

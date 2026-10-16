@@ -701,11 +701,12 @@
 .inside-container,
 .what-we-do-container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1320px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(40px, 6vw, 100px);
+  gap: clamp(40px, 6vw, 80px);
 }
 
 .inside-section-content,
@@ -1021,8 +1022,8 @@
 
 .team-group-container {
   width: 100%;
-  max-width: 1440px;
-  margin-bottom: 60px;
+  max-width: 1320px;
+  margin: 0 auto 60px auto;
   display: flex;
   flex-direction: column;
   align-items: center;

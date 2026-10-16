@@ -37,11 +37,11 @@
       rgba(233, 240, 250, 1) 38%,
       rgba(226, 235, 248, 1) 79%
     );
-  padding: clamp(120px, 15vh, 148px) clamp(24px, 6.5vw, 100px) clamp(48px, 8vh, 80px) clamp(24px, 6.5vw, 100px);
+  padding: clamp(110px, 14vh, 134px) clamp(28px, 6vw, 100px) clamp(24px, 4vh, 48px) clamp(28px, 6vw, 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -52,11 +52,12 @@
 ._21-case-studies-listing-new .hero-copy {
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 2.5vw, 28px);
+  gap: clamp(14px, 2vh, 24px);
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  max-width: 1150px;
+  max-width: 1320px;
+  margin: auto 0;
   position: relative;
   z-index: 2;
 }

@@ -19,6 +19,9 @@ const CaseStudyTravelTech = ({ navigateTo = () => {} }) => {
 
   return (
     <div className="_18-case-study-travel-tech-carried-over travel-page-root">
+      {/* Universal Floating Navbar */}
+      <Navbar activeLink="about" navigateTo={navigateTo} />
+
       {/* ====================================================================
           1. HERO SECTION (FIT TO SCREEN ON DESKTOP)
           ==================================================================== */}
@@ -30,11 +33,6 @@ const CaseStudyTravelTech = ({ navigateTo = () => {} }) => {
           <div className="ellipse-18"></div>
           <div className="ellipse-19"></div>
           <div className="ellipse-20"></div>
-        </div>
-
-        {/* Global Floating Navbar */}
-        <div className="travel-nav-container">
-          <Navbar activeLink="about" navigateTo={navigateTo} />
         </div>
 
         {/* Hero Body Content */}

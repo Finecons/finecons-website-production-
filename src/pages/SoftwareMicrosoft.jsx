@@ -28,7 +28,7 @@ export const SoftwareMicrosoft = ({ navigateTo }) => {
           {/* Left Column: Hero Content */}
           <div className="ms-hero-content">
             <div className="ms-hero-eyebrow">
-              S O F T W A R E &nbsp;&amp;&nbsp; L I C E N S I N G &nbsp;·&nbsp; M I C R O S O F T
+              SOFTWARE &amp; LICENSING · <span className="hero-eyebrow-brand">MICROSOFT</span>
             </div>
 
             <h1 className="ms-hero-title">
